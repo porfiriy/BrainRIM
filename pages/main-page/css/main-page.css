@@ -210,11 +210,12 @@ h6 {
 }
 .text-hello{
    display: flex;
-   width: 100px;
-   height: 40px;
-   color: #FEC727;
+   justify-content: center;
+   align-items: center;
+   white-space: nowrap;
+   color: #5dfe27;
    font-size: 26px;
-   margin: 0 auto;
+   margin: 30px auto;
 }
 .everyday-word-button{
    display: flex;
