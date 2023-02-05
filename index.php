@@ -99,23 +99,23 @@
       <div class="page-games-container">
          <div class="page-title">Тренируй свой мозг!</div>
          <div class="container-list-games">
-            <a href="/pages/firstGamePage-number/game-number.html">
+            <a href="/pages/firstGamePage-number/game-number.php">
                <div class="item-games yellow-item">
                   <img src="/pages/main-page/img/games-page/numbersImg.svg" alt="">
                </div>
             </a>
             <div class="item-games"><img src=" /pages/main-page/img/games-page/wordsImg.svg" alt="">
             </div>
-            <a href=" /pages/thirdGame-images/game-images.html">
+            <a href=" /pages/thirdGame-images/game-images.php">
                <div class="item-games yellow-item">
                   <img src=" /pages/main-page/img/games-page/ImageIcon.svg" alt="">
                </div>
             </a>
-            <a href=" /pages/Game-REAPEAT/gameREPEAT.html">
+            <a href=" /pages/Game-REAPEAT/gameREPEAT.php">
                <div class="item-games"><img src=" /pages/main-page/img/games-page/shapesImg.svg" alt="">
                </div>
             </a>
-            <a href=" /pages/fourthGame-colors/game-colors.html">
+            <a href=" /pages/fourthGame-colors/game-colors.php">
                <div class="item-games yellow-item">
                   <div class="colorsGame-title"><ion-icon class="img-colors" name="color-palette-outline"></ion-icon>
                   </div>

@@ -112,6 +112,16 @@ header{
 	text-align: center;
 	color: #FEC727;
 }
+.alerts-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.alert-user-already-have {
+	display: none;
+	font-size: 18px;
+	color: blueviolet;
+}
 .reg-icon{
 	color: black;
 	margin: 0 10px 0 0;
@@ -132,10 +142,10 @@ form{
 	font-size: 24px;
 	font-weight: 800;
 	color: black;
-	padding: 0 0px 0 10px;
+	padding: 0 0px 0 6px;
 }
 input::placeholder{
-	padding: 0 0px 0 10px;
+	padding: 0 0px 0 4px;
 	color: black;
 	font-size: 20px;
 	font-weight: bold;
