@@ -41,5 +41,38 @@ function selectOne($table){
    return $query->fetch();
 }
 
-tt(selectOne('users'));
+//Запись в БД
+function insert($table,$params){
+   global $pdo;
+   $i = 0;
+   $coll ='';
+   $mask = '';
+   foreach($params as $key => $value){
+      if($i === 0){
+         $coll = $coll."$key";
+      $mask = $mask."'"."$value"."'";
+      }else{
+      $coll = $coll." ,$key";
+      $mask = $mask.", '"."$value"."'";
+      }
+      $i++;
+   }
 
+   $sql = "INSERT INTO $table ($coll) VALUES ($mask);";
+
+   //  tt($sql);
+   //  exit();
+
+   $query = $pdo->prepare($sql);
+   $query->execute($params);
+   dbCheckError($query);
+}
+
+$arrData = [
+   'login' => 'galina',
+   'pass'  => '2389uxx37r873r',
+   'name'  => 'lisa'
+
+];
+
+insert('users',$arrData);
