@@ -1,3 +1,9 @@
+<?php  
+       
+      include("C:\ospanel\domains\mem.com\dataBase\controllers\users.php"); 
+?>
+
+                 
 
 <!DOCTYPE html>
 <html lang="en">
@@ -11,26 +17,22 @@
 </head>
 
 <body>
-      <?php  include("C:\ospanel\domains\mem.com\dataBase\db.php"); ?>
+      
       <div class="pg-registr-container">
             <header>
                   <a href="/index.php" class="scip-pg-registr">Пропустить</a>
             </header>
             <div class="pg-registr-title"><ion-icon class="reg-icon" name="id-card-outline"></ion-icon>Регистрация</div>
-            <div class="alerts-container">
-                  <?php
-                        if($userAlreadyHave == true):
-                  ?>
-                  <div class="alert-user-already-have">Такой логин уже занят!</div>
-                  <?php endif;?>
+            <div class="alerts-container err">
+                  <p><?=$errorMsg?></p>
             </div>
             <main>
 
-                  <form action="/dataBase/check.php" method="post">
-                        <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
-                        <input type="text" class="form-control" name="name" id="name" placeholder="Имя">
+                  <form action="registration-page.php" method="post">
+                        <input type="text" value="<?=$login?>" class="form-control" name="login" id="login" placeholder="Логин">
+                        <input type="email" value="<?=$email?>"  class="form-control" name="email" id="email" placeholder="Почта">
                         <input type="password" class="form-control" id="pass" name="pass" placeholder="Пароль">
-                        <button type="submit" class="btn btn-send">Отправить</button>
+                        <button type="submit" name="button-reg" class="btn btn-send">Отправить</button>
                   </form>
 
                   <div class="bttn-authorisation">Авторизация</div>
@@ -43,11 +45,11 @@
             <div class="pg-registr-title"><ion-icon class="reg-icon" name="id-card-outline"></ion-icon>Авторизация</div>
             <main>
 
-                  <form action=" /dataBase/auth.php" method="post">
+                  <form action="registration-page.php" method="post">
                         <input type="text" class="form-control" name="login" id="login" placeholder="Логин">
                         <input type="password" class="form-control" id="pass" name="pass" placeholder="Пароль">
                         <a href="#" class="forgot-pass">Забыли пароль?</a>
-                        <button type="submit" class="btn btn-send">Отправить</button>
+                        <button type="submit" name="button-auth" class="btn btn-send">Отправить</button>
                   </form>
 
                   <div class="bttn-registr">Регистрация</div>

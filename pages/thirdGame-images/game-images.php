@@ -67,10 +67,22 @@
       <div class="mode-options-container">
          <div class="mode-option-title">Сложность</div>
          <div class="mode-body">
-            <div class=" easy-mode-button">Легко</div>
-            <div class=" normal-mode-button">Нормально</div>
-            <div class=" hard-mode-button">Сложно</div>
-            <div class=" crazy-mode-button">Безумно</div>
+            <div class="mode-button-container">
+               <div class=" easy-mode-button">Легко</div>
+               <div class="mode-button__procent">1.3x</div>
+            </div>
+            <div class="mode-button-container">
+               <div class=" normal-mode-button">Нормально</div>
+               <div class="mode-button__procent">1.5x</div>
+            </div>
+            <div class="mode-button-container">
+               <div class=" hard-mode-button">Сложно</div>
+               <div class="mode-button__procent">1.7x</div>
+            </div>
+            <div class="mode-button-container">
+               <div class=" crazy-mode-button">Безумно</div>
+               <div class="mode-button__procent">2x</div>
+            </div>
          </div>
       </div>
       <div class="topButton-gameWords">

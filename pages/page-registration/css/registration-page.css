@@ -113,9 +113,16 @@ header{
 	color: #FEC727;
 }
 .alerts-container {
+	margin: 0 auto;
+	text-align: center;
+	line-height: 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	width: 70%;
+	height: 100px;
+	color: blueviolet;
+	font-size: 22px;
 }
 .alert-user-already-have {
 	display: none;
