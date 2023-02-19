@@ -1,3 +1,7 @@
+<?php
+   include 'C:\ospanel\domains\mem.com\dataBase\db.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,11 +48,11 @@
       </header>
 
       <main class="main">
-      <?php
-            if($_COOKIE['user'] == ''):
-      ?>
-      <?php else: ?>
-         <div class="text-hello">Привет <?=$_COOKIE['user']?></div>
+      <?php if(isset($_SESSION['user_id'])): ?>
+      
+         <div class="text-hello">Привет <?php echo $_SESSION['login'];?>!</div>
+         <?php else: ?>
+            <div class="text-hello">Зарегистрируйся :)</div>
       <?php endif;?>
          <div class="everyday-word-button"><ion-icon class="book-img" name="book-outline"></ion-icon>Слово дня</div>
          <div class="tasks-bonus-iq-container">

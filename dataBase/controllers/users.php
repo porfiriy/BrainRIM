@@ -29,16 +29,19 @@
                   'email' => $email
                ];
                $id = insert('users',$post);
-               $errorMsg = "Пользователь " . "<strong>" . $login . "</strong>" . " успешно зарегистрирован!";
+               $user =selectOne('users', ['user_id' => $id]);
+
+               $_SESSION['user_id'] = $user['user_id'];
+               $_SESSION['login'] = $user['login'];
+               $_SESSION['admin'] = $user['admin'];
+               
+               header('location: /index.php');
             }
          }
-
-         
-         // $last_row = selectOne('users',['user_id' => $id]);
    }else{
       echo 'GET';
       $login = '';
-         $email = '';
+      $email = '';
    }
 
      
