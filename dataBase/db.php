@@ -101,8 +101,9 @@ function insert($table,$params){
 $arrData = [
    'login' => 'galina',
    'pass'  => '2389uxx37r873r',
-   'email'  => 'lisa'
-
+   'email'  => 'lisa',
+   'admin' => '0',
+   'created' => '2023-02-13 19:35:14'
 ];
 
 //insert('users',$arrData);
@@ -123,7 +124,7 @@ function update($table, $id ,$params){
       $i++;
    }
 
-   $sql = "UPDATE $table SET $str WHERE user_id = $id;";
+   $sql = "UPDATE $table SET $str WHERE id = $id;";
    $query = $pdo->prepare($sql);
    $query->execute($params);
    dbCheckError($query);
@@ -143,7 +144,7 @@ function update($table, $id ,$params){
 function delete($table, $id ){
    global $pdo;
    
-   $sql = "DELETE FROM $table WHERE user_id = $id;";
+   $sql = "DELETE FROM $table WHERE id = $id;";
    $query = $pdo->prepare($sql);
    $query->execute($params);
    dbCheckError($query);

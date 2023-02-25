@@ -66,6 +66,7 @@ const resultsMenuDoneCardsItem = document.querySelector('.items-container__done-
 const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-loose-icon');
 const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
+const phpAddedIQscore = "<?php $sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];updateTo('IQscore',$_SESSION['id'],$sumIQ);?>";
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
@@ -213,6 +214,7 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
+      document.body.phpAddedIQscore;
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -230,7 +232,9 @@ function game() {
          resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
          resultsMenuTimeItem.classList.add('items-container__time-item-green');
          resultsMenuTime.innerHTML = `${seconds}`;
-         resultsMenuIqItem.innerHTML = '+50';
+         resultsMenuIqItem.innerHTML = `+50`;
+
+
       }
       else if (varCounterClickButtons == 20 && wrongAnswer > 0) {
          showMessage();

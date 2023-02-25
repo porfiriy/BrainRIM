@@ -12,7 +12,10 @@
 
 <body>
    
-<?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); ?>
+<?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); 
+      include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
+?>
+
 
    <div class="victory-loose-screen-container">
       <div class="victory-loose-screen__mode-container">

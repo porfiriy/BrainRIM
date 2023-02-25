@@ -1,5 +1,6 @@
 <?php
-   include 'C:\ospanel\domains\mem.com\dataBase\db.php';
+   
+   include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
 ?>
 
 <!DOCTYPE html>
@@ -22,20 +23,20 @@
             <a href="/pages/settings-page/settings-page.html" class="settings"><ion-icon
                   class="icon-settings" name="settings-outline"></ion-icon></a>
             <div class="header__top-button-title">Memory</div>
-            <img src="/img/Menu/Ава2(удалить).jpg" alt="#" class="profile">
+            <a href="/Profile-page/Profile.php" class="linck-profile"><img src="/img/Menu/Ава2(удалить).jpg" alt="#" class="profile"></a>
          </div>
          <div class="header-score-container">
             <div class="memany-container currency-container">
                <img src="/pages/main-page/img/memanyImg.svg" alt="memany">
-               0050
+               <div class="memany-count"><?php echo $memany['sum_memany']; ?></div>
             </div>
             <div class="hint-container currency-container">
                <ion-icon class="eye-icon" name="eye-outline"></ion-icon>
-               24 Шт.
+               <div class="memany-count"><?php echo $EyeScore['sum_eye_hint']; ?></div>
             </div>
             <div class="iq-container currency-container">
                <img src="/pages/main-page/img/brainImg.svg" alt="iq">
-               207 IQ
+               <div class="memany-count"><?php echo $IQscore['sum_iq']; ?></div>
             </div>
          </div>
          <div class="lvl-container">

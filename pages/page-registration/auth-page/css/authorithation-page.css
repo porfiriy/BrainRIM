@@ -77,7 +77,7 @@ h6 {
    font-size: inherit;
    font-weight: 400;
 }
-.pg-registr-container{
+.pg-authoris-container{
 	display: flex;
 	flex-direction: column;
 }
@@ -86,6 +86,7 @@ header{
 	justify-content: flex-end;
 	margin: 20px 20px 0 0px;
 }
+
 .scip-pg-registr {
 	font-style: normal;
 	font-weight: 700;
@@ -124,10 +125,6 @@ header{
 	display: none;
 	font-size: 18px;
 	color: blueviolet;
-}
-.reg-icon{
-	color: black;
-	margin: 0 10px 0 0;
 }
 form{
 	display: flex;
@@ -169,6 +166,16 @@ input::placeholder{
 	transform: scale(0.8);
 	border-width: 0px 0px 0px 0px;
 }
+.forgot-pass{
+	color: #FEC727;
+	font-size: 20px;
+	margin: 10px auto;
+}
+.forgot-pass:active{
+	color: #ffffff;
+	
+	margin: 10px auto;
+}
 .bttn-registr{
 	margin: 70px auto;
 	display: flex;
@@ -184,22 +191,7 @@ input::placeholder{
 	border-style: solid;
 	border-color: #000000;
 }
-.bttn-authorisation{
-	margin: 70px auto;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 60%;
-	height: 40px;
-	background-color: #FEC727;
-	font-size: 26px;
-	font-weight: 800;
-	border-radius: 10px;
-	border-width: 0px 3px 3px 0px;
-	border-style: solid;
-	border-color: #000000;
-}
-.bttn-authorisation:active{
+.bttn-registr:active{
 	transform: scale(0.8);
 	border-width: 0px 0px 0px 0px;
 }

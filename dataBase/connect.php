@@ -3,7 +3,7 @@ $DRIVER = 'mysql';
 $DBLOGIN = 'root';
 $DBPASS = '';
 $DBHOST = 'localhost';
-$DBDATA = 'register-db';
+$DBDATA = 'projectDB';
 $CHARSET = 'utf8';
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
