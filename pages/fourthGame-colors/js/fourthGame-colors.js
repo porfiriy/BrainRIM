@@ -66,7 +66,21 @@ const resultsMenuDoneCardsItem = document.querySelector('.items-container__done-
 const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-loose-icon');
 const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
-const phpAddedIQscore = "<?php $sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];updateTo('IQscore',$_SESSION['id'],$sumIQ);?>";
+
+//z
+//AJAX запрос на сервер для добавления в базу данных инфы
+async function doAjax1() {
+   try {
+      const res = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
+      const data = await res.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+//z
+
+
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
@@ -214,7 +228,7 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      document.body.phpAddedIQscore;
+      doAjax1();//z //вызов запроса в БД
    }
    deadeLine.addEventListener("animationend", showMessage);
 

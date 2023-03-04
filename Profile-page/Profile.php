@@ -1,3 +1,8 @@
+<?php
+   
+   include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +26,10 @@
 		<div class="profile-container">
 			<div class="profile_first">
 				<div class="profile-picture"><img src="/page-for-memory/img/profile/Group 42.svg" alt=""></div>
-				<span class="profile-name">Nickname</span>
+				<span class="profile-name"><?php if(isset($_SESSION['id'])): ?> <?php echo $_SESSION['login'];?>
+		<?php else: ?>
+			Логин
+		<?php endif;?></span>
 			</div>
 			<div class="currency">
 				<div class="memoney"><img src="/page-for-memory/img/profile/M копия 2.png" alt="">999</div>
@@ -33,7 +41,7 @@
 				<span class="zvanie">?</span>
 				<span class="zvanie">?</span>
 			</div>
-			<a href="<?php echo "C:\ospanel\domains\mem.com\dataBase\logOut.php";?> class="leave">Выйти</a>
+			<a href="<?php echo "/dataBase/logOut.php";?>" class="leave">Выйти</a>
 		</div>
 	</main>
 

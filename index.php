@@ -28,15 +28,24 @@
          <div class="header-score-container">
             <div class="memany-container currency-container">
                <img src="/pages/main-page/img/memanyImg.svg" alt="memany">
-               <div class="memany-count"><?php echo $memany['sum_memany']; ?></div>
+               <div class="memany-count"><?php if(isset($_SESSION['id'])): ?> <?php echo $memany['sum_memany']; ?>
+		<?php else: ?>
+			0
+		<?php endif;?></div>
             </div>
             <div class="hint-container currency-container">
                <ion-icon class="eye-icon" name="eye-outline"></ion-icon>
-               <div class="memany-count"><?php echo $EyeScore['sum_eye_hint']; ?></div>
+               <div class="memany-count"><?php if(isset($_SESSION['id'])): ?> <?php echo $EyeScore['sum_eye_hint']; ?>
+		<?php else: ?>
+			0
+		<?php endif;?></div>
             </div>
             <div class="iq-container currency-container">
                <img src="/pages/main-page/img/brainImg.svg" alt="iq">
-               <div class="memany-count"><?php echo $IQscore['sum_iq']; ?></div>
+               <div class="memany-count"><?php if(isset($_SESSION['id'])): ?> <?php echo $IQscore['sum_iq']; ?>
+		<?php else: ?>
+			0
+		<?php endif;?></div>
             </div>
          </div>
          <div class="lvl-container">
@@ -49,7 +58,7 @@
       </header>
 
       <main class="main">
-      <?php if(isset($_SESSION['user_id'])): ?>
+      <?php if(isset($_SESSION['id'])): ?>
       
          <div class="text-hello">Привет <?php echo $_SESSION['login'];?>!</div>
          <?php else: ?>

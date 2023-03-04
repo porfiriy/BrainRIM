@@ -1,15 +1,14 @@
 <?php 
 
 include 'C:\ospanel\domains\mem.com\dataBase\connect.php';
-
-include("C:\ospanel\domains\mem.com\dataBase\controllers\users.php");
+include "C:\ospanel\domains\mem.com\dataBase\controllers\users.php";
 
 
 //Запрос на получение одной строки с выбранной таблицы
 function select($table,$params = []){
    global $pdo;
    $sql = "SELECT * FROM $table";
-
+ 
    if(!empty($params)){
       $i = 0;
       foreach($params as $key => $value){

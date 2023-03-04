@@ -12,8 +12,9 @@
 
 <body>
    
-<?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); 
-      include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
+<?php 
+   include "C:\ospanel\domains\mem.com\include\games-pop-up.php"; 
+   include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
 ?>
 
 
