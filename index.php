@@ -24,7 +24,7 @@
                   name="settings-outline"></ion-icon></a>
             <span class="header__top-button-title">BrainRIM</span>
             <a href="/pages/Profile-page/Profile.php" class="profile-page">
-               <img src="/img/Menu/Ава2(удалить).jpg" alt="#" class="profile">
+               <img src="/img/Menu/brain.svg" alt="#" class="profile">
             </a>
          </div>
          <div class="header-score-container">
