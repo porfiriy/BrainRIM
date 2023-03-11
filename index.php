@@ -138,7 +138,7 @@
                <div class="item-games"><img src="/pages/main-page/img/games-page/ImageIcon.svg" alt="">
                </div>
             </a>
-            <a href="/pages/Game-REAPEAT/gameREPEAT.php">
+            <a href="#">
                <div class="item-games"><img src="/pages/main-page/img/games-page/shapesImg.svg" alt="">
                </div>
             </a>

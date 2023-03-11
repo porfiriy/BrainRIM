@@ -68,30 +68,6 @@ const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
-//z
-//AJAX запрос на сервер для добавления в базу данных инфы
-async function doAjaxLoose() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
-}
-
-//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-async function doAjaxWin() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
-}
-//z
-
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
    settings.style = 'visibility:hidden;';
@@ -238,7 +214,6 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      doAjaxLoose();//z //вызов запроса в БД
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -258,7 +233,6 @@ function game() {
          resultsMenuTime.innerHTML = `${seconds}`;
          resultsMenuIqItem.innerHTML = '+50';
          resultsMenuExpItem.innerHTML = '+20';
-         doAjaxWin();
       }
       else if (varCounterClickButtons == 20 && wrongAnswer > 0) {
          showMessage();
@@ -344,6 +318,4 @@ BUTTON_START.onclick = function () {
       game();
    }
 }
-
-
 
