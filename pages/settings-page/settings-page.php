@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css">
-   <title>settings page</title>
+   <title>settings-page</title>
 </head>
 
 <body>
@@ -17,8 +17,7 @@
          <a class="comeback-button" href="/index.php">
             <ion-icon name="chevron-back-outline"></ion-icon></a>
          <div class="social-list">
-            <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@memory_app"><ion-icon
-                  name="logo-tiktok"></ion-icon></a>
+            <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@memory_app"><ion-icon name="logo-tiktok"></ion-icon></a>
             <a href="https://vk.com/club217095388" class="linkiVK settings-top-icon"><ion-icon
                   name="logo-vk"></ion-icon></a>
          </div>
@@ -29,7 +28,7 @@
 
                <div class="main-item connect">
                   <a class="sign-in" href="\pages\page-registration\registration-page.php">Войти</a>
-                  <a href="/pages/page-registration/registration-page.html"><img
+                  <a href="/pages/page-registration/registration-page.php"><img
                         src="/img/play игры джойстик.png" alt="Gamepad" class="gamepad"></a>
                </div>
                <a class="main-item support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
@@ -40,25 +39,24 @@
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
                </div>
                <div class="main-item language-button">Язык</div>
-               <div class="language-container">
-                  <div class="EN language in-dev">Английский</div>
-                  <div class="RU language">Русский</div>
-                  <div class="EN language in-dev">中文</div>
-                  <div class="EN language in-dev">español</div>
-                  <div class="EN language in-dev">français</div>
-                  <div class="close-language"><ion-icon name="close-outline"></ion-icon></div>
+                 <div class="language-container">
+                   <div class="EN language in-dev">Английский</div>
+                   <div class="RU language">Русский</div>
+                   <div class="EN language in-dev">中文</div>
+                   <div class="EN language in-dev">español</div>
+                   <div class="EN language in-dev">français</div>
+                   <div class="close-language"><ion-icon name="close-outline"></ion-icon></div>
                </div>
                <div class="main-item about">О нас</div>
                <div class="about-us-container">
                   <span class="text-about-us">Привет! Мы (два разработчика)
                      <br>Решили создать это приложение в недалёком 2021 году.
                      <br>Мы не программисты,просто интузиасты (инди разработчики).
-                     <br>Мы будем поддерживать этот проект настолько долго, насколько долго будет жить наше комьюнити,не
-                     сомневайтесь в нас.
+                     <br>Мы будем поддерживать этот проект настолько долго, насколько долго будет жить наше комьюнити, не сомневайтесь в нас.
                      <br>*И да, мы не собираем данные наших пользователей.
                      <br><br><span class="lasttxt">Будьте здоровы!</span></span>
                   <div class="close-about-us"><ion-icon name="close-outline"></ion-icon></div>
-               </div>
+                </div>
             </div>
          </form>
       </main>

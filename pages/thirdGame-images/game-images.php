@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); ?>
+   <?php include("C:\ospanel\domains\BrainRIM\include\games-pop-up.php"); ?>
 
    <div class="pop-up__container">
       <div class="pop-up">
@@ -105,7 +105,7 @@
          <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
                name="refresh-outline"></ion-icon>
          </div>
-         <a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+         <a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
                name="home-outline"></ion-icon></a>
       </div>
    </div>

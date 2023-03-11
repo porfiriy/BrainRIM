@@ -12,59 +12,10 @@
 
 <body>
    <?php 
-   include "C:\ospanel\domains\mem.com\include\games-pop-up.php"; 
-   include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
+   include "C:\ospanel\domains\BrainRIM\include\games-pop-up.php"; 
+   include "C:\ospanel\domains\BrainRIM\dataBase\surencyAndScore.php";
 ?>
-   <div class="pop-up__container">
-      <div class="pop-up">
-         <div class="pop-up__title">
-            Внимание
-         </div>
-         <div class="pop-up__description">
-            Если вы перейдёте-результат не сохраниться
-         </div>
-         <div class="wrap__button">
-            <form class="pop-up__form" action="#">
-               <a href="/pages/settings-page/settings-page.php" class="pop-up__ok">Ok</a>
-               <a class="pop-up__cancel">Отмена</a>
-            </form>
-         </div>
-      </div>
-   </div>
-   <div class="pop-up__container2">
-      <div class="pop-up">
-         <div class="pop-up__title">
-            Внимание
-         </div>
-         <div class="pop-up__description">
-            Если вы перейдёте,результат не сохраниться
-         </div>
-         <div class="wrap__button2">
-            <form class="pop-up__form2" action="#">
-               <a href="/index.php" class="pop-up__ok2">Ok</a>
-               <a class="pop-up__cancel2">Отмена</a>
-            </form>
-         </div>
-      </div>
-   </div>
 
-   <div class="pop-up__container3">
-      <div class="pop-up3">
-         <div class="pop-up__title3">
-            Внимание
-         </div>
-         <div class="pop-up__description3">
-            Начать заново?
-         </div>
-
-         <div class="wrap__button3">
-            <form class="pop-up__form3" action="#">
-               <a onClick="window.location.reload();" class="pop-up__ok3">Ok</a>
-               <a class="pop-up__cancel3">Отмена</a>
-            </form>
-         </div>
-      </div>
-   </div>
    <div class="victory-loose-screen-container">
       <div class="victory-loose-screen__mode-container">
          <div class="victory-loose-screen__mode-title">Сложность</div>
@@ -107,7 +58,7 @@
          <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
                name="refresh-outline"></ion-icon>
          </div>
-         <a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+         <a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
                name="home-outline"></ion-icon></a>
       </div>
    </div>
