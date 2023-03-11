@@ -28,7 +28,7 @@
             <div class="settings-main-item">
 
                <div class="main-item connect">
-                  <a class="sign-in" href="\pages\page-registration\auth-page\auth-page.php">Войти</a>
+                  <a class="sign-in" href="\pages\page-registration\registration-page.php">Войти</a>
                   <a href="/pages/page-registration/registration-page.html"><img
                         src="/img/play игры джойстик.png" alt="Gamepad" class="gamepad"></a>
                </div>

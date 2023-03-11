@@ -1,6 +1,6 @@
 <?php  
        
-      include("C:\ospanel\domains\mem.com\dataBase\controllers\users.php"); 
+      include("C:\ospanel\domains\BrainRIM\dataBase\controllers\users.php"); 
 ?>
 
       
@@ -11,7 +11,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width">
-      <link rel="stylesheet" href="/pages/page-registration/auth-page/css/authorithation-page.css">
+      <link rel="stylesheet" href="\pages\page-registration\auth-page\css\authorithation-page.css">
       <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
       <title>authorithation-page</title>
 </head>
@@ -27,15 +27,48 @@
                   <p><?=$errorMsg?></p>
             </div>
             <main>
+            <div class="form signin">
+				<form action="auth-page.php" method="post">
+				<h2>Авторизация</h2>
+				<div class="alerts-container err">
+					<p>
+						<?=$errorMsg?>
+					</p>
+				</div>
+				<div class="inputBox">
+					<input type="email" value="<?=$email?>" class="form-control" name="email" id="email" placeholder="Почта">
+					<i class="fa-regular fa-user"></i>
+					<span>Логин</span>
+				</div>
+				<div class="inputBox">
+					<input type="password" value="" class="form-control" id="pass" name="pass" placeholder="Пароль">
+					<i class="fa-sharp fa-solid fa-lock"></i>
+					<span>Пароль</span>
+				</div>
+				<div class="inputBox">
+					<input type="submit" value="Вход">
+				</div>
+			</form>
+				<p>Не зарегистрированы? <a href="/pages/page-registration/registration-page.php" class="create">Создать
+						аккаунт</a></p>
+			</div>
+		</div>
+		<footer>
+			<a class="Support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
+		</footer>
+		<script>
+			let login = document.querySelector('.login');
+			let create = document.querySelector('.create');
+			let container = document.querySelector('.container');
 
-                  <form action="auth-page.php" method="post">
-                        <input type="email" value="<?=$email?>"  class="form-control" name="email" id="email" placeholder="Почта">
-                        <input type="password" value = "" class="form-control" id="pass" name="pass" placeholder="Пароль">
-                        <a href="#" class="forgot-pass">Забыли пароль?</a>
-                        <button type="submit" name="button-log" class="btn btn-send">Отправить</button>
-                  </form>
+			login.onclick = function () {
+				container.classList.add('signinForm');
+			}
 
-                  <a href = "/pages/page-registration/registration-page.php" class="bttn-registr">Регистрация</a>
+			create.onclick = function () {
+				container.classList.remove('signinForm');
+			}
+		</script>
             </main>
       </div>
       

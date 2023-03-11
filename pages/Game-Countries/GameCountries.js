@@ -14,7 +14,7 @@ let button6 = document.querySelector('.button-count__6');
 let arrButtons = [button1, button2, button3, button4, button5, button6];
 let numbrButtnsForMode;
 
-//переменные с иконками флагов
+//переменные с иконками флагов изи мод
 let SwitzerlandImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/ch.png";
 let ArmeniaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/am.png";
 let AustriaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/at.png";
@@ -47,6 +47,10 @@ let USAImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/um.png";
 
 let arrCounrysImgEasy = [SwitzerlandImg, ArmeniaImg, AustriaImg, BrazilImg, NorwayImg, BelarusImg, ChinaImg, GermanyImg, DenmarkImg, EstoniaImg, FinlandImg, FranceImg, BritishImg, GreeceImg, IsrailImg, IndiaImg, ItalyImg, JapanImg, KoreaImg, KZImg, LatviaImg, NewZilandImg, PolandImg, PortugalImg, RussianImg, SwedenImg, SyriaImg, TurkeyImg, USAImg];
 let arrCounrysTextEasy = ['Швейцария', 'Армения', 'Австрия', 'Бразилия', 'Норвегия', 'Беларусь', 'Китай', 'Германия', 'Денмарк', 'Эстония', 'Финляндия', 'Франция', 'Британия', 'Греция', 'Израиль', 'Индия', 'Италия', 'Япония', 'Корея', 'Казахстан', 'Латвия', 'Нов.Зеландия', 'Польша', 'Португалия', 'Россия', 'Швеция', 'Сирия', 'Турция', 'США'];
+
+
+
+//переменные с иконками флагов нормал мод
 
 
 
