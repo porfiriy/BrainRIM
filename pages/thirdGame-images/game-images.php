@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/page-for-memory/pages/thirdGame-images/css/game-images.css">
+   <link rel="stylesheet" href="/pages/thirdGame-images/css/game-images.css">
    <title>game words</title>
 </head>
 
@@ -23,7 +23,7 @@
          </div>
          <div class="wrap__button">
             <form class="pop-up__form" action="#">
-               <a href="/page-for-memory/pages/settings-page/settings-page.html" class="pop-up__ok">Ok</a>
+               <a href="/pages/settings-page/settings-page.php" class="pop-up__ok">Ok</a>
                <a class="pop-up__cancel">Отмена</a>
             </form>
          </div>
@@ -39,7 +39,7 @@
          </div>
          <div class="wrap__button2">
             <form class="pop-up__form2" action="#">
-               <a href="/page-for-memory/index.html" class="pop-up__ok2">Ok</a>
+               <a href="/index.php" class="pop-up__ok2">Ok</a>
                <a class="pop-up__cancel2">Отмена</a>
             </form>
          </div>
@@ -105,7 +105,7 @@
          <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
                name="refresh-outline"></ion-icon>
          </div>
-         <a href="/page-for-memory/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+         <a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
                name="home-outline"></ion-icon></a>
       </div>
    </div>
@@ -160,102 +160,102 @@
       </div>
       <section class="memory-game">
          <div class="memory-card" data-framework="1">
-            <img src="/page-for-memory/pages/thirdGame-images/img/1.png" alt="1" class="front-face">
+            <img src="/pages/thirdGame-images/img/1.png" alt="1" class="front-face">
             <img src="" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="1">
-            <img src="/page-for-memory/pages/thirdGame-images/img/1.png" alt="1" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/1.png" alt="1" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
 
          <div class="memory-card" data-framework="2">
-            <img src="/page-for-memory/pages/thirdGame-images/img/2.png" alt="2" class="front-face two-eagle">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/2.png" alt="2" class="front-face two-eagle">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="2">
-            <img src="/page-for-memory/pages/thirdGame-images/img/2.png" alt="2" class="front-face two-eagle">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/2.png" alt="2" class="front-face two-eagle">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="3">
-            <img src="/page-for-memory/pages/thirdGame-images/img/3.png" alt="3" class="front-face img-mouse">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/3.png" alt="3" class="front-face img-mouse">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="3">
-            <img src="/page-for-memory/pages/thirdGame-images/img/3.png" alt="3" class="front-face img-mouse">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/3.png" alt="3" class="front-face img-mouse">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="4">
-            <img src="/page-for-memory/pages/thirdGame-images/img/4.png" alt="4" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/4.png" alt="4" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="4">
-            <img src="/page-for-memory/pages/thirdGame-images/img/4.png" alt="4" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/4.png" alt="4" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="5">
-            <img src="/page-for-memory/pages/thirdGame-images/img/5.png" alt="5" class="front-face img-sheep">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/5.png" alt="5" class="front-face img-sheep">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="5">
-            <img src="/page-for-memory/pages/thirdGame-images/img/5.png" alt="5" class="front-face img-sheep">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/5.png" alt="5" class="front-face img-sheep">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="6">
-            <img src="/page-for-memory/pages/thirdGame-images/img/6.png" alt="6" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/6.png" alt="6" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="6">
-            <img src="/page-for-memory/pages/thirdGame-images/img/6.png" alt="6" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/6.png" alt="6" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="7">
-            <img src="/page-for-memory/pages/thirdGame-images/img/7.png" alt="7" class="front-face img-ice-creem">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/7.png" alt="7" class="front-face img-ice-creem">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="7">
-            <img src="/page-for-memory/pages/thirdGame-images/img/7.png" alt="7" class="front-face img-ice-creem">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/7.png" alt="7" class="front-face img-ice-creem">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="8">
-            <img src="/page-for-memory/pages/thirdGame-images/img/8.png" alt="8" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/8.png" alt="8" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="8">
-            <img src="/page-for-memory/pages/thirdGame-images/img/8.png" alt="8" class="front-face">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/8.png" alt="8" class="front-face">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="9">
-            <img src="/page-for-memory/pages/thirdGame-images/img/9.png" alt="9" class="front-face img-circle">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/9.png" alt="9" class="front-face img-circle">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
          <div class="memory-card" data-framework="9">
-            <img src="/page-for-memory/pages/thirdGame-images/img/9.png" alt="9" class="front-face img-circle">
-            <img src="/page-for-memory/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
-            <img class="brain-logo" src="/page-for-memory/pages/thirdGame-images/img/brain-logo.png" alt="logo">
+            <img src="/pages/thirdGame-images/img/9.png" alt="9" class="front-face img-circle">
+            <img src="/pages/thirdGame-images/img/0.jpg" alt="memory card" class="back-face">
+            <img class="brain-logo" src="/pages/thirdGame-images/img/brain-logo.png" alt="logo">
          </div>
       </section>
 
    </div>
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="/page-for-memory/pages/thirdGame-images/js/third-game.js"></script>
+   <script src="/pages/thirdGame-images/js/third-game.js"></script>
 </body>
 
 </html>
