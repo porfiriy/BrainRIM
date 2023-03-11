@@ -6,6 +6,6 @@ include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
 header('Content-Type: text/plain');
 
 // Send the data back.
-$sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
+$sumIQ = ['sum_iq' => $IQscore['sum_iq']+5];
 updateTo('IQscore',$_SESSION['id'],$sumIQ);
 ?>

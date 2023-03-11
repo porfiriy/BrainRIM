@@ -66,21 +66,31 @@ const resultsMenuDoneCardsItem = document.querySelector('.items-container__done-
 const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-loose-icon');
 const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
+const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы
-async function doAjax1() {
+async function doAjaxLoose() {
    try {
-      const res = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
-      const data = await res.text();
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+async function doAjaxWin() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
+      const data = await url.text();
       console.log(data);
    } catch (error) {
       console.log('Error:' + error);
    }
 }
 //z
-
-
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
@@ -228,7 +238,7 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      doAjax1();//z //вызов запроса в БД
+      doAjaxLoose();//z //вызов запроса в БД
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -246,9 +256,9 @@ function game() {
          resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
          resultsMenuTimeItem.classList.add('items-container__time-item-green');
          resultsMenuTime.innerHTML = `${seconds}`;
-         resultsMenuIqItem.innerHTML = `+50`;
-
-
+         resultsMenuIqItem.innerHTML = '+50';
+         resultsMenuExpItem.innerHTML = '+20';
+         doAjaxWin();
       }
       else if (varCounterClickButtons == 20 && wrongAnswer > 0) {
          showMessage();
@@ -323,56 +333,6 @@ function game() {
    }
 }
 
-
-
-
-//    //выодит проценты правильных ответов
-//    if (rightAnswer == 0) {
-//       menuResultsCercleProcents.innerHTML = "0%";
-//       menuResultsCercleProcents.style = "color: #FF0000;";
-//    }
-//    else if (rightAnswer == 2 || rightAnswer == 3) {
-//       menuResultsCercleProcents.innerHTML = "10%";
-//       menuResultsCercleProcents.style = "color: #ee470b;";
-//    }
-//    else if (rightAnswer == 4 || rightAnswer == 5) {
-//       menuResultsCercleProcents.innerHTML = "20%";
-//       menuResultsCercleProcents.style = "color: #ee470b;";
-//    }
-//    else if (rightAnswer == 6 || rightAnswer == 7) {
-//       menuResultsCercleProcents.innerHTML = "30%";
-//       menuResultsCercleProcents.style = "color: #ee9e0b;";
-//    }
-//    else if (rightAnswer == 8 || rightAnswer == 9) {
-//       menuResultsCercleProcents.innerHTML = "40%";
-//       menuResultsCercleProcents.style = "color: #ee9e0b;";
-//    }
-//    else if (rightAnswer == 10) {
-//       menuResultsCercleProcents.innerHTML = "50%";
-//       menuResultsCercleProcents.style = "color: #aeee0b;";
-//    }
-//    else if (rightAnswer == 11 || rightAnswer == 12) {
-//       menuResultsCercleProcents.innerHTML = "60%";
-//       menuResultsCercleProcents.style = "color: #62ee0b;";
-//    }
-//    else if (rightAnswer == 13 || rightAnswer == 14) {
-//       menuResultsCercleProcents.innerHTML = "70%";
-//       menuResultsCercleProcents.style = "color: #38ee0b;";
-//    }
-//    else if (rightAnswer == 15 || rightAnswer == 16) {
-//       menuResultsCercleProcents.innerHTML = "80%";
-//       menuResultsCercleProcents.style = "color: #38ee0b;;";
-//    }
-//    else if (rightAnswer == 17 || rightAnswer == 18 || rightAnswer == 19) {
-//       menuResultsCercleProcents.innerHTML = "90%";
-//       menuResultsCercleProcents.style = "color: #38ee0b;";
-//    }
-//    else if (rightAnswer == 20) {
-//       menuResultsCercleProcents.innerHTML = "100%";
-//       menuResultsCercleProcents.style = "color: #22ee0b;";
-//    }
-
-// }
 //активация кнопки старт при нажатии
 const BUTTON_START = document.querySelector('.button-start');
 BUTTON_START.onclick = function () {
@@ -384,4 +344,6 @@ BUTTON_START.onclick = function () {
       game();
    }
 }
+
+
 
