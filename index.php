@@ -20,7 +20,7 @@
       <div class="gray-background-container"></div>
       <header class="header">
          <div class="header__top-button-container">
-            <a href="/pages/settings-page/settings-page.html" class="settings"><ion-icon class="icon-settings"
+            <a href="/pages/settings-page/settings-page.php" class="settings"><ion-icon class="icon-settings"
                   name="settings-outline"></ion-icon></a>
             <span class="header__top-button-title">BrainRIM</span>
             <a href="/pages/Profile-page/Profile.php" class="profile-page">

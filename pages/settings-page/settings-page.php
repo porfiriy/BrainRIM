@@ -14,7 +14,7 @@
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
-         <a class="comeback-button" href="/page-for-memory/index.html">
+         <a class="comeback-button" href="/index.html">
             <ion-icon name="chevron-back-outline"></ion-icon></a>
          <div class="social-list">
             <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@memory_app"><ion-icon
@@ -28,9 +28,9 @@
             <div class="settings-main-item">
 
                <div class="main-item connect">
-                  <a class="sign-in" href="/page-for-memory/pages/page-registration/registration-page.html">Войти</a>
-                  <a href="/page-for-memory/pages/page-registration/registration-page.html"><img
-                        src="/page-for-memory/img/play игры джойстик.png" alt="Gamepad" class="gamepad"></a>
+                  <a class="sign-in" href="\pages\page-registration\auth-page\auth-page.php">Войти</a>
+                  <a href="/pages/page-registration/registration-page.html"><img
+                        src="/img/play игры джойстик.png" alt="Gamepad" class="gamepad"></a>
                </div>
                <a class="main-item support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
                <div class="main-item developers-button">Разработчики</div>
@@ -69,7 +69,7 @@
    </div>
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="/page-for-memory/pages/settings-page/settings-page.js"></script>
+   <script src="/pages/settings-page/settings-page.js"></script>
 </body>
 
 </html>
