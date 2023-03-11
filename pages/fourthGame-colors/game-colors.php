@@ -6,7 +6,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href="/page-for-memory/pages/fourthGame-colors/css/game-colors.css">
+   <link rel="stylesheet" href="/pages/fourthGame-colors/css/game-colors.css">
    <title>game words</title>
 </head>
 
@@ -25,7 +25,7 @@
          </div>
          <div class="wrap__button">
             <form class="pop-up__form" action="#">
-               <a href="/page-for-memory/pages/settings-page/settings-page.html" class="pop-up__ok">Ok</a>
+               <a href="/pages/settings-page/settings-page.php" class="pop-up__ok">Ok</a>
                <a class="pop-up__cancel">Отмена</a>
             </form>
          </div>
@@ -41,7 +41,7 @@
          </div>
          <div class="wrap__button2">
             <form class="pop-up__form2" action="#">
-               <a href="/page-for-memory/index.html" class="pop-up__ok2">Ok</a>
+               <a href="/index.php" class="pop-up__ok2">Ok</a>
                <a class="pop-up__cancel2">Отмена</a>
             </form>
          </div>
@@ -107,7 +107,7 @@
          <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
                name="refresh-outline"></ion-icon>
          </div>
-         <a href="/page-for-memory/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+         <a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
                name="home-outline"></ion-icon></a>
       </div>
    </div>
@@ -171,7 +171,7 @@
    </div>
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src="/page-for-memory/pages/fourthGame-colors/js/fourthGame-colors.js"></script>
+   <script src="/pages/fourthGame-colors/js/fourthGame-colors.js"></script>
 </body>
 
 </html>

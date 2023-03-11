@@ -128,26 +128,25 @@
          <div class="page-title">Тренируй свой мозг!</div>
          <div class="container-list-games">
             <div class="random-game-button">Случайная игра</div>
-            <a href="/pages/firstGamePage-number/game-number.html">
                <div class="item-games yellow-item">
                   <img src="/pages/main-page/img/games-page/numbersImg.svg" alt="">
                </div>
             </a>
             <div class="item-games"><img src="/pages/main-page/img/games-page/wordsImg.svg" alt="">
             </div>
-            <a href="/pages/thirdGame-images/game-images.html">
+            <a href="/pages/thirdGame-images/game-images.php">
                <div class="item-games"><img src="/pages/main-page/img/games-page/ImageIcon.svg" alt="">
                </div>
             </a>
-            <a href="/pages/Game-REAPEAT/gameREPEAT.html">
+            <a href="/pages/Game-REAPEAT/gameREPEAT.php">
                <div class="item-games"><img src="/pages/main-page/img/games-page/shapesImg.svg" alt="">
                </div>
             </a>
-            <a href="/pages/fourthGame-colors/game-colors.html">
+            <a href="/pages/fourthGame-colors/game-colors.php">
                <div class="item-games"><img src="/pages/main-page/img/games-page/colorsImg.svg" alt="">
                </div>
             </a>
-            <a href="/pages/Game-Countries/GameCountries.html">
+            <a href="/pages/Game-Countries/GameCountries.php">
                <div class="item-games"><img src="/pages/main-page/img/games-page/CountriesImg.svg"
                      alt="">
                </div>

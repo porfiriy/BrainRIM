@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/page-for-memory/pages/Game-Countries/GameCountries.css">
+	<link rel="stylesheet" href="/pages/Game-Countries/GameCountries.css">
 	<title>game-countries</title>
 </head>
 
@@ -53,7 +53,7 @@
 			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
 					name="refresh-outline"></ion-icon>
 			</div>
-			<a href="/page-for-memory/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+			<a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
 					name="home-outline"></ion-icon></a>
 		</div>
 	</div>
@@ -90,7 +90,7 @@
 		</div>
 		<header>
 			<div class="topButton-gameWords">
-				<a class="comeback-button" href="/page-for-memory/index.html">
+				<a class="comeback-button" href="/index.php">
 					<div class="comeback-button-body">
 						<ion-icon name="chevron-back-outline"></ion-icon>
 					</div>
@@ -109,7 +109,7 @@
 					<ion-icon name="checkmark-outline"></ion-icon>
 					<div class="count count-right">0</div>
 				</div>
-				<div class="hints-container"><img src="/page-for-memory/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div>22</div></div>
+				<div class="hints-container"><img src="/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div>22</div></div>
 				<div class="incorrect">
 					<ion-icon name="close-outline"></ion-icon>
 					<div class="count count-wrong">0</div>
@@ -135,7 +135,7 @@
 	</div>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	<script src="/page-for-memory/pages/Game-Countries/GameCountries.js"></script>
+	<script src="/pages/Game-Countries/GameCountries.js"></script>
 </body>
 
 </html>
