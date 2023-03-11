@@ -364,53 +364,56 @@
          </div>
       </div>
       <div class="analytic-container">
-         <div class="page-title">Аналитика</div>
-         <div class="container-list-games">
-            <a href="/pages/Statistics-page/0All-statistics/All-stats.html"
-               class="random-game-button">Общая
-            </a>
-            <a href="/pages/Statistics-page/1Number-statistics/Numbers-stats.html">
-               <div class="item-games yellow-item">
-                  <img src="/pages/main-page/img/games-page/numbersImg.svg" alt="">
-               </div>
-            </a>
-            <a href="/pages/Statistics-page/2Words-statistics/Words-stats.html">
-               <div class="item-games"><img src="/pages/main-page/img/games-page/wordsImg.svg" alt="">
-               </div>
-               <a href="/pages/Statistics-page/3Images-statistics/Images-stats.html">
-                  <div class="item-games"><img src="/pages/main-page/img/games-page/ImageIcon.svg"
-                        alt="">
-                  </div>
-               </a>
-               <a href="/pages/Statistics-page/4Figures-statistics/Figures-stats.html">
-                  <div class="item-games"><img src="/pages/main-page/img/games-page/shapesImg.svg"
-                        alt="">
-                  </div>
-               </a>
-               <a href="/pages/Statistics-page/5Colors-statistics/Colors-stats.html">
-                  <div class="item-games"><img src="/pages/main-page/img/games-page/colorsImg.svg"
-                        alt="">
-                  </div>
-               </a>
-               <a href="/pages/Statistics-page/6Rhytms-statistics/Rhytms-stats.html">
-                  <div class="item-games"><img src="/pages/main-page/img/games-page/musicImg.svg"
-                        alt="">
-                  </div>
-               </a>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
-               <div class="item-games-in-dev in-dev_text">В разработке</div>
+		<div class="page-title">Аналитика</div>
+		<div class="container-list-games">
+		<!--<a href="/page-for-memory/pages/Statistics-page/0All-statistics/All-stats.html" class="random-game-button">Общая
+		</a>
+		   <a href="/page-for-memory/pages/Statistics-page/1Number-statistics/Numbers-stats.html">
+			  <div class="item-games yellow-item">
+				 <img src="/page-for-memory/pages/main-page/img/games-page/numbersImg.svg" alt="">
+			  </div>
+		   </a>
+		   <a href="/page-for-memory/pages/Statistics-page/2Words-statistics/Words-stats.html">
+		   <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/wordsImg.svg" alt="">
+		   </div>
+		   <a href="/page-for-memory/pages/Statistics-page/3Images-statistics/Images-stats.html">
+			   <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/ImageIcon.svg" alt="">
+			  </div>
+		   </a>
+		   <a href="/page-for-memory/pages/Statistics-page/4Figures-statistics/Figures-stats.html">
+			  <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/shapesImg.svg" alt="">
+			  </div>
+		   </a>
+		   <a href="/page-for-memory/pages/Statistics-page/5Colors-statistics/Colors-stats.html">
+				 <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/colorsImg.svg" alt="">
+			  </div>
+		   </a>
+		   <a href="/page-for-memory/pages/Statistics-page/6Countries-statistics/Rhytms-stats.html">
+			  <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/CountriesImg.svg" alt="">
+			  </div>
+		   </a>-->
+		   <a href="#" class="random-game-button-in-dev">В разработке
+		   </a>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
+		   <div class="item-games-in-dev in-dev_text">В разработке</div>
          </div>
       </div>
 
