@@ -17,16 +17,17 @@
 </head>
 
 <body>
-      
-      <div class="pg-authoris-container">
             <header>
-                  <a href="/index.php" class="scip-pg-registr">Пропустить</a>
+                  <a href="/index.php" class="skip-button">Пропустить</a>
             </header>
+
             <div class="pg-registr-title"><ion-icon class="reg-icon" name="id-card-outline"></ion-icon>Авторизация</div>
             <div class="alerts-container err">
                   <p><?=$errorMsg?></p>
             </div>
-            <main>
+
+            <main class="main">
+			<div class="container">
             <div class="form signin">
 				<form action="auth-page.php" method="post">
 				<h2>Авторизация</h2>
@@ -53,6 +54,8 @@
 						аккаунт</a></p>
 			</div>
 		</div>
+		</main>
+
 		<footer>
 			<a class="Support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
 		</footer>
@@ -69,7 +72,6 @@
 				container.classList.remove('signinForm');
 			}
 		</script>
-            </main>
       </div>
       
 </body>
