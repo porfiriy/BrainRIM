@@ -375,13 +375,38 @@
  .pop-up__container2 {
 	visibility: hidden;
 	position: absolute;
+	background-color: #02000099;
 	height: 100%;
 	width: 100%;
 	z-index: 20;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #02000099;
+ }
+ .pop-up2 {
+	 min-height: 30%;
+	 border-radius: 20px;
+	 width: 85%;
+	 background-color: #213242;
+	 display: flex;
+	 justify-content: space-around;
+	 flex-direction: column;
+ }
+ .pop-up__title2{
+	 font-size: 30px;
+	 font-family: 'Balsamiq Sans', cursive;
+	 font-weight: 600;
+	 text-align: center;
+	 color: #05EFD4;
+	 text-decoration: underline;
+ }
+ .pop-up__description2{
+	font-size: 20px;
+	font-weight: 600;
+	font-family: 'Balsamiq Sans', cursive;
+	text-align: center;
+	padding: 0 20px ;
+	color: #ffffff;
  }
  .wrap__button2{
 	
