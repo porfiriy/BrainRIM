@@ -1,5 +1,5 @@
 <?php
-include "C:\ospanel\domains\mem.com\dataBase\surencyAndScore.php";
+include "C:\ospanel\domains\BrainRIM\dataBase\surencyAndScore.php";
 // This is the server-side script.
 
 // Set the content type.
