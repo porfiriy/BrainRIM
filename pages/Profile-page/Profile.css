@@ -100,6 +100,10 @@ transition: 0.4s;
 .page-name:hover{
 	text-shadow: 0 0 10px #05efd4;
 }
+.Profilesvg{
+	width: 100px;
+	border-radius: 20px;
+}
 .settings{
 	transition: 0.1s;
 }
