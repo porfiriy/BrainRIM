@@ -140,7 +140,6 @@ border-radius: 13px;
 }
 .profile-name{
     text-shadow: 0 0 10px #05efd4;
-    text-decoration: underline;
 }
 .currency{
 	display: flex;  
@@ -196,4 +195,14 @@ transform: scale(0.9);
 box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
 background-color: #05EFD4;
 color: #000000;
+}
+.leave{
+	text-decoration: none;
+    color: red;
+    display: block;
+    border: 2px solid #05EFD4;
+    border-radius: 10px;
+    margin: 10%;
+    padding: 10px;
+    transition: 0.4s;
 }

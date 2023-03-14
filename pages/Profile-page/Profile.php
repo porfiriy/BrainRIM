@@ -47,7 +47,7 @@
 			<div class="statistics">
 				<span class="button zvanie">Новичок</span>
 				<span class="button zvanie">?</span>
-				<a href="/pages/Statistics-page/0All-statistics/All-stats.php"
+				<a href="#"
 					class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
 				<a href="<?php echo "/dataBase/logOut.php";?>" class="leave">Выйти</a>
 			</div>

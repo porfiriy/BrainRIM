@@ -750,7 +750,8 @@ transition: 0.2s;
 	transition: 0.2s;
  }
  .random-game-button:active{
-	transform: scale(0.5);
+	transform: scale(0.9);
+	box-shadow: inset 2px 3px 3px rgb(255 255 255 / 25%), 0px 0px 20px 0px rgb(119 0 255);
  }
  .random-game-button-in-dev{
 	width: 85%;
