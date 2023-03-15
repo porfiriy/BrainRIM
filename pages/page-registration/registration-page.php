@@ -72,6 +72,9 @@
 			<div class="form signup">
                         <form action="registration-page.php" method="post">
 				<h2>Регистрация</h2>
+				<div class="alerts-container err">
+                   <p><?=$errorMsg?></p>
+             </div>
 				<div class="inputBox">
                         <input type="text" value="<?=$login?>" class="form-control" name="login" id="login" placeholder="Логин">
 					<i class="fa-regular fa-user"></i>

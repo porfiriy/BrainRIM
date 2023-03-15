@@ -71,6 +71,9 @@
              <div class="container">
                    <div class="form signin">
                          <h2>Авторизация</h2>
+                         <div class="alerts-container err">
+                   <p><?=$errorMsg?></p>
+             </div>
                          <form action="auth-page.php" method="post">
                          <div class="inputBox">
                          <input type="email" value="<?=$email?>"  class="form-control" name="email" id="emailLog">
@@ -86,7 +89,7 @@
                          <button type="submit" name="button-log" class="btn btn-send">Вход</button>
                          </div>
                          </form>
-                         <p>Не зарегистрированы? <a href="#" class="create">Создать аккаунт</a></p>
+                         <p>Не зарегистрированы? <a href="/pages/page-registration/registration-page.php" class="create">Создать аккаунт</a></p>
                    </div>
             
              <footer>
