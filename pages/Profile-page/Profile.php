@@ -24,7 +24,7 @@
 	<main>
 		<div class="profile-container">
 			<div class="profile_first">
-				<div class="profile-picture"><img src="/img/profile/Group 42.svg" alt=""></div>
+				<div class="profile-picture"><img class="Profilesvg" src="/img/Profile/Goodpict.svg" alt=""></div>
 				<span class="profile-name">
 					<?php if(isset($_SESSION['id'])): ?>
 					<?php echo $_SESSION['login'];?>
@@ -47,7 +47,7 @@
 			<div class="statistics">
 				<span class="button zvanie">Новичок</span>
 				<span class="button zvanie">?</span>
-				<a href="/pages/Statistics-page/0All-statistics/All-stats.php"
+				<a href="#"
 					class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
 				<a href="<?php echo "/dataBase/logOut.php";?>" class="leave">Выйти</a>
 			</div>

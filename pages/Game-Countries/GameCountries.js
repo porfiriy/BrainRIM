@@ -1,5 +1,5 @@
 'use strict'
-let audioStart = new Audio('/page-for-memory/sound/start-game.mp3');
+let audioStart = new Audio('/sound/start-game.mp3');
 
 //правильные-неправильные ответы
 let rightAnswer = 0;
@@ -15,35 +15,35 @@ let arrButtons = [button1, button2, button3, button4, button5, button6];
 let numbrButtnsForMode;
 
 //переменные с иконками флагов изи мод
-let SwitzerlandImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/ch.png";
-let ArmeniaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/am.png";
-let AustriaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/at.png";
-let BrazilImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/br.png";
-let NorwayImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/no.png";
-let BelarusImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/by.png";
-let ChinaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/cn.png";
-let GermanyImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/de.png";
-let DenmarkImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/dk.png";
-let EstoniaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/ee.png";
-let FinlandImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/fi.png";
-let FranceImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/fr.png";
-let BritishImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/gb.png";
-let GreeceImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/gr.png";
-let IsrailImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/il.png";
-let IndiaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/in.png";
-let ItalyImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/it.png";
-let JapanImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/jp.png";
-let KoreaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/kr.png";
-let KZImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/kz.png";
-let LatviaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/lv.png";
-let NewZilandImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/nz.png";
-let PolandImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/pl.png";
-let PortugalImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/pt.png";
-let RussianImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/ru.png";
-let SwedenImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/se.png";
-let SyriaImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/sy.png";
-let TurkeyImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/tr.png";
-let USAImg = "/page-for-memory/pages/Game-Countries/img/easy-mode/um.png";
+let SwitzerlandImg = "/pages/Game-Countries/img/easy-mode/ch.png";
+let ArmeniaImg = "/pages/Game-Countries/img/easy-mode/am.png";
+let AustriaImg = "/pages/Game-Countries/img/easy-mode/at.png";
+let BrazilImg = "/pages/Game-Countries/img/easy-mode/br.png";
+let NorwayImg = "/pages/Game-Countries/img/easy-mode/no.png";
+let BelarusImg = "/pages/Game-Countries/img/easy-mode/by.png";
+let ChinaImg = "/pages/Game-Countries/img/easy-mode/cn.png";
+let GermanyImg = "/pages/Game-Countries/img/easy-mode/de.png";
+let DenmarkImg = "/pages/Game-Countries/img/easy-mode/dk.png";
+let EstoniaImg = "/pages/Game-Countries/img/easy-mode/ee.png";
+let FinlandImg = "/pages/Game-Countries/img/easy-mode/fi.png";
+let FranceImg = "/pages/Game-Countries/img/easy-mode/fr.png";
+let BritishImg = "/pages/Game-Countries/img/easy-mode/gb.png";
+let GreeceImg = "/pages/Game-Countries/img/easy-mode/gr.png";
+let IsrailImg = "/pages/Game-Countries/img/easy-mode/il.png";
+let IndiaImg = "/pages/Game-Countries/img/easy-mode/in.png";
+let ItalyImg = "/pages/Game-Countries/img/easy-mode/it.png";
+let JapanImg = "/pages/Game-Countries/img/easy-mode/jp.png";
+let KoreaImg = "/pages/Game-Countries/img/easy-mode/kr.png";
+let KZImg = "/pages/Game-Countries/img/easy-mode/kz.png";
+let LatviaImg = "/pages/Game-Countries/img/easy-mode/lv.png";
+let NewZilandImg = "/pages/Game-Countries/img/easy-mode/nz.png";
+let PolandImg = "/pages/Game-Countries/img/easy-mode/pl.png";
+let PortugalImg = "/pages/Game-Countries/img/easy-mode/pt.png";
+let RussianImg = "/pages/Game-Countries/img/easy-mode/ru.png";
+let SwedenImg = "/pages/Game-Countries/img/easy-mode/se.png";
+let SyriaImg = "/pages/Game-Countries/img/easy-mode/sy.png";
+let TurkeyImg = "/pages/Game-Countries/img/easy-mode/tr.png";
+let USAImg = "/pages/Game-Countries/img/easy-mode/um.png";
 
 let arrCounrysImgEasy = [SwitzerlandImg, ArmeniaImg, AustriaImg, BrazilImg, NorwayImg, BelarusImg, ChinaImg, GermanyImg, DenmarkImg, EstoniaImg, FinlandImg, FranceImg, BritishImg, GreeceImg, IsrailImg, IndiaImg, ItalyImg, JapanImg, KoreaImg, KZImg, LatviaImg, NewZilandImg, PolandImg, PortugalImg, RussianImg, SwedenImg, SyriaImg, TurkeyImg, USAImg];
 let arrCounrysTextEasy = ['Швейцария', 'Армения', 'Австрия', 'Бразилия', 'Норвегия', 'Беларусь', 'Китай', 'Германия', 'Денмарк', 'Эстония', 'Финляндия', 'Франция', 'Британия', 'Греция', 'Израиль', 'Индия', 'Италия', 'Япония', 'Корея', 'Казахстан', 'Латвия', 'Нов.Зеландия', 'Польша', 'Португалия', 'Россия', 'Швеция', 'Сирия', 'Турция', 'США'];

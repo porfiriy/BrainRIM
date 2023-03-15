@@ -53,7 +53,7 @@
 			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
 					name="refresh-outline"></ion-icon>
 			</div>
-			<a href="/index.html" class=" results-menu__button result-menu__button-home"><ion-icon
+			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
 					name="home-outline"></ion-icon></a>
 		</div>
 	</div>

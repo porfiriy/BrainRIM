@@ -67,31 +67,29 @@
        <header>
              <a class="skip-button" href="/index.php">Пропустить</a>
        </header>
-      
+	   <div class="main">
              <div class="container">
                    <div class="form signin">
                          <h2>Авторизация</h2>
-                         <div class="alerts-container err">
-                   <p><?=$errorMsg?></p>
-             </div>
                          <form action="auth-page.php" method="post">
+						 <h2>Авторизация</h2>
                          <div class="inputBox">
-                         <input type="email" value="<?=$email?>"  class="form-control" name="email" id="emailLog">
+                         <input type="email" value="<?=$email?>" required="required" class="form-control" name="email" id="emailLog">
                                <i class="fa-regular fa-user"></i>
                                <span>Логин</span>
                          </div>
                          <div class="inputBox">
-                         <input type="password" value = "" class="form-control" id="passLog" name="pass">
+                         <input type="password" required="required" value = "" class="form-control" id="passLog" name="pass">
                                <i class="fa-sharp fa-solid fa-lock"></i>
                                <span>Пароль</span>
                          </div>
                          <div class="inputBox">
-                         <button type="submit" name="button-log" class="btn btn-send">Вход</button>
+                         <input type="submit" name="button-log" class="btn btn-send"></input>
                          </div>
                          </form>
                          <p>Не зарегистрированы? <a href="/pages/page-registration/registration-page.php" class="create">Создать аккаунт</a></p>
                    </div>
-            
+				</div>
              <footer>
                    <a class="Support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
              </footer>
@@ -111,6 +109,7 @@
              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
              <script src="/pages/page-registration/registration-page.js"></script>
+			 </div>
  </body>
  
  </html>
