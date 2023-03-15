@@ -119,7 +119,18 @@
 	gap: 48px;
 	font-size: 18px;
 	color: #FFFFFF;
+	-webkit-animation: glow 2s ease-in-out infinite alternate;
+	-moz-animation: glow 2s ease-in-out infinite alternate;
+	animation: glow 2s ease-in-out infinite alternate;
  }
+ @-webkit-keyframes glow {
+	from {
+	  text-shadow: 0 0 3px #fff, 0 0 1px #2218b1, 0 0 3px #2218b1, 0 0 5px #2218b1, 0 0 7px #2218b1, 0 0 9px #2218b1, 0 0 11px #2218b1;
+	}
+	to {
+	  text-shadow: 0 0 15px #fff, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+	}
+  }
 	
  
  .header__top-button-title{
@@ -292,12 +303,56 @@ transition: 0.2s;
 		color: rgb(0, 0, 0);
 		}
 	
- .profile{
-	 width: 45px;
-	 height: 45px;
-	 border: 2px solid black;
-	 border-radius: 20%; 
- }
+.Profile-anim{
+	position: relative;
+	width: 45px;
+	height: 45px;
+	border-radius: 20px; 
+	display: grid;
+	place-items: center;
+	overflow: hidden;
+}
+.Profile-anim::before{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	Background-image: conic-gradient(transparent,transparent,transparent, #ff0000);
+    animation: rotate 4s linear infinite;
+}
+.Profile-anim::after{
+	content: '';
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	Background-image: conic-gradient(transparent,transparent,transparent, rgb(0, 0, 255));
+	animation: rotate 4s linear infinite;
+	animation-delay: -2s;
+}
+.Profile-anim .profile-page{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	inset: 5px;
+	border-radius: 20px;
+	background-color: black;
+	border: 1px solid #05EFD4;
+	z-index: 2;
+}
+@keyframes rotate {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+.profile{
+	width: 90%;
+}
  .main{
 	 flex: 1 1 auto;
 	font-family: 'Balsamiq Sans', cursive;
