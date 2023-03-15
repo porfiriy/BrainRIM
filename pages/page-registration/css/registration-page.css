@@ -103,12 +103,17 @@
 	 transform: scale(0.8);
  }
  .container .form{
-	 display: flex;
-	 justify-content: center;
-	 align-items: center;
-	 flex-direction: column;
-	 gap: 40px;
-	 margin: 50% 0 0 0;
+	display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 50% 0 0 0;
+ }
+ form {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
  }
  .container .form.signin,
  .container.signinForm .form.signup{
@@ -194,9 +199,10 @@
 	 box-shadow: inset 2px 3px 3px rgb(255 255 255 / 25%), 0px 0px 20px 0px rgb(29, 136, 148);
  }
  .container .form p{
-	 color: rgba(255,255,255,0.5);
-	 font-size: 0.75em;
-	 font-weight: 300;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.95em;
+    font-weight: 300;
+    margin: 30px;
  }
  .container .form p a{
 	 font-weight: 500;
