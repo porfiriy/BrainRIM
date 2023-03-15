@@ -116,7 +116,7 @@
 	justify-content: space-around;
 	align-items: center;
 	margin: 15px 0 0 0;
-	gap: 48px;
+	gap: 40px;
 	font-size: 18px;
 	color: #FFFFFF;
 	-webkit-animation: glow 2s ease-in-out infinite alternate;
@@ -305,8 +305,8 @@ transition: 0.2s;
 	
 .Profile-anim{
 	position: relative;
-	width: 45px;
-	height: 45px;
+	width: 55px;
+	height: 55px;
 	border-radius: 20px; 
 	display: grid;
 	place-items: center;
@@ -315,18 +315,18 @@ transition: 0.2s;
 .Profile-anim::before{
 	content: '';
 	position: absolute;
-	width: 40px;
-	height: 40px;
-	border-radius: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 30px;
 	Background-image: conic-gradient(transparent,transparent,transparent, #ff0000);
     animation: rotate 4s linear infinite;
 }
 .Profile-anim::after{
 	content: '';
 	position: absolute;
-	width: 40px;
-	height: 40px;
-	border-radius: 20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 30px;
 	Background-image: conic-gradient(transparent,transparent,transparent, rgb(0, 0, 255));
 	animation: rotate 4s linear infinite;
 	animation-delay: -2s;
@@ -337,7 +337,7 @@ transition: 0.2s;
 	justify-content: center;
 	position: absolute;
 	inset: 5px;
-	border-radius: 20px;
+	border-radius: 30px;
 	background-color: black;
 	border: 1px solid #05EFD4;
 	z-index: 2;
