@@ -1,9 +1,9 @@
 <?php
 $DRIVER = 'mysql';
-$DBLOGIN = 'root';
-$DBPASS = '';
+$DBLOGIN = 'porf201v_db';
+$DBPASS = 'o2gd13%I';
 $DBHOST = 'localhost';
-$DBDATA = 'projectDB';
+$DBDATA = 'porf201v_db';
 $CHARSET = 'utf8';
 $options = [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC];
