@@ -50,7 +50,7 @@
 					<span>Пароль</span>
 				</div>
 				<div class="inputBox">
-                              <input type="submit" name="button-reg" class="btn btn-send"></input>
+                              <button type="submit" name="button-reg" class="btn btn-send"></button>
 				</div>
                         </form>
 				<p>Есть аккаунт? <a href="/pages/page-registration/auth-page/auth-page.php" class="login">Войти</a></p>

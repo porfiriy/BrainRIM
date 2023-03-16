@@ -182,11 +182,13 @@
 	 color: #00dfc4;
 	 border-right: 1px solid #00dfc4;
  }
- .container .form .inputBox input[type="submit"]{
+ .btn-send{
 	 background: #00dfc4;
 	 color: #223243;
 	 padding: 10px 0;
 	 font-weight: 500;
+	 height: 40px;
+	 width: 100%;
 	 cursor: pointer;
 	 box-shadow: -5px -5px 15px rgba(255,255,255,0.1),
 	 5px 5px 15px rgba(0,0,0,0.35),

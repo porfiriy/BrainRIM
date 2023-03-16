@@ -72,7 +72,6 @@
                    <div class="form signin">
                          <h2>Авторизация</h2>
                          <form action="auth-page.php" method="post">
-						 <h2>Авторизация</h2>
                          <div class="inputBox">
                          <input type="email" value="<?=$email?>" required="required" class="form-control" name="email" id="emailLog">
                                <i class="fa-regular fa-user"></i>
@@ -84,7 +83,7 @@
                                <span>Пароль</span>
                          </div>
                          <div class="inputBox">
-                         <input type="submit" name="button-log" class="btn btn-send"></input>
+                         <button type="submit" name="button-log" class="btn btn-send"></button>
                          </div>
                          </form>
                          <p>Не зарегистрированы? <a href="/pages/page-registration/registration-page.php" class="create">Создать аккаунт</a></p>
