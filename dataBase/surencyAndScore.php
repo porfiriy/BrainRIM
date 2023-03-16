@@ -1,7 +1,5 @@
 <?php 
 
-include "dataBase/connect.php";
-include "dataBase/controllers/users.php";
 
 
 //Запрос на получение одной строки с выбранной таблицы

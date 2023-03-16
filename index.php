@@ -1,5 +1,5 @@
 <?php
-include "dataBase/surencyAndScore.php";
+include "dataBase/controllers/users.php";
 ?>
 
 <!DOCTYPE html>

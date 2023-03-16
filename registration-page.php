@@ -1,11 +1,8 @@
 <?php  
        
-      include(".../dataBase/controllers/users.php");
+		 include "dataBase/controllers/users.php";
       
 ?>
-
-                 
-
 
 <!DOCTYPE html>
 <html lang="en">
