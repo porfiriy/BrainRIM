@@ -1,6 +1,6 @@
 <?php
    
-   include ".../dataBase/db.php";
+   include "dataBase/db.php";
    
 
    $errorMsg = '';
