@@ -318,10 +318,10 @@ transition: 0.2s;
 	width: 50px;
 	height: 50px;
 	border-radius: 30px;
-	Background-image: conic-gradient(transparent,transparent,transparent, #ff0000);
-    animation: rotate 4s linear infinite;
+	Background-image: conic-gradient(transparent,transparent,transparent, #00f6ff);
+    animation: rotate 2s linear infinite;
 }
-.Profile-anim::after{
+/*.Profile-anim::after{
 	content: '';
 	position: absolute;
 	width: 50px;
@@ -331,6 +331,7 @@ transition: 0.2s;
 	animation: rotate 4s linear infinite;
 	animation-delay: -2s;
 }
+Нихуя не работает из-за выпирания, а с z-index картинка везде*/
 .Profile-anim .profile-page{
 	display: flex;
 	align-items: center;
@@ -339,8 +340,7 @@ transition: 0.2s;
 	inset: 5px;
 	border-radius: 30px;
 	background-color: black;
-	border: 1px solid #05EFD4;
-	z-index: 2;
+	border: 1px solid black;
 }
 @keyframes rotate {
 	0% {
