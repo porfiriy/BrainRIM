@@ -57,7 +57,10 @@
                </div>
             </div>
          </div>
-         <div class="lvl-container">
+
+      </header>
+      <main class="main">
+		         <div class="lvl-container">
             <div class="player-level">Lvl 1</div>
             <div class="player-exp-scale">
                <div class="player-exp__line-blue"></div>
@@ -76,11 +79,8 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
-      </header>
-      <main class="main">
-         <div class="everyday-word-button"><ion-icon name="calendar-number-outline"></ion-icon>Ежедневно</div>
          <div class="tasks-bonus-iq-container">
-            <div class="bonus-button"><ion-icon name="gift-outline"></ion-icon></div>
+            <div class="everyday-word-button"><ion-icon name="calendar-number-outline"></ion-icon></div>
             <div class="everyday-tasks-button"><ion-icon name="receipt-outline"></ion-icon>
             </div>
          </div>
