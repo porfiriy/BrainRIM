@@ -1,7 +1,7 @@
 <?php 
 
-include 'C:\ospanel\domains\BrainRIM\dataBase\connect.php';
-include "C:\ospanel\domains\BrainRIM\dataBase\controllers\users.php";
+include ".../dataBase/connect.php";
+include ".../dataBase/controllers/users.php";
 
 
 //Запрос на получение одной строки с выбранной таблицы
