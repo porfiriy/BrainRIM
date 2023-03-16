@@ -1,6 +1,6 @@
 <?php
    
-   include "C:\OSPanel\domains\BrainRIM\dataBase\surencyAndScore.php";
+   include "../BrainRIM/dataBase/surencyAndScore.php";
 ?>
 
 <!DOCTYPE html>

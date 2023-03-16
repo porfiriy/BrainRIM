@@ -1,6 +1,6 @@
 <?php  
        
-      include("C:\ospanel\domains\BrainRIM\dataBase\controllers\users.php"); 
+      include("../BrainRIM/dataBase/controllers/users.php");
       
 ?>
 

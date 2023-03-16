@@ -1,6 +1,6 @@
 <?php
    
-   include "C:\ospanel\domains\BrainRIM\dataBase\db.php";
+   include "../dataBase/db.php";
    
 
    $errorMsg = '';

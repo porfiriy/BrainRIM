@@ -620,45 +620,37 @@ transition: 0.2s;
 	background-color: #213242;
 	justify-content: center;
 	align-items: center;
-	border-top: 2px solid #05EFD4;
 	border-radius: 15px 15px 0px 0px;
+	--borderWidth: 1%;
  }
 
 
 
- .navigation::before, 
- .navigation::after {
-	 position: absolute;
-	 top: 0;
-	 bottom: 0;
-	 left: 0;
-	 right: 0;
-	 content: '';
-	 z-index: -1;
-	 box-shadow: inset 0 0 0 6px #BFE2FF;
-	 animation: anim-navigation 8s linear infinite; 
- }
- .navigation::before {
-	 animation-delay: -4s;
- }
- .navigation::after, 
- .navigation::before {
-	 background-color: #BFE2FF;
- }
- @keyframes anim-navigation {
-	 0%, 100% {
-		 clip: rect(0px, 220px, 6px, 0px);
-	 }
-	 25% {
-		 clip: rect(0px, 6px, 220px, 0px);
-	 }
-	 50% {
-		 clip: rect(218px, 220px, 220px, 0px);
-	 }
-	 75% {
-		 clip: rect(0px, 220px, 220px, 218px);
-	 }
- }
+
+  .navigation:after {
+	content: '';
+	position: absolute;
+	height: calc(100% + var(--borderWidth) * 5);
+	width: calc(100% + var(--borderWidth) * 0);
+	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	border-radius: calc(2 * var(--borderWidth));
+	z-index: -1;
+	animation: animatedgradient 3s ease alternate infinite;
+	background-size: 300% 300%;
+  }
+  
+  
+  @keyframes animatedgradient {
+	  0% {
+		  background-position: 0% 50%;
+	  }
+	  50% {
+		  background-position: 100% 50%;
+	  }
+	  100% {
+		  background-position: 0% 50%;
+	  }
+  }
 
  
 
