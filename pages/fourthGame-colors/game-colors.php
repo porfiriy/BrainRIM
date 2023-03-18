@@ -1,3 +1,8 @@
+
+<?php 
+   include "../../include/games-pop-up.php"; 
+   include "../../dataBase/surencyAndScore.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +16,7 @@
 </head>
 
 <body>
-   <?php 
-   include "C:\ospanel\domains\BrainRIM\include\games-pop-up.php"; 
-   include "C:\ospanel\domains\BrainRIM\dataBase\surencyAndScore.php";
-?>
+
 
    <div class="victory-loose-screen-container">
       <div class="victory-loose-screen__mode-container">

@@ -1,7 +1,6 @@
 <?php
    
    include "dataBase/db.php";
-   include "dataBase/surencyAndScore.php";
 
    $errorMsg = '';
   

@@ -1,6 +1,5 @@
 <?php 
-
-
+   include "../dataBase/controllers/users.php"
 
 //Запрос на получение одной строки с выбранной таблицы
 function select($table,$params = []){
