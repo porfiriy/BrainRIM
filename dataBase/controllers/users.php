@@ -1,6 +1,6 @@
 <?php
    
-   include "dataBase/db.php";
+   include $_SERVER['DOCUMENT_ROOT']."/dataBase/db.php";
 
    $errorMsg = '';
   

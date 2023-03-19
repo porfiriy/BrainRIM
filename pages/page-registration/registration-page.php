@@ -1,7 +1,7 @@
 <?php  
        
-		 include "dataBase/controllers/users.php";
-      
+		 include "../../dataBase/controllers/users.php";
+		 include "../../path.php";
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +21,7 @@
 
 <body>
 	<header>
-		<a class="skip-button" href="/index.php">Пропустить</a>
+		<a class="skip-button" href="<?php echo BASE_URL ?>">Пропустить</a>
 	</header>
 	<div class="main">
 		<div class="container">

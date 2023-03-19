@@ -1,6 +1,6 @@
 <?php
    
-   include "C:\ospanel\domains\BrainRIM\dataBase\surencyAndScore.php";
+   include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

@@ -1,5 +1,7 @@
 <?php
-include "dataBase/controllers/users.php";
+   include "path.php";
+   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+   
 ?>
 
 <!DOCTYPE html>

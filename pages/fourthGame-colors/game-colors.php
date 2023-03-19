@@ -1,7 +1,7 @@
 
 <?php 
-   include "../../include/games-pop-up.php"; 
-   include "../../dataBase/surencyAndScore.php";
+   include $_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"; 
+   include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
 ?>
 <!DOCTYPE html>
 <html lang="en">

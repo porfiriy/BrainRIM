@@ -27,8 +27,8 @@
             <div class="settings-main-item">
 
                <div class="main-item connect">
-                  <a class="sign-in" href="/registration-page.php">Войти</a>
-                  <a href="/registration-page.php"><img
+                  <a class="sign-in" href="/pages/page-registration/registration-page.php">Войти</a>
+                  <a href="/pages/page-registration/registration-page.php"><img
                         src="/img/Settings/PlayGamesGamepad.svg" alt="Gamepad" class="gamepad"></a>
                </div>
                <a class="main-item support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
