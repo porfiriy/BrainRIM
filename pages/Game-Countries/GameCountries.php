@@ -10,6 +10,7 @@
 	<title>game-countries</title>
 </head>
 
+<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <body>
 	<div class="victory-loose-screen-container">
 		<div class="victory-loose-screen__mode-container">
@@ -89,15 +90,15 @@
 			</div>
 		</div>
 		<header>
-			<div class="topButton-gameWords">
-				<a class="comeback-button" href="/index.php">
-					<div class="comeback-button-body">
-						<ion-icon name="chevron-back-outline"></ion-icon>
-					</div>
-				</a>
-				<a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-				<div class="linkToTheRestart"><ion-icon class="img-restart" name="refresh-outline"></ion-icon></div>
-			</div>
+		<div class="topButton-gameWords">
+         <a class="comeback-button" href="#">
+            <div class="comeback-button-body">
+               <ion-icon name="chevron-back-outline"></ion-icon>
+            </div>
+         </a>
+         <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+         <div class="linkToTheRestart"><ion-icon class="img-restart" name="refresh-outline"></ion-icon></div>
+      </div>
 		</header>
 		<main>
 			<div class="game-mode"></div>

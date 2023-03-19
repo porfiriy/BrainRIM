@@ -61,6 +61,10 @@ let menuResultsGreenRectangle = document.querySelector(".box-informations-orange
 let menuResultsCercleProcents = document.querySelector('.box-informations-orange__circle-procent-results');
 let menuResultsTimer = document.querySelector(".box-informations-orange__time");
 
+let settings = document.querySelector(".pop-up__container");
+let comeback = document.querySelector(".pop-up__container2");
+let restart = document.querySelector(".pop-up__container3");
+
 let ModeTimeAnim;
 let randomNumberBtn;
 let arrAlredyExistNumbrs = [];
@@ -96,7 +100,65 @@ const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 
+//z
+//AJAX запрос на сервер для добавления в базу данных инфы
+async function doAjaxLoose() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
 
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+async function doAjaxWin() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+//z
+
+//при нажатии на отмену вспл окна настройки 
+document.querySelector('.pop-up__cancel').onclick = function () {
+   settings.style = 'visibility:hidden;';
+
+};
+//при нажатии на иконку настроек
+document.querySelector('.linkToTheSettings').onclick = function () {
+
+   settings.style = 'visibility:visible;';
+
+};
+
+//при нажатии на отмену вспл окна назад
+document.querySelector('.pop-up__cancel2').onclick = function () {
+   comeback.style = 'visibility:hidden;';
+
+};
+//при нажатии на иконку назад
+document.querySelector('.comeback-button').onclick = function () {
+
+   comeback.style = 'visibility:visible;';
+
+};
+
+//при нажатии на отмену вспл окна рестарт
+document.querySelector('.pop-up__cancel3').onclick = function () {
+   restart.style = 'visibility:hidden;';
+
+};
+//при нажатии на иконку рестарт
+document.querySelector('.linkToTheRestart').onclick = function () {
+
+   restart.style = 'visibility:visible;';
+
+};
 
 easyModeButton.onclick = function () {//при нажатии на изи кнопку сложности
    modeOptionsContainer.style = 'display: none;';
@@ -235,6 +297,7 @@ function showLooseMessage() {
    resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
    resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
    resultsMenuTimeItem.classList.add('items-container__time-item-red');
+   doAjaxLoose();//z //вызов запроса в БД
 }
 function showWinMessage() {
    deadeLine.style = "animation-play-state: paused ";
@@ -249,6 +312,7 @@ function showWinMessage() {
    resultsMenuTimeItem.classList.add('items-container__time-item-green');
    resultsMenuIqItem.innerHTML = '+50';
    resultsMenuExpItem.innerHTML = '+20';
+   doAjaxWin();
 }
 deadeLine.addEventListener("animationend", showLooseMessage);
 

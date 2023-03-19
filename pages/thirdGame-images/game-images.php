@@ -11,7 +11,7 @@
 </head>
 
 <body>
-   <?php include("C:\ospanel\domains\BrainRIM\include\games-pop-up.php"); ?>
+   <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 
    <div class="pop-up__container">
       <div class="pop-up">

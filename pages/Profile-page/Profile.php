@@ -35,13 +35,31 @@
 			</div>
 			<div class="currency">
 				<div class="currencies memoney"><img class="money-pct" src="/img/Menu/Memoney.svg" alt="">
-					<div class="count">999</div>
+					<div class="count">
+					<?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $memany['sum_memany']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+					</div>
 				</div>
 				<div class="currencies hints"><img class="hints-pct" src="/img/Menu/Hints.svg" alt="">
-					<div class="count">999</div>
+					<div class="count">
+					<?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $EyeScore['sum_eye_hint']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+					</div>
 				</div>
 				<div class="currencies iq"><span class="iq-txt">IQ</span>
-					<div class="count">999</div>
+					<div class="count">
+					<?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $IQscore['sum_iq']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+					</div>
 				</div>
 			</div>
 			<div class="statistics">

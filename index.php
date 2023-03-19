@@ -218,11 +218,23 @@
          <div class="currency">
             <div class="currency-memoney">
                <img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
-               <div class="count count-memoney">2</div>
+               <div class="count count-memoney">
+               <?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $memany['sum_memany']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+               </div>
             </div>
             <div class="currency-hints">
                <img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
-               <div class="count count-hints">14</div>
+               <div class="count count-hints">
+               <?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $EyeScore['sum_eye_hint']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+               </div>
             </div>
          </div>
          <div class="convert-currency">
