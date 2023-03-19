@@ -616,7 +616,7 @@ transition: 0.2s;
 	position: relative;
 	display: flex;
 	width: 100%;
-	height: 100%;
+	height: 96%;
 	background-color: #213242;
 	justify-content: center;
 	align-items: center;
@@ -626,17 +626,17 @@ transition: 0.2s;
 
 
 
-
   .navigation:after {
 	content: '';
 	position: absolute;
-	height: calc(100% + var(--borderWidth) * 5);
+	height: calc(100% + var(--borderWidth) * 2);
 	width: calc(100% + var(--borderWidth) * 0);
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 	border-radius: 14px;
 	z-index: -1;
 	animation: animatedgradient 3s ease alternate infinite;
 	background-size: 300% 300%;
+	bottom: 0px;
   }
   
   
@@ -1217,6 +1217,10 @@ background: #05EFD4;
 color: #000;
 text-decoration: none;
 }
+.convert-currency-body{
+	display: flex;
+	position: absolute;
+}
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
@@ -1247,9 +1251,26 @@ text-decoration: none;
 }
 .buy:active{
 	transform: scale(0.8);
-
 }
-
+.special-offers{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+	max-width: 320px;
+	height: 50px;
+	border: 2px solid #05EFD4;
+	border-radius: 6px;
+	color: white;
+	transition: 0.6s;
+}
+.special-offers:hover{
+	box-shadow: 0px 0px 15px 0px #0da5a5;
+	border-radius: 16px;
+	color: #000;
+	background-color: #05EFD4;
+}
 
 
  .analytic-container{

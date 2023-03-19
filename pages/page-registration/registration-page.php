@@ -23,6 +23,7 @@
 	<header>
 		<a class="skip-button" href="<?php echo BASE_URL ?>">Пропустить</a>
 	</header>
+	
 	<div class="main">
 		<div class="container">
 			<div class="form signup">

@@ -238,7 +238,8 @@
             </div>
          </div>
          <div class="convert-currency">
-            <span class="convert-currency-button">Конвертировать валюту</span>
+            <button class="convert-currency-button">Конвертировать валюту</button>
+			<div class="convert-currency-body">Конвертировать валюту</div>
          </div>
          <div class="buy-currency">
             <div class="buy-memoney">
@@ -255,12 +256,7 @@
                <div class="buy six-offer">500<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
             </div>
-            <div class="buy-memoney">
-
-            </div>
-            <div class="buy-hints">
-
-            </div>
+            <div class="special-offers">Специальные предложения</div>
          </div>
       </div>
 
