@@ -239,8 +239,11 @@
          </div>
          <div class="convert-currency">
             <button class="convert-currency-button">Конвертировать валюту</button>
-			<div class="convert-currency-body">Конвертировать валюту</div>
-         </div>
+			</div>
+			<div class="convert-currency-body">
+				<div class="convert-currency-text">Конвертировать валюту</div>
+			<div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
+		</div>
          <div class="buy-currency">
             <div class="buy-memoney">
                <div class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"

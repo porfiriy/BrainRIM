@@ -43,7 +43,9 @@ const CloseInfoForEverydayWords = document.querySelector('.close-everyday-info-b
 const AllLevelsButton = document.querySelector('.player-level');
 const AllLevels = document.querySelector('.all-lvls-container');
 const CloseAllLevels = document.querySelector('.close-levels-container');
-const convertCurrencyBtn = document.querySelector('.convert-currency-button');
+const ConvertCurrencyButton = document.querySelector('.convert-currency-button');
+const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
+const CloseConvertCurrency = document.querySelector('.close-currency-body');
 
 function activeLink() {
   list.forEach((item) =>
@@ -106,7 +108,7 @@ CloseAllLevels.onclick = function () { //Закрыть уровни
   audioClick.play();
 }
 
-convertCurrencyBtn.onclick = function () { //Кнопка конверт валюты
+ConvertCurrencyButton.onclick = function () { //Кнопка конверт валюты
   audioClick.play();
 }
 
@@ -121,6 +123,14 @@ itemStoreNavigation.onclick = function () { //при нажатии на кно�
   containerAchievmentsPage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
+}
+ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
+	ConvertCurrencyBody.style = 'display: flex;';
+	containerGrayBackground.style = 'display: none;';
+}
+CloseConvertCurrency.onclick = function () { //Конвертировать валюту - при закрытии
+	ConvertCurrencyBody.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
 }
 
 //Аналитика

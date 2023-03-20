@@ -1218,9 +1218,37 @@ color: #000;
 text-decoration: none;
 }
 .convert-currency-body{
-	display: flex;
-	position: absolute;
+		display: none;
+		flex-direction: column;
+		font-size: 22px;
+		position: absolute;
+		text-align: center;
+		width: 240px;
+		background-color:#0c4e74;
+		z-index: 3;
+		border: 2px solid #05EFD4;
+		border-radius: 15px;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		z-index: 4;
 }
+.close-currency-body{
+	display: flex;
+	justify-content: center;
+	border-top: 2px  solid #05EFD4;
+	border-radius: 10px;
+	box-shadow: 0px -1px 4px rgb(0 255 5 / 30%), 0px 3px 0px rgb(0 241 255 / 25%);
+	color: red;
+	font-size: 26px;
+  }
+  .close-currency-body:active{
+	transform: scale(0.95);
+	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
+	background-color: #05EFD4;
+	color: #000000;
+	transition: 0.4s;
+  }
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
