@@ -126,7 +126,7 @@ itemStoreNavigation.onclick = function () { //при нажатии на кно�
 }
 ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
 	ConvertCurrencyBody.style = 'display: flex;';
-	containerGrayBackground.style = 'display: none;';
+	containerGrayBackground.style = 'display: block;';
 }
 CloseConvertCurrency.onclick = function () { //Конвертировать валюту - при закрытии
 	ConvertCurrencyBody.style = 'display: none;';

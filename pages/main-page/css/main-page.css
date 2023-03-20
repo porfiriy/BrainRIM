@@ -397,6 +397,27 @@ transition: 0.2s;
 	 justify-content: center;
 	 align-items: center;
  }
+
+
+
+ .everyday-glowing{
+	-webkit-animation: everyday-glowing 4s ease-in-out infinite alternate;
+	-moz-animation: everyday-glowing 4s ease-in-out infinite alternate;
+	animation: everyday-glowing 4s ease-in-out infinite alternate;
+
+  }
+   
+  @keyframes everyday-glowing {
+	from { background-color: #ffffff00; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
+	to { background-color: #00ffc6; box-shadow: 0 0 20px #05a3a8; color: #000000; }
+  }
+   
+  @-webkit-keyframes everyday-glowing {
+	from { background-color: #ffffff00; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
+	to { background-color: #00ffc6; box-shadow: 0 0 20px #05a3a8; color: #000000; }
+  }
+
+
  .everyday_icon_body{
 	 width: 22%;
 	 margin: 5px auto;

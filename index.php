@@ -313,8 +313,8 @@
          <div class="everyday-title">Ежедневно</div>
          <div class="everyday_body">
             <div class="everyday_word">
-               <div class="everyday_icon_body"><ion-icon name="book-outline"></ion-icon></div>
-               <div class="everyday_text_body">Слово дня</div>
+               <div class="everyday_icon_body everyday-glowing"><ion-icon name="book-outline"></ion-icon></div>
+               <div class="everyday_text_body everyday-glowing">Слово дня</div>
             </div>
             <div class="day_history">
                <div class="everyday_icon_body"><ion-icon name="library-outline"></ion-icon></div>
@@ -364,7 +364,7 @@
       <div class="everyday_new-word-container">
          <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
          <div class="close-window everyday_new-word-close-button"><ion-icon name="close-outline"></ion-icon></div>
-         <div class="everyday-title">Новое слово дня</div>
+         <div class="everyday-title">Англ. слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
                <span class="yellow-word">unaware</span> - Не знать / не знающий,
