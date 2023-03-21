@@ -1,5 +1,7 @@
 <?php 
 
+ini_set('session.gc_maxlifetime',432000);//увеличив время сессии
+
 
 session_start();
 require('connect.php');
