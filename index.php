@@ -212,7 +212,20 @@
       </div>
       <div class="page-store-container">
          <span class="page-title Shop">Магазин</span>
-         <img src="/img/Menu/Time.svg" alt="Время" class="timeoclock">
+	<div class="clocks">
+         <div class="clock">
+			<div class="hour">
+				<div class="hr" id="hr"></div>
+			</div>
+			<div class="min">
+				<div class="mn" id="mn"></div>
+			</div>
+			<div class="sec">
+				<div class="sc" id="sc"></div>
+			</div>
+		 </div>
+	</div>
+
          <div class="time">Обновление через</div>
          <div class="time">23:59</div>
          <div class="currency">
@@ -238,8 +251,12 @@
             </div>
          </div>
          <div class="convert-currency">
-            <span class="convert-currency-button">Конвертировать валюту</span>
-         </div>
+            <button class="convert-currency-button">Конвертировать валюту</button>
+			</div>
+			<div class="convert-currency-body">
+				<div class="convert-currency-text">Конвертировать валюту</div>
+			<div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
+		</div>
          <div class="buy-currency">
             <div class="buy-memoney">
                <div class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
@@ -255,12 +272,7 @@
                <div class="buy six-offer">500<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
             </div>
-            <div class="buy-memoney">
-
-            </div>
-            <div class="buy-hints">
-
-            </div>
+            <div class="special-offers">Специальные предложения</div>
          </div>
       </div>
 
@@ -314,8 +326,8 @@
          <div class="everyday-title">Ежедневно</div>
          <div class="everyday_body">
             <div class="everyday_word">
-               <div class="everyday_icon_body"><ion-icon name="book-outline"></ion-icon></div>
-               <div class="everyday_text_body">Слово дня</div>
+               <div class="everyday_icon_body everyday-glowing"><ion-icon name="book-outline"></ion-icon></div>
+               <div class="everyday_text_body everyday-glowing">Слово дня</div>
             </div>
             <div class="day_history">
                <div class="everyday_icon_body"><ion-icon name="library-outline"></ion-icon></div>
@@ -365,7 +377,7 @@
       <div class="everyday_new-word-container">
          <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
          <div class="close-window everyday_new-word-close-button"><ion-icon name="close-outline"></ion-icon></div>
-         <div class="everyday-title">Новое слово дня</div>
+         <div class="everyday-title">Англ. слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
                <span class="yellow-word">unaware</span> - Не знать / не знающий,

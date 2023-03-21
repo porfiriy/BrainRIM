@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<div class="gray-background-container"></div>
 	<header>
 		<a class="comeback-button" href="/index.php">
 			<ion-icon name="chevron-back-outline"></ion-icon></a>
@@ -63,11 +64,18 @@
 				</div>
 			</div>
 			<div class="statistics">
-				<span class="button zvanie">Новичок</span>
-				<span class="button zvanie">?</span>
-				<a href="#"
-					class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
-				<a href="<?php echo "/dataBase/logOut.php";?>" class="leave">Выйти</a>
+				<span class="button rank">Новичок</span>
+				<div class="rank-body">
+					<span class="rank-info">новичок</span>
+					<span class="rank-info">Знаток</span>
+					<span class="rank-info">Молодец</span>
+					<span class="rank-info">Профессионал</span>
+					<span class="rank-info">Мегаразум</span>
+					<div class="close-rank"><ion-icon name="close-outline"></ion-icon></div>
+				</div>
+				<span class="button wtf">?</span>
+				<a href="#" class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
+				<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти</a>
 			</div>
 		</div>
 	</main>

@@ -43,7 +43,13 @@ const CloseInfoForEverydayWords = document.querySelector('.close-everyday-info-b
 const AllLevelsButton = document.querySelector('.player-level');
 const AllLevels = document.querySelector('.all-lvls-container');
 const CloseAllLevels = document.querySelector('.close-levels-container');
-const convertCurrencyBtn = document.querySelector('.convert-currency-button');
+const ConvertCurrencyButton = document.querySelector('.convert-currency-button');
+const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
+const CloseConvertCurrency = document.querySelector('.close-currency-body');
+const deg = 6;
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
 
 function activeLink() {
   list.forEach((item) =>
@@ -106,7 +112,7 @@ CloseAllLevels.onclick = function () { //Закрыть уровни
   audioClick.play();
 }
 
-convertCurrencyBtn.onclick = function () { //Кнопка конверт валюты
+ConvertCurrencyButton.onclick = function () { //Кнопка конверт валюты
   audioClick.play();
 }
 
@@ -121,6 +127,23 @@ itemStoreNavigation.onclick = function () { //при нажатии на кно�
   containerAchievmentsPage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
+}
+setInterval(() => {
+let day = new Date();
+let hh = day.getHours() * 30;
+let mm = day.getMinutes() * deg;
+let ss = day.getSeconds() * deg;
+hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+mn.style.transform = `rotateZ(${mm}deg)`;
+sc.style.transform = `rotateZ(${ss}deg)`;
+})
+ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
+	ConvertCurrencyBody.style = 'display: flex;';
+	containerGrayBackground.style = 'display: block;';
+}
+CloseConvertCurrency.onclick = function () { //Конвертировать валюту - при закрытии
+	ConvertCurrencyBody.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
 }
 
 //Аналитика

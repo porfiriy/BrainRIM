@@ -26,18 +26,30 @@
          <form action="#" class="form">
             <div class="settings-main-item">
 
+			<div class="item-body">
+				<div class="mark"><ion-icon name="log-in-outline"></ion-icon></div>
                <div class="main-item connect">
                   <a class="sign-in" href="/pages/page-registration/registration-page.php">Войти</a>
                   <a href="/pages/page-registration/registration-page.php"><img
                         src="/img/Settings/PlayGamesGamepad.svg" alt="Gamepad" class="gamepad"></a>
-               </div>
+               </div></div>
+
+			   <div class="item-body">
+				<div class="mark"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
                <a class="main-item support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
+			   </div>
+
+			   <div class="item-body">
+				<div class="mark"><ion-icon name="help-circle-outline"></ion-icon></div>
                <div class="main-item developers-button">Разработчики</div>
                <div class="developers-container_body">
                   <div class="Porfiriy"><a class="Porfiriy-text" href="https://github.com/porfiriy">Porfiriy</a></div>
                   <div class="Aleksey"><a class="Aleksey-text" href="https://github.com/MooNMisTX">Aleksey</a></div>
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
-               </div>
+               </div></div>
+
+			   <div class="item-body">
+				<div class="mark"><ion-icon name="language-outline"></ion-icon></div>
                <div class="main-item language-button">Язык</div>
                  <div class="language-container">
                    <div class="EN language in-dev">Английский</div>
@@ -46,8 +58,16 @@
                    <div class="EN language in-dev">español</div>
                    <div class="EN language in-dev">français</div>
                    <div class="close-language"><ion-icon name="close-outline"></ion-icon></div>
-               </div>
-               <div class="main-item about">О нас</div>
+               </div></div>
+
+			   <div class="item-body">
+				<div class="mark"><ion-icon name="newspaper-outline"></ion-icon></div>
+			   <a class="main-item news" href="https://m.vk.com/club217095388">Новости</a>
+			   </div>
+			   
+			   <div class="item-body">
+				<div class="mark"><ion-icon name="information-circle-outline"></ion-icon></div>
+               <div class="main-item about">О нас</div></div>
                <div class="about-us-container">
                   <span class="text-about-us">Привет! Мы (два разработчика)
                      <br>Решили создать это приложение в недалёком 2021 году.

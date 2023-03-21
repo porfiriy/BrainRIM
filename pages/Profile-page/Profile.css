@@ -74,6 +74,14 @@ h6 {
 font-size: inherit;
 font-weight: 400;
 }
+.gray-background-container{
+	position: absolute;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(0 0 0 / 30%);
+	z-index: 2;
+}
 header {
 	padding: 12px;
 display: flex;
@@ -102,7 +110,7 @@ transition: 0.4s;
 }
 .Profilesvg{
 	width: 100px;
-	border-radius: 20px;
+	border-radius: 21px;
 }
 .settings{
 	transition: 0.1s;
@@ -121,8 +129,6 @@ transition: 0.4s;
 	margin: 0% auto;
 	background: rgba( 33, 50, 66, 0.25 );
 	box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-	backdrop-filter: blur( 5px );
-	-webkit-backdrop-filter: blur( 5px );
 	border-radius: 10px;
 	border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
@@ -137,7 +143,7 @@ margin: 30px auto;
 }
 .profile-picture{
 border: 3px solid #05EFD4;
-border-radius: 13px;
+border-radius: 25px;
 }
 .profile-name{
     text-shadow: 0 0 10px #05efd4;
@@ -170,11 +176,11 @@ border-radius: 13px;
 }
 .statistics{
 font-size: 26px;
-color: #05EFD4;
+color: #ffffff;
 width: 80%;
 margin: 0% auto;
 }
-.zvanie{
+.wtf{
 	display: block;
 	border: 2px solid #05EFD4;  
 	border-radius: 10px;
@@ -182,13 +188,51 @@ margin: 0% auto;
 	padding: 10px;
 	transition: 0.4s;
 }
+.rank{
+	display: block;
+	border: 2px solid #05EFD4;  
+	border-radius: 10px;
+	margin: 10%;
+	padding: 10px;
+	transition: 0.4s;
+}
+.rank-body{
+	position: absolute;
+    display: none;
+	flex-direction: column;
+	top:50%;
+	left:50%;
+	transform:translate(-50%, -50%);
+	z-index: 3;
+	border: 2px solid #05efd4;
+	border-radius: 10px;
+	background: #0d1822;
+	padding: 20px;
+	gap: 5px;
+}
+.rank-info{
+	border: 2px solid #05EFD4;
+	border-radius: 20px;
+	padding: 8px;
+}
+.close-rank{
+	margin: 10px;
+	border: 2px solid #05efd4;
+    border-radius: 10px;
+	transition: 0.8s;
+}
+.close-rank:active{
+    background: #05efd4;
+    border-radius: 10px;
+	color: black;
+}
 .statistic-page{
 	display: block;
 	border: 2px solid #05EFD4;  
 	border-radius: 10px;
 	margin: 10%;
 	padding: 10px;
-	color: #05EFD4; 
+	color: #ffffff;
 	transition: 0.4s;
 }
 .button:active{

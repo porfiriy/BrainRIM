@@ -24,16 +24,17 @@
        <header>
              <a class="skip-button" href="/index.php">Пропустить</a>
        </header>
+
 	   <div class="main">
              <div class="container">
                    <div class="form signin">
-                        <h2>Авторизация</h2>
-                        <div class="alerts-container err">
+                         <h2>Авторизация</h2>
+                         <div class="alerts-container err">
                               <p><?=$errorMsg?></p>
                         </div>
                          <form action="auth-page.php" method="post">
                          <div class="inputBox">
-                         <input type="email" value="<?=$email?>" required="required" class="form-control" name="email" id="emailLog">
+                            <input type="email" value="<?=$email?>" required="required" class="form-control" name="email" id="emailLog">
                                <i class="fa-regular fa-user"></i>
                                <span>Почта</span>
                          </div>

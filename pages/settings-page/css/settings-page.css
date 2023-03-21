@@ -125,9 +125,29 @@
 	justify-content: center;
 	width: 100%;
 	flex: 1 1 auto;
-   
+
  }
- 
+ .item-body {
+    display: flex;
+    gap: 10px;
+ }
+ .mark {
+    display: flex;
+	align-items: center;
+    justify-content: center;
+	border: 1px solid #05EFD4;
+	background-color: #1c2c3a;
+	border-radius: 10px;
+	box-shadow: 0px -1px 20px 0px rgb(255 255 255 / 25%), 0px 2px 4px 1px rgb(0 0 0 / 45%);
+	color: #FFFFFF;
+	padding: 10px;
+	transition: 1.4s;
+    font-size: 25px;
+}
+.mark:hover {
+    background: #05EFD4;
+    color: #000000;
+}
  .main-item {
 	display: flex;
 	align-items: center;
@@ -139,26 +159,23 @@
 	font-size: 23px;
 	height: 50px; 
 	border: 1px solid #05EFD4;
-	background-color: #213242;
+	background-color: #1c2c3a;
 	border-radius: 10px;
 	box-shadow: 0px -1px 20px 0px rgb(255 255 255 / 25%), 0px 2px 4px 1px rgb(0 0 0 / 45%);
 	color: #FFFFFF;
 	transition: 0.4s;
  }
  .main-item:active{
-	transform: scale(0.9);
+	transform: scale(0.95);
 	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
 	background-color: #05EFD4;
 	color: #000000;
  }
  .sign-in {
-	 color: rgb(160, 40, 207);
 	 transition: 0.4s;
  }
  .sign-in:active{
 	 transform: scale(0.9);
-	 box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
-	 background-color: #05EFD4;
 	 color: #000000;
  }
  .gamepad {

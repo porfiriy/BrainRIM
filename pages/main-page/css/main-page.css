@@ -397,6 +397,27 @@ transition: 0.2s;
 	 justify-content: center;
 	 align-items: center;
  }
+
+
+
+ .everyday-glowing{
+	-webkit-animation: everyday-glowing 4s ease-in-out infinite alternate;
+	-moz-animation: everyday-glowing 4s ease-in-out infinite alternate;
+	animation: everyday-glowing 4s ease-in-out infinite alternate;
+
+  }
+   
+  @keyframes everyday-glowing {
+	from { background-color: #ffffff00; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
+	to { background-color: #00ffc6; box-shadow: 0 0 20px #05a3a8; color: #000000; }
+  }
+   
+  @-webkit-keyframes everyday-glowing {
+	from { background-color: #ffffff00; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
+	to { background-color: #00ffc6; box-shadow: 0 0 20px #05a3a8; color: #000000; }
+  }
+
+
  .everyday_icon_body{
 	 width: 22%;
 	 margin: 5px auto;
@@ -626,17 +647,17 @@ transition: 0.2s;
 
 
 
-
   .navigation:after {
 	content: '';
 	position: absolute;
-	height: calc(100% + var(--borderWidth) * 5);
+	height: calc(100% + var(--borderWidth) * 2);
 	width: calc(100% + var(--borderWidth) * 0);
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 	border-radius: 14px;
 	z-index: -1;
 	animation: animatedgradient 3s ease alternate infinite;
 	background-size: 300% 300%;
+	bottom: 0px;
   }
   
   
@@ -1133,19 +1154,86 @@ transition: 0.2s;
 	 font-family: 'Balsamiq Sans', cursive;
 	 position: absolute;
 	 display: none;
-	 height: 100%;
+	 height: 90%;
 	 width: 100%;
 	 min-width: 340px;
 	 background: rgb(0,8,82);
 	 background: #213242;
 	 z-index: 0;
+	 overflow: scroll;
    }
-  .timeoclock{
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
-	 margin: 20px auto;
-  }
+.clocks{
+	display: flex;
+	justify-content: center;
+	margin: 20px auto 0 auto;
+}
+.clock{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #007effb0 url(/img/Menu/clock.svg);
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid #0a3848;
+    box-shadow: 0px 0px 20px 0px rgb(255 255 255 / 15%),
+	            0px 20px 20px rgba(0, 0, 0, 0.3),
+				inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+				inset 0 20px 20px rgba(0, 0, 0, 0.3);
+}
+.clock::before{
+	content: '';
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background: #fff;
+	z-index: 100000;
+	border-radius: 50%;
+}
+.hour,
+.min,
+.sec{
+	position: absolute;
+}
+.hr, .mn, .sc{
+display: flex;
+justify-content: center;
+position: absolute;
+border-radius: 50%;
+}
+.hr::before{
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 25px;
+	background: #500921;
+	z-index: 10;
+	border-radius: 6px 6px 0 0;
+}
+.mn::before{
+	content: '';
+	position: absolute;
+	width: 3px;
+	height: 30px;
+	background: #c4c4c4;
+	z-index: 11;
+	border-radius: 6px 6px 0 0;
+}
+.sc::before{
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 35px;
+	background: #1e536e;
+	z-index: 12;
+	border-radius: 6px 6px 0 0;
+}
+
+
+
+
+
   .time{
 	color: white;
 	font-size: 18px;
@@ -1217,6 +1305,38 @@ background: #05EFD4;
 color: #000;
 text-decoration: none;
 }
+.convert-currency-body{
+		display: none;
+		flex-direction: column;
+		font-size: 22px;
+		position: absolute;
+		text-align: center;
+		width: 240px;
+		background-color:#0c4e74;
+		z-index: 3;
+		border: 2px solid #05EFD4;
+		border-radius: 15px;
+		top:50%;
+		left:50%;
+		transform:translate(-50%, -50%);
+		z-index: 4;
+}
+.close-currency-body{
+	display: flex;
+	justify-content: center;
+	border-top: 2px  solid #05EFD4;
+	border-radius: 10px;
+	box-shadow: 0px -1px 4px rgb(0 255 5 / 30%), 0px 3px 0px rgb(0 241 255 / 25%);
+	color: red;
+	font-size: 26px;
+  }
+  .close-currency-body:active{
+	transform: scale(0.95);
+	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
+	background-color: #05EFD4;
+	color: #000000;
+	transition: 0.4s;
+  }
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
@@ -1247,9 +1367,26 @@ text-decoration: none;
 }
 .buy:active{
 	transform: scale(0.8);
-
 }
-
+.special-offers{
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto;
+	max-width: 320px;
+	height: 50px;
+	border: 2px solid #05EFD4;
+	border-radius: 6px;
+	color: white;
+	transition: 0.6s;
+}
+.special-offers:hover{
+	box-shadow: 0px 0px 15px 0px #0da5a5;
+	border-radius: 16px;
+	color: #000;
+	background-color: #05EFD4;
+}
 
 
  .analytic-container{
@@ -1263,7 +1400,7 @@ text-decoration: none;
 	 z-index: 0;
   }
   .page-title {
-	 margin: 50px auto 0 auto;
+	 margin: 30px auto 0 auto;
 	 width: 60%;
 	 font-family: 'Balsamiq Sans';
 	 font-style: normal;

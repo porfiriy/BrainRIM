@@ -388,7 +388,7 @@ height: 40px;
 	min-height: 30%;
 	border-radius: 20px;
 	width: 85%;
-	background-color: #05EFD4;
+	background-color: #213242;
 	display: flex;
 	justify-content: space-around;
 	flex-direction: column;
@@ -398,7 +398,7 @@ height: 40px;
 	font-family: 'Balsamiq Sans', cursive;
 	font-weight: 600;
 	text-align: center;
-	color: rgb(133, 2, 133);
+	color: #05EFD4;
 	text-decoration: underline;
 }
 .pop-up__description2{
@@ -407,6 +407,7 @@ height: 40px;
    font-family: 'Balsamiq Sans', cursive;
    text-align: center;
    padding: 0 20px ;
+   color: #ffffff;
 }
 .wrap__button2{
    
@@ -560,7 +561,7 @@ height: 40px;
    display: flex;
    justify-content: center;
    align-items: center;
-   background: #05EFD4;
+   background: #007eff;
    width: 25%;
    height:15%;
    margin: 5px;
