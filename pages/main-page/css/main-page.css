@@ -1171,7 +1171,7 @@ transition: 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #007effb0 url(/clock.svg);
+    background: #007effb0 url(/img/Menu/Time.svg);
     background-size: cover;
     border-radius: 50%;
     border: 4px solid #0a3848;
