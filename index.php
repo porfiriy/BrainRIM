@@ -212,7 +212,20 @@
       </div>
       <div class="page-store-container">
          <span class="page-title Shop">Магазин</span>
-         <img src="/img/Menu/Time.svg" alt="Время" class="timeoclock">
+	<div class="clocks">
+         <div class="clock">
+			<div class="hour">
+				<div class="hr" id="hr"></div>
+			</div>
+			<div class="min">
+				<div class="mn" id="mn"></div>
+			</div>
+			<div class="sec">
+				<div class="sc" id="sc"></div>
+			</div>
+		 </div>
+	</div>
+
          <div class="time">Обновление через</div>
          <div class="time">23:59</div>
          <div class="currency">

@@ -654,7 +654,7 @@ border-radius: 5px;
  }
  .country-answers-container{
 width: 100%;
-color: #05EFD4;
+color: #ffffff;
 display: flex;
 flex-wrap: wrap;
 align-items: center;
@@ -680,7 +680,7 @@ transition: 0.2s;
 	display: none;
 	flex-wrap: wrap;
 	width: 100%;
-	color: #05EFD4;
+	color: #ffffff;
 	align-items: center;
 	justify-content: space-around;
 	text-align: center;

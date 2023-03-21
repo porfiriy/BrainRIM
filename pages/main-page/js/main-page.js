@@ -46,6 +46,10 @@ const CloseAllLevels = document.querySelector('.close-levels-container');
 const ConvertCurrencyButton = document.querySelector('.convert-currency-button');
 const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
 const CloseConvertCurrency = document.querySelector('.close-currency-body');
+const deg = 6;
+const hr = document.querySelector('#hr');
+const mn = document.querySelector('#mn');
+const sc = document.querySelector('#sc');
 
 function activeLink() {
   list.forEach((item) =>
@@ -124,6 +128,15 @@ itemStoreNavigation.onclick = function () { //при нажатии на кно�
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
+setInterval(() => {
+let day = new Date();
+let hh = day.getHours() * 30;
+let mm = day.getMinutes() * deg;
+let ss = day.getSeconds() * deg;
+hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+mn.style.transform = `rotateZ(${mm}deg)`;
+sc.style.transform = `rotateZ(${ss}deg)`;
+})
 ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
 	ConvertCurrencyBody.style = 'display: flex;';
 	containerGrayBackground.style = 'display: block;';
