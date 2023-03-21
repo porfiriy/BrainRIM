@@ -401,9 +401,9 @@ transition: 0.2s;
 
 
  .everyday-glowing{
-	-webkit-animation: everyday-glowing 4s ease-in-out infinite alternate;
-	-moz-animation: everyday-glowing 4s ease-in-out infinite alternate;
-	animation: everyday-glowing 4s ease-in-out infinite alternate;
+	-webkit-animation: everyday-glowing 1.3s ease-in-out infinite alternate;
+	-moz-animation: everyday-glowing 1.3s ease-in-out infinite alternate;
+	animation: everyday-glowing 1.3s ease-in-out infinite alternate;
 
   }
    

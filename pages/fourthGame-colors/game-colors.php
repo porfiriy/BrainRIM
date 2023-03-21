@@ -1,8 +1,3 @@
-
-<?php 
-   include $_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"; 
-   include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,6 +10,10 @@
    <title>game words</title>
 </head>
 
+<?php 
+   include $_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"; 
+   include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
+?>
 <body>
 
 

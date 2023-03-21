@@ -25,7 +25,9 @@
 	<main>
 		<div class="profile-container">
 			<div class="profile_first">
-				<div class="profile-picture"><img class="Profilesvg" src="/img/Profile/Goodpict.svg" alt=""></div>
+				<div class="profile-picture"><img class="Profilesvg" src="/img/Menu/brain.svg" alt=""></div>
+				<div class="profile">
+					<div class="change-name"><ion-icon name="pencil-outline"></ion-icon></div>
 				<span class="profile-name">
 					<?php if(isset($_SESSION['id'])): ?>
 					<?php echo $_SESSION['login'];?>
@@ -33,6 +35,7 @@
 					Логин
 					<?php endif;?>
 				</span>
+				</div>
 			</div>
 			<div class="currency">
 				<div class="currencies memoney"><img class="money-pct" src="/img/Menu/Memoney.svg" alt="">

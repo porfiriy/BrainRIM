@@ -26,6 +26,13 @@
  }
 html,
 body {
+user-select: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+outline: none;
+-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+-webkit-tap-highlight-color: transparent;
 height: 100%;
 width: 100%;
 font-size: 100%;
@@ -108,10 +115,6 @@ transition: 0.4s;
 .page-name:hover{
 	text-shadow: 0 0 10px #05efd4;
 }
-.Profilesvg{
-	width: 100px;
-	border-radius: 21px;
-}
 .settings{
 	transition: 0.1s;
 }
@@ -134,16 +137,35 @@ transition: 0.4s;
 }
 .profile_first{
 display: flex;
-justify-content: space-around;
+justify-content: space-evenly;
 color: rgb(0, 255, 0);
 font-size: 26px;
 text-align: center;
 align-items: center;
 margin: 30px auto;
+height: 110px;
+min-width: 300px;
 }
 .profile-picture{
 border: 3px solid #05EFD4;
 border-radius: 25px;
+}
+.Profilesvg{
+	width: 100px;
+	border-radius: 21px;
+	transition: 1s;
+}
+.Profilesvg:hover{
+    transform: scale(1.8); /* (180% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.profile {
+    display: flex;
+    align-items: center;
+}
+.change-name{
+	color: #ffffff;
+	font-size: 24px;
+	margin: 0 10px 0 0;
 }
 .profile-name{
     text-shadow: 0 0 10px #05efd4;
