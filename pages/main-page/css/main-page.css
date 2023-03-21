@@ -637,7 +637,7 @@ transition: 0.2s;
 	position: relative;
 	display: flex;
 	width: 100%;
-	height: 96%;
+	height: 100%;
 	background-color: #213242;
 	justify-content: center;
 	align-items: center;
@@ -1154,16 +1154,18 @@ transition: 0.2s;
 	 font-family: 'Balsamiq Sans', cursive;
 	 position: absolute;
 	 display: none;
-	 height: 100%;
+	 height: 90%;
 	 width: 100%;
 	 min-width: 340px;
 	 background: rgb(0,8,82);
 	 background: #213242;
 	 z-index: 0;
+	 overflow: scroll;
    }
 .clocks{
 	display: flex;
-	justify-content: center
+	justify-content: center;
+	margin: 20px auto 0 auto;
 }
 .clock{
     width: 100px;
@@ -1171,7 +1173,7 @@ transition: 0.2s;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #007effb0 url(/img/Menu/Time.svg);
+    background: #007effb0 url(/img/Menu/clock.svg);
     background-size: cover;
     border-radius: 50%;
     border: 4px solid #0a3848;
@@ -1398,7 +1400,7 @@ text-decoration: none;
 	 z-index: 0;
   }
   .page-title {
-	 margin: 50px auto 0 auto;
+	 margin: 30px auto 0 auto;
 	 width: 60%;
 	 font-family: 'Balsamiq Sans';
 	 font-style: normal;
