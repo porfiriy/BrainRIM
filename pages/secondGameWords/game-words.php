@@ -13,6 +13,10 @@
 <body>
    <div class="start-menu">
       <a href="#" class="button-start">START</a>
+	  <div class="game-info-title">
+		<span class="game-info-name">Игра слов</span>
+		<span class="game-info">Изменить!</span>
+	  </div>
    </div>
    <div class="wrapper">
       <div class="topButton-gameWords">

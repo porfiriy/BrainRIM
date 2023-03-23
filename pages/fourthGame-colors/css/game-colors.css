@@ -712,6 +712,25 @@
 	width: 0px;
 	font-size: 0px;
  }
+ .game-info-title{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 20%;
+    position: absolute;
+    text-align: center;
+    gap: 15px;
+} 
+.game-info-name {
+    color: #05EFD4;
+	font-size: 24px;
+}
+.game-info{
+    max-width: 350px;
+    color: #ffffff;
+    font-size: 18px;
+}
  
  .counter-complited{
 	display: block;
@@ -757,7 +776,7 @@
 	font-family: 'Balsamiq Sans', cursive;
 	font-size: 35px;
 	font-weight: bold;
-	color: #cc9d1b;
+	color: #ffffff;
 	
  }
  @keyframes rectangle__text {

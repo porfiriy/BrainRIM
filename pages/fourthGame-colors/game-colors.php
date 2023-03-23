@@ -70,6 +70,10 @@
             <div class="start-menu__game-mode"></div>
          </div>
          <a href="#" class="button-start">START</a>
+		 <div class="game-info-title">
+		<span class="game-info-name">Игра картинок</span>
+		<span class="game-info">В этой игре вам надо будет ответить, правильный ли цвет изображён вокруг слова</span>
+	  </div>
       </div>
    </div>
    <div class="wrapper">

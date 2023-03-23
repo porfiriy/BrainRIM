@@ -14,6 +14,10 @@
 <?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); ?>
       <div class="start-menu">
          <a href="#" class="button-start">START</a>
+		 <div class="game-info-title">
+		<span class="game-info-name">Игра цифр</span>
+		<span class="game-info">В этой игре вам надо будет запомнить цифры по порядку и набрать их</span>
+	  </div>
       </div>
       <div class="random-num-container">
          <div class="random-num-container__text">ЗАПОМНИ</div>

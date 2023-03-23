@@ -824,6 +824,25 @@ height: 40px;
    width: 0px;
    font-size: 0px;
 }
+.game-info-title{
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    bottom: 20%;
+    position: absolute;
+    text-align: center;
+    gap: 15px;
+} 
+.game-info-name {
+    color: #05EFD4;
+	font-size: 24px;
+}
+.game-info{
+    max-width: 350px;
+    color: #ffffff;
+    font-size: 18px;
+}
 
 .victory-loose-screen-container{
    position: absolute;
