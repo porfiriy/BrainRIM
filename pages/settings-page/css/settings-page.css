@@ -247,23 +247,12 @@
 	 box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
    }
    .Porfiriy{
-	 color: #05EFD4;
+	 color: #ffffff;
 	 margin: 20px 0 10px 0;
    }
-   .Porfiriy-text{
-	 color: #05EFD4;
-   }
-   .Porfiriy-text:active{
-	 color: rgb(0, 255,0);
-   }
    .Aleksey{
+	color: #ffffff;
 	 margin: 10px 0 20px 0;
-   }
-   .Aleksey-text{
-	 color: #05EFD4;
-   }
-   .Aleksey-text:active{
-	 color: rgb(0, 255,0);
    }
    .about-us-container{
 	 display: none;

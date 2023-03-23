@@ -43,8 +43,8 @@
 				<div class="mark"><ion-icon name="help-circle-outline"></ion-icon></div>
                <div class="main-item developers-button">Разработчики</div>
                <div class="developers-container_body">
-                  <div class="Porfiriy"><a class="Porfiriy-text" href="https://github.com/porfiriy">Porfiriy</a></div>
-                  <div class="Aleksey"><a class="Aleksey-text" href="https://github.com/MooNMisTX">Aleksey</a></div>
+                  <div class="Porfiriy">Porfiriy</div>
+                  <div class="Aleksey">Aleksey</div>
                   <div class="close"><ion-icon name="close-outline"></ion-icon></div>
                </div></div>
 
