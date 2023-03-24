@@ -17,7 +17,7 @@
          <a class="comeback-button" href="/index.php">
             <ion-icon name="chevron-back-outline"></ion-icon></a>
          <div class="social-list">
-            <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@memory_app"><ion-icon name="logo-tiktok"></ion-icon></a>
+            <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@brainrim_app"><ion-icon name="logo-tiktok"></ion-icon></a>
             <a href="https://vk.com/club217095388" class="linkiVK settings-top-icon"><ion-icon
                   name="logo-vk"></ion-icon></a>
          </div>
@@ -82,6 +82,7 @@
       </main>
       <footer class="footer">
          <span class="version">| Beta version 1.1</span>
+		 <a href="/Privacy-Policy.php" class="privacy"><ion-icon name="shield-outline"></ion-icon></a>
 
       </footer>
    </div>
