@@ -1052,7 +1052,6 @@ transition: 0.2s;
 	height: 70%;
 	width: 80%;
 	background-color:#213242;
-	z-index: 3;
 	border-radius: 15px;
 	color: #FFFFFF;
   }
@@ -1103,7 +1102,7 @@ transition: 0.2s;
 	max-width: 80%;
  }
  .day-word__body {
-	margin: 2%;
+	padding: 10px;
 	width: 96%;
 	height: 50%;
 	overflow: scroll;
@@ -1160,7 +1159,6 @@ transition: 0.2s;
 	 min-width: 340px;
 	 background: rgb(0,8,82);
 	 background: #213242;
-	 z-index: 0;
 	 overflow: scroll;
    }
 .clocks{
@@ -1230,11 +1228,6 @@ border-radius: 50%;
 	z-index: 12;
 	border-radius: 6px 6px 0 0;
 }
-
-
-
-
-
   .time{
 	color: white;
 	font-size: 18px;
@@ -1314,13 +1307,11 @@ text-decoration: none;
 		text-align: center;
 		width: 240px;
 		background-color:#0c4e74;
-		z-index: 3;
 		border: 2px solid #05EFD4;
 		border-radius: 15px;
 		top:50%;
 		left:50%;
 		transform:translate(-50%, -50%);
-		z-index: 4;
 }
 .close-currency-body{
 	display: flex;

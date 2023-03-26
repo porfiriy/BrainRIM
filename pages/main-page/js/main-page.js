@@ -68,6 +68,73 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   audioNavigClick.play();
 }
 
+//Ежедневки
+everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
+	containerEverydayTasks.style = 'display: block;';
+	containerGrayBackground.style = 'display: block;';
+	audioClick.play();
+  }
+  everydayTasksCloseButton.onclick = function () { //при закрытии ежедневных заданий
+	containerEverydayTasks.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
+	wordDayContainer.style = 'display: none;';
+	audioClick.play();
+  }
+  InfoTasksButton.onclick = function () { //при нажатии на кнопку инфы ежедневных заданий
+	InfoForTasks.style = 'display: flex; z-index:6;';
+	containerGrayBackground.style = 'display: block; z-index:5;';
+  }
+  CloseInfoForTasks.onclick = function () { //при закрытии инфы ежедневных заданий
+	InfoForTasks.style = 'display: none;';
+	containerGrayBackground.style = 'display: block; z-index: 3;';
+	audioClick.play();
+  }
+  wordDayButton.onclick = function () { //при нажатии на кнопку ежедневных фактов
+	wordDayContainer.style = 'display: block; z-index: 4;';
+	containerGrayBackground.style = 'display: block;';
+	audioClick.play();
+  }
+  wordDayCloseButton.onclick = function () { //при закрытии ежедневных фактов
+	containerGrayBackground.style = 'display: none;';
+	wordDayContainer.style = 'display: none;';
+	audioClick.play();
+  }
+  InfoWordDayButton.onclick = function () { //при нажатии на кнопку инфы ежедневных фактов
+	EverydayInfoButton.style = 'display: flex; z-index: 6;';
+	containerGrayBackground.style = 'display: block; z-index: 5;';
+	wordDayContainer.style = 'display: block;';
+	audioClick.play();
+  }
+  CloseInfoForEverydayWords.onclick = function () { //при закрытии инфы ежедневных фактов
+	EverydayInfoButton.style = 'display: none;';
+	containerGrayBackground.style = 'display: block; z-index: 3;';
+	wordDayContainer.style = 'display: block; z-index: 4;';
+	audioClick.play();
+  }
+  everydayWord.onclick = function () { //при нажатии на кнопку слова дня
+	containerGrayBackground.style = 'display: block;';
+	everydayWordButton.style = 'display: block; z-index: 4;';
+  }
+  everydayWordCloseButton.onclick = function () { //при закрытии слова дня
+	everydayWordButton.style = 'display: none';
+  }
+  
+  dayHistoryButton.onclick = function () { //при нажатии на кнопку исторической даты
+	containerGrayBackground.style = 'display: block;';
+	everydayDateButton.style = 'display: block; z-index: 4;';
+  }
+  everydayDateCloseButton.onclick = function () { //при закрытии инфы исторической даты
+	everydayDateButton.style = 'display: none';
+  }
+  
+  newWordButton.onclick = function () { //при нажатии на кнопку нового английского слова
+	containerGrayBackground.style = 'display: block;';
+	everydayNewWordButton.style = 'display: block; z-index: 4;';
+  }
+  everydayNewWordCloseButton.onclick = function () { //при закрытии нового английского слова
+	everydayNewWordButton.style = 'display: none';
+  }
+
 //Игры
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
   containerGamesPage.style = 'display: block;';
@@ -85,16 +152,7 @@ itemAchievmentsNavigation.onclick = function () { //при нажатии на �
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
-//поворот нижней кнопки Достижений
-/*let arrows = document.getElementsByClassName("scroll");
-for (let i = 0; i < arrows.length; i++) {
-  arrows[i].addEventListener("click", function (event) {
-    if (this.style.transform == "")
-      this.style.transform = "rotate(180deg)";
-    else
-      this.style.transform = "";
-  });
-}*/
+
 //Скрипт на скролл у ачивок
 AchievmentsScrollButton.onclick = function scrollToDown() {
   document.getElementById('achievments-container').scrollTo(9999, 9999);
@@ -116,10 +174,6 @@ ConvertCurrencyButton.onclick = function () { //Кнопка конверт ва
   audioClick.play();
 }
 
-
-
-
-
 //Магазин
 itemStoreNavigation.onclick = function () { //при нажатии на кнопку Store
   containerStorePage.style = 'display: block;';
@@ -138,8 +192,8 @@ mn.style.transform = `rotateZ(${mm}deg)`;
 sc.style.transform = `rotateZ(${ss}deg)`;
 })
 ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
-	ConvertCurrencyBody.style = 'display: flex;';
-	containerGrayBackground.style = 'display: block;';
+	ConvertCurrencyBody.style = 'display: flex; z-index:4;';
+	containerGrayBackground.style = 'display: block; z-index:3;';
 }
 CloseConvertCurrency.onclick = function () { //Конвертировать валюту - при закрытии
 	ConvertCurrencyBody.style = 'display: none;';
@@ -154,74 +208,12 @@ itemAnalyticNavigation.onclick = function () {
   containerStorePage.style = 'display: none;';
   audioNavigClick.play();
 }
-everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
-  containerEverydayTasks.style = 'display: block;';
-  containerGrayBackground.style = 'display: block;';
-  audioClick.play();
-}
-everydayTasksCloseButton.onclick = function () { //при закрытии ежедневных заданий
-  containerEverydayTasks.style = 'display: none;';
-  containerGrayBackground.style = 'display: none;';
-  wordDayContainer.style = 'display: none;';
-  audioClick.play();
-}
-InfoTasksButton.onclick = function () { //при нажатии на кнопку инфы ежедневных заданий
-  InfoForTasks.style = 'display: flex; z-index:6;';
-  containerGrayBackground.style = 'display: block; z-index:5;';
-}
-CloseInfoForTasks.onclick = function () { //при закрытии инфы ежедневных заданий
-  InfoForTasks.style = 'display: none;';
-  containerGrayBackground.style = 'display: block; z-index: 3;';
-  audioClick.play();
-}
-wordDayButton.onclick = function () { //при нажатии на кнопку ежедневных фактов
-  wordDayContainer.style = 'display: block;';
-  containerGrayBackground.style = 'display: block;';
-  audioClick.play();
-}
-wordDayCloseButton.onclick = function () { //при закрытии ежедневных фактов
-  containerGrayBackground.style = 'display: none;';
-  wordDayContainer.style = 'display: none;';
-  audioClick.play();
-}
-InfoWordDayButton.onclick = function () { //при нажатии на кнопку инфы ежедневных фактов
-  EverydayInfoButton.style = 'display: flex;';
-
-  audioClick.play();
-}
-CloseInfoForEverydayWords.onclick = function () { //при закрытии инфы ежедневных фактов
-  EverydayInfoButton.style = 'display: none;';
-  audioClick.play();
-}
 
 settingsButton.onclick = function () {
   audioClick.play();
 }
 Profile.onclick = function () {
   audiomeme.play();
-}
-everydayWord.onclick = function () {
-  containerGrayBackground.style = 'display: block;';
-  everydayWordButton.style = 'display: block';
-}
-everydayWordCloseButton.onclick = function () {
-  everydayWordButton.style = 'display: none';
-}
-
-dayHistoryButton.onclick = function () {
-  containerGrayBackground.style = 'display: block;';
-  everydayDateButton.style = 'display: block';
-}
-everydayDateCloseButton.onclick = function () {
-  everydayDateButton.style = 'display: none';
-}
-
-newWordButton.onclick = function () {
-  containerGrayBackground.style = 'display: block;';
-  everydayNewWordButton.style = 'display: block';
-}
-everydayNewWordCloseButton.onclick = function () {
-  everydayNewWordButton.style = 'display: none';
 }
 
 function getSum(a, b) {
