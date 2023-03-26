@@ -179,6 +179,7 @@ color: #05EFD4;
    display: flex;
    justify-content: center;
    font-size: 20px;
+   font-weight: 900;
 }
  
  .player-level{
@@ -655,7 +656,7 @@ transition: 0.2s;
 	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
 	border-radius: 14px;
 	z-index: -1;
-	animation: animatedgradient 3s ease alternate infinite;
+	animation: animatedgradient 5s ease alternate infinite;
 	background-size: 300% 300%;
 	bottom: 0px;
   }

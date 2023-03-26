@@ -1,7 +1,5 @@
 <?php  
-       
-		 include "../../dataBase/controllers/users.php";
-		 include "../../path.php";
+    include($_SERVER['DOCUMENT_ROOT']."/dataBase/controllers/users.php"); 
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +19,7 @@
 
 <body>
 	<header>
-		<a class="skip-button" href="<?php echo BASE_URL ?>">Пропустить</a>
+	<a class="skip-button" href="/index.php">Пропустить</a>
 	</header>
 	
 	<div class="main">
@@ -30,8 +28,8 @@
                         <form action="registration-page.php" method="post">
 				<h2>Регистрация</h2>
 				<div class="alerts-container err">
-                   <p><?=$errorMsg?></p>
-             </div>
+                <p><?=$errorMsg?></p>
+            </div>
 				<div class="inputBox">
                         <input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login" >
 					<i class="fa-regular fa-user"></i>
@@ -48,7 +46,7 @@
 					<span>Пароль</span>
 				</div>
 				<div class="inputBox">
-                              <button type="submit" name="button-reg" class="btn btn-send"></button>
+                            <button type="submit" name="button-reg" class="btn btn-send">Зарегистрироваться</button>
 				</div>
                         </form>
 				<p>Есть аккаунт? <a href="/pages/page-registration/auth-page/auth-page.php" class="login">Войти</a></p>

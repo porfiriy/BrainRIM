@@ -106,15 +106,19 @@
 	display: flex;
     align-items: center;
     flex-direction: column;
-    margin: 25% 0 0 0;
+    margin: 150px 0 0 0;
+
  }
  form {
     display: flex;
-    gap: 40px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+	gap: 40px;
  }
+ .alerts-container{
+	position: absolute;
+}
  .container .form.signin,
  .container.signinForm .form.signup{
 	 display: flex;
@@ -183,20 +187,33 @@
 	 border-right: 1px solid #00dfc4;
  }
  .btn-send{
-	 background: #00dfc4;
-	 color: #223243;
-	 padding: 10px 0;
-	 font-weight: 500;
-	 height: 40px;
-	 width: 100%;
-	 cursor: pointer;
-	 box-shadow: -5px -5px 15px rgba(255,255,255,0.1),
-	 5px 5px 15px rgba(0,0,0,0.35),
-	 inset -5px -5px 15px rgba(255,255,255,0.1),
-	 inset 5px 5px 15px rgba(0,0,0,0.35);
-	 transition: 0.3s;
+    padding: 12px 10px 12px 48px;
+    border: none;
+    width: 100%;
+    background: #223243;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #fff;
+    font-weight: 300;
+    border-radius: 25px;
+    font-size: 1.5em;
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.35);
+    transition: 0.5s;
+    outline: none;
  }
- .container .form .inputBox input:active{
+ .btn-send:active{
+	transform: scale(0.95);
+    box-shadow: inset 2px 3px 3px rgb(255 255 255 / 25%), 0px 0px 20px 0px rgb(29, 136, 148);
+ }
+ .container .form .inputBox button[type="submit"] {
+    background: #00dfc4;
+    color: #223243;
+    padding: 10px 0;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: -5px -5px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.35), inset -5px -5px 15px rgba(255,255,255,0.1), inset 5px 5px 15px rgba(0,0,0,0.35);
+    transition: 0.3s;
+}
+ .container .form .inputBox button:active{
 	 transform: scale(0.95);
 	 box-shadow: inset 2px 3px 3px rgb(255 255 255 / 25%), 0px 0px 20px 0px rgb(29, 136, 148);
  }
