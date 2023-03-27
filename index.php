@@ -262,9 +262,9 @@
 				<span>8</span><img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
 				</div>
 				<div class="trade-currency">
-				<input type="number" class="input-trade">
+				<input placeholder="1" type="number" class="input-trade"> 
 				<span>=</span>
-				<input type="number" class="input-trade">
+				<input placeholder="8" type="number" class="input-trade">
 				</div>
 				<button type="submit" name="convert-button" class="convert-button">Обменять</button>
 		    </div>
