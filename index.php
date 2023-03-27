@@ -254,9 +254,20 @@
             <button class="convert-currency-button">Конвертировать валюту</button>
 			</div>
 			<div class="convert-currency-body">
+			    <div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
 				<div class="convert-currency-text">Конвертировать валюту</div>
-			<div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
-		</div>
+				<div class="trade-price">
+				<span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
+				<div class="reverse"><ion-icon name="repeat-outline"></ion-icon></div>
+				<span>8</span><img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
+				</div>
+				<div class="trade-currency">
+				<input type="count" class="input-trade">
+				<span>=</span>
+				<input type="count" class="input-trade">
+				</div>
+				<button type="submit" name="convert-button" class="convert-button">Обменять</button>
+		    </div>
          <div class="buy-currency">
             <div class="buy-memoney">
                <div class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
