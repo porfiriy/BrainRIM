@@ -99,7 +99,7 @@
 	width: 100%;
 	min-width: 340px;
 	height: 100%;
-	background-color: rgba(108, 108, 108, 0.584);
+	background-color: rgb(0 0 0 / 50%);
 	z-index: 3;
  }
  .header{
@@ -1300,35 +1300,103 @@ color: #000;
 text-decoration: none;
 }
 .convert-currency-body{
-		display: none;
-		flex-direction: column;
-		font-size: 22px;
-		position: absolute;
-		text-align: center;
-		width: 240px;
-		background-color:#0c4e74;
-		border: 2px solid #05EFD4;
-		border-radius: 15px;
-		top:50%;
-		left:50%;
-		transform:translate(-50%, -50%);
+	display: none;
+    flex-direction: column;
+    font-size: 20px;
+    position: absolute;
+    text-align: center;
+    width: 270px;
+    background-color: #0c4e74;
+    border: 2px solid #05EFD4;
+    border-radius: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+	gap: 20px;
 }
 .close-currency-body{
-	display: flex;
-	justify-content: center;
-	border-top: 2px  solid #05EFD4;
-	border-radius: 10px;
-	box-shadow: 0px -1px 4px rgb(0 255 5 / 30%), 0px 3px 0px rgb(0 241 255 / 25%);
-	color: red;
-	font-size: 26px;
-  }
-  .close-currency-body:active{
+    position: absolute;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #213242;
+    box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    color: red;
+    font-weight: 900;
+    font-size: 47px;
+    margin: 10px;
+    transition: 0.1s;
+}
+.close-currency-body:active{
 	transform: scale(0.95);
 	box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%);
 	background-color: #05EFD4;
 	color: #000000;
 	transition: 0.4s;
-  }
+}
+.convert-currency-text{
+    margin: 70px auto auto auto;
+color: #05EFD4;
+font-size: 22px;
+}
+.trade-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	gap: 5px;
+	font-size: 24px;
+}
+.trade-currency {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+	gap: 10px;
+}
+.input-trade{
+	border-radius: 15px;
+	width: 100px;
+	height: 30px;
+	overflow: scroll;
+	background-color: #0c4e74;
+	padding: 10px;
+	color: #ffffff;
+	transition: 1s;
+	box-shadow: -5px -5px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.35);
+	border: 1px solid #00dfc4;
+}
+.input-trade:focus {
+    box-shadow: 0px 0px 15px 0px #0da5a5;
+    border-radius: 16px;
+    color: #000;
+    background-color: #05EFD4;
+}
+.convert-button{
+	border-radius: 15px;
+	border: 2px solid #05EFD4;
+    width: 160px;
+	height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+	margin: 10px auto 70px auto;
+	font-size: 20px;
+	background-color: #0c4e74;
+	color: #05EFD4;
+	transition: 0.8s;
+}
+.convert-button:active{
+	transform: scale(0.95);
+	box-shadow: 0px 0px 20px -4px #05efd4;
+	color: #000;
+	background-color: #05EFD4;
+}
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
