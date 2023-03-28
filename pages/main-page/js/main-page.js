@@ -46,7 +46,8 @@ const CloseAllLevels = document.querySelector('.close-levels-container');
 const ConvertCurrencyButton = document.querySelector('.convert-currency-button');
 const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
 const CloseConvertCurrency = document.querySelector('.close-currency-body');
-const deg = 6;
+const Offers = document.querySelector('.special-offers');
+const deg = 6; 
 const hr = document.querySelector('#hr');
 const mn = document.querySelector('#mn');
 const sc = document.querySelector('#sc');
@@ -153,7 +154,7 @@ itemAchievmentsNavigation.onclick = function () { //при нажатии на �
   audioNavigClick.play();
 }
 
-//Скрипт на скролл у ачивок
+//Скролл у ачивок
 AchievmentsScrollButton.onclick = function scrollToDown() {
   document.getElementById('achievments-container').scrollTo(9999, 9999);
 }
@@ -199,6 +200,10 @@ CloseConvertCurrency.onclick = function () { //Конвертировать ва
 	ConvertCurrencyBody.style = 'display: none;';
 	containerGrayBackground.style = 'display: none;';
 }
+Offers.onclick = function scrollToDown() { //Скролл до спец предложений
+	containerStorePage.scrollTo(9999, 9999);
+}
+
 
 //Аналитика
 itemAnalyticNavigation.onclick = function () {

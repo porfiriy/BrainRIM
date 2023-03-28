@@ -1397,6 +1397,12 @@ font-size: 22px;
 	color: #000;
 	background-color: #05EFD4;
 }
+.special-offers-body{
+	display: flex;
+	justify-content: center;
+	margin: 200px auto;
+	color: #ffffff;
+}
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;

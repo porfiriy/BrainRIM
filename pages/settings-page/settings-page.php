@@ -36,7 +36,12 @@
 
 			   <div class="item-body">
 				<div class="mark"><ion-icon name="chatbubble-ellipses-outline"></ion-icon></div>
-               <a class="main-item support" href="https://vk.com/topic-217095388_49215306">Поддержка</a>
+               <div class="main-item support">Поддержка</div>
+			   </div>
+			   <div class="support-body">
+				<textarea placeholder="Опишите свою проблему" class="input-trouble"></textarea>
+				<button type="submit" name="button-reg" class="submit-button">Отправить</button>
+				<div class="close-support"><ion-icon name="close-outline"></ion-icon></div>
 			   </div>
 
 			   <div class="item-body">
@@ -62,7 +67,25 @@
 
 			   <div class="item-body">
 				<div class="mark"><ion-icon name="newspaper-outline"></ion-icon></div>
-			   <a class="main-item news" href="https://m.vk.com/club217095388">Новости</a>
+			   <div class="main-item news">Новости</div>
+			   </div>
+			   <div class="news-body">
+				<h1 class="news-title">Масштабное обновление</h1>
+				<ul class="news-text">
+					<li>Открыт бета-тест</li>
+					<li>Добавлена поддержка</li>
+					<li>Добавлены новости</li>
+					<li>Изменён профиль</li>
+					<li>Обновлены все страницы</li>
+					<li>Открыт бета-тест</li>
+					<li>Сделан конвертер валют</li>
+					<li>Изменён конвертер валют</li>
+					<li>Обновлены игры</li>
+					<li>И ещё очень много чего!</li>
+					
+				</ul>
+				<span class="date">28.03.2023</span>
+				<div class="close-news"><ion-icon name="close-outline"></ion-icon></div>
 			   </div>
 			   
 			   <div class="item-body">
