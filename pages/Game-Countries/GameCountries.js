@@ -148,7 +148,7 @@ const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 
 //z
-//AJAX запрос на сервер для добавления в базу данных инфы
+//AJAX запрос на сервер для добавления в базу данных инфы при лузе
 async function doAjaxLoose() {
    try {
       const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
@@ -367,7 +367,7 @@ function showFlags() {
 
 
 
-   //анимация проигриша 
+   //анимация луза 
    function showLooseMessage() {
       deadeLine.style = "animation-play-state: paused ";
       victoryLooseScreenContainer.style = 'display:flex;';

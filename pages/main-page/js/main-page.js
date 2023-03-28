@@ -204,7 +204,6 @@ Offers.onclick = function scrollToDown() { //Скролл до спец пред
 	containerStorePage.scrollTo(9999, 9999);
 }
 
-
 //Аналитика
 itemAnalyticNavigation.onclick = function () {
   containerAnalyticPage.style = 'display: block;';
