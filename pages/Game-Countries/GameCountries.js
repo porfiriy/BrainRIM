@@ -14,6 +14,8 @@ let button6 = document.querySelector('.button-count__6');
 let arrButtons = [button1, button2, button3, button4, button5, button6];
 let numbrButtnsForMode;
 
+
+
 //переменные с иконками флагов изи мод
 let SwitzerlandImg = "/pages/Game-Countries/img/easy-mode/ch.png";
 let ArmeniaImg = "/pages/Game-Countries/img/easy-mode/am.png";
@@ -44,13 +46,55 @@ let SwedenImg = "/pages/Game-Countries/img/easy-mode/se.png";
 let SyriaImg = "/pages/Game-Countries/img/easy-mode/sy.png";
 let TurkeyImg = "/pages/Game-Countries/img/easy-mode/tr.png";
 let USAImg = "/pages/Game-Countries/img/easy-mode/um.png";
+let CanadaImg = "/pages/Game-Countries/img/easy-mode/ca.png";
+let AustraliaImg = "/pages/Game-Countries/img/easy-mode/hm.png";
+let IraqImg = "/pages/Game-Countries/img/easy-mode/iq.png";
+let IranImg = "/pages/Game-Countries/img/easy-mode/ir.png";
+let SerbiaImg = "/pages/Game-Countries/img/easy-mode/rs.png";
 
-let arrCounrysImgEasy = [SwitzerlandImg, ArmeniaImg, AustriaImg, BrazilImg, NorwayImg, BelarusImg, ChinaImg, GermanyImg, DenmarkImg, EstoniaImg, FinlandImg, FranceImg, BritishImg, GreeceImg, IsrailImg, IndiaImg, ItalyImg, JapanImg, KoreaImg, KZImg, LatviaImg, NewZilandImg, PolandImg, PortugalImg, RussianImg, SwedenImg, SyriaImg, TurkeyImg, USAImg];
-let arrCounrysTextEasy = ['Швейцария', 'Армения', 'Австрия', 'Бразилия', 'Норвегия', 'Беларусь', 'Китай', 'Германия', 'Денмарк', 'Эстония', 'Финляндия', 'Франция', 'Британия', 'Греция', 'Израиль', 'Индия', 'Италия', 'Япония', 'Корея', 'Казахстан', 'Латвия', 'Нов.Зеландия', 'Польша', 'Португалия', 'Россия', 'Швеция', 'Сирия', 'Турция', 'США'];
+let arrCounrysImgEasy = [SwitzerlandImg, ArmeniaImg, AustriaImg, BrazilImg, NorwayImg, BelarusImg, ChinaImg, GermanyImg, DenmarkImg, EstoniaImg, FinlandImg, FranceImg, BritishImg, GreeceImg, IsrailImg, IndiaImg, ItalyImg, JapanImg, KoreaImg, KZImg, LatviaImg, NewZilandImg, PolandImg, PortugalImg, RussianImg, SwedenImg, SyriaImg, TurkeyImg, USAImg, CanadaImg, AustraliaImg, IraqImg, IranImg, SerbiaImg];
+let arrCounrysTextEasy = ['Швейцария', 'Армения', 'Австрия', 'Бразилия', 'Норвегия', 'Беларусь', 'Китай', 'Германия', 'Дания', 'Эстония', 'Финляндия', 'Франция', 'Британия', 'Греция', 'Израиль', 'Индия', 'Италия', 'Япония', 'Корея', 'Казахстан', 'Латвия', 'Нов.Зеландия', 'Польша', 'Португалия', 'Россия', 'Швеция', 'Сирия', 'Турция', 'США', 'Канада', 'Австралия', 'Ирак', 'Иран', 'Сербия'];
+
 
 
 
 //переменные с иконками флагов нормал мод
+let ArabEmiratesImg = "/pages/Game-Countries/img/normal-mode/ae.png";
+let AfganistanImg = "/pages/Game-Countries/img/normal-mode/af.png";
+let AngolaImg = "/pages/Game-Countries/img/normal-mode/ao.png";
+let ArgentinImg = "/pages/Game-Countries/img/normal-mode/ar.png";
+let AzerbaijanImg = "/pages/Game-Countries/img/normal-mode/az.png";
+let KamerunImg = "/pages/Game-Countries/img/normal-mode/cm.png";
+let BelgiumImg = "/pages/Game-Countries/img/normal-mode/be.png";
+let BalgarImg = "/pages/Game-Countries/img/normal-mode/bg.png";
+let BoliviaImg = "/pages/Game-Countries/img/normal-mode/bo.png";
+let BagamesImg = "/pages/Game-Countries/img/normal-mode/bs.png";
+let ChiliImg = "/pages/Game-Countries/img/normal-mode/cl.png";
+let ColumbiaImg = "/pages/Game-Countries/img/normal-mode/co.png";
+let CostaRicaImg = "/pages/Game-Countries/img/normal-mode/cr.png";
+let CubaImg = "/pages/Game-Countries/img/normal-mode/cu.png";
+let CyprImg = "/pages/Game-Countries/img/normal-mode/cy.png";
+let ChehiaImg = "/pages/Game-Countries/img/normal-mode/cz.png";
+let DominicanImg = "/pages/Game-Countries/img/normal-mode/do.png";
+let AlgirImg = "/pages/Game-Countries/img/normal-mode/dz.png";
+let EcuadorImg = "/pages/Game-Countries/img/normal-mode/ec.png";
+let EgyptImg = "/pages/Game-Countries/img/normal-mode/eg.png";
+let SpainImg = "/pages/Game-Countries/img/normal-mode/es.png";
+let ScotlandImg = "/pages/Game-Countries/img/normal-mode/gb-sct.png";
+let GruziaImg = "/pages/Game-Countries/img/normal-mode/ge.png";
+let GrinlandImg = "/pages/Game-Countries/img/normal-mode/gl.png";
+let HarvatImg = "/pages/Game-Countries/img/normal-mode/hr.png";
+let KeniaImg = "/pages/Game-Countries/img/normal-mode/ke.png";
+let MadagascarImg = "/pages/Game-Countries/img/normal-mode/mg.png";
+let MakedonImg = "/pages/Game-Countries/img/normal-mode/mk.png";
+let NigerImg = "/pages/Game-Countries/img/normal-mode/ng.png";
+let NiderlandImg = "/pages/Game-Countries/img/normal-mode/nl.png";
+let PanamaImg = "/pages/Game-Countries/img/normal-mode/pa.png";
+let PacestanImg = "/pages/Game-Countries/img/normal-mode/pk.png";
+let YemenImg = "/pages/Game-Countries/img/normal-mode/ye.png";
+
+let arrCounrysImgNormal = [ArabEmiratesImg, AfganistanImg, AngolaImg, ArgentinImg, AzerbaijanImg, KamerunImg, BelgiumImg, BalgarImg, BoliviaImg, BagamesImg, ChiliImg, ColumbiaImg, CostaRicaImg, CubaImg, CyprImg, ChehiaImg, DominicanImg, AlgirImg, EcuadorImg, EgyptImg, SpainImg, ScotlandImg, GruziaImg, GrinlandImg, HarvatImg, KeniaImg, MadagascarImg, MakedonImg, NigerImg, NiderlandImg, PanamaImg, PacestanImg, YemenImg];
+let arrCounrysTextNormal = ['Араб. Эмираты', 'Афганистан', 'Ангола', 'Аргентина', 'Азербайджан', ' Камерун', 'Бельгия', 'Балгария', 'Боливия', 'Багамские ост.', 'Чили', 'Колумбия', 'Коста-Рика', 'Куба', 'Кипр', 'Чехия', 'Доминикан', 'Алжир', 'Эквадор', 'Египет', 'Испания', 'Шотландия', 'Грузия', 'Гренландия', 'Харватия', 'Кения', 'Мадагаскар', 'Македония', 'Нигерия', 'Нидерланды', 'Панама', 'Пакистан', 'Емен'];
 
 
 
@@ -66,6 +110,9 @@ let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
 
 let ModeTimeAnim;
+let chosenGameMode; //в неё записываем режим после выбора режима пользователем
+let arrGameMode;//в неё записываем массив с флагами
+let arrTextGameMode;
 let randomNumberBtn;
 let arrAlredyExistNumbrs = [];
 let conditionPress = false;//при нажатии на кнопку будет true
@@ -161,6 +208,7 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 };
 
 easyModeButton.onclick = function () {//при нажатии на изи кнопку сложности
+   chosenGameMode = 'easy';
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Легко';
    gameMode.classList.add('game-mode-style-easy');
@@ -175,6 +223,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    numbrButtnsForMode = 3;
 }
 normalModeButton.onclick = function () {
+   chosenGameMode = 'normal';
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Нормально';
    gameMode.classList.add('game-mode-style-normal');
@@ -189,6 +238,7 @@ normalModeButton.onclick = function () {
    numbrButtnsForMode = 3;
 }
 hardModeButton.onclick = function () {
+   chosenGameMode = 'hard';
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Сложно';
    gameMode.classList.add('game-mode-style-hard');
@@ -204,6 +254,7 @@ hardModeButton.onclick = function () {
    numbrButtnsForMode = 5;
 }
 crazyModeButton.onclick = function () {
+   chosenGameMode = 'crazy';
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
@@ -221,6 +272,30 @@ crazyModeButton.onclick = function () {
 victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
 }
+
+function checkPressButton(numberButton) {
+   if (arrButtons[randomNumberBtn] == numberButton) {
+      rightAnswer += 1;
+      countRightBody.innerHTML = rightAnswer;
+      if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
+         showLooseMessage();
+      }
+      if (rightAnswer == 10) {
+         showWinMessage();
+      }
+   } else {
+      wrongAnswer += 1;
+      countWrongBody.innerHTML = wrongAnswer;
+      if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
+         showLooseMessage();
+      }
+      if (rightAnswer == 10) {
+         showLooseMessage();
+      }
+   }
+   showFlags();
+}
+
 button1.onclick = function () {
    conditionPress = true;
    checkPressButton(button1);
@@ -247,29 +322,17 @@ button6.onclick = function () {
    checkPressButton(button6);
 }
 
-function checkPressButton(numberButton) {
-   if (arrButtons[randomNumberBtn] == numberButton) {
-      rightAnswer += 1;
-      countRightBody.innerHTML = rightAnswer;
-      if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
-         showLooseMessage();
-      }
-      if (rightAnswer == 10) {
-         showWinMessage();
-      }
-   } else {
-      wrongAnswer += 1;
-      countWrongBody.innerHTML = wrongAnswer;
-      if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
-         showLooseMessage();
-      }
-      if (rightAnswer == 10) {
-         showLooseMessage();
-      }
-   }
-   showFlags();
-}
+function ChoiseGameModeArray() {
 
+   if (chosenGameMode == 'easy') {
+      arrGameMode = arrCounrysImgEasy;
+      arrTextGameMode = arrCounrysTextEasy;
+   } else if (chosenGameMode == 'normal') {
+      arrGameMode = arrCounrysImgNormal;
+      arrTextGameMode = arrCounrysTextNormal;
+   }
+
+}
 function randomLoopForArr() {
    const range = 25;//до какого значения ранд числа
    const count = 15;      // кол-во требуемых чисел
@@ -285,38 +348,8 @@ function randomLoopForArr() {
 
 }
 
-//анимация проигриша 
-function showLooseMessage() {
-   deadeLine.style = "animation-play-state: paused ";
-   victoryLooseScreenContainer.style = 'display:flex;';
-   victoryLooseScreenWinLooseText.innerHTML = 'Поражение!'
-   victoryLooseScreenWinLooseText.classList.add('loose-text-red');
-   resultsMenuWinLooseItem.innerHTML = 'Поражение!';
-   resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
-   resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
-   resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
-   resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
-   resultsMenuTimeItem.classList.add('items-container__time-item-red');
-   doAjaxLoose();//z //вызов запроса в БД
-}
-function showWinMessage() {
-   deadeLine.style = "animation-play-state: paused ";
-   victoryLooseScreenContainer.style = 'display:flex;';
-   victoryLooseScreenWinLooseText.innerHTML = 'Победа!'
-   victoryLooseScreenWinLooseText.classList.add('victory-text-green');
-   resultsMenuWinLooseItem.innerHTML = 'Победа!'
-   resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-   resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
-   resultsMenuOpenedCardsItem.innerHTML = '20';
-   resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
-   resultsMenuTimeItem.classList.add('items-container__time-item-green');
-   resultsMenuIqItem.innerHTML = '+50';
-   resultsMenuExpItem.innerHTML = '+20';
-   doAjaxWin();
-}
-deadeLine.addEventListener("animationend", showLooseMessage);
-
 function showFlags() {
+
    if (conditionPress == true) {
       arrayRandomNumbers = [];
       randomLoopForArr();
@@ -330,25 +363,59 @@ function showFlags() {
       conditionPress = false;
    }
 
-   flagsBody.innerHTML = `<img class="img-country" src="${arrCounrysImgEasy[arrayRandomNumbers[0]]}">`;//добавляет флаг в html
+
+
+
+
+   //анимация проигриша 
+   function showLooseMessage() {
+      deadeLine.style = "animation-play-state: paused ";
+      victoryLooseScreenContainer.style = 'display:flex;';
+      victoryLooseScreenWinLooseText.innerHTML = 'Поражение!'
+      victoryLooseScreenWinLooseText.classList.add('loose-text-red');
+      resultsMenuWinLooseItem.innerHTML = 'Поражение!';
+      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
+      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
+      resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
+      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
+      resultsMenuTimeItem.classList.add('items-container__time-item-red');
+      doAjaxLoose();//z //вызов запроса в БД
+   }
+   function showWinMessage() {
+      deadeLine.style = "animation-play-state: paused ";
+      victoryLooseScreenContainer.style = 'display:flex;';
+      victoryLooseScreenWinLooseText.innerHTML = 'Победа!'
+      victoryLooseScreenWinLooseText.classList.add('victory-text-green');
+      resultsMenuWinLooseItem.innerHTML = 'Победа!'
+      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
+      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
+      resultsMenuOpenedCardsItem.innerHTML = '20';
+      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
+      resultsMenuTimeItem.classList.add('items-container__time-item-green');
+      resultsMenuIqItem.innerHTML = '+50';
+      resultsMenuExpItem.innerHTML = '+20';
+      doAjaxWin();
+   }
+   deadeLine.addEventListener("animationend", showLooseMessage);
+
+
+   flagsBody.innerHTML = `<img class="img-country" src="${arrGameMode[arrayRandomNumbers[0]]}">`;//добавляет флаг в html
    arrAlredyExistNumbrs.push(arrayRandomNumbers[0]);
    randomNumberBtn = Math.floor(Math.random() * numbrButtnsForMode);//рандомная кнопка с правильным ответом
    console.log(randomNumberBtn);
    let iterCount = 1;// нужно чтобы с каждой итерац менялся индекс массива
    for (let k = 0; k <= numbrButtnsForMode; k++) {
-      arrButtons[k].innerHTML = arrCounrysTextEasy[arrayRandomNumbers[iterCount]];
+      arrButtons[k].innerHTML = arrTextGameMode[arrayRandomNumbers[iterCount]];
       iterCount++;
    }
-   arrButtons[randomNumberBtn].innerHTML = arrCounrysTextEasy[arrayRandomNumbers[0]];//вставляет правильный ответ текст в кнопку
+   arrButtons[randomNumberBtn].innerHTML = arrTextGameMode[arrayRandomNumbers[0]];//вставляет правильный ответ текст в кнопку
 
 }
 
 
-
-
-
 function game() {
    randomLoopForArr();
+   ChoiseGameModeArray();
    showFlags();
    deadeLine.style = `animation: deadeLine ${ModeTimeAnim}s linear `;//запуск анимации,c переменной под каждый мод игы
 }
