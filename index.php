@@ -352,7 +352,7 @@
             </div>
          </div>
          <div class="everyday-info-button-body">
-            <span>Ежедневно здесь будет появляться интересная и полезная информация.
+            <span>Каждый день здесь будет появляться новая интересная и полезная информация.
                <br>Она будет расширять ваш кругозор.
                <br>Не пропустите!.</span>
             <div class="close-everyday-info-button-body"><ion-icon name="close-outline"></ion-icon></div>
