@@ -270,17 +270,17 @@
 		    </div>
          <div class="buy-currency">
             <div class="buy-memoney">
-               <div class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 0.86$</div>
-               <div class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 1.88$</div>
-               <div class="buy third-offer">48<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy third-offer">48<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 3.41$</div>
-               <div class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 6.99$</div>
-               <div class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 13.62$</div>
-               <div class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
             </div>
             <div class="special-offers">Специальные предложения</div>
@@ -452,7 +452,7 @@
          </div>
       </div>
 
-
+      <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/main-page/js/main-page.js"></script>
