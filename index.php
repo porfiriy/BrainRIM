@@ -270,17 +270,17 @@
 		    </div>
          <div class="buy-currency">
             <div class="buy-memoney">
-               <div class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 0.86$</div>
-               <div class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 1.88$</div>
-               <div class="buy third-offer">48<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy third-offer">48<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 3.41$</div>
-               <div class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 6.99$</div>
-               <div class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 13.62$</div>
-               <div class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div id="buy" class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
             </div>
             <div class="special-offers">Специальные предложения</div>
@@ -328,7 +328,7 @@
       </div>
       <div class="info-button-body">
          <span>Еженедельные задания - задания которые вы можете выполнять в течении недели и получать бонусы и подарки.
-            <br>В конце каждой неделю они обновляются. На данный момент функция в разработке.</span>
+            <br>В конце каждой недели они обновляются. На данный момент функция в разработке.</span>
          <div class="close-every-day-tasks-info every-day-tasks-close-button"><ion-icon name="close-outline"></ion-icon>
          </div>
       </div>
@@ -352,7 +352,7 @@
             </div>
          </div>
          <div class="everyday-info-button-body">
-            <span>Ежедневно здесь будет появляться интересная и полезная информация.
+            <span>Каждый день здесь будет появляться новая интересная и полезная информация.
                <br>Она будет расширять ваш кругозор.
                <br>Не пропустите!.</span>
             <div class="close-everyday-info-button-body"><ion-icon name="close-outline"></ion-icon></div>
@@ -452,7 +452,7 @@
          </div>
       </div>
 
-
+      <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/main-page/js/main-page.js"></script>

@@ -240,3 +240,75 @@ function getSum(a, b) {
 
 }
 getSum(511, 506);
+
+
+
+
+
+//Платёжка Google
+function onGooglePayLoaded() {
+	const googlePayClient =
+	new google.payments.api.PaymentsClient({
+	  environment:'TEST'
+	});
+}
+
+const clientConfiguration = {
+	apiVersion: 2,
+	apiVersionMinor: 0,
+	allowedPaymentMethods: [cardPaymentMethod]
+};
+
+googlePayClient.isReadyToPay(clientConfiguration)
+ .then(function(response) {
+  if(response.result) {
+//Добавляет гугл пэй кнопку
+  }
+}).catch(function(err) {
+ //Ошибка в консоль разрабов
+});
+
+googlePayClient.createButton({
+	// defaults to black if default or omitted
+	buttonColor:'default',
+	// defaults to long if omitted
+	buttonType:'long',
+	onClick: onGooglePaymentsButtonClicked
+});
+
+const paymentDataRequest = Object.assign({},
+	clientConfiguration);
+
+	paymentDataRequest.transactionInfo = {
+		totalPriceStatus:'FINAL',
+		totalPrice:'123.45',
+		currencyCode:'USD',
+	};
+	paymentDataRequest.merchantInfo = {
+		merchantId:'BCR2DN4T7LDKXGJW',
+		merchantName:'SFH Company'
+	};
+
+	//Информация при оплате
+	const cardPaymentMethod = {
+		type: 'CARD',
+		tokenizationSpecification: tokenizationSpec,
+		parameters: {
+			allowedCardNetworks: ['VISA','AMEX'],
+			allowedAuthMethods: ['PAN_ONLY','CRYPTOGRAM_3DS'],
+			billingAddressRequired: true,
+			billingAddressParameters: {
+				format: 'FULL',
+				phoneNumberRequired: true
+			}
+		}
+	};
+
+
+googlePayClient
+.loadPaymentData(paymentDataRequest)
+.then(function(paymentData) {
+	processPayment(paymentData);
+}).catch(function(err) {
+	//Ошибка в консоль разрабов
+   });
