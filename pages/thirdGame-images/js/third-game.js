@@ -1,7 +1,7 @@
 "use strict"
 
 //звук
-let audioComplete = new Audio('/page-for-memory/sound/successfull2.mp3'); 
+let audioComplete = new Audio('/page-for-memory/sound/successfull2.mp3');
 let audioVictory = new Audio('/page-for-memory/sound/successfull.mp3');
 let audioStart = new Audio('/page-for-memory/sound/start-game.mp3');
 let audioFaile = new Audio('/page-for-memory/sound/faile.mp3');
@@ -14,12 +14,14 @@ let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
 
 
+const cards = document.querySelectorAll('.memory-card');
 let deadeLine = document.getElementById("deadeLine");
 let easyModeButton = document.querySelector('.easy-mode-button');
 let normalModeButton = document.querySelector('.normal-mode-button');
 let hardModeButton = document.querySelector('.hard-mode-button');
 let crazyModeButton = document.querySelector('.crazy-mode-button');
 let modeOptionsContainer = document.querySelector('.mode-options-container');
+let hintButton = document.querySelector('.hint-button');
 let gameMode = document.querySelector('.game-mode');
 let gameModeStyleEasy = document.querySelector('.game-mode-style-easy');
 const startButtonContainer = document.querySelector('.button-start-container');
@@ -131,6 +133,12 @@ crazyModeButton.onclick = function () {
 victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
 }
+hintButton.onclick = function () {
+   cards.forEach(card => card.classList.add('flip'));
+   setTimeout(() => {
+      cards.forEach(card => card.classList.remove('flip'));
+   }, 1500);
+}
 
 
 
@@ -182,7 +190,7 @@ function game() {
    let nofOpenedCardsArr = [];
 
 
-   const cards = document.querySelectorAll('.memory-card');
+
 
    let hasFlippedCard = false;
    let lockBoard = false;
