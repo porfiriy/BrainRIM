@@ -181,7 +181,7 @@ const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 
 //z
-//AJAX запрос на сервер для добавления в базу данных инфы
+//AJAX запрос на сервер для добавления в базу данных инфы при лузе
 async function doAjaxLoose() {
    try {
       const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
@@ -430,6 +430,41 @@ function showFlags() {
       }
       conditionPress = false;
    }
+
+
+
+
+
+   //анимация луза 
+   function showLooseMessage() {
+      deadeLine.style = "animation-play-state: paused ";
+      victoryLooseScreenContainer.style = 'display:flex;';
+      victoryLooseScreenWinLooseText.innerHTML = 'Поражение!'
+      victoryLooseScreenWinLooseText.classList.add('loose-text-red');
+      resultsMenuWinLooseItem.innerHTML = 'Поражение!';
+      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
+      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
+      resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
+      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
+      resultsMenuTimeItem.classList.add('items-container__time-item-red');
+      doAjaxLoose();//z //вызов запроса в БД
+   }
+   function showWinMessage() {
+      deadeLine.style = "animation-play-state: paused ";
+      victoryLooseScreenContainer.style = 'display:flex;';
+      victoryLooseScreenWinLooseText.innerHTML = 'Победа!'
+      victoryLooseScreenWinLooseText.classList.add('victory-text-green');
+      resultsMenuWinLooseItem.innerHTML = 'Победа!'
+      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
+      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
+      resultsMenuOpenedCardsItem.innerHTML = '20';
+      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
+      resultsMenuTimeItem.classList.add('items-container__time-item-green');
+      resultsMenuIqItem.innerHTML = '+50';
+      resultsMenuExpItem.innerHTML = '+20';
+      doAjaxWin();
+   }
+   deadeLine.addEventListener("animationend", showLooseMessage);
 
 
    flagsBody.innerHTML = `<img class="img-country" src="${arrGameMode[arrayRandomNumbers[0]]}">`;//добавляет флаг в html

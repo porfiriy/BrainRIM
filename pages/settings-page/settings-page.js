@@ -9,6 +9,14 @@ const CloseAboutUs = document.querySelector('.close-about-us');
 const LanguageButton = document.querySelector('.language-button');
 const Language = document.querySelector('.language-container');
 const CloseLanguage = document.querySelector('.close-language');
+const SupportButton = document.querySelector('.support');
+const Support = document.querySelector('.support-body');
+const CloseSupport = document.querySelector('.close-support');
+const NewsButton = document.querySelector('.news');
+const News = document.querySelector('.news-body');
+const CloseNews = document.querySelector('.close-news');
+
+
 
 Devs.onclick = function () { //Разработчики - при нажатии на кнопку
 	DevsList.style = 'display: flex;';
@@ -35,5 +43,22 @@ LanguageButton.onclick = function () { //Язык - при нажатии на �
 }
 CloseLanguage.onclick = function () { //Язык - при закрытии
 	Language.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
+}
+
+SupportButton.onclick = function () { //Поддержка - при нажатии на кнопку
+	Support.style = 'display: flex;';
+	containerGrayBackground.style = 'display: block;';
+}
+CloseSupport.onclick = function () { //Поддержка - при закрытии
+	Support.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
+}
+NewsButton.onclick = function () { //Поддержка - при нажатии на кнопку
+	News.style = 'display: flex;';
+	containerGrayBackground.style = 'display: block;';
+}
+CloseNews.onclick = function () { //Поддержка - при закрытии
+	News.style = 'display: none;';
 	containerGrayBackground.style = 'display: none;';
 }

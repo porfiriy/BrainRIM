@@ -69,16 +69,16 @@
 			<div class="statistics">
 				<span class="button rank">Новичок</span>
 				<div class="rank-body">
-					<span class="rank-info">новичок</span>
-					<span class="rank-info">Знаток</span>
-					<span class="rank-info">Молодец</span>
-					<span class="rank-info">Профессионал</span>
-					<span class="rank-info">Мегаразум</span>
+					<span class="rank-info rank-newbie">новичок</span>
+					<span class="rank-info rank-midle">Знаток</span>
+					<span class="rank-info rank-good">Молодец</span>
+					<span class="rank-info rank-pro">Профессионал</span>
+					<span class="rank-info rank-god">Мегаразум</span>
 					<div class="close-rank"><ion-icon name="close-outline"></ion-icon></div>
 				</div>
 				<span class="button wtf">?</span>
 				<a href="#" class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
-				<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти</a>
+				<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти из аккаунта</a>
 			</div>
 		</div>
 	</main>

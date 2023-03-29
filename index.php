@@ -278,12 +278,14 @@
                      alt="">= 3.41$</div>
                <div class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 6.99$</div>
-               <div class="buy five-offer">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 13.62$</div>
-               <div class="buy six-offer">500<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+               <div class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
             </div>
             <div class="special-offers">Специальные предложения</div>
+			<!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
+			<div class="special-offers-body">В данный момент специальных предложений нету.</div>
          </div>
       </div>
 
