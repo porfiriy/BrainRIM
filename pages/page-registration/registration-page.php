@@ -25,30 +25,30 @@
 	<div class="main">
 		<div class="container">
 			<div class="form signup">
-                        <form action="registration-page.php" method="post">
-				<h2>Регистрация</h2>
-				<div class="alerts-container err">
-                <p><?=$errorMsg?></p>
-            </div>
-				<div class="inputBox">
-                        <input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login" >
-					<i class="fa-regular fa-user"></i>
-					<span>Логин</span>
-				</div>
-				<div class="inputBox">
-                        <input type="email" required="required" value="<?=$email?>"  class="form-control" name="email" id="email" >
-					<i class="fa-regular fa-envelope"></i>
-					<span>Почта</span>
-				</div>
-				<div class="inputBox">
-                        <input type="password" required="required" class="form-control" id="pass" name="pass" >
-					<i class="fa-sharp fa-solid fa-lock"></i>
-					<span>Пароль</span>
-				</div>
-				<div class="inputBox">
-                            <button type="submit" name="button-reg" class="btn btn-send">Зарегистрироваться</button>
-				</div>
-                        </form>
+            <form action="registration-page.php" method="post">
+					<h2>Регистрация</h2>
+					<div class="alerts-container err">
+						<p><?=$errorMsg?></p>
+					</div>
+					<div class="inputBox">
+									<input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login" >
+						<i class="fa-regular fa-user"></i>
+						<span>Логин</span>
+					</div>
+					<div class="inputBox">
+									<input type="email" required="required" value="<?=$email?>"  class="form-control" name="email" id="email" >
+						<i class="fa-regular fa-envelope"></i>
+						<span>Почта</span>
+					</div>
+					<div class="inputBox">
+									<input type="password" required="required" class="form-control" id="pass" name="pass" >
+						<i class="fa-sharp fa-solid fa-lock"></i>
+						<span>Пароль</span>
+					</div>
+					<div class="inputBox">
+										<button type="submit" name="button-reg" class="btn btn-send">Зарегистрироваться</button>
+					</div>
+            </form>
 				<p>Есть аккаунт? <a href="/pages/page-registration/auth-page/auth-page.php" class="login">Войти</a></p>
 			</div>
 		</div>

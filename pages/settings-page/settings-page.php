@@ -1,3 +1,7 @@
+<?php  
+    include($_SERVER['DOCUMENT_ROOT']."/dataBase/controllers/settings/userQuestions.php"); 
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -23,7 +27,6 @@
          </div>
       </header>
       <main class="main">
-         <form action="#" class="form">
             <div class="settings-main-item">
 
 			<div class="item-body">
@@ -39,8 +42,10 @@
                <div class="main-item support">Поддержка</div>
 			   </div>
 			   <div class="support-body">
-				<textarea placeholder="Опишите свою проблему" class="input-trouble"></textarea>
-				<button type="submit" name="button-reg" class="submit-button">Отправить</button>
+            <form action="settings-page.php" method="post">
+				   <textarea name="questoinValue"  placeholder="Опишите свою проблему" class="input-trouble"></textarea>
+				   <button type="submit" name="button-send-questions" class="submit-button">Отправить</button>
+            </form>
 				<div class="close-support"><ion-icon name="close-outline"></ion-icon></div>
 			   </div>
 
@@ -101,7 +106,7 @@
                   <div class="close-about-us"><ion-icon name="close-outline"></ion-icon></div>
                 </div>
             </div>
-         </form>
+       
       </main>
       <footer class="footer">
          <span class="version">| Beta version 1.1</span>
