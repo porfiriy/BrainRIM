@@ -700,27 +700,18 @@ height: 40px;
    -webkit-tap-highlight-color: transparent;
 }
 .hint-button{
-   position: absolute;
-   top: 13%;
-   right: 5%;
-   width: 50px;
-   height: 50px;
-   font-size: 47px;
-   color: #000000;
-}
-.icon-eye:active{
-   transform: scale(0.6);
-   color: #05EFD4;
+    display: flex;
+    font-size: 40px;
+	color: #05EFD4;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+	margin: 10px auto;
 }
 .hint-counter{
-   position: absolute;
-   top: 25%;
-   right: 40%;
-   width: 50px;
-   height: 50px;
-   font-size: 25px;
+   font-size: 26px;
    font-weight: 700;
-   color: #05EFD4;
+   color: #ffffff;
 }
 .deadLineWrapper{
    margin: 10px auto;

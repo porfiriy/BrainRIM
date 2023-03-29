@@ -107,7 +107,7 @@
 
       <div class="game-mode"></div>
       <div class="hint-button">
-         <div class="hint-counter">0</div><ion-icon class="icon-eye" name="eye-outline"></ion-icon>
+	  <ion-icon class="icon-eye" name="eye-outline"></ion-icon><div class="hint-counter">0</div>
       </div>
       <h3 class="text-openedCards"> Сделано:<span class="score-openedCards" id="scoreOpenedCards"></span>/9</h3>
       <div class="deadLineWrapper">

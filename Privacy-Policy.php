@@ -5,7 +5,7 @@
       <meta name='viewport' content='width=device-width, initial-scale=1.0'>
 	  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
       <title>Privacy Policy</title>
-      <style> body {font-family: 'Balsamiq Sans'; padding:1em;}</style>
+      <style> body {font-family: 'Balsamiq Sans'; padding:1em; -webkit-tap-highlight-color: transparent; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);}</style>
 	  <style> header {display: flex; justify-content: space-between; align-items: center; font-size: 34px;}</style>
 	  <style> .comeback-button {display: flex; font-size: 44px;}</style>
 	  <style> #Dark-theme {Display: none;}</style>
