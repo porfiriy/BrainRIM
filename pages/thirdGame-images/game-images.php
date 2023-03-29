@@ -109,9 +109,9 @@
       <div class="hint-button">
 	  <ion-icon class="icon-eye" name="eye-outline"></ion-icon><div class="hint-counter">0</div>
       </div>
-      <h3 class="text-openedCards"> Сделано:<span class="score-openedCards" id="scoreOpenedCards"></span>/9</h3>
       <div class="deadLineWrapper">
          <div id="deadeLine"></div>
+		 <h3 class="text-openedCards"> Сделано:<span class="score-openedCards" id="scoreOpenedCards"></span>/9</h3>
       </div>
       <section class="memory-game">
          <div class="memory-card" data-framework="1">

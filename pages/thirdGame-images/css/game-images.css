@@ -690,14 +690,15 @@ height: 40px;
    color: #8619B9;
 }
 .text-openedCards{
-   font-family: 'Balsamiq Sans', cursive;
-   padding: 10px 0 15px 0;
-   font-weight: 600;
-   text-align: center;
-   font-size: 22px;
-   color: #ffffff;
-   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-   -webkit-tap-highlight-color: transparent;
+	font-family: 'Balsamiq Sans', cursive;
+
+    font-weight: 600;
+    text-align: center;
+    font-size: 22px;
+    color: #000000;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+	position: absolute;
 }
 .hint-button{
     display: flex;
@@ -714,11 +715,14 @@ height: 40px;
    color: #ffffff;
 }
 .deadLineWrapper{
-   margin: 10px auto;
-   height: 24px;
-   width: 300px;
-   background-color: #383DA6;
-   border-radius: 6px;
+	margin: 10px auto;
+    height: 24px;
+    width: 300px;
+    background-color: #383DA6;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 #deadeLine{
    animation-play-state: paused;
