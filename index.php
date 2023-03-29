@@ -328,7 +328,7 @@
       </div>
       <div class="info-button-body">
          <span>Еженедельные задания - задания которые вы можете выполнять в течении недели и получать бонусы и подарки.
-            <br>В конце каждой неделю они обновляются. На данный момент функция в разработке.</span>
+            <br>В конце каждой недели они обновляются. На данный момент функция в разработке.</span>
          <div class="close-every-day-tasks-info every-day-tasks-close-button"><ion-icon name="close-outline"></ion-icon>
          </div>
       </div>
