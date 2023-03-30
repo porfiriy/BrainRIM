@@ -303,6 +303,22 @@ transition: 0.2s;
 		color: rgb(0, 0, 0);
 		}
 	
+.reg-hint{
+	display: flex;
+    width: 280px;
+    align-items: center;
+    margin: 0 auto;
+    gap: 5px;
+}
+.reg-hint-icon{
+color: #05EFD4;
+font-size: 64px;
+}
+.reg-hint-text{
+color: #ffffff;
+font-size: 18px;
+}
+
 .Profile-anim{
 	position: relative;
 	width: 55px;
