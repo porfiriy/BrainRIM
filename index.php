@@ -80,13 +80,17 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
-			<a class="reg-hint" href="/pages/page-registration/registration-page.php">
-			<ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
-			<span class="reg-hint-text">Войдите, чтобы сохранить прогресс и забрать подарок</span>
-			</a>
-         <div class="tasks-bonus-iq-container">
-            <div class="everyday-word-button"><ion-icon name="calendar-number-outline"></ion-icon></div>
-            <div class="everyday-tasks-button"><ion-icon name="receipt-outline"></ion-icon>
+            <?php if(isset($_SESSION['id'])): ?>
+                  <?php else: ?>
+            <a class="reg-hint" href="/pages/page-registration/registration-page.php">
+			   <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
+			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс и забрать подарок</span>
+			   </a>
+ 
+                  <?php endif;?>
+            <div class="tasks-bonus-iq-container">
+               <div class="everyday-word-button"><ion-icon name="calendar-number-outline"></ion-icon></div>
+               <div class="everyday-tasks-button"><ion-icon name="receipt-outline"></ion-icon>
             </div>
          </div>
       </main>
