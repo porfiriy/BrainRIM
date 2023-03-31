@@ -27,7 +27,7 @@
 			<div class="results-menu__mode"></div>
 		</div>
 
-		<div class="hujna">
+		<div class="win-loose-screen">
 		<ion-icon class="star" name="star"></ion-icon>
 		<div class="screen-title items-container__win-loose-item">Победа</div>
 		<ion-icon class="star" name="star"></ion-icon>
@@ -96,7 +96,6 @@
 				</div>
 			</div>
 		</div>
-		<header>
 		<div class="topButton-gameWords">
          <a class="comeback-button" href="#">
             <div class="comeback-button-body">
@@ -106,7 +105,6 @@
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
          <div class="linkToTheRestart"><ion-icon class="img-restart" name="refresh-outline"></ion-icon></div>
       </div>
-		</header>
 		<main>
 			<div class="game-mode"></div>
 			<div class="deadLineWrapper">
