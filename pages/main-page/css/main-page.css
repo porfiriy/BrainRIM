@@ -309,6 +309,10 @@ transition: 0.2s;
     align-items: center;
     margin: 0 auto;
     gap: 5px;
+	transition: 0.2s;
+}
+.reg-hint:active{
+	transform: scale(0.9);
 }
 .reg-hint-icon{
 color: #05EFD4;

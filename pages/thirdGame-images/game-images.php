@@ -15,51 +15,55 @@
 
 
    <div class="victory-loose-screen-container">
-      <div class="victory-loose-screen__mode-container">
-         <div class="victory-loose-screen__mode-title">Сложность</div>
-         <div class="victory-loose-screen__mode"></div>
-      </div>
-      <div class="victory-loose-screen__win-loose-text">Победа!</div>
-      <div class="victory-loose-screen__results-button">Результаты</div>
-   </div>
-   <div class="results-menu-container">
-      <div class="results-menu__title">Результаты</div>
-      <div class="results-menu__mode-container">
-         <div class="results-menu__mode-title">Сложность</div>
-         <div class="results-menu__mode"></div>
-      </div>
-      <div class="results-menu__items-container items-container">
-         <div class="items-container__each-item-container">
-            <div class="items-container__win-loose-icon"></div>
-            <div class="items-container__win-loose-item"></div>
-         </div>
-         <div class="items-container__each-item-container">
-            <div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
-            <div class="items-container__time-item">
-               <div class="results-menu__time"></div> сек.
-            </div>
-         </div>
-         <div class="items-container__each-item-container">
-            <div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
-            <div class="items-container__done-cards-item">Открыто<div class="opened-cards">8</div>/9</div>
-         </div>
-         <div class="items-container__each-item-container">
-            <div class="items-container__iq-icon">IQ</div>
-            <div class="items-container__iq-item">+20</div>
-         </div>
-         <div class="items-container__each-item-container">
-            <div class="items-container__exp-icon">Exp</div>
-            <div class="items-container__exp-item">+10</div>
-         </div>
-      </div>
-      <div class="results-menu__buttons-container">
-         <div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
-               name="refresh-outline"></ion-icon>
-         </div>
-         <a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
-               name="home-outline"></ion-icon></a>
-      </div>
-   </div>
+		<div class="victory-loose-screen__mode-container">
+			<div class="victory-loose-screen__mode-title">Сложность</div>
+			<div class="victory-loose-screen__mode"></div>
+		</div>
+		<div class="victory-loose-screen__win-loose-text">Победа!</div>
+		<div class="victory-loose-screen__results-button">Результаты</div>
+	</div>
+	<div class="results-menu-container">
+		<div class="results-menu__title">Результаты</div>
+		<div class="results-menu__mode-container">
+			<div class="results-menu__mode-title">Сложность</div>
+			<div class="results-menu__mode"></div>
+		</div>
+
+		<div class="win-loose-screen">
+		<ion-icon class="star" name="star"></ion-icon>
+		<div class="screen-title items-container__win-loose-item">Победа</div>
+		<ion-icon class="star" name="star"></ion-icon>
+		</div>
+		
+		<div class="results-menu__items-container items-container">
+			<div class="items-container__each-item-container">
+				<div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
+				<div class="items-container__done-cards-item"><div class="opened-cards"></div>/10</div>
+			</div>
+			<div class="items-container__each-item-container">
+				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
+				<div class="items-container__time-item">
+					<div class="results-menu__time"></div> м. с.
+				</div>
+			</div>
+			<div class="items-container__each-item-container">
+				<div class="items-container__iq-icon">IQ</div>
+				<div class="items-container__iq-item">+</div>
+			</div>
+			<div class="items-container__each-item-container">
+				<div class="items-container__exp-icon">Exp</div>
+				<div class="items-container__exp-item">+</div>
+			</div>
+			</div>
+		<div class="results-menu__buttons-container">
+			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
+					name="refresh-outline"></ion-icon>
+			</div>
+			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon
+					name="home-outline"></ion-icon></a>
+		</div>
+	</div>
+	
    <div class="button-start-container">
       <div class="start-menu">
          <div class="start-menu__game-mode-container">
