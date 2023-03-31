@@ -57,6 +57,10 @@
                   'sum_iq' => 10
                ];
                insert('IQscore',$currencyIQscore);
+               $userLvlValue = [
+                  'user_id' => $id
+               ];
+               insert('usersLvl',$userLvlValue);
                userAuth($user);
                
                header('location: /index.php');

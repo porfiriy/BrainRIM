@@ -1,7 +1,7 @@
 <?php
    include "path.php";
    include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
-   
+   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/userLevel.php");
 ?>
 
 <!DOCTYPE html>
@@ -62,10 +62,16 @@
       </header>
       <main class="main">
 		         <div class="lvl-container">
-            <div class="player-level">Lvl 1</div>
+            <div class="player-level">Lvl 
+                  <?php if(isset($_SESSION['id'])): ?>
+                  <?php echo $level['Level']; ?>
+                  <?php else: ?>
+                  0
+                  <?php endif;?>
+            </div>
             <div class="player-exp-scale">
                <div class="player-exp__line-blue"></div>
-               <div class="player-exp__text">0/100</div>
+               <div class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/100</div>
             </div>
             <div class="all-lvls-container">
                <div class="level level-one">Lvl 1</div>
