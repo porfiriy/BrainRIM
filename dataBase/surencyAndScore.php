@@ -47,6 +47,10 @@ function updateTo($table, $id ,$params){
    dbCheckError($query);
 }
 
+$level = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
+$experienc = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
+
+
 $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);

@@ -59,7 +59,7 @@ async function doAjaxLoose() {
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
 async function doAjaxWin() {
    try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin copy.php');
       const data = await url.text();
       console.log(data);
    } catch (error) {
@@ -71,6 +71,17 @@ async function doAjaxWin() {
 async function doAjaxMinusHints() {
    try {
       const url = await fetch('/dataBase/controllers/antiBonusSystem/minusEyeHints.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+
+//exp
+async function doAjaxExperience() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/experience.php');
       const data = await url.text();
       console.log(data);
    } catch (error) {
@@ -220,8 +231,9 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      resultsMenuIqItem.innerHTML = '+10';
+      resultsMenuIqItem.innerHTML = '+5';
       doAjaxLoose();
+      doAjaxExperience();
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -292,8 +304,9 @@ function game() {
             resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
             resultsMenuTimeItem.classList.add('items-container__time-item-green');
             resultsMenuTime.innerHTML = `${seconds}`;
-            resultsMenuIqItem.innerHTML = '+50';
+            resultsMenuIqItem.innerHTML = '+30';
             doAjaxWin();
+            doAjaxExperience();
          }
          //добавляет звук
          audioComplete.play();

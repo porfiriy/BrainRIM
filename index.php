@@ -1,7 +1,6 @@
 <?php
-   include "path.php";
    include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
-   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/userLevel.php");
+   
 ?>
 
 <!DOCTYPE html>
@@ -466,7 +465,7 @@
          </div>
       </div>
 
-      <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script>
+      <!-- <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script> -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/main-page/js/main-page.js"></script>
