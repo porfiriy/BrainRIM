@@ -253,7 +253,7 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 
 easyModeButton.onclick = function () {//при нажатии на изи кнопку сложности
    chosenGameMode = 'easy';
-   rangeForMode = 40;
+   rangeForMode = 39;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Легко';
    gameMode.classList.add('game-mode-style-easy');
@@ -269,7 +269,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
 }
 normalModeButton.onclick = function () {
    chosenGameMode = 'normal';
-   rangeForMode = 58;
+   rangeForMode = 57;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Нормально';
    gameMode.classList.add('game-mode-style-normal');
@@ -285,7 +285,7 @@ normalModeButton.onclick = function () {
 }
 hardModeButton.onclick = function () {
    chosenGameMode = 'hard';
-   rangeForMode = 40;
+   rangeForMode = 0;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Сложно';
    gameMode.classList.add('game-mode-style-hard');
@@ -302,7 +302,7 @@ hardModeButton.onclick = function () {
 }
 crazyModeButton.onclick = function () {
    chosenGameMode = 'crazy';
-   rangeForMode = 40;
+   rangeForMode = 0;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
@@ -441,42 +441,6 @@ function showFlags() {
       }
       conditionPress = false;
    }
-
-
-
-
-
-   //анимация луза 
-   function showLooseMessage() {
-      deadeLine.style = "animation-play-state: paused ";
-      victoryLooseScreenContainer.style = 'display:flex;';
-      victoryLooseScreenWinLooseText.innerHTML = 'Поражение!'
-      victoryLooseScreenWinLooseText.classList.add('loose-text-red');
-      resultsMenuWinLooseItem.innerHTML = 'Поражение!';
-      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
-      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
-      resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
-      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
-      resultsMenuTimeItem.classList.add('items-container__time-item-red');
-      doAjaxLoose();//z //вызов запроса в БД
-   }
-   function showWinMessage() {
-      deadeLine.style = "animation-play-state: paused ";
-      victoryLooseScreenContainer.style = 'display:flex;';
-      victoryLooseScreenWinLooseText.innerHTML = 'Победа!'
-      victoryLooseScreenWinLooseText.classList.add('victory-text-green');
-      resultsMenuWinLooseItem.innerHTML = 'Победа!'
-      resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
-      resultsMenuOpenedCardsItem.innerHTML = '20';
-      resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
-      resultsMenuTimeItem.classList.add('items-container__time-item-green');
-      resultsMenuIqItem.innerHTML = '+50';
-      resultsMenuExpItem.innerHTML = '+20';
-      doAjaxWin();
-   }
-   deadeLine.addEventListener("animationend", showLooseMessage);
-
 
    flagsBody.innerHTML = `<img class="img-country" src="${arrGameMode[arrayRandomNumbers[0]]}">`;//добавляет флаг в html
    arrAlredyExistNumbrs.push(arrayRandomNumbers[0]);
