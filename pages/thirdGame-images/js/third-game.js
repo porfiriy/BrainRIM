@@ -1,11 +1,11 @@
 "use strict"
 
 //звук
-let audioComplete = new Audio('/page-for-memory/sound/successfull2.mp3');
-let audioVictory = new Audio('/page-for-memory/sound/successfull.mp3');
-let audioStart = new Audio('/page-for-memory/sound/start-game.mp3');
-let audioFaile = new Audio('/page-for-memory/sound/faile.mp3');
-let audioClick = new Audio('/page-for-memory/sound/click.mp3');
+let audioComplete = new Audio('/sound/successfull2.mp3');
+let audioVictory = new Audio('/sound/successfull.mp3');
+let audioStart = new Audio('/sound/start-game.mp3');
+let audioFaile = new Audio('/sound/faile.mp3');
+let audioClick = new Audio('/sound/click.mp3');
 
 let ModeTimeAnim;
 
@@ -14,6 +14,10 @@ let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
 
 
+//добавляет счёт для открытых карт
+let score = 0;
+let eyeValueForJS = 0;
+eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 const cards = document.querySelectorAll('.memory-card');
 let deadeLine = document.getElementById("deadeLine");
 let easyModeButton = document.querySelector('.easy-mode-button');
@@ -22,6 +26,7 @@ let hardModeButton = document.querySelector('.hard-mode-button');
 let crazyModeButton = document.querySelector('.crazy-mode-button');
 let modeOptionsContainer = document.querySelector('.mode-options-container');
 let hintButton = document.querySelector('.hint-button');
+let hintCounter = document.querySelector('.hint-counter');
 let gameMode = document.querySelector('.game-mode');
 let gameModeStyleEasy = document.querySelector('.game-mode-style-easy');
 const startButtonContainer = document.querySelector('.button-start-container');
@@ -36,10 +41,43 @@ const resultsMenuWinLooseItem = document.querySelector('.items-container__win-lo
 const resultsMenuTimeItem = document.querySelector('.items-container__time-item');
 const resultsMenuOpenedCardsItem = document.querySelector('.opened-cards');
 const resultsMenuDoneCardsItem = document.querySelector('.items-container__done-cards-item');
-const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-loose-icon');
-const resultsMenuTime = document.querySelector('.results-menu__time');
+const resultsMenuTime = document.querySelector('.results__time-sec');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 
+//z
+//AJAX запрос на сервер для добавления в базу данных инфы при лузе
+async function doAjaxLoose() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+async function doAjaxWin() {
+   try {
+      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы
+async function doAjaxMinusHints() {
+   try {
+      const url = await fetch('/dataBase/controllers/antiBonusSystem/minusEyeHints.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
+//z
 
 
 //при нажатии на отмену вспл окна настройки 
@@ -134,10 +172,24 @@ victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
 }
 hintButton.onclick = function () {
-   cards.forEach(card => card.classList.add('flip'));
-   setTimeout(() => {
-      cards.forEach(card => card.classList.remove('flip'));
-   }, 1500);
+   if (eyeValue > 0) {
+      eyeValueForJS -= 1;
+      hintCounter.innerHTML = eyeValueForJS;
+      doAjaxMinusHints();
+      if (cards.forEach(card => card.classList.contains('flip'))) {
+
+      }
+      else {
+         cards.forEach(card => card.classList.add('flip'));
+         if (cards.forEach(card => card.classList.contains('alredy-flip'))) {
+            console.log('aza');
+         } else {
+            setTimeout(() => {
+               cards.forEach(card => card.classList.remove('flip'));
+            }, 1500);
+         }
+      }
+   }
 }
 
 
@@ -164,11 +216,12 @@ function game() {
       victoryLooseScreenWinLooseText.classList.add('loose-text-red');
       resultsMenuWinLooseItem.innerHTML = 'Поражение!'
       resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
-      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
       resultsMenuOpenedCardsItem.innerHTML = `${score}`;
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
+      resultsMenuIqItem.innerHTML = '+10';
+      doAjaxLoose();
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -220,7 +273,6 @@ function game() {
 
    }
    //добавляет счёт для открытых карт
-   let score = 0;
    document.getElementById("scoreOpenedCards").innerHTML = score;
 
    function checkForMatch() {
@@ -236,12 +288,12 @@ function game() {
             victoryLooseScreenWinLooseText.classList.add('victory-text-green');
             resultsMenuWinLooseItem.innerHTML = 'Победа!'
             resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-            resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
             resultsMenuOpenedCardsItem.innerHTML = '9';
             resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
             resultsMenuTimeItem.classList.add('items-container__time-item-green');
             resultsMenuTime.innerHTML = `${seconds}`;
             resultsMenuIqItem.innerHTML = '+50';
+            doAjaxWin();
          }
          //добавляет звук
          audioComplete.play();
@@ -257,6 +309,8 @@ function game() {
 
 
    function disableCards() {
+      firstCard.classList.add('alredy-flip');
+      secondCard.classList.add('alredy-flip');
       firstCard.removeEventListener('click', flipCard);
       secondCard.removeEventListener('click', flipCard);
 

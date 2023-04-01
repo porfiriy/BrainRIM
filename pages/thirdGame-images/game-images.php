@@ -1,7 +1,14 @@
+<?php
+   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+   <script>
+            let eyeValue = '<?= $eyeValue ?>';
+   </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -38,13 +45,12 @@
 		<div class="results-menu__items-container items-container">
 			<div class="items-container__each-item-container">
 				<div class="items-container__done-cards-icon"><ion-icon name="checkmark-outline"></ion-icon></div>
-				<div class="items-container__done-cards-item"><div class="opened-cards"></div>/10</div>
+				<div class="items-container__done-cards-item"><div class="opened-cards"></div>/9</div>
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
 				<div class="items-container__time-item">
-					<div class="results-menu__time"></div> м. с.
-				</div>
+					<div class="results-menu__time"></div>0м. <div class="results__time-sec"></div>с.</div>
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__iq-icon">IQ</div>
@@ -52,7 +58,7 @@
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__exp-icon">Exp</div>
-				<div class="items-container__exp-item">+</div>
+				<div class="items-container__exp-item">+5</div>
 			</div>
 			</div>
 		<div class="results-menu__buttons-container">
@@ -111,7 +117,7 @@
 
       <div class="game-mode"></div>
       <div class="hint-button">
-	  <ion-icon class="icon-eye" name="eye-outline"></ion-icon><div class="hint-counter">0</div>
+	  <ion-icon class="icon-eye" name="eye-outline"></ion-icon><div class="hint-counter"><?php if(isset($_SESSION['id'])): ?> <?php echo $EyeScore['sum_eye_hint']; ?> <?php else: ?>0<?php endif;?></div>
       </div>
       <div class="deadLineWrapper">
          <div id="deadeLine"></div>

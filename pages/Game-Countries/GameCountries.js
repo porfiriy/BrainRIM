@@ -202,6 +202,17 @@ async function doAjaxWin() {
       console.log('Error:' + error);
    }
 }
+
+//AJAX запрос на сервер для добавления в базу данных инфы при лузе
+async function doAjaxMinusHints() {
+   try {
+      const url = await fetch('/dataBase/controllers/antiBonusSystem/minusEyeHints.php');
+      const data = await url.text();
+      console.log(data);
+   } catch (error) {
+      console.log('Error:' + error);
+   }
+}
 //z
 
 //при нажатии на отмену вспл окна настройки 

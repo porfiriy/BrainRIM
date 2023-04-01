@@ -583,6 +583,9 @@ height: 40px;
 .memory-card.flip{
    transform: rotateY(180deg);
 }
+.memory-card.alredy-flip{
+   transform: rotateY(180deg);
+}
 .memory-card:active{
    transform: scale(0.80);
    transition: transform .2s;
