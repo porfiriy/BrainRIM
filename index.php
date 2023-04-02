@@ -89,7 +89,7 @@
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
 			   <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
-			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс и забрать подарок</span>
+			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс. ( Подарок при первом входе)</span>
 			   </a>
  
                   <?php endif;?>

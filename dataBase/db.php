@@ -1,6 +1,7 @@
 <?php 
 
-ini_set('session.gc_maxlifetime',432000);//увеличив время сессии
+ini_set('session.gc_maxlifetime',604800);//увеличив время сессии
+ini_set('session.cookie_lifetime',604800);
 
 
 session_start();
