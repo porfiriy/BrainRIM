@@ -5,6 +5,7 @@ let audioSwap = new Audio('');
 let audiomeme = new Audio('/page-for-memory/pages/main-page/sounds/dwayne-sound.mp3');
 let audioNavigClick = new Audio('/page-for-memory/pages/main-page/sounds/start-13691.mp3')
 
+console.log(expValue);
 const list = document.querySelectorAll('.list')
 const itemHomeNavigation = document.querySelector('.list-home');
 const itemGamesNavigation = document.querySelector('.list-games');
