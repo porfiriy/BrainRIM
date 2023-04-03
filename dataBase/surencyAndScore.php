@@ -58,6 +58,10 @@ $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 $eyeValue = $EyeScore['sum_eye_hint'];
 $expValue = $level['experience'];
 
+if($expValue == 100){
+   $LvlValue = ['Level' => $level['Level']+1];
+   updateTo('usersLvl',$_SESSION['id'],$LvlValue);
+}
 //код на логику добавления денег
 //$sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
 

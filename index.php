@@ -8,12 +8,8 @@
 
 <head>
    <script>
-            let expValue = '<?= $expValue ?>';
-			let expLevelUp = 100;
-
-            if (expValue == expLevelUp){ //Хуета на фейрверк
-			setTimeout(() => {canvas},3000)
-			expLevelUp +=100;}
+         let expValue = '<?= $expValue ?>';
+	
    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +20,7 @@
 </head>
 
 <body>
-<canvas></canvas>
+<canvas class="canvas"></canvas>
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
@@ -473,7 +469,7 @@
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
          </div>
       </div>
-
+      
       <!-- <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script> -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
