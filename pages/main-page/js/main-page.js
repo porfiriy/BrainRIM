@@ -48,6 +48,14 @@ const ConvertCurrencyButton = document.querySelector('.convert-currency-button')
 const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
 const CloseConvertCurrency = document.querySelector('.close-currency-body');
 const Offers = document.querySelector('.special-offers');
+const Growth = document.querySelector('.growth-body');
+const Chill = document.querySelector('.chill-body');
+const GrowthButton = document.querySelector('.growth-up');
+const ChillButton = document.querySelector('.chillout');
+const BackFromGrowth = document.querySelector('.back-from-growth');
+const BackFromChill = document.querySelector('.back-from-chill');
+
+
 const deg = 6;
 const hr = document.querySelector('#hr');
 const mn = document.querySelector('#mn');
@@ -139,12 +147,27 @@ everydayNewWordCloseButton.onclick = function () { //при закрытии н�
 }
 
 //Игры
+GrowthButton.onclick = function () { //при нажатии на кнопку развития
+	Growth.style = 'display: block;';
+}
+ChillButton.onclick = function () { //при нажатии на кнопку отдыха
+	Chill.style = 'display: block;';
+}
+BackFromGrowth.onclick = function () { //Кнопка назад в развитии
+	Chill.style = 'display:none;';
+	Growth.style = 'display:none;';
+}
+BackFromChill.onclick = function () { //Кнопка назад в отдыхе
+	Chill.style = 'display:none;';
+}
+
+
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
   containerGamesPage.style = 'display: block;';
   containerAchievmentsPage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
-  audioNavigClick.play();
+  //audioNavigClick.play();
 }
 
 //Достижения
