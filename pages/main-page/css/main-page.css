@@ -226,7 +226,14 @@ color: #05EFD4;
    top: -17px;
 	font-weight: 800;
 	color: #05efd4;
- }
+}
+
+canvas{
+display:block;
+position: absolute;
+z-index: 1;
+} 
+
  .all-lvls-container{
 	display: none;
 	flex-direction: column;

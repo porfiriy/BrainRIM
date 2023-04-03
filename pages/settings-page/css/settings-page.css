@@ -220,18 +220,16 @@
     transition: 1s;
 	border-radius: 15px;
 	font-size: 18px;
- }
- .submit-button{
-    border-radius: 15px;
-    border: 2px solid #05EFD4;
-    width: 180px;
-    height: 35px;
-    font-size: 20px;
-    background-color: #0c4e74;
-    color: #05EFD4;
-    transition: 0.8s;
-	margin: 22px auto;
- }
+}
+.submit-button{ border-radius: 15px;
+	border: 2px solid #05EFD4;
+	width: 180px; height: 35px; 
+	font-size: 20px; 
+	background-color: #0c4e74; 
+	color: #05EFD4; 
+	transition: 0.8s; 
+	margin: 22px auto; 
+}
  .submit-button:active{
 	transform: scale(0.95);
 	box-shadow: 0px 0px 20px -4px #05efd4;

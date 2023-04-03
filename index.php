@@ -4,11 +4,16 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
    <script>
             let expValue = '<?= $expValue ?>';
+			let expLevelUp = 100;
+
+            if (expValue == expLevelUp){ //Хуета на фейрверк
+			setTimeout(() => {canvas},3000)
+			expLevelUp +=100;}
    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,6 +24,7 @@
 </head>
 
 <body>
+<canvas></canvas>
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
