@@ -220,6 +220,7 @@
     transition: 1s;
 	border-radius: 15px;
 	font-size: 18px;
+	width: 230px;
 }
 .submit-button{ border-radius: 15px;
 	border: 2px solid #05EFD4;
