@@ -54,7 +54,18 @@ const GrowthButton = document.querySelector('.growth-up');
 const ChillButton = document.querySelector('.chillout');
 const BackFromGrowth = document.querySelector('.back-from-growth');
 const BackFromChill = document.querySelector('.back-from-chill');
-
+const MemoryContainer = document.querySelector('.memory-games-container');
+const ReactionContainer = document.querySelector('.reaction-games-container');
+const AttentionContainer = document.querySelector('.attention-games-container');
+const IQContainer = document.querySelector('.iq-games-container');
+const MemoryButton = document.querySelector('.memory-button');
+const ReactionButton = document.querySelector('.reaction-button');
+const AttentionButton = document.querySelector('.attention-button');
+const IQButton = document.querySelector('.iq-button');
+const BackFromMemory = document.querySelector('.back-from-memory');
+const BackFromReaction = document.querySelector('.back-from-reaction');
+const BackFromAttention = document.querySelector('.back-from-attention');
+const BackFromIQ = document.querySelector('.back-from-iq');
 
 const deg = 6;
 const hr = document.querySelector('#hr');
@@ -161,6 +172,31 @@ BackFromChill.onclick = function () { //Кнопка назад в отдыхе
 	Chill.style = 'display:none;';
 }
 
+MemoryButton.onclick = function () { //Кнопка игр Памяти
+	MemoryContainer.style = 'display:block;';
+}
+ReactionButton.onclick = function () { //Кнопка игр Реакции
+	ReactionContainer.style = 'display:block;';
+}
+AttentionButton.onclick = function () { //Кнопка игр Внимательности
+	AttentionContainer.style = 'display:block;';
+}
+IQButton.onclick = function () { //Кнопка игр Интеллекта
+	IQContainer.style = 'display:block;';
+}
+
+BackFromMemory.onclick = function () { //Кнопка назад в играх Памяти
+	MemoryContainer.style = 'display:none;';
+}
+BackFromReaction.onclick = function () { //Кнопка назад в играх Реакции
+	ReactionContainer.style = 'display:none;';
+}
+BackFromAttention.onclick = function () { //Кнопка назад в играх Внимательности
+	AttentionContainer.style = 'display:none;';
+}
+BackFromIQ.onclick = function () { //Кнопка назад в играх Интеллекта
+	IQContainer.style = 'display:none;';
+}
 
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
   containerGamesPage.style = 'display: block;';
