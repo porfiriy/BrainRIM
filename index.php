@@ -183,7 +183,7 @@
 <div class="games-title">Память</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="memory-games-body">
-<a class="game-item memory-game" href="/pages/Game-Countries/GameCountries.php"><ion-icon name="flag-outline"></ion-icon></a>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
@@ -196,7 +196,7 @@
 <div class="games-title">Реакция</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="reaction-games-body">
-<a class="game-item reaction-game" href="/pages/Game-Countries/GameCountries.php"><ion-icon name="color-palette-outline"></ion-icon></a>
+<a class="game-item reaction-game" href="/pages/fourthGame-colors/game-colors.php"><ion-icon name="color-palette-outline"></ion-icon></a>
 <ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
@@ -209,7 +209,7 @@
 <div class="games-title">Внимательность</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="attention-games-body">
-<a class="game-item attention-game" href="/pages/Game-Countries/GameCountries.php"><ion-icon name="image-outline"></ion-icon></a>
+<a class="game-item attention-game" href="/pages/thirdGame-images/game-images.php"><ion-icon name="image-outline"></ion-icon></a>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
@@ -222,7 +222,7 @@
 <div class="games-title">Интеллект</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="iq-games-body">
-<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<a class="game-item iq-game" href="/pages/Game-Countries/GameCountries.php"><ion-icon name="flag-outline"></ion-icon></a>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
