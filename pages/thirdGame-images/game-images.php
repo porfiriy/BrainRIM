@@ -27,7 +27,7 @@
 			<div class="victory-loose-screen__mode"></div>
 		</div>
 		<div class="victory-loose-screen__win-loose-text">Победа!</div>
-		<div class="victory-loose-screen__results-button">Результаты</div>
+		<div class="victory-loose-screen__results-button" id="button" >Результаты</div>
 	</div>
 	<div class="results-menu-container">
 		<div class="results-menu__title">Результаты</div>
@@ -54,11 +54,11 @@
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__iq-icon">IQ</div>
-				<div class="items-container__iq-item">+</div>
+				<div class="items-container__iq-item"></div>
 			</div>
 			<div class="items-container__each-item-container">
 				<div class="items-container__exp-icon">Exp</div>
-				<div class="items-container__exp-item">+5</div>
+				<div class="items-container__exp-item"></div>
 			</div>
 			</div>
 		<div class="results-menu__buttons-container">
@@ -89,15 +89,15 @@
          <div class="mode-body">
             <div class="easy-mode-button">
                <span class="easy-mode-text">Легко</span>
-               <div class="easy-mode-count">1.2x</div>
+               <div class="easy-mode-count">1x</div>
             </div>
             <div class="normal-mode-button">
                <span class="normal-mode-text">Нормально</span>
-               <div class="normal-mode-count">1.4x</div>
+               <div class="normal-mode-count">1.2x</div>
             </div>
             <div class="hard-mode-button">
                <span class="hard-mode-text">Сложно</span>
-               <div class="hard-mode-count">1.7x</div>
+               <div class="hard-mode-count">1.5x</div>
             </div>
             <div class="crazy-mode-button">
                <span class="crazy-mode-text">Безумие</span>
@@ -218,10 +218,12 @@
       </section>
 
    </div>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+   
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
    <script src="/pages/thirdGame-images/js/third-game.js"></script>
+  
 </body>
 
 </html>

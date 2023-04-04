@@ -16,6 +16,9 @@ let restart = document.querySelector(".pop-up__container3");
 
 //добавляет счёт для открытых карт
 let score = 0;
+let expUpForMode;
+let iqUpForMode;
+let statusLoosOrWin;
 let eyeValueForJS = 0;
 eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 const cards = document.querySelectorAll('.memory-card');
@@ -43,51 +46,96 @@ const resultsMenuOpenedCardsItem = document.querySelector('.opened-cards');
 const resultsMenuDoneCardsItem = document.querySelector('.items-container__done-cards-item');
 const resultsMenuTime = document.querySelector('.results__time-sec');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
+const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы при лузе
-async function doAjaxLoose() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
+function doAjaxExperience() {
+   let expUpForModeAjax;
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = `${expUpForMode}`;
+   } else {
+      expUpForModeAjax = 2;
    }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-async function doAjaxWin() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin copy.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+function doAjaxWin() {
+   let IqUpForModeAjax = `${iqUpForMode}`;
+
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
-//AJAX запрос на сервер для добавления в базу данных инфы
-async function doAjaxMinusHints() {
-   try {
-      const url = await fetch('/dataBase/controllers/antiBonusSystem/minusEyeHints.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+function doAjaxMinusHints() {
+
+
+   $.ajax({
+      url: '/dataBase/controllers/antiBonusSystem/minusEyeHints.php',
+      type: 'POST',
+      data: {
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
-//exp
-async function doAjaxExperience() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/experience.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+
+function doAjaxLoose() {
+   let IqUpForModeAjax = `2`;
+
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
+
 //z
 
 
@@ -139,6 +187,8 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    victoryLooseScreenGameMode.innerHTML = 'Легко';
    resultsMenuMode.classList.add('results-menu__easy-mode');
    resultsMenuMode.innerHTML = 'Легко';
+   expUpForMode = 5;
+   iqUpForMode = 10;
 }
 normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -152,6 +202,8 @@ normalModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Нормально';
    resultsMenuMode.classList.add('results-menu__normal-mode');
    resultsMenuMode.innerHTML = 'Нормально';
+   expUpForMode = 6;
+   iqUpForMode = 12;
 }
 hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -165,12 +217,14 @@ hardModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Сложно';
    resultsMenuMode.classList.add('results-menu__hard-mode');
    resultsMenuMode.innerHTML = 'Сложно';
+   expUpForMode = 8;
+   iqUpForMode = 15;
 }
 crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '34';
+   ModeTimeAnim = '4';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');
@@ -178,6 +232,8 @@ crazyModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Безумно';
    resultsMenuMode.classList.add('results-menu__crazy-mode');
    resultsMenuMode.innerHTML = 'Безумно';
+   expUpForMode = 10;
+   iqUpForMode = 20;
 }
 victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
@@ -231,7 +287,9 @@ function game() {
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      resultsMenuIqItem.innerHTML = '+5';
+      resultsMenuIqItem.innerHTML = '+2';
+      resultsMenuExpItem.innerHTML = `+2`;
+      statusLoosOrWin = "loose";
       doAjaxLoose();
       doAjaxExperience();
    }
@@ -304,7 +362,9 @@ function game() {
             resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
             resultsMenuTimeItem.classList.add('items-container__time-item-green');
             resultsMenuTime.innerHTML = `${seconds}`;
-            resultsMenuIqItem.innerHTML = '+30';
+            resultsMenuIqItem.innerHTML = `+${iqUpForMode}`;
+            resultsMenuExpItem.innerHTML = `+${expUpForMode}`;
+            statusLoosOrWin = "win";
             doAjaxWin();
             doAjaxExperience();
          }

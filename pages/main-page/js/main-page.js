@@ -62,6 +62,8 @@ const mn = document.querySelector('#mn');
 const sc = document.querySelector('#sc');
 
 
+
+
 function activeLink() {
   list.forEach((item) =>
     item.classList.remove('active'));
@@ -148,17 +150,17 @@ everydayNewWordCloseButton.onclick = function () { //при закрытии н�
 
 //Игры
 GrowthButton.onclick = function () { //при нажатии на кнопку развития
-	Growth.style = 'display: block;';
+  Growth.style = 'display: block;';
 }
 ChillButton.onclick = function () { //при нажатии на кнопку отдыха
-	Chill.style = 'display: block;';
+  Chill.style = 'display: block;';
 }
 BackFromGrowth.onclick = function () { //Кнопка назад в развитии
-	Chill.style = 'display:none;';
-	Growth.style = 'display:none;';
+  Chill.style = 'display:none;';
+  Growth.style = 'display:none;';
 }
 BackFromChill.onclick = function () { //Кнопка назад в отдыхе
-	Chill.style = 'display:none;';
+  Chill.style = 'display:none;';
 }
 
 
