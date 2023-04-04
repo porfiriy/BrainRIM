@@ -76,7 +76,7 @@
 
             <div id="loading-bar" class="player-exp-scale">
                <div id="progress" class="player-exp__line-blue"></div>
-               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/100</p>
+               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/<span class="nextLvl-value"></span></p>
             </div>
 
             <div class="all-lvls-container">

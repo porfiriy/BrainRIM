@@ -66,6 +66,9 @@ const BackFromMemory = document.querySelector('.back-from-memory');
 const BackFromReaction = document.querySelector('.back-from-reaction');
 const BackFromAttention = document.querySelector('.back-from-attention');
 const BackFromIQ = document.querySelector('.back-from-iq');
+const nextLvlValueContainer = document.querySelector('.nextLvl-value');
+
+
 
 const deg = 6;
 const hr = document.querySelector('#hr');
@@ -175,29 +178,29 @@ BackFromChill.onclick = function () { //Кнопка назад в отдыхе
 }
 
 MemoryButton.onclick = function () { //Кнопка игр Памяти
-	MemoryContainer.style = 'display:block;';
+  MemoryContainer.style = 'display:block;';
 }
 ReactionButton.onclick = function () { //Кнопка игр Реакции
-	ReactionContainer.style = 'display:block;';
+  ReactionContainer.style = 'display:block;';
 }
 AttentionButton.onclick = function () { //Кнопка игр Внимательности
-	AttentionContainer.style = 'display:block;';
+  AttentionContainer.style = 'display:block;';
 }
 IQButton.onclick = function () { //Кнопка игр Интеллекта
-	IQContainer.style = 'display:block;';
+  IQContainer.style = 'display:block;';
 }
 
 BackFromMemory.onclick = function () { //Кнопка назад в играх Памяти
-	MemoryContainer.style = 'display:none;';
+  MemoryContainer.style = 'display:none;';
 }
 BackFromReaction.onclick = function () { //Кнопка назад в играх Реакции
-	ReactionContainer.style = 'display:none;';
+  ReactionContainer.style = 'display:none;';
 }
 BackFromAttention.onclick = function () { //Кнопка назад в играх Внимательности
-	AttentionContainer.style = 'display:none;';
+  AttentionContainer.style = 'display:none;';
 }
 BackFromIQ.onclick = function () { //Кнопка назад в играх Интеллекта
-	IQContainer.style = 'display:none;';
+  IQContainer.style = 'display:none;';
 }
 
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
@@ -492,56 +495,89 @@ class Fireworks {
     this.render();
   }
 }
+let fireworksExist = false;//нужно для проверки был ли салют на лвле
+let LevelCounterValue;
+let LevelExpValueForLvls;
+if (expValue < 100) {
+  LevelCounterValue = 1;
+  ShowFireworks();
+  LevelExpValueForLvls = 100;
+  fireworksExist = false;
+} else if (expValue >= 100 && expValue < 150) {
+  LevelCounterValue = 2;
+  ShowFireworks();
+  LevelExpValueForLvls = 150;
+  fireworksExist = false;
+} else if (expValue >= 150 && expValue < 200) {
+  LevelCounterValue = 3;
+  ShowFireworks();
+  LevelExpValueForLvls = 200;
+  fireworksExist = false;
+} else if (expValue >= 200 && expValue < 250) {
+  LevelCounterValue = 4;
+  ShowFireworks();
+  LevelExpValueForLvls = 250;
+  fireworksExist = false;
+} else if (expValue >= 250 && expValue < 300) {
+  LevelCounterValue = 5;
+  ShowFireworks();
+  LevelExpValueForLvls = 300;
+  fireworksExist = false;
+} else if (expValue >= 300 && expValue < 350) {
+  LevelCounterValue = 6;
+  ShowFireworks();
+  LevelExpValueForLvls = 350;
+  fireworksExist = false;
+} else if (expValue >= 350 && expValue < 400) {
+  LevelCounterValue = 7;
+  ShowFireworks();
+  LevelExpValueForLvls = 400;
+  fireworksExist = false;
+} else if (expValue >= 400 && expValue < 450) {
+  LevelCounterValue = 8;
+  ShowFireworks();
+  LevelExpValueForLvls = 450;
+  fireworksExist = false;
+} else if (expValue >= 450 && expValue < 500) {
+  LevelCounterValue = 9;
+  ShowFireworks();
+  LevelExpValueForLvls = 500;
+  fireworksExist = false;
+} else if (expValue >= 300 && expValue < 550) {
+  LevelCounterValue = 10;
+  ShowFireworks();
+  LevelExpValueForLvls = 350;
+  fireworksExist = false;
+}
+nextLvlValueContainer.innerHTML = LevelExpValueForLvls;//показывает вменю опыт ля след. левела
 
 
-
+console.log(LevelExpValueForLvls);
 let bar = document.querySelector("#loading-bar");
 let progress = document.querySelector("#progress");
-let reporter = document.querySelector("p > span");
 
-let processingTime = 800;
-let i = 0;
-setInterval( function(){ 
-  
-  if ( i < 99 ) {
-    i = i + Math.floor(Math.random() * (25 - 1));
-    progress.style.width = i + "%";
-    processingTime = Math.floor(Math.random() * (3000 - 800));
-    if ( i >= 99 ) {
-      i = 99;
-      reporter.textContent = i;
-      bar.classList.add('complete');
-      processingTime = 1000;
-    }
-    reporter.textContent = i;
-  } else {
-    i = 0;
-    progress.style.width = i + "%";
-    reporter.textContent = i;
-    bar.classList.remove('complete');
-    processingTime = Math.floor(Math.random() * (3000 - 800));
-  };
-  
-}, processingTime);
+let oneProcent = LevelExpValueForLvls / 100;
+let i = expValue / oneProcent;
+progress.style.width = i + "%";
 
 
 
-let expLevelUp = 100;
 
-if (expValue == expLevelUp) { //условие вызывает фейерверк при новом левеле
 
-  let timerId = setTimeout(() => {
-    a = new Fireworks();
-    a.run();
-    canvas.style = 'display: block;';
-  }, 0000);
-  setTimeout(() => { canvas.style = 'display: none;'; }, 7000);
-  expLevelUp += 100;
-  console.log(expLevelUp);
+function ShowFireworks() {
+  if (expValue >= LevelExpValueForLvls && fireworksExist == false) { //условие вызывает фейерверк при новом левеле
+
+    let timerId = setTimeout(() => {
+      a = new Fireworks();
+      a.run();
+      fireworksExist = true;
+      canvas.style = 'display: block;';
+    }, 0000);
+    setTimeout(() => { canvas.style = 'display: none;'; }, 7000);
+    expLevelUp += 100;
+    console.log(expLevelUp);
+  }
 }
-
-//Ошибки системы лвл в консоль
-console.log(expValue);
 
 
 

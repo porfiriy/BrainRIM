@@ -48,6 +48,7 @@ const resultsMenuTime = document.querySelector('.results__time-sec');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
+
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы при лузе
 function doAjaxExperience() {
@@ -224,7 +225,7 @@ crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '4';
+   ModeTimeAnim = '34';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');
