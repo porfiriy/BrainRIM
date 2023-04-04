@@ -206,7 +206,7 @@ color: #05EFD4;
 	letter-spacing: 0.225em;
 	color: #05EFD4;
  }
- .player-exp-scale{
+ #loading-bar{
 	 box-sizing: border-box;
 	width: 60%;
 	height: 25px;
@@ -217,8 +217,9 @@ color: #05EFD4;
 	border-radius: 15px;
 	text-align: center;
 	margin: 10px auto;
+	overflow: hidden
  }
- .player-exp__line-blue {
+ #progress{
 	width: 10px;
 	height: 23px;
 	left: 69px;

@@ -73,10 +73,12 @@
                   0
                   <?php endif;?>
             </div>
-            <div class="player-exp-scale">
-               <div class="player-exp__line-blue"></div>
-               <div class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/100</div>
+
+            <div id="loading-bar" class="player-exp-scale">
+               <div id="progress" class="player-exp__line-blue"></div>
+               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/100</p>
             </div>
+
             <div class="all-lvls-container">
                <div class="level level-one">Lvl 1</div>
                <div class="level level-two">Lvl 2</div>
@@ -143,7 +145,7 @@
 		 </footer>
 
 <div class="page-games-container">
-   <div class="page-title">Игры<ion-icon class="gamepad-title" name="game-controller"></ion-icon></div>
+   <div class="games-title">Игры<ion-icon class="gamepad-title" name="game-controller"></ion-icon></div>
    <div class="games-choice">
 	  <div class="growth-up choice-mode">Развиваться</div>
 	  <div class="or">Или</div>
@@ -460,7 +462,7 @@
          </div>
       </div>
       <div class="analytic-container">
-		<div class="page-title">Аналитика</div>
+		<div class="games-title">Аналитика</div>
 		<div class="container-list-games">
 		<!--<a href="/page-for-memory/pages/Statistics-page/0All-statistics/All-stats.html" class="random-game-button">Общая
 		</a>
