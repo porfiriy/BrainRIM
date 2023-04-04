@@ -105,16 +105,11 @@
             </div>
          </div>
       </div>
-      <div class="topButton-gameWords">
-         <a class="comeback-button" href="#">
-            <div class="comeback-button-body">
-               <ion-icon name="chevron-back-outline"></ion-icon>
-            </div>
-         </a>
+	  <div class="topButton-gameWords">
+         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-         <div class="linkToTheRestart"><ion-icon class="img-restart" name="refresh-outline"></ion-icon></div>
+         <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
-
       <div class="game-mode"></div>
       <div class="hint-button">
 	  <ion-icon class="icon-eye" name="eye-outline"></ion-icon><div class="hint-counter"><?php if(isset($_SESSION['id'])): ?> <?php echo $EyeScore['sum_eye_hint']; ?> <?php else: ?>0<?php endif;?></div>

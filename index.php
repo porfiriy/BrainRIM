@@ -150,20 +150,10 @@
 	  <div class="chillout choice-mode">Отдыхать</div>
    </div>
   </div>
-<div class="growth-body">
-<ion-icon class="back-from-growth" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
-<div class="page-title">Развитие</div>
-<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
-<div class="growth-games-body">
-<div class="growth-game memory">Память</div>
-<div class="growth-game reaction">реакция</div>
-<div class="growth-game attention">Внимательность</div>
-<div class="growth-game iq">Интеллект</div>
-</div>
-</div>
+
 
 <div class="chill-body">
-<ion-icon class="back-from-chill" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<ion-icon class="back-from-chill back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
 <div class="page-title">Отдых</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="chill-games-body">
@@ -177,107 +167,73 @@
 </div>
 
 
+<div class="growth-body">
+<ion-icon class="back-from-growth back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<div class="page-title">Развитие</div>
+<div class="growth-games-body">
+<div class="growth-game memory-button">Память</div>
+<div class="growth-game reaction-button">реакция</div>
+<div class="growth-game attention-button">Внимательность</div>
+<div class="growth-game iq-button">Интеллект</div>
+</div>
+</div>
 
-
-
-
-
-
-
-
-   <!--<div class="container-list-games">
-	  <div class="random-game-button">Случайная игра</div>
-		 <div class="item-games yellow-item">
-			<img src="/pages/main-page/img/games-page/numbersImg.svg" alt="">
-		 </div>
-	  </a>
-	  <div class="item-games"><img src="/pages/main-page/img/games-page/wordsImg.svg" alt="">
-	  </div>
-	  <a href="/pages/thirdGame-images/game-images.php">
-		 <div class="item-games"><img src="/pages/main-page/img/games-page/ImageIcon.svg" alt="">
-		 </div>
-	  </a>
-	  <a href="#">
-		 <div class="item-games"><img src="/pages/main-page/img/games-page/shapesImg.svg" alt="">
-		 </div>
-	  </a>
-	  <a href="/pages/fourthGame-colors/game-colors.php">
-		 <div class="item-games"><img src="/pages/main-page/img/games-page/colorsImg.svg" alt="">
-		 </div>
-	  </a>
-	  <a href="/pages/Game-Countries/GameCountries.php">
-		 <div class="item-games"><img src="/pages/main-page/img/games-page/CountriesImg.svg"
-			   alt="">
-		 </div>
-	  </a>
-
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-	  <div class="item-games-in-dev in-dev_text">В разработке</div>
-
-   </div>-->
-
-<div class="page-achievments-container">
-         <div class="page-title">Тренируй свой мозг!</div>
-         <div class="container-list-games">
-            <div class="random-game-button">Случайная игра</div>
-               <div class="item-games yellow-item">
-                  <img src="/pages/main-page/img/games-page/numbersImg.svg" alt="">
-               </div>
-            </a>
-            <div class="item-games"><img src="/pages/main-page/img/games-page/wordsImg.svg" alt="">
-            </div>
-            <a href="/pages/thirdGame-images/game-images.php">
-               <div class="item-games"><img src="/pages/main-page/img/games-page/ImageIcon.svg" alt="">
-               </div>
-            </a>
-            <a href="#">
-               <div class="item-games"><img src="/pages/main-page/img/games-page/shapesImg.svg" alt="">
-               </div>
-            </a>
-            <a href="/pages/fourthGame-colors/game-colors.php">
-               <div class="item-games"><img src="/pages/main-page/img/games-page/colorsImg.svg" alt="">
-               </div>
-            </a>
-            <a href="/pages/Game-Countries/GameCountries.php">
-               <div class="item-games"><img src="/pages/main-page/img/games-page/CountriesImg.svg"
-                     alt="">
-               </div>
-            </a>
-
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-            <div class="item-games-in-dev in-dev_text">В разработке</div>
-
-         </div>
-
-      </div>
+<div class="memory-games-container">
+<ion-icon class="back-from-memory back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<div class="games-title">Память</div>
+<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
+<div class="memory-games-body">
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+</div>
+</div>
+<div class="reaction-games-container">
+<ion-icon class="back-from-reaction back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<div class="games-title">Реакция</div>
+<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
+<div class="reaction-games-body">
+<a class="game-item reaction-game" href="/pages/fourthGame-colors/game-colors.php"><ion-icon name="color-palette-outline"></ion-icon></a>
+<ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="reaction-game game-in-dev" name="code-slash"></ion-icon>
+</div>
+</div>
+<div class="attention-games-container">
+<ion-icon class="back-from-attention back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<div class="games-title">Внимательность</div>
+<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
+<div class="attention-games-body">
+<a class="game-item attention-game" href="/pages/thirdGame-images/game-images.php"><ion-icon name="image-outline"></ion-icon></a>
+<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+</div>
+</div>
+<div class="iq-games-container">
+<ion-icon class="back-from-iq back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<div class="games-title">Интеллект</div>
+<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
+<div class="iq-games-body">
+<a class="game-item iq-game" href="/pages/Game-Countries/GameCountries.php"><ion-icon name="flag-outline"></ion-icon></a>
+<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+</div>
+</div>
 
       <div class="page-achievments-container">
          <div class="wrapper-achievments">
-            <span class="page-title Achievements">Достижения</span>
+            <span class="games-title Achievements">Достижения</span>
             <main class="main-achievements">
                <div id="achievments-container">
                   <div class="container-achieve">
@@ -316,7 +272,7 @@
          </div>
       </div>
       <div class="page-store-container">
-         <span class="page-title Shop">Магазин</span>
+         <span class="games-title Shop">Магазин</span>
 	<div class="clocks">
          <div class="clock">
 			<div class="hour">
