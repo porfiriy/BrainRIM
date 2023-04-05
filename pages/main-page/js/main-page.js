@@ -77,6 +77,27 @@ const sc = document.querySelector('#sc');
 
 
 
+let expForDowngrade = false;//для понижения опыта
+//AJAX запрос на сервер для добавления в базу данных инфы при лузе
+function doAjaxExperienceDowngrade() {
+
+  $.ajax({
+    url: '/dataBase/controllers/bonusSystem/experience.php',
+    type: 'POST',
+    dataType: "json",
+    data: {
+      expForDowngrade: expForDowngrade,
+
+    },
+    success: function (data) {
+      console.log(data.expUpForModeAjax);
+    },
+    error: function () {
+      console.log('ERROR');
+    }
+  })
+}
+
 
 function activeLink() {
   list.forEach((item) =>
@@ -516,6 +537,8 @@ if (expValue < 100) {
 } else if (expValue >= 200 && expValue < 250) {
   LevelCounterValue = 4;
   ShowFireworks();
+  expForDowngrade = true;
+  doAjaxExperienceDowngrade();
   LevelExpValueForLvls = 250;
   fireworksExist = false;
 } else if (expValue >= 250 && expValue < 300) {

@@ -124,7 +124,7 @@ let VaticanImg = "/pages/Game-Countries/img/normal-mode/va.png";
 let VenesuelaImg = "/pages/Game-Countries/img/normal-mode/ve.png";
 let VietnamImg = "/pages/Game-Countries/img/normal-mode/vn.png";
 
-let arrCounrysImgNormal = [ArabEmiratesImg, AfganistanImg, AngolaImg, ArgentinImg, AzerbaijanImg, KamerunImg, BelgiumImg, BalgarImg, BoliviaImg, BagamesImg, ChiliImg, ColumbiaImg, CostaRicaImg, CubaImg, CyprImg, ChehiaImg, DominicanImg, AlgirImg, EcuadorImg, EgyptImg, SpainImg, ScotlandImg, GrinlandImg, HarvatImg, KeniaImg, MadagascarImg, MakedonImg, NigerImg, NiderlandImg, PanamaImg, PacestanImg, YemenImg, HonkongImg, HaitiImg, IndonezImg, IrlandImg, IslandImg, JamaykaImg, KirgizImg, KombodgaImg, LucsenburgImg, LiviaImg, MorokoImg, PuertoRicoImg, PalestinaImg, RuminiaImg, SudanImg, SingapurImg, SloveniaImg, SlovakiaImg, TailandImg, TadjicistanImg, TurkmenistanImg, TaivanImg, UzbecistanImg, VaticanImg, VenesuelaImg, VietnamImg];
+let arrCounrysImgNormal = [ArabEmiratesImg, AfganistanImg, AngolaImg, ArgentinImg, AzerbaijanImg, KamerunImg, BelgiumImg, BalgarImg, BoliviaImg, BagamesImg, ChiliImg, ColumbiaImg, CostaRicaImg, CubaImg, CyprImg, ChehiaImg, DominicanImg, AlgirImg, EcuadorImg, EgyptImg, SpainImg, ScotlandImg, GrinlandImg, HarvatImg, KeniaImg, MadagascarImg, MakedonImg, NigeriaImg, NiderlandImg, PanamaImg, PacestanImg, YemenImg, HonkongImg, HaitiImg, IndonezImg, IrlandImg, IslandImg, JamaykaImg, KirgizImg, KombodgaImg, LucsenburgImg, LiviaImg, MorokoImg, PuertoRicoImg, PalestinaImg, RuminiaImg, SudanImg, SingapurImg, SloveniaImg, SlovakiaImg, TailandImg, TadjicistanImg, TurkmenistanImg, TaivanImg, UzbecistanImg, VaticanImg, VenesuelaImg, VietnamImg];
 let arrCounrysTextNormal = ['Араб. Эмираты', 'Афганистан', 'Ангола', 'Аргентина', 'Азербайджан', ' Камерун', 'Бельгия', 'Балгария', 'Боливия', 'Багамские ост.', 'Чили', 'Колумбия', 'Коста-Рика', 'Куба', 'Кипр', 'Чехия', 'Доминикан', 'Алжир', 'Эквадор', 'Египет', 'Испания', 'Шотландия', 'Гренландия', 'Харватия', 'Кения', 'Мадагаскар', 'Македония', 'Нигерия', 'Нидерланды', 'Панама', 'Пакистан', 'Емен', 'Гонконг', 'Гаити', 'Индонезия', 'Ирландия', 'Исландия', 'Ямайка', 'Киргизия', 'Комбоджа', 'Люксенбург', 'Ливия', 'Мороко', 'Пуэрто-Рико', 'Палестина', 'Румыния', 'Судан', 'Сингапур', 'Словения', 'Словакия', 'Таиланд', 'Таджикистан', 'Туркменистан', 'Тайвань', 'Узбекистан', 'Ватикан', 'Венисуэла', 'Вьетнам'];
 
 
@@ -201,8 +201,8 @@ let ZambiaImg = "/pages/Game-Countries/img/hard-mode/zm.png";
 let ZimbabweImg = "/pages/Game-Countries/img/hard-mode/zw.png";
 
 
-let arrCounrysImgHard = [AndorraImg, AlbaniaImg, AntarcticaImg, AmericanSamoaImg, BosniaAndHerzegovinaImg,BarbadosImg, BangladeshImg, BahrainImg, BurundiImg, BermudaImg, BhutanImg, BotswanaImg, CentralAfricanRepublicImg, CongoImg, CookIslandsImg, CaboVerdeImg, WesternSaharaImg, GabonImg, GhanaImg, GambiaImg, GuatemalaImg, GuamImg, GuineaBissauImg, GuyanaImg, HondurasImg, HungaryImg, JerseyImg, JordanImg, KuwaitImg, CaymanIslandsImg, LaoPeoplesDemocraticRepublicImg, LebanonImg, SriLankaImg, LiberiaImg, MonacoImg, MaliImg, MongoliaImg, MaltaImg, MalaysiaImg, MozambiqueImg, NamibiaImg, NigerImg, NorfolkIslandImg, NicaraguaImg, NepalImg, NauruImg, OmanImg, FrenchPolynesiaImg, PapuaNewGuineaImg, PhilippinesImg, ParaguayImg, QatarImg, SolomonIslandsImg, SeychellesImg, SomaliaImg, SurinameImg, SouthSudanImg, ElSalvadorImg, TogoImg, TunisiaImg, UgandaImg, UruguayImg, VirginIslandsBritishImg, VirginIslandsUSImg, SamoaImg, KosovoImg, SouthAfricaImg, ZambiaImg, ZimbabweImg]
-let arrCounrysTextHard = ['Андорра','Албания','Антарктика','Америк. Самоа','Босн. и Герцег.','Барбадос','Бангладеш','Бахрейн','Бурунди','Бермудские Ост.','Бутан','Ботсвана','Центр.Африкан. Респ.','Респ. Конго','Ост. Кука','Кабо-Верде','Запад. Сахара','Габон','Гана','Гамбия','Гватемала','Гуам','Гвинея-Бисау','Гайана','Гондурас','Венгрия','Джерси','Иордания','Кувейт','Ост. Кайман','Лаос','Ливан','Шри-Ланка','Либерия','Монако','Мали','Монголия','Мальта','Малайзия','Мозамбик','Намибия','Нигер','Ост. Норфолк','Никарагуа','Непал','Науру','Оман','Французская Полинезия','Папуа-Нов.Гвинея','Филиппины','Парагвай','Катар','Соломоновы Ост.','Сейшельские Ост.','Сомали','Суринам','Южный Судан','Сальвадор','Того','Тунис','Уганда','Уругвай','Виргинские Ост. (Великобритания)','Виргинские Ост. (США)','Самоа','Респ. Косово','Южно-Африкан. Респ.','Замбия','Зимбабве']
+let arrCounrysImgHard = [AndorraImg, AlbaniaImg, AntarcticaImg, AmericanSamoaImg, BosniaAndHerzegovinaImg, BarbadosImg, BangladeshImg, BahrainImg, BurundiImg, BermudaImg, BhutanImg, BotswanaImg, CentralAfricanRepublicImg, CongoImg, CookIslandsImg, CaboVerdeImg, WesternSaharaImg, GabonImg, GhanaImg, GambiaImg, GuatemalaImg, GuamImg, GuineaBissauImg, GuyanaImg, HondurasImg, HungaryImg, JerseyImg, JordanImg, KuwaitImg, CaymanIslandsImg, LaoPeoplesDemocraticRepublicImg, LebanonImg, SriLankaImg, LiberiaImg, MonacoImg, MaliImg, MongoliaImg, MaltaImg, MalaysiaImg, MozambiqueImg, NamibiaImg, NigerImg, NorfolkIslandImg, NicaraguaImg, NepalImg, NauruImg, OmanImg, FrenchPolynesiaImg, PapuaNewGuineaImg, PhilippinesImg, ParaguayImg, QatarImg, SolomonIslandsImg, SeychellesImg, SomaliaImg, SurinameImg, SouthSudanImg, ElSalvadorImg, TogoImg, TunisiaImg, UgandaImg, UruguayImg, VirginIslandsBritishImg, VirginIslandsUSImg, SamoaImg, KosovoImg, SouthAfricaImg, ZambiaImg, ZimbabweImg]
+let arrCounrysTextHard = ['Андорра', 'Албания', 'Антарктика', 'Америк. Самоа', 'Босн. и Герцег.', 'Барбадос', 'Бангладеш', 'Бахрейн', 'Бурунди', 'Бермудские Ост.', 'Бутан', 'Ботсвана', 'Центр.Африкан. Респ.', 'Респ. Конго', 'Ост. Кука', 'Кабо-Верде', 'Запад. Сахара', 'Габон', 'Гана', 'Гамбия', 'Гватемала', 'Гуам', 'Гвинея-Бисау', 'Гайана', 'Гондурас', 'Венгрия', 'Джерси', 'Иордания', 'Кувейт', 'Ост. Кайман', 'Лаос', 'Ливан', 'Шри-Ланка', 'Либерия', 'Монако', 'Мали', 'Монголия', 'Мальта', 'Малайзия', 'Мозамбик', 'Намибия', 'Нигер', 'Ост. Норфолк', 'Никарагуа', 'Непал', 'Науру', 'Оман', 'Французская Полинезия', 'Папуа-Нов.Гвинея', 'Филиппины', 'Парагвай', 'Катар', 'Соломоновы Ост.', 'Сейшельские Ост.', 'Сомали', 'Суринам', 'Южный Судан', 'Сальвадор', 'Того', 'Тунис', 'Уганда', 'Уругвай', 'Виргинские Ост. (Великобритания)', 'Виргинские Ост. (США)', 'Самоа', 'Респ. Косово', 'Южно-Африкан. Респ.', 'Замбия', 'Зимбабве']
 
 
 
@@ -277,7 +277,7 @@ let TanzaniaUnitedRepublic = "/pages/Game-Countries/img/crazy-mode/tz.png";
 let VanuatuImg = "/pages/Game-Countries/img/crazy-mode/vu.png";
 
 let arrCounrysImgcrazy = [AntiguaandBarbudaImg, AnguillaImg, ArubaImg, ÅlandIslandsImg, BurkinaFasoImg, SaintBarthélemyImg, BruneiDarussalamImg, BonaireSintEustatiusandSabaImg, BelizeImg, CocosKeelingIslandsImg, CongoDemocraticRepublicImg, CuraçaoImg, ChristmasIslandImg, DjiboutiImg, DominicaImg, EritreaImg, EthiopiaImg, FijiImg, FalklandIslandsMalvinasImg, MicronesiaFederatedStatesImg, FaroeIslandsImg, NorthernIrelandImg, WalesImg, GrenadaImg, FrenchGuianaImg, GuernseyImg, GibraltarImg, GuadeloupeImg, EquatorialGuineaImg, SouthGeorgiaSouthSandwichIslandsImg, IsleofManImg, KiribatiImg, ComorosImg, SaintKittsNevisImg, SaintLuciaImg, LiechtensteinImg, LesothoImg, MontenegroImg, MarshallIslandsImg, MyanmarImg, MacaoImg, MartiniqueImg, MauritaniaImg, MontserratImg, MauritiusImg, MaldivesImg, MalawiImg, NewCaledoniaImg, NiueImg, SaintPierreMiquelonImg, PitcairnImg, PalauImg, RwandaImg, SaintHelenaAscensionTristandaCunhaImg, SierraLeoneImg, SanMarinoImg, SenegalImg, SaoTomePrincipeImg, SintMaartenDutchpartImg, EswatiniImg, TokelauImg, TimorLesteImg, TongaImg, TrinidadTobagoImg, TuvaluImg, TanzaniaUnitedRepublic, VanuatuImg]
-let arrCounrysTextcrazy = ['Антигуа и Барбуда','Ангилья','Аруба','Эландские ост.','Буркина-Фасо','Сен-Бартельми','Бруней-Даруссалам','Бонайре,Саба и Синт-Эстатиус','Белиз','Кокосовые(Килинг)ост.','Конго, Демократ. Респ.','Кюрасао','Ост. Рождества','Джибути','Доминика','Эритрея','Эфиопия','Фиджи','Фолклендские ост.(Мальвинские)','Микронезия, Федеративные Штаты','Фарерские острова','Северная Ирландия','Уэльс','Гренада','Французская Гвиана','Гернси','Гибралтар','Гваделупа','Экваториальная Гвинея','Юж. Джорджия и Юж.Сандвичевы ост.','Ост. Мэн','Кирибати','Коморы','Сент-Китс и Невис','Сент-Люсия','Лихтенштейн','Лесото','Черногория','Маршалловы ост.','Мьянма','Макао','Мартиника','Мавритания','Монтсеррат','Маврикий','Мальдивы','Малави','Новая Каледония','Ниуэ','Сент-Пьер и Микелон','Питкерн','Палау','Руанда','Святая Елена, Ост. вознесения, Тристан-да-Кунья','Сьерра-Леоне','Сан-Марино','Сенегал','Сан-Томе и Принсипи','Синт-Мартен','Эсватини','Токелау','Тимор-Лесте','Тонга','Тринидад и Тобаго','Тувалу','Танзания, Объединенная Респ.','Вануату']
+let arrCounrysTextcrazy = ['Антигуа и Барбуда', 'Ангилья', 'Аруба', 'Эландские ост.', 'Буркина-Фасо', 'Сен-Бартельми', 'Бруней-Даруссалам', 'Бонайре,Саба и Синт-Эстатиус', 'Белиз', 'Кокосовые(Килинг)ост.', 'Конго, Демократ. Респ.', 'Кюрасао', 'Ост. Рождества', 'Джибути', 'Доминика', 'Эритрея', 'Эфиопия', 'Фиджи', 'Фолклендские ост.(Мальвинские)', 'Микронезия, Федеративные Штаты', 'Фарерские острова', 'Северная Ирландия', 'Уэльс', 'Гренада', 'Французская Гвиана', 'Гернси', 'Гибралтар', 'Гваделупа', 'Экваториальная Гвинея', 'Юж. Джорджия и Юж.Сандвичевы ост.', 'Ост. Мэн', 'Кирибати', 'Коморы', 'Сент-Китс и Невис', 'Сент-Люсия', 'Лихтенштейн', 'Лесото', 'Черногория', 'Маршалловы ост.', 'Мьянма', 'Макао', 'Мартиника', 'Мавритания', 'Монтсеррат', 'Маврикий', 'Мальдивы', 'Малави', 'Новая Каледония', 'Ниуэ', 'Сент-Пьер и Микелон', 'Питкерн', 'Палау', 'Руанда', 'Святая Елена, Ост. вознесения, Тристан-да-Кунья', 'Сьерра-Леоне', 'Сан-Марино', 'Сенегал', 'Сан-Томе и Принсипи', 'Синт-Мартен', 'Эсватини', 'Токелау', 'Тимор-Лесте', 'Тонга', 'Тринидад и Тобаго', 'Тувалу', 'Танзания, Объединенная Респ.', 'Вануату']
 
 
 
@@ -438,7 +438,7 @@ normalModeButton.onclick = function () {
 }
 hardModeButton.onclick = function () {
    chosenGameMode = 'hard';
-   rangeForMode = 0;
+   rangeForMode = 68;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Сложно';
    gameMode.classList.add('game-mode-style-hard');
@@ -455,7 +455,7 @@ hardModeButton.onclick = function () {
 }
 crazyModeButton.onclick = function () {
    chosenGameMode = 'crazy';
-   rangeForMode = 0;
+   rangeForMode = 66;
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
@@ -562,6 +562,12 @@ function ChoiseGameModeArray() {
    } else if (chosenGameMode == 'normal') {
       arrGameMode = arrCounrysImgNormal;
       arrTextGameMode = arrCounrysTextNormal;
+   } else if (chosenGameMode == 'hard') {
+      arrGameMode = arrCounrysImgHard;
+      arrTextGameMode = arrCounrysTextHard;
+   } else if (chosenGameMode == 'crazy') {
+      arrGameMode = arrCounrysImgcrazy;
+      arrTextGameMode = arrCounrysTextcrazy;
    }
 
 }
