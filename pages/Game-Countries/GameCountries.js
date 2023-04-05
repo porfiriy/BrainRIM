@@ -202,7 +202,85 @@ let ZimbabweImg = "/pages/Game-Countries/img/hard-mode/zw.png";
 
 
 let arrCounrysImgHard = [AndorraImg, AlbaniaImg, AntarcticaImg, AmericanSamoaImg, BosniaAndHerzegovinaImg,BarbadosImg, BangladeshImg, BahrainImg, BurundiImg, BermudaImg, BhutanImg, BotswanaImg, CentralAfricanRepublicImg, CongoImg, CookIslandsImg, CaboVerdeImg, WesternSaharaImg, GabonImg, GhanaImg, GambiaImg, GuatemalaImg, GuamImg, GuineaBissauImg, GuyanaImg, HondurasImg, HungaryImg, JerseyImg, JordanImg, KuwaitImg, CaymanIslandsImg, LaoPeoplesDemocraticRepublicImg, LebanonImg, SriLankaImg, LiberiaImg, MonacoImg, MaliImg, MongoliaImg, MaltaImg, MalaysiaImg, MozambiqueImg, NamibiaImg, NigerImg, NorfolkIslandImg, NicaraguaImg, NepalImg, NauruImg, OmanImg, FrenchPolynesiaImg, PapuaNewGuineaImg, PhilippinesImg, ParaguayImg, QatarImg, SolomonIslandsImg, SeychellesImg, SomaliaImg, SurinameImg, SouthSudanImg, ElSalvadorImg, TogoImg, TunisiaImg, UgandaImg, UruguayImg, VirginIslandsBritishImg, VirginIslandsUSImg, SamoaImg, KosovoImg, SouthAfricaImg, ZambiaImg, ZimbabweImg]
-let arrCounrysTextHard = ['Андорра','Албания','Антарктика','Американское Самоа','Босния и Герцеговина','Барбадос','Бангладеш','Бахрейн','Бурунди','Бермудские Острова','Бутан','Ботсвана','Центральноафриканская Республика','Республика Конго','Острова Кука','Кабо-Верде','Западная Сахара','Габон','Гана','Гамбия','Гватемала','Гуам','Гвинея-Бисау','Гайана','Гондурас','Венгрия','Джерси','Иордания','Кувейт','Острова Кайман','Лаос','Ливан','Шри-Ланка','Либерия','Монако','Мали','Монголия','Мальта','Малайзия','Мозамбик','Намибия','Нигер','Остров Норфолк','Никарагуа','Непал','Науру','Oman','Французская Полинезия','Папуа — Новая Гвинея','Филиппины','Парагвай','Катар','Соломоновы Острова','Сейшельские Острова','Сомали','Суринам','Южный Судан','Сальвадор','Того','Тунис','Уганда','Уругвай','Виргинские Острова (Великобритания)','Виргинские Острова (США)','Самоа','Республика Косово','Южно-Африканская Республика','Замбия','Зимбабве']
+let arrCounrysTextHard = ['Андорра','Албания','Антарктика','Америк. Самоа','Босн. и Герцег.','Барбадос','Бангладеш','Бахрейн','Бурунди','Бермудские Ост.','Бутан','Ботсвана','Центр.Африкан. Респ.','Респ. Конго','Ост. Кука','Кабо-Верде','Запад. Сахара','Габон','Гана','Гамбия','Гватемала','Гуам','Гвинея-Бисау','Гайана','Гондурас','Венгрия','Джерси','Иордания','Кувейт','Ост. Кайман','Лаос','Ливан','Шри-Ланка','Либерия','Монако','Мали','Монголия','Мальта','Малайзия','Мозамбик','Намибия','Нигер','Ост. Норфолк','Никарагуа','Непал','Науру','Оман','Французская Полинезия','Папуа-Нов.Гвинея','Филиппины','Парагвай','Катар','Соломоновы Ост.','Сейшельские Ост.','Сомали','Суринам','Южный Судан','Сальвадор','Того','Тунис','Уганда','Уругвай','Виргинские Ост. (Великобритания)','Виргинские Ост. (США)','Самоа','Респ. Косово','Южно-Африкан. Респ.','Замбия','Зимбабве']
+
+
+
+
+//переменные с иконками флагов крейзи мод
+let AntiguaandBarbudaImg = "/pages/Game-Countries/img/crazy-mode/ag.png";
+let AnguillaImg = "/pages/Game-Countries/img/crazy-mode/ai.png";
+let ArubaImg = "/pages/Game-Countries/img/crazy-mode/aw.png";
+let ÅlandIslandsImg = "/pages/Game-Countries/img/crazy-mode/ax.png";
+let BurkinaFasoImg = "/pages/Game-Countries/img/crazy-mode/bf.png";
+let SaintBarthélemyImg = "/pages/Game-Countries/img/crazy-mode/bl.png";
+let BruneiDarussalamImg = "/pages/Game-Countries/img/crazy-mode/bn.png";
+let BonaireSintEustatiusandSabaImg = "/pages/Game-Countries/img/crazy-mode/bq.png";
+let BelizeImg = "/pages/Game-Countries/img/crazy-mode/bz.png";
+let CocosKeelingIslandsImg = "/pages/Game-Countries/img/crazy-mode/cc.png";
+let CongoDemocraticRepublicImg = "/pages/Game-Countries/img/crazy-mode/cd.png";
+let CuraçaoImg = "/pages/Game-Countries/img/crazy-mode/cw.png";
+let ChristmasIslandImg = "/pages/Game-Countries/img/crazy-mode/cx.png";
+let DjiboutiImg = "/pages/Game-Countries/img/crazy-mode/dj.png";
+let DominicaImg = "/pages/Game-Countries/img/crazy-mode/dm.png";
+let EritreaImg = "/pages/Game-Countries/img/crazy-mode/er.png";
+let EthiopiaImg = "/pages/Game-Countries/img/crazy-mode/et.png";
+let FijiImg = "/pages/Game-Countries/img/crazy-mode/fj.png";
+let FalklandIslandsMalvinasImg = "/pages/Game-Countries/img/crazy-mode/fk.png";
+let MicronesiaFederatedStatesImg = "/pages/Game-Countries/img/crazy-mode/fm.png";
+let FaroeIslandsImg = "/pages/Game-Countries/img/crazy-mode/fo.png";
+let NorthernIrelandImg = "/pages/Game-Countries/img/crazy-mode/gb-nir.png";
+let WalesImg = "/pages/Game-Countries/img/crazy-mode/gb-wls.png";
+let GrenadaImg = "/pages/Game-Countries/img/crazy-mode/gd.png";
+let FrenchGuianaImg = "/pages/Game-Countries/img/crazy-mode/gf.png";
+let GuernseyImg = "/pages/Game-Countries/img/crazy-mode/gg.png";
+let GibraltarImg = "/pages/Game-Countries/img/crazy-mode/gi.png";
+let GuadeloupeImg = "/pages/Game-Countries/img/crazy-mode/gp.png";
+let EquatorialGuineaImg = "/pages/Game-Countries/img/crazy-mode/gq.png";
+let SouthGeorgiaSouthSandwichIslandsImg = "/pages/Game-Countries/img/crazy-mode/gs.png";
+let IsleofManImg = "/pages/Game-Countries/img/crazy-mode/im.png";
+let KiribatiImg = "/pages/Game-Countries/img/crazy-mode/ki.png";
+let ComorosImg = "/pages/Game-Countries/img/crazy-mode/km.png";
+let SaintKittsNevisImg = "/pages/Game-Countries/img/crazy-mode/kn.png";
+let SaintLuciaImg = "/pages/Game-Countries/img/crazy-mode/lc.png";
+let LiechtensteinImg = "/pages/Game-Countries/img/crazy-mode/li.png";
+let LesothoImg = "/pages/Game-Countries/img/crazy-mode/ls.png";
+let MontenegroImg = "/pages/Game-Countries/img/crazy-mode/me.png";
+let MarshallIslandsImg = "/pages/Game-Countries/img/crazy-mode/mh.png";
+let MyanmarImg = "/pages/Game-Countries/img/crazy-mode/mm.png";
+let MacaoImg = "/pages/Game-Countries/img/crazy-mode/mo.png";
+let MartiniqueImg = "/pages/Game-Countries/img/crazy-mode/mq.png";
+let MauritaniaImg = "/pages/Game-Countries/img/crazy-mode/mr.png";
+let MontserratImg = "/pages/Game-Countries/img/crazy-mode/ms.png";
+let MauritiusImg = "/pages/Game-Countries/img/crazy-mode/mu.png";
+let MaldivesImg = "/pages/Game-Countries/img/crazy-mode/mv.png";
+let MalawiImg = "/pages/Game-Countries/img/crazy-mode/mw.png";
+let NewCaledoniaImg = "/pages/Game-Countries/img/crazy-mode/nc.png";
+let NiueImg = "/pages/Game-Countries/img/crazy-mode/nu.png";
+let SaintPierreMiquelonImg = "/pages/Game-Countries/img/crazy-mode/pm.png";
+let PitcairnImg = "/pages/Game-Countries/img/crazy-mode/pn.png";
+let PalauImg = "/pages/Game-Countries/img/crazy-mode/pw.png";
+let RwandaImg = "/pages/Game-Countries/img/crazy-mode/rw.png";
+let SaintHelenaAscensionTristandaCunhaImg = "/pages/Game-Countries/img/crazy-mode/sh.png";
+let SierraLeoneImg = "/pages/Game-Countries/img/crazy-mode/sl.png";
+let SanMarinoImg = "/pages/Game-Countries/img/crazy-mode/sm.png";
+let SenegalImg = "/pages/Game-Countries/img/crazy-mode/sn.png";
+let SaoTomePrincipeImg = "/pages/Game-Countries/img/crazy-mode/st.png";
+let SintMaartenDutchpartImg = "/pages/Game-Countries/img/crazy-mode/sx.png";
+let EswatiniImg = "/pages/Game-Countries/img/crazy-mode/sz.png";
+let TokelauImg = "/pages/Game-Countries/img/crazy-mode/tk.png";
+let TimorLesteImg = "/pages/Game-Countries/img/crazy-mode/tl.png";
+let TongaImg = "/pages/Game-Countries/img/crazy-mode/to.png";
+let TrinidadTobagoImg = "/pages/Game-Countries/img/crazy-mode/tt.png";
+let TuvaluImg = "/pages/Game-Countries/img/crazy-mode/tv.png";
+let TanzaniaUnitedRepublic = "/pages/Game-Countries/img/crazy-mode/tz.png";
+let VanuatuImg = "/pages/Game-Countries/img/crazy-mode/vu.png";
+
+let arrCounrysImgcrazy = [AntiguaandBarbudaImg, AnguillaImg, ArubaImg, ÅlandIslandsImg, BurkinaFasoImg, SaintBarthélemyImg, BruneiDarussalamImg, BonaireSintEustatiusandSabaImg, BelizeImg, CocosKeelingIslandsImg, CongoDemocraticRepublicImg, CuraçaoImg, ChristmasIslandImg, DjiboutiImg, DominicaImg, EritreaImg, EthiopiaImg, FijiImg, FalklandIslandsMalvinasImg, MicronesiaFederatedStatesImg, FaroeIslandsImg, NorthernIrelandImg, WalesImg, GrenadaImg, FrenchGuianaImg, GuernseyImg, GibraltarImg, GuadeloupeImg, EquatorialGuineaImg, SouthGeorgiaSouthSandwichIslandsImg, IsleofManImg, KiribatiImg, ComorosImg, SaintKittsNevisImg, SaintLuciaImg, LiechtensteinImg, LesothoImg, MontenegroImg, MarshallIslandsImg, MyanmarImg, MacaoImg, MartiniqueImg, MauritaniaImg, MontserratImg, MauritiusImg, MaldivesImg, MalawiImg, NewCaledoniaImg, NiueImg, SaintPierreMiquelonImg, PitcairnImg, PalauImg, RwandaImg, SaintHelenaAscensionTristandaCunhaImg, SierraLeoneImg, SanMarinoImg, SenegalImg, SaoTomePrincipeImg, SintMaartenDutchpartImg, EswatiniImg, TokelauImg, TimorLesteImg, TongaImg, TrinidadTobagoImg, TuvaluImg, TanzaniaUnitedRepublic, VanuatuImg]
+let arrCounrysTextcrazy = ['Антигуа и Барбуда','Ангилья','Аруба','Эландские ост.','Буркина-Фасо','Сен-Бартельми','Бруней-Даруссалам','Бонайре,Саба и Синт-Эстатиус','Белиз','Кокосовые(Килинг)ост.','Конго, Демократ. Респ.','Кюрасао','Ост. Рождества','Джибути','Доминика','Эритрея','Эфиопия','Фиджи','Фолклендские ост.(Мальвинские)','Микронезия, Федеративные Штаты','Фарерские острова','Северная Ирландия','Уэльс','Гренада','Французская Гвиана','Гернси','Гибралтар','Гваделупа','Экваториальная Гвинея','Юж. Джорджия и Юж.Сандвичевы ост.','Ост. Мэн','Кирибати','Коморы','Сент-Китс и Невис','Сент-Люсия','Лихтенштейн','Лесото','Черногория','Маршалловы ост.','Мьянма','Макао','Мартиника','Мавритания','Монтсеррат','Маврикий','Мальдивы','Малави','Новая Каледония','Ниуэ','Сент-Пьер и Микелон','Питкерн','Палау','Руанда','Святая Елена, Ост. вознесения, Тристан-да-Кунья','Сьерра-Леоне','Сан-Марино','Сенегал','Сан-Томе и Принсипи','Синт-Мартен','Эсватини','Токелау','Тимор-Лесте','Тонга','Тринидад и Тобаго','Тувалу','Танзания, Объединенная Респ.','Вануату']
+
+
+
 
 // меню результатов 
 let menuResultsContainer = document.querySelector(".container-results-menu");
