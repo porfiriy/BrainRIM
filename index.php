@@ -92,11 +92,14 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
+
+<button class="level-up">Улучшить</button>
+
             <?php if(isset($_SESSION['id'])): ?>
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
 			   <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
-			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс. ( Подарок при первом входе)</span>
+			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс и забрать подарок!</span>
 			   </a>
  
                   <?php endif;?>
