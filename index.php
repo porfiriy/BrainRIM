@@ -165,7 +165,7 @@
 <ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon>
 <ion-icon class="chill-game hz-game" name="american-football"></ion-icon>
 <ion-icon class="chill-game hz-game" name="basketball"></ion-icon>
-<ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
+<span class="chill-game tzfe-game">2048</span>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
 </div>

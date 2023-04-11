@@ -1730,6 +1730,14 @@ font-size: 22px;
    color: #213242;
    background-color: #05EFD4;
  }
+ .tzfe-game {
+	font-size: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 92px;
+    height: 92px;
+}
 .games-title{
 	margin: 70px auto 0 auto;
 	width: 60%;
