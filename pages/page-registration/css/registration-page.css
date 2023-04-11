@@ -244,3 +244,20 @@
  .Support:hover{
 	 color: #ffffff;
  }
+.another-variants{
+	display: flex;
+	gap: 20px;
+}
+.facebook{
+	width: 40px;
+}
+.google-img{
+	width: 40px;
+}
+.twitter-img{
+	width: 40px;
+	color: #1d9bf0;
+}
+.xe3v8dz {
+    fill: white;
+}
