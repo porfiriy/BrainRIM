@@ -74,7 +74,7 @@
          <a href="#" class="button-start">START</a>
 		 <div class="game-info-title">
 		<span class="game-info-name">Игра картинок</span>
-		<span class="game-info">В этой игре вам надо будет ответить, правильный ли цвет изображён вокруг слова</span>
+		<span class="game-info">В этой игре вам надо будет ответить, правильный ли цвет изображён вокруг слова по центру</span>
 	  </div>
       </div>
    </div>
@@ -102,7 +102,7 @@
       </div>
 	  <div class="topButton-gameWords">
          <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
-         <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+         <a href="/pages/settings-page/settings-page.php" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
       <div class="container-play-area">
@@ -118,8 +118,8 @@
                </div>
             </div>
             <div class="container-buttons">
-               <div class="button_red"></div>
-               <div class="button_green"></div>
+               <div class="button_red">Нет</div>
+               <div class="button_green">Да</div>
             </div>
       </div>
    </div>

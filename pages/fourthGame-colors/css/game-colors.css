@@ -604,18 +604,22 @@
  }
  .game-mode-style-easy{
 	color: rgb(102, 236, 25);
+	margin: 50px 0 0 0;
  }
  .game-mode-style-normal{
 	color: #E27B02;
+	margin: 50px 0 0 0;
  }
  .game-mode-style-hard{
 	color: #FA4B00;
+	margin: 50px 0 0 0;
  }
  .game-mode-style-crazy{
 	color: #8619B9;
+	margin: 50px 0 0 0;
  }
  .deadLineWrapper{
-	margin: 10px auto;
+	margin: 40px auto;
 	height: 24px;
 	width: 300px;
 	background-color: #383DA6;
@@ -751,7 +755,7 @@
  }
  .conntainer-rectangle{
 	display: flex;
-	margin: 140px 0 0 0;
+	margin: 120px 0 0 0;
 	justify-content: center;
  }
  .rectangle {
@@ -763,7 +767,8 @@
  border-radius: 20px;
  background-color: #110707;
  animation: rectangle 2s;
- 
+ border: 3px solid #000000;
+ box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }
  
  @keyframes rectangle {
@@ -794,31 +799,49 @@
  }
  .container-buttons{
 	display: flex;
-	margin: 210px 0 0 0;
+	margin: 150px 0 0 0;
 	justify-content: space-around;
  }
  .button_red {
-	height: 105px;
-	width: 105px;
+	height: 115px;
+	width: 115px;
 	border-radius: 20px;
 	background-color: #c8000A;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+	border: 2px solid #05EFD4;
+	transition: 0.2s;
+	box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }
  .button_red:active{
-	transform: scale(0.7);
-	transition: all 0.2ms;
+	transform: scale(0.85);
 	background-color: #c8000a79;
+	border: none;
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
  }
  
  .button_green {
-	height: 105px;
-	width: 105px;
+	height: 115px;
+	width: 115px;
 	border-radius: 20px;
 	background-color: #598234;
+	display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+	border: 2px solid #05EFD4;
+	transition: 0.2s;
+	box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }
  .button_green:active{
-	transform: scale(0.7);
-	transition: all 0.2ms;
+	transform: scale(0.85);
 	background-color: #5882346c;
+	border: none;
+	border-radius: 20px;
+	color: rgb(0, 0, 0);
  }
  
  .victory-loose-screen-container{
