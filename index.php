@@ -8,8 +8,9 @@
 
 <head>
    <script>
-         let expValue = '<?= $expValue ?>';
-	
+         let expValue = Number('<?= $expValue ?>');
+         let nextLvlExpValue = Number('<?= $nextLvlExpValue ?>');
+         let levelValue = Number('<?= $levelValue ?>');
    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,7 +69,7 @@
 		         <div class="lvl-container">
             <div class="player-level">Lvl 
                   <?php if(isset($_SESSION['id'])): ?>
-                  <?php echo $level['Level']; ?>
+                  <span class="playerLvlCounterBody"></span>
                   <?php else: ?>
                   0
                   <?php endif;?>
@@ -76,7 +77,7 @@
 
             <div id="loading-bar" class="player-exp-scale">
                <div id="progress" class="player-exp__line-blue"></div>
-               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <?php echo $level['experience']; ?> <?php else: ?>0<?php endif;?>/<span class="nextLvl-value"></span></p>
+               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span> <?php else: ?>0<?php endif;?>/<?php if(isset($_SESSION['id'])): ?> <span class="nextLvl-value"></span> <?php else: ?>100<?php endif;?></p>
             </div>
 
             <div class="all-lvls-container">
@@ -92,9 +93,7 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
-
-<button class="level-up">Улучшить</button>
-
+            <button class="level-up">Улучшить</button>
             <?php if(isset($_SESSION['id'])): ?>
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">

@@ -58,7 +58,9 @@ const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы 
 function doAjaxExperience() {
+
    let expUpForModeAjax;
+
    if (statusLoosOrWin == "win") {//проверка на победу или луз
       expUpForModeAjax = `${expUpForMode}`;
    } else {
@@ -126,7 +128,7 @@ function doAjaxLoose() {
    let IqUpForModeAjax = `2`;
 
    $.ajax({
-      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
       type: 'POST',
       dataType: "json",
       data: {
@@ -261,7 +263,7 @@ crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '4';
+   ModeTimeAnim = '34';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');

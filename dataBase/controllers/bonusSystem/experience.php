@@ -9,10 +9,8 @@ $ajaxValue['expUpForModeAjax'] = $_POST['expUpForModeAjax'];
 echo json_encode($ajaxValue);
 
 
-$experienceValue = ['experience' => $experienc['experience']+$ajaxValue['expUpForModeAjax']];
+$experienceValue = ['experience' => $level['experience']+$ajaxValue['expUpForModeAjax']];
+
 updateTo('usersLvl',$_SESSION['id'],$experienceValue);
-
-
-// Send the data back.
 
 ?>

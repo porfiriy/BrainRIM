@@ -67,6 +67,10 @@ const BackFromReaction = document.querySelector('.back-from-reaction');
 const BackFromAttention = document.querySelector('.back-from-attention');
 const BackFromIQ = document.querySelector('.back-from-iq');
 const nextLvlValueContainer = document.querySelector('.nextLvl-value');
+const bodyForExpValue = document.querySelector('.expValueFromDB');
+const bodyForNextExpValue = document.querySelector('.nextLvl-value');
+const buttonLevelUp = document.querySelector('.level-up');
+const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
 
 
 
@@ -77,16 +81,14 @@ const sc = document.querySelector('#sc');
 
 
 
-let expForDowngrade = false;//для понижения опыта
-//AJAX запрос на сервер для добавления в базу данных инфы при лузе
-function doAjaxExperienceDowngrade() {
 
+//AJAX запрос обнуление опыта
+function doAjaxExperienceDowngradeAndLevelUp() {
   $.ajax({
     url: '/dataBase/controllers/antiBonusSystem/minusExp.php',
     type: 'POST',
     dataType: "json",
     data: {
-      expForDowngrade: expForDowngrade,
 
     },
     success: function (data) {
@@ -98,6 +100,47 @@ function doAjaxExperienceDowngrade() {
   })
 }
 
+console.log(expValue);
+console.log(nextLvlExpValue);
+if (expValue >= nextLvlExpValue) {//если лвл достиг нужн знач.
+  buttonLevelUp.style = 'display:flex;';
+}
+buttonLevelUp.onclick = function () {
+  ShowFireworks();
+  doAjaxExperienceDowngradeAndLevelUp();
+  bodyForExpValue.innerHTML = 0;
+  progress.style.width = 0 + "%";//обнуляет линию
+  buttonLevelUp.style = 'display:none;';
+  playerLvlCounterBody.innerHTML = levelValue += 1;
+  bodyForNextExpValue.innerHTML = nextLvlExpValue += 50;
+}
+bodyForExpValue.innerHTML = expValue;//добавляют динамич знач на экран из базы данных
+bodyForNextExpValue.innerHTML = nextLvlExpValue;
+playerLvlCounterBody.innerHTML = levelValue;
+
+let bar = document.querySelector("#loading-bar");
+let progress = document.querySelector("#progress");
+
+let oneProcent = nextLvlExpValue / 100;
+let i = expValue / oneProcent;
+progress.style.width = i + "%";//выводит линию по опыту
+
+
+
+
+
+function ShowFireworks() {
+  if (expValue >= nextLvlExpValue) { //условие вызывает фейерверк при новом левеле
+
+    let timerId = setTimeout(() => {
+      a = new Fireworks();
+      a.run();
+      fireworksExist = true;
+      canvas.style = 'display: block;';
+    }, 0000);
+    setTimeout(() => { canvas.style = 'display: none;'; }, 7000);
+  }
+}
 
 function activeLink() {
   list.forEach((item) =>
@@ -516,92 +559,6 @@ class Fireworks {
     this.render();
   }
 }
-let fireworksExist = false;//нужно для проверки был ли салют на лвле
-let LevelCounterValue;
-let LevelExpValueForLvls;
-if (expValue < 100) {
-  LevelCounterValue = 1;
-  ShowFireworks();
-  LevelExpValueForLvls = 100;
-  fireworksExist = false;
-} else if (expValue >= 100 && expValue < 150) {
-  LevelCounterValue = 2;
-  ShowFireworks();
-  LevelExpValueForLvls = 150;
-  fireworksExist = false;
-} else if (expValue >= 150 && expValue < 200) {
-  LevelCounterValue = 3;
-  ShowFireworks();
-  LevelExpValueForLvls = 200;
-  fireworksExist = false;
-} else if (expValue >= 200 && expValue < 250) {
-  LevelCounterValue = 4;
-  ShowFireworks();
-  doAjaxExperienceDowngrade();
-  LevelExpValueForLvls = 250;
-  fireworksExist = false;
-} else if (expValue >= 250 && expValue < 300) {
-  LevelCounterValue = 5;
-  ShowFireworks();
-  LevelExpValueForLvls = 300;
-  fireworksExist = false;
-} else if (expValue >= 300 && expValue < 350) {
-  LevelCounterValue = 6;
-  ShowFireworks();
-  LevelExpValueForLvls = 350;
-  fireworksExist = false;
-} else if (expValue >= 350 && expValue < 400) {
-  LevelCounterValue = 7;
-  ShowFireworks();
-  LevelExpValueForLvls = 400;
-  fireworksExist = false;
-} else if (expValue >= 400 && expValue < 450) {
-  LevelCounterValue = 8;
-  ShowFireworks();
-  LevelExpValueForLvls = 450;
-  fireworksExist = false;
-} else if (expValue >= 450 && expValue < 500) {
-  LevelCounterValue = 9;
-  ShowFireworks();
-  LevelExpValueForLvls = 500;
-  fireworksExist = false;
-} else if (expValue >= 300 && expValue < 550) {
-  LevelCounterValue = 10;
-  ShowFireworks();
-  LevelExpValueForLvls = 350;
-  fireworksExist = false;
-}
-nextLvlValueContainer.innerHTML = LevelExpValueForLvls;//показывает вменю опыт ля след. левела
-
-
-console.log(LevelExpValueForLvls);
-let bar = document.querySelector("#loading-bar");
-let progress = document.querySelector("#progress");
-
-let oneProcent = LevelExpValueForLvls / 100;
-let i = expValue / oneProcent;
-progress.style.width = i + "%";
-
-
-
-
-
-function ShowFireworks() {
-  if (expValue >= LevelExpValueForLvls && fireworksExist == false) { //условие вызывает фейерверк при новом левеле
-
-    let timerId = setTimeout(() => {
-      a = new Fireworks();
-      a.run();
-      fireworksExist = true;
-      canvas.style = 'display: block;';
-    }, 0000);
-    setTimeout(() => { canvas.style = 'display: none;'; }, 7000);
-    expLevelUp += 100;
-    console.log(expLevelUp);
-  }
-}
-
-
 
 
 

@@ -48,20 +48,20 @@ function updateTo($table, $id ,$params){
 }
 
 $level = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
-$experienc = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
-
 
 $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 
 $eyeValue = $EyeScore['sum_eye_hint'];
+$levelValue = $level['Level'];
 $expValue = $level['experience'];
+$nextLvlExpValue = $level['nextLvlExp'];
 
-if($expValue == 100){
-   $LvlValue = ['Level' => $level['Level']+1];
-   updateTo('usersLvl',$_SESSION['id'],$LvlValue);
-}
+// if($expValue == 100){
+//    $LvlValue = ['Level' => $level['Level']+1];
+//    updateTo('usersLvl',$_SESSION['id'],$LvlValue);
+// }
 //код на логику добавления денег
 //$sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
 

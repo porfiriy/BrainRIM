@@ -1,12 +1,15 @@
 <?php
+include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
 
-$expForDowngrade['expForDowngrade'] = $_POST['expForDowngrade'];
+header('Content-Type: text/plain');
 
-echo json_encode($expForDowngrade);
+$levelValue = ['Level' => $level['Level']+1];
+updateTo('usersLvl',$_SESSION['id'],$levelValue);
 
-if ($expForDowngrade == true){
-   $experienceDawngradeValue = ['experience' => $experienc['experience']=0];
-   updateTo('usersLvl',$_SESSION['id'],$experienceDawngradeValue);
-}
+$experienceValue = ['experience' => 0];
 
+updateTo('usersLvl',$_SESSION['id'],$experienceValue);
+
+$nextExpValue = ['nextLvlExp' => $level['nextLvlExp']+50];
+updateTo('usersLvl',$_SESSION['id'],$nextExpValue);
 ?>

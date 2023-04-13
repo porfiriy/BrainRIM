@@ -313,22 +313,22 @@ transition: 0.2s;
 		}
 
 .level-up{
-	display: flex;
-    font-size: 24px;
-    border: 2px solid #05EFD4;
-    border-radius: 10px;
-    padding: 5px;
-    width: 180px;
-    transition: 0.2s;
-    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
-    color: #213242;
-    background-color: #05EFD4;
-    justify-content: center;
-    margin: 0 auto;
+	display: none;
+   font-size: 24px;
+   border: 2px solid #05EFD4;
+   border-radius: 10px;
+   padding: 5px;
+   width: 180px;
+   transition: 0.2s;
+   box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
+   color: #213242;
+   background-color: #05EFD4;
+   justify-content: center;
+   margin: 0 auto;
 	-webkit-animation: level-up-fade 0.5s ease-out infinite alternate;
-    -moz-animation: level-up-fade 0.5s ease-out infinite alternate;
-    -o-animation: level-up-fade 0.5s ease-out infinite alternate;
-    animation: level-up-fade 3s ease-out infinite alternate;
+   -moz-animation: level-up-fade 0.5s ease-out infinite alternate;
+   -o-animation: level-up-fade 0.5s ease-out infinite alternate;
+   animation: level-up-fade 3s ease-out infinite alternate;
 }
 .level-up:active {
     transform: scale(0.95);
