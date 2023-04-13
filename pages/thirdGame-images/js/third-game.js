@@ -18,6 +18,12 @@ let restart = document.querySelector(".pop-up__container3");
 let score = 0;
 let expUpForMode;
 let iqUpForMode;
+let gameModeId;
+//считает время с начала игры
+let seconds = 0;
+let minutes = 0;
+let winForResults = 0;
+let looseForResults = 0;
 let statusLoosOrWin;
 let eyeValueForJS = 0;
 eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
@@ -50,7 +56,7 @@ const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 
 //z
-//AJAX запрос на сервер для добавления в базу данных инфы при лузе
+//AJAX запрос на сервер для добавления в базу данных инфы 
 function doAjaxExperience() {
    let expUpForModeAjax;
    if (statusLoosOrWin == "win") {//проверка на победу или луз
@@ -119,7 +125,6 @@ function doAjaxMinusHints() {
 function doAjaxLoose() {
    let IqUpForModeAjax = `2`;
 
-
    $.ajax({
       url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
       type: 'POST',
@@ -133,6 +138,34 @@ function doAjaxLoose() {
       },
       error: function () {
          console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let modeID = `${gameModeId}`;
+   let win = `${winForResults}`;
+   let loose = `${looseForResults}`;
+   let time_sec = `${seconds}`;
+   let opened_cards = `${score}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsImgGame.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         modeID: modeID,
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         opened_cards: opened_cards,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
       }
    })
 }
@@ -190,6 +223,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    resultsMenuMode.innerHTML = 'Легко';
    expUpForMode = 5;
    iqUpForMode = 10;
+   gameModeId = 1;
 }
 normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -205,6 +239,7 @@ normalModeButton.onclick = function () {
    resultsMenuMode.innerHTML = 'Нормально';
    expUpForMode = 6;
    iqUpForMode = 12;
+   gameModeId = 2;
 }
 hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -220,12 +255,13 @@ hardModeButton.onclick = function () {
    resultsMenuMode.innerHTML = 'Сложно';
    expUpForMode = 8;
    iqUpForMode = 15;
+   gameModeId = 3;
 }
 crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '34';
+   ModeTimeAnim = '4';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');
@@ -235,6 +271,7 @@ crazyModeButton.onclick = function () {
    resultsMenuMode.innerHTML = 'Безумно';
    expUpForMode = 10;
    iqUpForMode = 20;
+   gameModeId = 4;
 }
 victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
@@ -264,9 +301,7 @@ hintButton.onclick = function () {
 
 function game() {
 
-   //считает время с начала игры
-   let seconds = 0;
-   let minutes = 0;
+
    function timerGame() {
       let timerID = setInterval(function () {
 
@@ -291,8 +326,10 @@ function game() {
       resultsMenuIqItem.innerHTML = '+2';
       resultsMenuExpItem.innerHTML = `+2`;
       statusLoosOrWin = "loose";
+      looseForResults = 1;
       doAjaxLoose();
       doAjaxExperience();
+      doAjaxResults();
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -366,8 +403,10 @@ function game() {
             resultsMenuIqItem.innerHTML = `+${iqUpForMode}`;
             resultsMenuExpItem.innerHTML = `+${expUpForMode}`;
             statusLoosOrWin = "win";
+            winForResults = 1;
             doAjaxWin();
             doAjaxExperience();
+            doAjaxResults();
          }
          //добавляет звук
          audioComplete.play();

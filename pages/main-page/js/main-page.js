@@ -82,7 +82,7 @@ let expForDowngrade = false;//для понижения опыта
 function doAjaxExperienceDowngrade() {
 
   $.ajax({
-    url: '/dataBase/controllers/bonusSystem/experience.php',
+    url: '/dataBase/controllers/antiBonusSystem/minusExp.php',
     type: 'POST',
     dataType: "json",
     data: {
@@ -537,7 +537,6 @@ if (expValue < 100) {
 } else if (expValue >= 200 && expValue < 250) {
   LevelCounterValue = 4;
   ShowFireworks();
-  expForDowngrade = true;
   doAjaxExperienceDowngrade();
   LevelExpValueForLvls = 250;
   fireworksExist = false;
