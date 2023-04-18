@@ -71,7 +71,7 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
-
+const Magic = document.querySelector('.magic');
 
 
 const deg = 6;
@@ -111,6 +111,7 @@ buttonLevelUp.onclick = function () {
   bodyForExpValue.innerHTML = 0;
   progress.style.width = 0 + "%";//обнуляет линию
   buttonLevelUp.style = 'display:none;';
+  Magic.style = 'display: flex;'; //убирает страницу игр
   playerLvlCounterBody.innerHTML = levelValue += 1;
   bodyForNextExpValue.innerHTML = nextLvlExpValue += 50;
 }
@@ -128,9 +129,45 @@ progress.style.width = i + "%";//выводит линию по опыту
 
 
 
-
 function ShowFireworks() {
-  if (expValue >= nextLvlExpValue) { //условие вызывает фейерверк при новом левеле
+	if (expValue >= nextLvlExpValue) { //условие вызывает фейерверк при новом левеле
+
+
+const duration = 5 * 1000,
+  animationEnd = Date.now() + duration,
+  defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+function randomInRange(min, max) {
+  return Math.random() * (max - min) + min;
+}
+
+const interval = setInterval(function() {
+  const timeLeft = animationEnd - Date.now();
+
+  if (timeLeft <= 0) {
+    return clearInterval(interval);
+  }
+
+  const particleCount = 50 * (timeLeft / duration);
+
+  // since particles fall down, start a bit higher than random
+  confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+    })
+  );
+  confetti(
+    Object.assign({}, defaults, {
+      particleCount,
+      origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+    })
+  );
+}, 250);
+
+
+
+ 
 
     let timerId = setTimeout(() => {
       a = new Fireworks();
@@ -150,15 +187,21 @@ function activeLink() {
 list.forEach((item) =>
   item.addEventListener('click', activeLink));
 
+  
 //Дом
 itemHomeNavigation.onclick = function () {//при нажатии на элем home в меню навигац
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
+  Growth.style = 'display: none;';
+  Chill.style = 'display: none;';
+  MemoryContainer.style = 'display: none;';
+  ReactionContainer.style = 'display: none;';
+  AttentionContainer.style = 'display: none;';
+  IQContainer.style = 'display: none;';
   containerAchievmentsPage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
-
 //Ежедневки
 everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
   containerEverydayTasks.style = 'display: block;';
