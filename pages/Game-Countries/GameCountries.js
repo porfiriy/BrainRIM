@@ -294,6 +294,15 @@ let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
 
 
+//считает время с начала игры
+let seconds = 0;
+let minutes = 0;
+let expUpForMode;
+let iqUpForMode;
+let gameModeId;
+let winForResults = 0;
+let looseForResults = 0;
+let statusLoosOrWin;
 let rangeForMode;//до какого значения ранд числа
 let ModeTimeAnim;
 let chosenGameMode; //в неё записываем режим после выбора режима пользователем
@@ -334,38 +343,122 @@ const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
 
 //z
-//AJAX запрос на сервер для добавления в базу данных инфы при лузе
-async function doAjaxLoose() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
+//AJAX запрос на сервер для добавления в базу данных инфы 
+function doAjaxExperience() {
+
+   let expUpForModeAjax;
+
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = `${expUpForMode}`;
+   } else {
+      expUpForModeAjax = 2;
    }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-async function doAjaxWin() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+function doAjaxWin() {
+   let IqUpForModeAjax = `${iqUpForMode}`;
+
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
-//AJAX запрос на сервер для добавления в базу данных инфы при лузе
-async function doAjaxMinusHints() {
-   try {
-      const url = await fetch('/dataBase/controllers/antiBonusSystem/minusEyeHints.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+function doAjaxMinusHints() {
+
+
+   $.ajax({
+      url: '/dataBase/controllers/antiBonusSystem/minusEyeHints.php',
+      type: 'POST',
+      data: {
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
+
+
+function doAjaxLoose() {
+   let IqUpForModeAjax = `2`;
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let modeID = `${gameModeId}`;
+   let win = `${winForResults}`;
+   let loose = `${looseForResults}`;
+   let time_sec = `${seconds}`;
+   let rightAnswerRes = `${rightAnswer}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsCountriesGame.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         modeID: modeID,
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         rightAnswerRes: rightAnswerRes,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
+      }
+   })
+}
+
 //z
 
 //при нажатии на отмену вспл окна настройки 
@@ -410,7 +503,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Легко';
    gameMode.classList.add('game-mode-style-easy');
-   ModeTimeAnim = '30';
+   ModeTimeAnim = '60';
    startButtonContainer.style = 'display: block;'
    startButtonGameMode.innerHTML = 'Легко';
    startButtonGameMode.classList.add('start-menu__easy-game-mode');
@@ -419,6 +512,9 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    resultsMenuMode.classList.add('results-menu__easy-mode');
    resultsMenuMode.innerHTML = 'Легко';
    numbrButtnsForMode = 3;
+   expUpForMode = 5;
+   iqUpForMode = 10;
+   gameModeId = 1;
 }
 normalModeButton.onclick = function () {
    chosenGameMode = 'normal';
@@ -426,7 +522,7 @@ normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Нормально';
    gameMode.classList.add('game-mode-style-normal');
-   ModeTimeAnim = '25';
+   ModeTimeAnim = '60';
    startButtonContainer.style = 'display: block;'
    startButtonGameMode.innerHTML = 'Нормально';
    startButtonGameMode.classList.add('start-menu__normal-game-mode');
@@ -435,6 +531,9 @@ normalModeButton.onclick = function () {
    resultsMenuMode.classList.add('results-menu__normal-mode');
    resultsMenuMode.innerHTML = 'Нормально';
    numbrButtnsForMode = 3;
+   expUpForMode = 6;
+   iqUpForMode = 12;
+   gameModeId = 2;
 }
 hardModeButton.onclick = function () {
    chosenGameMode = 'hard';
@@ -442,7 +541,7 @@ hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Сложно';
    gameMode.classList.add('game-mode-style-hard');
-   ModeTimeAnim = '22';
+   ModeTimeAnim = '60';
    startButtonContainer.style = 'display: block;'
    startButtonGameMode.innerHTML = 'Сложно';
    startButtonGameMode.classList.add('start-menu__hard-game-mode');
@@ -452,6 +551,9 @@ hardModeButton.onclick = function () {
    resultsMenuMode.innerHTML = 'Сложно';
    hardModeButtonsContainer.style = "display:flex;";
    numbrButtnsForMode = 5;
+   expUpForMode = 8;
+   iqUpForMode = 15;
+   gameModeId = 3;
 }
 crazyModeButton.onclick = function () {
    chosenGameMode = 'crazy';
@@ -459,7 +561,7 @@ crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '20';
+   ModeTimeAnim = '60';
    startButtonContainer.style = 'display: block;'
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');
@@ -469,6 +571,9 @@ crazyModeButton.onclick = function () {
    resultsMenuMode.innerHTML = 'Безумно';
    hardModeButtonsContainer.style = "display:flex;";
    numbrButtnsForMode = 5;
+   expUpForMode = 10;
+   iqUpForMode = 20;
+   gameModeId = 4;
 }
 victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;'
@@ -482,11 +587,17 @@ function showLooseMessage() {
    victoryLooseScreenWinLooseText.classList.add('loose-text-red');
    resultsMenuWinLooseItem.innerHTML = 'Поражение!';
    resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
-   resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
    resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
+   resultsMenuTime.innerHTML = `${seconds}`;
    resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
    resultsMenuTimeItem.classList.add('items-container__time-item-red');
+   statusLoosOrWin = "loose";
+   resultsMenuIqItem.innerHTML = '+2';
+   resultsMenuExpItem.innerHTML = `+2`;
+   looseForResults = 1;
    doAjaxLoose();//z //вызов запроса в БД
+   doAjaxExperience();
+   doAjaxResults();
 }
 function showWinMessage() {
    deadeLine.style = "animation-play-state: paused ";
@@ -495,13 +606,19 @@ function showWinMessage() {
    victoryLooseScreenWinLooseText.classList.add('victory-text-green');
    resultsMenuWinLooseItem.innerHTML = 'Победа!'
    resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-   resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
    resultsMenuOpenedCardsItem.innerHTML = '20';
+   resultsMenuTime.innerHTML = `${seconds}`;
    resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
    resultsMenuTimeItem.classList.add('items-container__time-item-green');
    resultsMenuIqItem.innerHTML = '+50';
    resultsMenuExpItem.innerHTML = '+20';
+   statusLoosOrWin = "win";
+   resultsMenuIqItem.innerHTML = `+${iqUpForMode}`;
+   resultsMenuExpItem.innerHTML = `+${expUpForMode}`;
+   winForResults = 1;
    doAjaxWin();
+   doAjaxExperience();
+   doAjaxResults();
 }
 deadeLine.addEventListener("animationend", showLooseMessage);
 
@@ -616,6 +733,13 @@ function showFlags() {
 
 
 function game() {
+   function timerGame() {
+      let timerID = setInterval(function () {
+
+         seconds += 1;
+      }, 1000)
+   }
+   timerGame();
    randomLoopForArr();
    ChoiseGameModeArray();
    showFlags();

@@ -215,7 +215,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Легко';
    gameMode.classList.add('game-mode-style-easy');
-   ModeTimeAnim = '60';
+   ModeTimeAnim = '50';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Легко';
    startButtonGameMode.classList.add('start-menu__easy-game-mode');
@@ -231,7 +231,7 @@ normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Нормально';
    gameMode.classList.add('game-mode-style-normal');
-   ModeTimeAnim = '50';
+   ModeTimeAnim = '40';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Нормально';
    startButtonGameMode.classList.add('start-menu__normal-game-mode');
@@ -247,7 +247,7 @@ hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Сложно';
    gameMode.classList.add('game-mode-style-hard');
-   ModeTimeAnim = '40';
+   ModeTimeAnim = '35';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Сложно';
    startButtonGameMode.classList.add('start-menu__hard-game-mode');
@@ -263,7 +263,7 @@ crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
    gameMode.innerHTML = 'Безумно';
    gameMode.classList.add('game-mode-style-crazy');
-   ModeTimeAnim = '34';
+   ModeTimeAnim = '30';
    startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Безумно';
    startButtonGameMode.classList.add('start-menu__crazy-game-mode');

@@ -41,7 +41,7 @@
 			<div class="items-container__each-item-container">
 				<div class="items-container__time-icon"><ion-icon name="stopwatch-outline"></ion-icon></div>
 				<div class="items-container__time-item">
-					<div class="results-menu__time"></div> м. с.
+					<div class="results-menu__time"></div> с.
 				</div>
 			</div>
 			<div class="items-container__each-item-container">
@@ -135,6 +135,7 @@
 			</div>
 		</main>
 	</div>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 	<script src="/pages/Game-Countries/GameCountries.js"></script>

@@ -21,7 +21,6 @@
 </head>
 
 <body>
-<canvas class="canvas"></canvas>
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
@@ -93,7 +92,10 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
-            <button class="level-up">Улучшить</button>
+            <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+
+			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+            <button class="level-up magic" style="display: none;">Улучшить</button>
             <?php if(isset($_SESSION['id'])): ?>
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
@@ -164,7 +166,7 @@
 <ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon>
 <ion-icon class="chill-game hz-game" name="american-football"></ion-icon>
 <ion-icon class="chill-game hz-game" name="basketball"></ion-icon>
-<span class="chill-game tzfe-game">2048</span>
+<a href="/pages/Game-REAPEAT/gameREPEAT.php" class="chill-game tzfe-game">2048</a>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
 </div>
@@ -516,7 +518,12 @@
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
          </div>
       </div>
-      
+      <?php
+      $date = date('Y-m-d H:i:s');
+      if($date == "2023-04-14 22:11:10"){
+       echo "poluchilos";
+      }
+      ?>
 
       
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

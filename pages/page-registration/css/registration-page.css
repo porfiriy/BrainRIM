@@ -244,6 +244,10 @@
  .Support:hover{
 	 color: #ffffff;
  }
+ .another-variants-text{
+	margin: 10px 0 10px 0;
+	color: #05efd4;
+ }
 .another-variants{
 	display: flex;
 	gap: 20px;
@@ -258,6 +262,6 @@
 	width: 40px;
 	color: #1d9bf0;
 }
-.xe3v8dz {
+.facebook-path {
     fill: white;
 }

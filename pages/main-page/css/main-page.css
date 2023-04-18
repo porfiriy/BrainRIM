@@ -132,7 +132,7 @@ z-index: 1;
 	  text-shadow: 0 0 3px #fff, 0 0 1px #2218b1, 0 0 3px #2218b1, 0 0 5px #2218b1, 0 0 7px #2218b1, 0 0 9px #2218b1, 0 0 11px #2218b1;
 	}
 	to {
-	  text-shadow: 0 0 15px #fff, 0 0 10px #ff4da6, 0 0 15px #ff4da6, 0 0 20px #ff4da6, 0 0 25px #ff4da6, 0 0 30px #ff4da6, 0 0 35px #ff4da6;
+	  text-shadow: 0 0 15px #fff, 0 0 10px #6e1dc5, 0 0 15px #6e1dc5, 0 0 20px #6e1dc5, 0 0 25px #6e1dc5, 0 0 30px #6e1dc5, 0 0 35px #6e1dc5;
 	}
   }
 	
@@ -2010,4 +2010,102 @@ font-size: 22px;
   }
   .in-dev_text:hover{
 	text-decoration: underline;
+  }
+
+
+
+  
+
+
+  .magic{
+	display:inline-block;
+	position:relative;
+  }
+  
+  .magic i{
+	color:orange;
+	filter:grayscale(100%);
+	position:relative;
+  }
+  .magic:hover i{
+	animation:change 1s forwards;
+  }
+  
+  
+  @keyframes change{
+	50% {
+	  transform:scale(0);
+	filter:grayscale(100%);
+	}
+	51% {
+	  filter:grayscale(0%);
+	}
+	100% {
+	  transform:scale(1);
+	  filter:grayscale(0%);
+	}
+  }
+  
+  .magic::after {
+	content:"";
+	position:absolute;
+	width:160px;
+	height:160px;
+	left:calc(50% - 80px);
+	top:calc(50% - 80px);
+	background:
+	  /*Кол-во, цвет, размер*/
+	  radial-gradient(circle,red 50%,transparent 60%),
+	  radial-gradient(circle,rgb(0, 255, 42) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(66, 42, 175) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(174, 185, 19) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(34, 185, 196) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(99, 47, 4) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(219, 26, 177) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%),
+	  radial-gradient(circle,rgb(255, 255, 255) 50%,transparent 60%);
+
+	  /*Размер*/
+	background-size:18px 18px; 
+	background-position:
+	  /*Координаты*/
+	  calc(50% - 50px) calc(50% - 50px),
+	  calc(50% + 50px) calc(50% - 50px),
+	  calc(50% - 50px) calc(50% + 50px),
+	  calc(50% + 50px) calc(50% + 50px),
+	  calc(50% +  0px) calc(50% + 70px),
+	  calc(50% + 70px) calc(50% +  0px),
+	  calc(50% - 70px) calc(50% +  0px),
+	  calc(50% +  0px) calc(50% - 70px),
+
+	  calc(50% - 50px) calc(50% - 50px),
+	  calc(50% + 50px) calc(50% - 50px),
+	  calc(50% - 50px) calc(50% + 50px),
+	  calc(50% + 50px) calc(50% + 50px),
+	  calc(50% +  0px) calc(50% + 70px),
+	  calc(50% + 70px) calc(50% +  0px),
+	  calc(50% - 70px) calc(50% +  0px),
+	  calc(50% +  0px) calc(50% - 70px);
+
+	background-repeat:no-repeat;
+	border-radius:50%;
+	transform:scale(0);
+  }
+  
+  .magic:hover:after {
+	transform:scale(1);
+	opacity:0;
+	background-size:0 0;
+	transition:
+	  transform 0.3s 0.3s,
+	  opacity 0.1s 0.55s,
+	  background-size 0.5s 0.9s;
   }
