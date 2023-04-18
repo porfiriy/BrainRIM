@@ -92,10 +92,11 @@
                <div class="level level-ten">Lvl 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
-            <script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
+
+			<script src="https://cdn.jsdelivr.net/npm/tsparticles-confetti@2.9.3/tsparticles.confetti.bundle.min.js"></script>
 
 			<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
-            <button class="level-up magic" style="display: none;">Улучшить</button>
+            <button class="level-up magic">Улучшить</button>
             <?php if(isset($_SESSION['id'])): ?>
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
