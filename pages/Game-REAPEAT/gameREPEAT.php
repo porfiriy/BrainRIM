@@ -1,56 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-   <link rel="stylesheet" href=" /pages/Game-REAPEAT/css/gameREPEAT.css">
-   <title>game words</title>
+	<meta charset="UTF-8">
+	<title>2048 игр</title>
+	<link rel="stylesheet" href="/pages/Game-REAPEAT/css/gameREPEAT.css">    
 </head>
-
-
 <body>
-<?php include("C:\ospanel\domains\mem.com\include\games-pop-up.php"); ?>
+	<div class="marg">
+		<p>SCORE:<span id="score01">0</span></p>    
+		<div class="main">                                              
+			<div class="cell" id="c00"></div>
+			<div class="cell" id="c01"></div>
+			<div class="cell" id="c02"></div>
+			<div class="cell" id="c03"></div>
 
-   <div class="wrapper">
-      <div class="topButton-gameWords">
-         <a class="comeback-button" href="#">
-            <div class="comeback-button-body">
-               <ion-icon name="chevron-back-outline"></ion-icon>
-            </div>
-         </a>
-         <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
-         <div class="linkToTheRestart"><ion-icon class="img-restart" name="refresh-outline"></ion-icon></div>
-      </div>
-      <div class="text-level">Lvl <span class="lvl-counter">1</span>
-      </div>
-      <div class="deadLineWrapper">
-         <div id="deadeLine"></div>
-      </div>
-      <div class="game-buttons-container">
-         <div class="game-buttons-container__button" class="button1" id="1"></div>
-         <div class="game-buttons-container__button" class="button2" id="2"></div>
-         <div class="game-buttons-container__button" class="button3"></div>
-         <div class="game-buttons-container__button" class="button4"></div>
-         <div class="game-buttons-container__button" class="button5"></div>
-         <div class="game-buttons-container__button" class="button6"></div>
-         <div class="game-buttons-container__button" class="button8"></div>
-         <div class="game-buttons-container__button" class="button7"></div>
-         <div class="game-buttons-container__button" class="button9"></div>
-         <div class="game-buttons-container__button" class="button10"></div>
-         <div class="game-buttons-container__button" class="button11"></div>
-         <div class="game-buttons-container__button" class="button12"></div>
-         <div class="game-buttons-container__button" class="button13"></div>
-         <div class="game-buttons-container__button" class="button14"></div>
-         <div class="game-buttons-container__button" class="button15"></div>
-         <div class="game-buttons-container__button" class="button16"></div>
-      </div>
-   </div>
-   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-   <script src=" /pages/Game-REAPEAT/js/gameREPEAT.js"></script>
+			<div class="cell" id="c10"></div>
+			<div class="cell" id="c11"></div>
+			<div class="cell" id="c12"></div>
+			<div class="cell" id="c13"></div>
+			
+			<div class="cell" id="c20"></div>
+			<div class="cell" id="c21"></div>
+			<div class="cell" id="c22"></div>
+			<div class="cell" id="c23"></div>
+
+			<div class="cell" id="c30"></div>
+			<div class="cell" id="c31"></div>
+			<div class="cell" id="c32"></div>
+			<div class="cell" id="c33"></div>
+		</div>
+		<div class="gameover" id="gameover">                
+			<div class="over">
+				<p>GAME OVER!!!</p>
+				<p>SCORE:<span id="score02"></span></p>
+				<a href="javascript:game.start()">try again!</a>
+			</div>
+		</div>
+	</div>
+    <script src="/pages/Game-REAPEAT/js/gameREPEAT.js"></script>  
 </body>
-
 </html>
