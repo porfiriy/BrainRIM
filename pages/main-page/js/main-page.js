@@ -71,7 +71,7 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
-const Magic = document.querySelector('.magic');
+
 
 
 const deg = 6;
@@ -102,7 +102,7 @@ function doAjaxExperienceDowngradeAndLevelUp() {
 
 console.log(expValue);
 console.log(nextLvlExpValue);
-if (expValue >= nextLvlExpValue) {//если лвл достиг нужн знач.
+if (expValue >= nextLvlExpValue && expValue !== 0) {//если лвл достиг нужн знач.
   buttonLevelUp.style = 'display:flex;';
 }
 buttonLevelUp.onclick = function () {
@@ -111,7 +111,6 @@ buttonLevelUp.onclick = function () {
   bodyForExpValue.innerHTML = 0;
   progress.style.width = 0 + "%";//обнуляет линию
   buttonLevelUp.style = 'display:none;';
-  Magic.style = 'display: flex;'; //убирает страницу игр
   playerLvlCounterBody.innerHTML = levelValue += 1;
   bodyForNextExpValue.innerHTML = nextLvlExpValue += 50;
 }

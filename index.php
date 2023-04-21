@@ -8,9 +8,15 @@
 
 <head>
    <script>
-         let expValue = Number('<?= $expValue ?>');
-         let nextLvlExpValue = Number('<?= $nextLvlExpValue ?>');
-         let levelValue = Number('<?= $levelValue ?>');
+      <?php if(isset($_SESSION['id'])): ?>
+            let expValue = Number('<?= $expValue ?>');
+            let nextLvlExpValue = Number('<?= $nextLvlExpValue ?>');
+            let levelValue = Number('<?= $levelValue ?>');
+      <?php else: ?>
+            let expValue = 0;
+            let nextLvlExpValue = Number(100);
+            let levelValue = Number(1);
+      <?php endif;?>
    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -68,15 +74,15 @@
 		         <div class="lvl-container">
             <div class="player-level">Lvl 
                   <?php if(isset($_SESSION['id'])): ?>
-                  <span class="playerLvlCounterBody"></span>
+                     <span class="playerLvlCounterBody"></span>
                   <?php else: ?>
-                  0
+                     <span class="playerLvlCounterBody"></span>
                   <?php endif;?>
             </div>
 
             <div id="loading-bar" class="player-exp-scale">
                <div id="progress" class="player-exp__line-blue"></div>
-               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span> <?php else: ?>0<?php endif;?>/<?php if(isset($_SESSION['id'])): ?> <span class="nextLvl-value"></span> <?php else: ?>100<?php endif;?></p>
+               <p class="player-exp__text"><?php if(isset($_SESSION['id'])): ?> <span class="expValueFromDB"></span> <?php else: ?><span class="expValueFromDB"></span><?php endif;?>/<?php if(isset($_SESSION['id'])): ?> <span class="nextLvl-value"></span> <?php else: ?><span class="nextLvl-value"></span><?php endif;?></p>
             </div>
 
             <div class="all-lvls-container">
