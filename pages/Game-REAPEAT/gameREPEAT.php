@@ -2,12 +2,19 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>2048 игр</title>
+	<title>2048</title>
+	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Game-REAPEAT/css/gameREPEAT.css">    
 </head>
 <body>
+<?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
+<div class="topButton-gameWords">
+         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
+         <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
+         <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
+      </div>
 	<div class="marg">
-		<p>SCORE:<span id="score01">0</span></p>    
+		<p>SCORE: <span id="score01"> 0</span></p>    
 		<div class="main">                                              
 			<div class="cell" id="c00"></div>
 			<div class="cell" id="c01"></div>
@@ -38,5 +45,7 @@
 		</div>
 	</div>
     <script src="/pages/Game-REAPEAT/js/gameREPEAT.js"></script>  
+	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 </html>

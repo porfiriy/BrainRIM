@@ -172,8 +172,6 @@ function doAjaxResults() {
    })
 }
 
-//z
-
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
