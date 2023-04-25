@@ -8,13 +8,17 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
+
 <div class="topButton-gameWords">
          <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
-	<div class="marg">
-		<p>SCORE: <span id="score01"> 0</span></p>    
+	  
+	  <div class="wrapper">
+	<div class="score_container">
+		<p>Счёт: <span id="score01"> 0</span></p>
+	</div>  
 		<div class="main">                                              
 			<div class="cell" id="c00"></div>
 			<div class="cell" id="c01"></div>
@@ -35,7 +39,7 @@
 			<div class="cell" id="c31"></div>
 			<div class="cell" id="c32"></div>
 			<div class="cell" id="c33"></div>
-		</div>
+			</div>
 		<div class="gameover" id="gameover">                
 			<div class="over">
 				<p>GAME OVER!!!</p>
