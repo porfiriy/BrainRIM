@@ -331,14 +331,14 @@
 			    <div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
 				<div class="convert-currency-text">Конвертировать валюту</div>
 				<div class="trade-price">
-				<span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
+				<span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.svg" alt=""> 
 				<div class="reverse"><ion-icon name="repeat-outline"></ion-icon></div>
 				<span>8</span><img class="hintsicon" src="/img/Menu/Hints.svg" alt="">
 				</div>
 				<div class="trade-currency">
-				<input placeholder="1" type="number" class="input-trade"> 
+			   <input placeholder="1" type="number" class="input-trade" id="myInput" oninput="trackInput()">
 				<span>=</span>
-				<input placeholder="8" type="number" class="input-trade">
+				<div class="input-trade" id="output"></div>
 				</div>
 				<button type="submit" name="convert-button" class="convert-button">Обменять</button>
 		    </div>

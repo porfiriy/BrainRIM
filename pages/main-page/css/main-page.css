@@ -1479,6 +1479,9 @@ font-size: 22px;
 	gap: 10px;
 }
 .input-trade{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	border-radius: 15px;
 	width: 100px;
 	height: 30px;

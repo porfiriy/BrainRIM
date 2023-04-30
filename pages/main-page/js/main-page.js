@@ -123,6 +123,31 @@ let oneProcent = nextLvlExpValue / 100;
 let i = expValue / oneProcent;
 progress.style.width = i + "%";//выводит линию по опыту
 
+//отвечает за конвертаци в магазине,вывод расчётов 
+let inputConvert;
+function trackInput() {
+  inputConvert = document.getElementById('myInput').value;
+  let output = document.getElementById('output');
+  output.innerHTML = inputConvert *= 8;
+}
+
+document.querySelector(".convert-button").onclick = function () {//конвертирует монеты пользователя в подсказки
+  let currencyValue = inputConvert;
+  $.ajax({
+    url: '/dataBase/controllers/convertCurrency/convertHints.php',
+    type: 'POST',
+    dataType: "json",
+    data: {
+      currencyValue: currencyValue,
+    },
+    success: function (data) {
+      console.log(data);
+    },
+    error: function () {
+      console.log('ERROR');
+    }
+  })
+}
 
 
 
