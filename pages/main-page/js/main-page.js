@@ -1,8 +1,6 @@
 //звук 
-// let audioClick = new Audio('/page-for-memory/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
-let audioSwap = new Audio('');
-// let audiomeme = new Audio('/page-for-memory/pages/main-page/sounds/dwayne-sound.mp3');
-// let audioNavigClick = new Audio('/page-for-memory/pages/main-page/sounds/start-13691.mp3')
+let audioClick = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
+let audioNavigClick = new Audio('/pages/main-page/sounds/start-13691.mp3');
 
 
 const list = document.querySelectorAll('.list');

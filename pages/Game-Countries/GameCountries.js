@@ -606,7 +606,7 @@ function showWinMessage() {
    victoryLooseScreenWinLooseText.classList.add('victory-text-green');
    resultsMenuWinLooseItem.innerHTML = 'Победа!'
    resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-   resultsMenuOpenedCardsItem.innerHTML = '20';
+   resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
    resultsMenuTime.innerHTML = `${seconds}`;
    resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
    resultsMenuTimeItem.classList.add('items-container__time-item-green');
