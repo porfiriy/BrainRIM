@@ -28,9 +28,9 @@
 		</div>
 
 		<div class="win-loose-screen">
-		<ion-icon class="star" name="star"></ion-icon>
-		<div class="screen-title items-container__win-loose-item">Победа</div>
-		<ion-icon class="star" name="star"></ion-icon>
+			<ion-icon class="star" name="star"></ion-icon>
+			<div class="screen-title items-container__win-loose-item">Победа</div>
+			<ion-icon class="star" name="star"></ion-icon>
 		</div>
 		
 		<div class="results-menu__items-container items-container">
@@ -52,7 +52,7 @@
 				<div class="items-container__exp-icon">Exp</div>
 				<div class="items-container__exp-item">+</div>
 			</div>
-			</div>
+		</div>
 		<div class="results-menu__buttons-container">
 			<div onClick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon
 					name="refresh-outline"></ion-icon>
@@ -69,10 +69,10 @@
 			</div>
 			<a href="#" class="button-start">START</a>
 			<div class="game-info-title">
-		<span class="game-info-name">Игра стран</span>
-		<span class="game-info">В этой игре вам надо будет выбрать правильное название страны, изображённой на картинке </span>
-	  </div>
-		</div>
+			<span class="game-info-name">Игра стран</span>
+			<span class="game-info">В этой игре вам надо будет выбрать правильное название страны, изображённой на картинке </span>
+	   </div>
+	</div>
 	</div>
 	<div class="wrapper">
 		<div class="mode-options-container">
@@ -106,16 +106,7 @@
 			<div class="deadLineWrapper">
 				<div id="deadeLine"></div>
 			</div>
-			<div class="answers and-hints">
-				<div class="correct">
-					<ion-icon name="checkmark-outline"></ion-icon>
-					<div class="count count-right">0</div>
-				</div>
 				<div class="hints-container"><img src="/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div>22</div></div>
-				<div class="incorrect">
-					<ion-icon name="close-outline"></ion-icon>
-					<div class="count count-wrong">0</div>
-				</div>
 
 			</div>
 			<div class="flags-container">

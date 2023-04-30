@@ -625,7 +625,6 @@ deadeLine.addEventListener("animationend", showLooseMessage);
 function checkPressButton(numberButton) {
    if (arrButtons[randomNumberBtn] == numberButton) {
       rightAnswer += 1;
-      countRightBody.innerHTML = rightAnswer;
       if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
          showLooseMessage();
       }
@@ -634,7 +633,6 @@ function checkPressButton(numberButton) {
       }
    } else {
       wrongAnswer += 1;
-      countWrongBody.innerHTML = wrongAnswer;
       if (wrongAnswer > 0 && rightAnswer + wrongAnswer == 10) {
          showLooseMessage();
       }
