@@ -1,6 +1,6 @@
 //звук 
 let audioClick = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
-let audioNavigClick = new Audio('/pages/main-page/sounds/start-13691.mp3');
+let audioNavigClick = new Audio('/sound/680126__strangehorizon__g_neck_pop.wav');
 
 
 const list = document.querySelectorAll('.list');
@@ -262,7 +262,6 @@ BonusContainerContinue.onclick = function () { //при закрытии Бон�
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
   doAjaxGift();
-
 }
 
 //Ежедневки
@@ -311,74 +310,93 @@ CloseInfoForEverydayWords.onclick = function () { //при закрытии ин
 everydayWord.onclick = function () { //при нажатии на кнопку слова дня
   containerGrayBackground.style = 'display: block;';
   everydayWordButton.style = 'display: block; z-index: 4;';
+  audioClick.play();
 }
 everydayWordCloseButton.onclick = function () { //при закрытии слова дня
   everydayWordButton.style = 'display: none';
+  audioClick.play();
 }
 
 dayHistoryButton.onclick = function () { //при нажатии на кнопку исторической даты
   containerGrayBackground.style = 'display: block;';
   everydayDateButton.style = 'display: block; z-index: 4;';
+  audioClick.play();
 }
 everydayDateCloseButton.onclick = function () { //при закрытии инфы исторической даты
   everydayDateButton.style = 'display: none';
+  audioClick.play();
 }
 
 newWordButton.onclick = function () { //при нажатии на кнопку нового английского слова
   containerGrayBackground.style = 'display: block;';
   everydayNewWordButton.style = 'display: block; z-index: 4;';
+  audioClick.play();
 }
 everydayNewWordCloseButton.onclick = function () { //при закрытии нового английского слова
   everydayNewWordButton.style = 'display: none';
+  audioClick.play();
 }
 
 //Игры
 GrowthButton.onclick = function () { //при нажатии на кнопку развития
   Growth.style = 'display: block;';
+  audioClick.play();
 }
 ChillButton.onclick = function () { //при нажатии на кнопку отдыха
   Chill.style = 'display: block;';
+  audioClick.play();
 }
 BackFromGrowth.onclick = function () { //Кнопка назад в развитии
   Chill.style = 'display:none;';
   Growth.style = 'display:none;';
+  audioClick.play();
 }
 BackFromChill.onclick = function () { //Кнопка назад в отдыхе
   Chill.style = 'display:none;';
+  audioClick.play();
 }
 
 MemoryButton.onclick = function () { //Кнопка игр Памяти
   MemoryContainer.style = 'display:block;';
+  audioClick.play();
 }
 ReactionButton.onclick = function () { //Кнопка игр Реакции
   ReactionContainer.style = 'display:block;';
+  audioClick.play();
 }
 AttentionButton.onclick = function () { //Кнопка игр Внимательности
   AttentionContainer.style = 'display:block;';
+  audioClick.play();
 }
 IQButton.onclick = function () { //Кнопка игр Интеллекта
   IQContainer.style = 'display:block;';
+  audioClick.play();
 }
 
 BackFromMemory.onclick = function () { //Кнопка назад в играх Памяти
   MemoryContainer.style = 'display:none;';
+  audioClick.play();
 }
 BackFromReaction.onclick = function () { //Кнопка назад в играх Реакции
   ReactionContainer.style = 'display:none;';
+  audioClick.play();
 }
 BackFromAttention.onclick = function () { //Кнопка назад в играх Внимательности
   AttentionContainer.style = 'display:none;';
+  audioClick.play();
 }
 BackFromIQ.onclick = function () { //Кнопка назад в играх Интеллекта
   IQContainer.style = 'display:none;';
+  audioClick.play();
 }
 
+//ИГРЫ
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
   containerGamesPage.style = 'display: block;';
   containerAchievmentsPage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
-  //audioNavigClick.play();
+  audioNavigClick.play();
 }
 
 //Достижения

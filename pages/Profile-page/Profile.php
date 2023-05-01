@@ -16,7 +16,7 @@
 
 <body>
 	<!-- alert -->
-	<div class="pop-up-alert-container"><div class="alert-text">Функция недоступна!</div></div></div>
+	<div class="pop-up-alert-container"><div class="alert-text">Функция в разработке!</div></div></div>
 	<div class="gray-background-container"></div>
 	<!-- alert -->
 	<header>
