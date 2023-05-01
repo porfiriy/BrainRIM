@@ -1,11 +1,10 @@
 "use strict"
 
 //звук
-let audioComplete = new Audio('/sound/successfull2.mp3');
+let audioCardDone = new Audio('/sound/interface-124464_RpPW8qfY.mp3');
+let audioComplete = new Audio('/sound/680126__strangehorizon__g_neck_pop.wav');
 let audioVictory = new Audio('/sound/successfull.mp3');
 let audioStart = new Audio('/sound/start-game.mp3');
-let audioFaile = new Audio('/sound/faile.mp3');
-let audioClick = new Audio('/sound/click.mp3');
 
 let ModeTimeAnim;
 
@@ -224,6 +223,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    expUpForMode = 5;
    iqUpForMode = 10;
    gameModeId = 1;
+   audioComplete.play();
 }
 normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -240,6 +240,7 @@ normalModeButton.onclick = function () {
    expUpForMode = 6;
    iqUpForMode = 12;
    gameModeId = 2;
+   audioComplete.play();
 }
 hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -256,6 +257,7 @@ hardModeButton.onclick = function () {
    expUpForMode = 8;
    iqUpForMode = 15;
    gameModeId = 3;
+   audioComplete.play();
 }
 crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -272,15 +274,18 @@ crazyModeButton.onclick = function () {
    expUpForMode = 10;
    iqUpForMode = 20;
    gameModeId = 4;
+   audioComplete.play();
 }
 victoryLooseScreenResultsButton.onclick = function () {
-   resultsMenuContainer.style = 'display:block;'
+   resultsMenuContainer.style = 'display:block;';
+   audioComplete.play();
 }
 hintButton.onclick = function () {
    if (eyeValue > 0) {
       eyeValueForJS -= 1;
       hintCounter.innerHTML = eyeValueForJS;
       doAjaxMinusHints();
+      audioComplete.play();
       if (cards.forEach(card => card.classList.contains('flip'))) {
 
       }
@@ -407,9 +412,10 @@ function game() {
             doAjaxWin();
             doAjaxExperience();
             doAjaxResults();
+            audioVictory.play();
          }
          //добавляет звук
-         audioComplete.play();
+         audioCardDone.play();
 
          disableCards();
          return;

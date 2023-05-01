@@ -450,10 +450,12 @@ setInterval(() => { //время
 ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
   ConvertCurrencyBody.style = 'display: flex; z-index:4;';
   containerGrayBackground.style = 'display: block; z-index:3;';
+  audioClick.play();
 }
 CloseConvertCurrency.onclick = function () { //Конвертировать валюту - при закрытии
   ConvertCurrencyBody.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
+  audioClick.play();
 }
 Offers.onclick = function scrollToDown() { //Скролл до спец предложений
   containerStorePage.scrollTo(9999, 9999);
@@ -472,7 +474,7 @@ settingsButton.onclick = function () {
   audioClick.play();
 }
 Profile.onclick = function () {
-  audiomeme.play();
+
 }
 
 

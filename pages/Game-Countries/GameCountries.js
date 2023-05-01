@@ -1,5 +1,11 @@
 'use strict'
+
+//звук
+let audioCardDone = new Audio('/sound/interface-124464_RpPW8qfY.mp3');
+let audioComplete = new Audio('/sound/680126__strangehorizon__g_neck_pop.wav');
+let audioVictory = new Audio('/sound/successfull.mp3');
 let audioStart = new Audio('/sound/start-game.mp3');
+
 
 //правильные-неправильные ответы
 let rightAnswer = 0;
@@ -515,6 +521,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    expUpForMode = 5;
    iqUpForMode = 10;
    gameModeId = 1;
+   audioComplete.play();
 }
 normalModeButton.onclick = function () {
    chosenGameMode = 'normal';
@@ -534,6 +541,7 @@ normalModeButton.onclick = function () {
    expUpForMode = 6;
    iqUpForMode = 12;
    gameModeId = 2;
+   audioComplete.play();
 }
 hardModeButton.onclick = function () {
    chosenGameMode = 'hard';
@@ -554,6 +562,7 @@ hardModeButton.onclick = function () {
    expUpForMode = 8;
    iqUpForMode = 15;
    gameModeId = 3;
+   audioComplete.play();
 }
 crazyModeButton.onclick = function () {
    chosenGameMode = 'crazy';
@@ -574,9 +583,11 @@ crazyModeButton.onclick = function () {
    expUpForMode = 10;
    iqUpForMode = 20;
    gameModeId = 4;
+   audioComplete.play();
 }
 victoryLooseScreenResultsButton.onclick = function () {
-   resultsMenuContainer.style = 'display:block;'
+   resultsMenuContainer.style = 'display:block;';
+   audioComplete.play();
 }
 
 //анимация проигриша 
@@ -598,6 +609,7 @@ function showLooseMessage() {
    doAjaxLoose();//z //вызов запроса в БД
    doAjaxExperience();
    doAjaxResults();
+
 }
 function showWinMessage() {
    deadeLine.style = "animation-play-state: paused ";
@@ -619,6 +631,7 @@ function showWinMessage() {
    doAjaxWin();
    doAjaxExperience();
    doAjaxResults();
+   audioVictory.play();
 }
 deadeLine.addEventListener("animationend", showLooseMessage);
 
@@ -646,27 +659,32 @@ function checkPressButton(numberButton) {
 button1.onclick = function () {
    conditionPress = true;
    checkPressButton(button1);
-
+   audioCardDone.play();
 }
 button2.onclick = function () {
    conditionPress = true;
    checkPressButton(button2);
+   audioCardDone.play();
 }
 button3.onclick = function () {
    conditionPress = true;
    checkPressButton(button3);
+   audioCardDone.play();
 }
 button4.onclick = function () {
    conditionPress = true;
    checkPressButton(button4);
+   audioCardDone.play();
 }
 button5.onclick = function () {
    conditionPress = true;
    checkPressButton(button5);
+   audioCardDone.play();
 }
 button6.onclick = function () {
    conditionPress = true;
    checkPressButton(button6);
+   audioCardDone.play();
 }
 
 function ChoiseGameModeArray() {
@@ -697,7 +715,7 @@ function randomLoopForArr() {
       let l = rangeForMode - i - 1;
       m[r] = (l in m) ? m[l] : l;
    }
-   console.log(arrayRandomNumbers);
+   //console.log(arrayRandomNumbers);
 
 }
 
@@ -710,7 +728,7 @@ function showFlags() {
          if (arrayRandomNumbers[0] == arrAlredyExistNumbrs[i]) {
             arrayRandomNumbers = [];
             randomLoopForArr();
-            console.log('уже есть ,нужен новый');
+            //console.log('уже есть ,нужен новый');
          }
       }
       conditionPress = false;
@@ -719,7 +737,7 @@ function showFlags() {
    flagsBody.innerHTML = `<img class="img-country" src="${arrGameMode[arrayRandomNumbers[0]]}">`;//добавляет флаг в html
    arrAlredyExistNumbrs.push(arrayRandomNumbers[0]);
    randomNumberBtn = Math.floor(Math.random() * numbrButtnsForMode);//рандомная кнопка с правильным ответом
-   console.log(randomNumberBtn);
+   //console.log(randomNumberBtn);
    let iterCount = 1;// нужно чтобы с каждой итерац менялся индекс массива
    for (let k = 0; k <= numbrButtnsForMode; k++) {
       arrButtons[k].innerHTML = arrTextGameMode[arrayRandomNumbers[iterCount]];
