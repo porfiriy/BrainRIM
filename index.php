@@ -153,10 +153,10 @@
                      <span class="text active">Главная</span>
                   </a>
                </li>
-               <li class="list list-achievements">
-                  <a href="#achievements">
+               <li class="list list-improve">
+                  <a href="#improve">
                      <span class=" icon"><ion-icon name="ribbon-outline"></ion-icon></span>
-                     <span class="text">Достижения</span>
+                     <span class="text">Развитие</span>
                   </a>
                </li>
                <li class="list list-games">
@@ -259,38 +259,39 @@
 </div>
 </div>
 
-      <div class="page-achievments-container">
-         <div class="wrapper-achievments">
-            <span class="games-title Achievements">Достижения</span>
-            <main class="main-achievements">
-               <div id="achievments-container">
-                  <div class="container-achieve">
-                     <div class="achieve">Just Chill</div>
-                     <div class="forachieve">Играть больше часа в одной игре</div>
+      <div class="page-improve-container">
+         <div class="wrapper-improve">
+            <span class="improve-title">Улучшай себя !</span>
+			<span class="improve-description">Полезные советы</span>
+            <main class="main-improve">
+               <div id="improve-container">
+                  <div class="container-improve">
+                     <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
+                     <div class="forimprove">Ставь цели, достигай их!</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">Мегаразум</div>
-                     <div class="forachieve">Провести в приложении 20+ часов</div>
+                  <div class="container-improve">
+                     <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>
+                     <div class="forimprove">Планируй расходы и узнавай стратегии!</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">Молоток</div>
-                     <div class="forachieve">Выполнить все ежедневные задания</div>
+                  <div class="container-improve">
+                     <div class="improve">Медитация<ion-icon class="improve-icon" name="pulse-outline"></ion-icon></div>
+                     <div class="forimprove">Расслабляйся , настраивайся на рабочий лад , отдыхай!</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
+                  <div class="container-improve">
+                     <div class="improve">Упражнения<ion-icon class="improve-icon" name="bicycle-outline"></ion-icon></div>
+                     <div class="forimprove">Построй свой план тренировок, разминок!</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
+                  <div class="container-improve">
+                     <div class="improve">Развитие<ion-icon class="improve-icon" name="rocket-outline"></ion-icon></div>
+                     <div class="forimprove"> Уверенность, самодисциплина, общительность и др.</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
+                  <div class="container-improve">
+                     <div class="improve">Продуктивность<ion-icon class="improve-icon" name="time-outline"></ion-icon></div>
+                     <div class="forimprove">Управление временем, планирования задач, список дел, напоминания!</div>
                   </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
+                  <div class="container-improve">
+                     <div class="improve">?</div>
+                     <div class="forimprove">???</div>
                   </div>
                </div>
                <div class="DownButton">
@@ -299,6 +300,7 @@
             </main>
          </div>
       </div>
+
       <div class="page-store-container">
          <span class="games-title Shop">Магазин</span>
 	<div class="clocks">

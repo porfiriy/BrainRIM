@@ -9,9 +9,9 @@ const itemHomeNavigation = document.querySelector('.list-home');
 const itemGamesNavigation = document.querySelector('.list-games');
 const itemStoreNavigation = document.querySelector('.list-store');
 const itemAnalyticNavigation = document.querySelector('.list-analytic');
-const itemAchievmentsNavigation = document.querySelector('.list-achievements');
+const itemImproveNavigation = document.querySelector('.list-improve');
 const containerGamesPage = document.querySelector('.page-games-container');
-const containerAchievmentsPage = document.querySelector('.page-achievments-container');
+const containerImprovePage = document.querySelector('.page-improve-container');
 const containerStorePage = document.querySelector('.page-store-container');
 const containerEverydayTasks = document.querySelector('.everyday-tasks-container');
 const containerAnalyticPage = document.querySelector('.analytic-container');
@@ -32,7 +32,7 @@ const everydayNewWordButton = document.querySelector('.everyday_new-word-contain
 const everydayNewWordCloseButton = document.querySelector('.everyday_new-word-close-button');
 const dayHistoryButton = document.querySelector('.day_history');
 const newWordButton = document.querySelector('.new_word');
-const AchievmentsScrollButton = document.querySelector('.scroll');
+const ImproveScrollButton = document.querySelector('.scroll');
 const InfoForTasks = document.querySelector('.info-button-body');
 const InfoWordDayButton = document.querySelector('.word-day-info-button');
 const InfoTasksButton = document.querySelector('.tasks-info-button');
@@ -242,7 +242,7 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   ReactionContainer.style = 'display: none;';
   AttentionContainer.style = 'display: none;';
   IQContainer.style = 'display: none;';
-  containerAchievmentsPage.style = 'display: none;';
+  containerImprovePage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
@@ -375,15 +375,15 @@ BackFromIQ.onclick = function () { //Кнопка назад в играх Ин�
 
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games
   containerGamesPage.style = 'display: block;';
-  containerAchievmentsPage.style = 'display: none;';
+  containerImprovePage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   //audioNavigClick.play();
 }
 
 //Достижения
-itemAchievmentsNavigation.onclick = function () { //при нажатии на кнопку Achievments
-  containerAchievmentsPage.style = 'display: block;';
+itemImproveNavigation.onclick = function () { //при нажатии на кнопку Improve
+  containerImprovePage.style = 'display: block;';
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
@@ -391,11 +391,11 @@ itemAchievmentsNavigation.onclick = function () { //при нажатии на �
 }
 
 //Скролл у ачивок
-AchievmentsScrollButton.onclick = function scrollToDown() {
-  document.getElementById('achievments-container').scrollTo(9999, 9999);
+ImproveScrollButton.onclick = function scrollToDown() {
+  document.getElementById('Improve-container').scrollTo(9999, 9999);
 }
-AchievmentsScrollButton.onclick = function scrollToTop() {
-  document.getElementById('achievments-container').scrollTo(0, 0);
+ImproveScrollButton.onclick = function scrollToTop() {
+  document.getElementById('Improve-container').scrollTo(0, 0);
 };
 //Уровни
 AllLevelsButton.onclick = function () { // Открыть уровни
@@ -415,7 +415,7 @@ ConvertCurrencyButton.onclick = function () { //Кнопка конверт ва
 itemStoreNavigation.onclick = function () { //при нажатии на кнопку Store
   containerStorePage.style = 'display: block;';
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
-  containerAchievmentsPage.style = 'display: none;';
+  containerImprovePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
@@ -445,7 +445,7 @@ Offers.onclick = function scrollToDown() { //Скролл до спец пред
 itemAnalyticNavigation.onclick = function () {
   containerAnalyticPage.style = 'display: block;';
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
-  containerAchievmentsPage.style = 'display: none;';
+  containerImprovePage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   audioNavigClick.play();
 }
