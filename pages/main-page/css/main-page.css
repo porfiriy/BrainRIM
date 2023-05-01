@@ -1057,7 +1057,7 @@ font-size: 18px;
  }
  
  
- .page-achievments-container{
+ .page-improve-container{
 	position: absolute;
 	display: none;
 	height: 100%;
@@ -1071,14 +1071,35 @@ font-size: 18px;
    line-height: 1;
    font-size: 14px;
  }
- .wrapper-achievments {
+ .wrapper-improve {
 	 min-height: 100%;
 	 min-width: 100%;
 	 display: flex;
 	 flex-direction: column;
   }
-  .main-achievements {
-	 margin: -130px 0 0 0;
+  .improve-title{
+	margin: 70px auto 0 auto;
+	width: 80%;
+    font-family: 'Balsamiq Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 29px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    letter-spacing: 0.125em;
+    color: #ffffff;
+    gap: 10px;
+  }
+  .improve-description{
+	margin: 30px auto 0 auto;
+	font-size: 24px;
+	color: #00ff00;
+  }
+  .main-improve{
+	 margin: -200px 0 0 0;
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
@@ -1087,46 +1108,52 @@ font-size: 18px;
 	 height: 100%;
 	 flex: 1 1 auto;
   }
-  #achievments-container{
+  #improve-container{
 	 font-family: 'Balsamiq Sans', cursive;
 	 font-size: 20px;
-	 color: #05EFD4;
+	 color: #ffffff;
 	 overflow: scroll;
 	 height: 500px;
+	 width: 330px;
   }
   .scroll{
 	rotate: 180deg;
   }
-  .container-achieve{
-	 margin: 50px auto;
-	 background: rgb(0,121,255);
-	 background: linear-gradient(270deg, rgb(0 73 155) 0%, rgb(0 249 229 / 70%) 130%);
-	 border-radius: 10px;
-	 height: 70px;
-	 width: 90%;
+  .container-improve{
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    background: #213242;
+    border-radius: 15px;
+    height: 180px;
+    width: 300px;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
   }
-  .achieve{
+  .improve{
 	 font-size: 24px;
-	 height: 30px;
-	 text-shadow: 1px 0 1px #000,
-	 0 1px 1px #000, 
-	 -1px 0 1px #000, 
-	 0 -1px 1px #000;
 	 display: flex;
 	 align-items: center;
 	 justify-content: center;
+	 gap: 10px;
   }
-  .forachieve{
-	 color:#ffffff;
-	 height: 30px;
-	 text-shadow: 1px 0 1px #000,
-	 0 1px 1px #000, 
-	 -1px 0 1px #000, 
-	 0 -1px 1px #000;
-	 display: flex;
-	 align-items: center;
-	 justify-content: center;
- } 
+  .forimprove{
+    color: #ffffff;
+    text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
+    display: flex;
+    align-items: center;
+    border: 2px solid #05EFD4;
+    border-radius: 20px;
+    width: 270px;
+    margin: 0 auto;
+    padding: 15px;
+    font-size: 18px;
+ }
+ .improve-icon{
+	font-size: 30px;
+	color: #05EFD4;
+ }
  .DownButton{
 	 position: absolute;
 	 display: flex;
