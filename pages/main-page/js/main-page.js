@@ -70,10 +70,11 @@ const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
 const BonusContainer = document.querySelector('.bonus_container');
-const BonusContainerContinue = document.querySelector('.bonus_container_continue'); 
+const BonusContainerContinue = document.querySelector('.bonus_container_continue');
 const shopMemoneyValueBody = document.querySelector('.count-memoney');
 const homeMemoneyValueBody = document.querySelector('.home-memony-body');
 const homeHintsValueBody = document.querySelector('.home-hints-body');
+const homeIqValueBody = document.querySelector('.home-iq-body');
 const shopHintsValueBody = document.querySelector('.count-hints');
 
 let memoneyRealtime = memoneyValue;
@@ -100,6 +101,24 @@ function doAjaxExperienceDowngradeAndLevelUp() {
     },
     error: function () {
       console.log('ERROR');
+    }
+  })
+}
+//AJAX запрос на добавления подарка
+function doAjaxGift() {
+  let justPlug = true;
+  $.ajax({
+    url: '/dataBase/controllers/bonusSystem/registrGifts.php',
+    type: 'POST',
+    dataType: "json",
+    data: {
+      justPlug: justPlug,
+    },
+    success: function (data) {
+      console.log(data);
+    },
+    error: function () {
+      console.log('ERRORчик');
     }
   })
 }
@@ -134,14 +153,15 @@ let inputConvert;
 function trackInput() {
   inputConvert = document.getElementById('myInput').value;
   let output = document.getElementById('output');
-  if (memoneyRealtime >= inputConvert) {
-    memoneyRealtime -= inputConvert;
-  }
   output.innerHTML = inputConvert *= 8;
-  eyeHintsRealtime += inputConvert;
+
 }
 
 document.querySelector(".convert-button").onclick = function () {//конвертирует монеты пользователя в подсказки
+  if (memoneyRealtime >= inputConvert / 8) {
+    memoneyRealtime -= inputConvert / 8;
+    eyeHintsRealtime += inputConvert;
+  }
   shopMemoneyValueBody.innerHTML = `${memoneyRealtime}`;//динамически обновляет валюту на странице
   homeMemoneyValueBody.innerHTML = `${memoneyRealtime}`;
   shopHintsValueBody.innerHTML = `${eyeHintsRealtime}`;
@@ -230,12 +250,19 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
 
 //Бонус при регистрации
 if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
-	BonusContainer.style = 'display: flex;'
-	containerGrayBackground.style = 'display: flex;'
+  BonusContainer.style = 'display: flex;'
+  containerGrayBackground.style = 'display: flex;'
 }
 BonusContainerContinue.onclick = function () { //при закрытии Бонуса
+  shopMemoneyValueBody.innerHTML = `10`;
+  homeIqValueBody.innerHTML = '10';
+  shopHintsValueBody.innerHTML = `20`;
+  homeMemoneyValueBody.innerHTML = `10`;
+  homeHintsValueBody.innerHTML = `20`;
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
+  doAjaxGift();
+
 }
 
 //Ежедневки

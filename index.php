@@ -62,7 +62,7 @@
             </div>
             <div class="iq-container currency-container">
                <span class="iq-name">IQ</span>
-               <div class="memany-count">
+               <div class="memany-count home-iq-body">
                   <?php if(isset($_SESSION['id'])): ?>
                   <?php echo $IQscore['sum_iq']; ?>
                   <?php else: ?>
@@ -123,9 +123,11 @@
 <div class="bonus_container">
 	<p class="welcome-bonus-text">Добро пожаловать !</p>
 	<p class="bonus-text-second">Подарок</p>
-	<div class="bonus-rewards">+10 <span class="iq-name">IQ</span>
-	<br>+20 <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints">
-	<br>+30 <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg" alt="memoney"></div>
+	<div class="bonus-rewards">
+      <div class="rewards-item">+10 <span class="iq-name">IQ</span></div>
+	   <div class="rewards-item">+20 <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints"></div>
+	   <div class="rewards-item">+10 <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg" alt="memoney"></div>
+   </div>
 	<div class="bonus_container_continue">Принять</div>
 </div>
 
@@ -538,12 +540,6 @@
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
          </div>
       </div>
-      <?php
-      $date = date('Y-m-d H:i:s');
-      if($date == "2023-04-14 22:11:10"){
-       echo "poluchilos";
-      }
-      ?>
 
       
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>

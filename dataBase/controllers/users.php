@@ -53,7 +53,7 @@
                 //должно создавать новую строку со счётом iq с id пользователя
                 $currencyIQscore = [
                   'user_id' => $id,
-                  'sum_iq' => 10
+                  'sum_iq' => 0
                ];
                insert('IQscore',$currencyIQscore);
                $userLvlValue = [

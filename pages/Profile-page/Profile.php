@@ -15,8 +15,10 @@
 </head>
 
 <body>
+	<!-- alert -->
 	<div class="pop-up-alert-container"><div class="alert-text">Функция недоступна!</div></div></div>
-<div class="gray-background-container"></div>
+	<div class="gray-background-container"></div>
+	<!-- alert -->
 	<header>
 		<a class="comeback-button" href="/index.php">
 			<ion-icon name="chevron-back-outline"></ion-icon></a>
