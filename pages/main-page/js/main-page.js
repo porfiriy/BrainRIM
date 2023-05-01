@@ -69,8 +69,9 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
-const BonusContainer = document.querySelector('.bonus-container');
-const BonusContainerContinue = document.querySelector('.bonus-container-continue'); const shopMemoneyValueBody = document.querySelector('.count-memoney');
+const BonusContainer = document.querySelector('.bonus_container');
+const BonusContainerContinue = document.querySelector('.bonus_container_continue'); 
+const shopMemoneyValueBody = document.querySelector('.count-memoney');
 const homeMemoneyValueBody = document.querySelector('.home-memony-body');
 const homeHintsValueBody = document.querySelector('.home-hints-body');
 const shopHintsValueBody = document.querySelector('.count-hints');
@@ -227,18 +228,16 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   audioNavigClick.play();
 }
 
+//Бонус при регистрации
 if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
-  //сюда код на открытие контейнера с подарком
+	BonusContainer.style = 'display: flex;'
+	containerGrayBackground.style = 'display: flex;'
 }
-//Бонус
-//BonusContainer.style = 'display: flex;';
-//containerGrayBackground.style = 'display: flex;'; для открытия контейнера с подарком
-
-//Бонус
 BonusContainerContinue.onclick = function () { //при закрытии Бонуса
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
 }
+
 //Ежедневки
 everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
   containerEverydayTasks.style = 'display: block;';
