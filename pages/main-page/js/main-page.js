@@ -69,8 +69,14 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
+const shopMemoneyValueBody = document.querySelector('.count-memoney');
+const homeMemoneyValueBody = document.querySelector('.home-memony-body');
+const homeHintsValueBody = document.querySelector('.home-hints-body');
+const shopHintsValueBody = document.querySelector('.count-hints');
 
-
+let memoneyRealtime = memoneyValue;
+let eyeHintsRealtime = hintsValue;
+console.log(memoneyRealtime);
 
 const deg = 6;
 const hr = document.querySelector('#hr');
@@ -128,10 +134,18 @@ let inputConvert;
 function trackInput() {
   inputConvert = document.getElementById('myInput').value;
   let output = document.getElementById('output');
+  if (memoneyRealtime >= inputConvert) {
+    memoneyRealtime -= inputConvert;
+  }
   output.innerHTML = inputConvert *= 8;
+  eyeHintsRealtime += inputConvert;
 }
 
 document.querySelector(".convert-button").onclick = function () {//конвертирует монеты пользователя в подсказки
+  shopMemoneyValueBody.innerHTML = `${memoneyRealtime}`;//динамически обновляет валюту на странице
+  homeMemoneyValueBody.innerHTML = `${memoneyRealtime}`;
+  shopHintsValueBody.innerHTML = `${eyeHintsRealtime}`;
+  homeHintsValueBody.innerHTML = `${eyeHintsRealtime}`;
   let currencyValue = inputConvert;
   $.ajax({
     url: '/dataBase/controllers/convertCurrency/convertHints.php',

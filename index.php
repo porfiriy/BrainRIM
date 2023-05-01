@@ -7,11 +7,13 @@
 <html lang="en">
 
 <head>
-   <script>
+   <script>//записывает в переменные данные из базы
       <?php if(isset($_SESSION['id'])): ?>
             let expValue = Number('<?= $expValue ?>');
             let nextLvlExpValue = Number('<?= $nextLvlExpValue ?>');
             let levelValue = Number('<?= $levelValue ?>');
+            let memoneyValue = Number('<?= $memoneyValue ?>');
+            let hintsValue = Number('<?= $hintsValue ?>');
       <?php else: ?>
             let expValue = 0;
             let nextLvlExpValue = Number(100);
@@ -39,7 +41,7 @@
          <div class="header-score-container">
             <div class="memany-container currency-container">
                <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg" alt="memoney">
-               <div class="memany-count">
+               <div class="memany-count home-memony-body">
                   <?php if(isset($_SESSION['id'])): ?>
                   <?php echo $memany['sum_memany']; ?>
                   <?php else: ?>
@@ -49,7 +51,7 @@
             </div>
             <div class="hint-container currency-container">
                <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints">
-               <div class="memany-count">
+               <div class="memany-count home-hints-body">
                   <?php if(isset($_SESSION['id'])): ?>
                   <?php echo $EyeScore['sum_eye_hint']; ?>
                   <?php else: ?>

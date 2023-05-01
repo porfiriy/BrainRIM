@@ -53,6 +53,7 @@ $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 
+$hintsValue = $EyeScore['sum_eye_hint'];
 $memoneyValue = $memany['sum_memany'];
 $eyeValue = $EyeScore['sum_eye_hint'];
 $levelValue = $level['Level'];
