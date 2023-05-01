@@ -613,6 +613,55 @@ font-size: 18px;
 	color: #05EFD4;
 	transition: 0.2s;
  }
+
+
+ .bonus_container{
+position: absolute;
+display: none;
+flex-direction: column;
+align-items: center;
+border:2px solid #05EFD4;
+border-radius: 10px;
+width: 300px;
+height: 500px;
+margin: 0 auto;
+top: 130px;
+right: 46px;
+background-color: #213242;
+ }
+ .welcome-bonus-text{
+font-size: 26px;
+color: white;
+margin: 80px 0px 0px 0px;
+ }
+ .bonus-text-second{
+font-size: 24px;
+color: rgb(0, 255, 0);
+margin: 30px 0px 0px 0px;
+ }
+ .bonus-rewards{
+margin: 80px 0px 0px 0px;
+font-size: 24px;
+border: 2px solid #05EFD4;
+color: white;
+padding: 50px;
+border-radius: 20px;
+box-shadow: -2px -5px 11px -3px rgba(255, 255, 255, 0.25), 4px 4px 4px 5px rgba(0, 0, 0, 0.25);
+ }
+ .bonus_container_continue{
+    bottom: -60px;
+    color: white;
+    font-size: 24px;
+    position: absolute;
+    border: 2px solid #05EFD4;
+    width: 300px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px;
+	background-color: #213242;
+ }
+
+
  .info-button-body{
 	display: none;
 	position: absolute;

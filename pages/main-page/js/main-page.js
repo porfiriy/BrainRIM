@@ -69,15 +69,14 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
-const shopMemoneyValueBody = document.querySelector('.count-memoney');
+const BonusContainer = document.querySelector('.bonus-container');
+const BonusContainerContinue = document.querySelector('.bonus-container-continue'); const shopMemoneyValueBody = document.querySelector('.count-memoney');
 const homeMemoneyValueBody = document.querySelector('.home-memony-body');
 const homeHintsValueBody = document.querySelector('.home-hints-body');
 const shopHintsValueBody = document.querySelector('.count-hints');
 
 let memoneyRealtime = memoneyValue;
 let eyeHintsRealtime = hintsValue;
-console.log(memoneyRealtime);
-
 const deg = 6;
 const hr = document.querySelector('#hr');
 const mn = document.querySelector('#mn');
@@ -226,6 +225,15 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
+}
+//Бонус
+//BonusContainer.style = 'display: flex;';
+//containerGrayBackground.style = 'display: flex;'; для открытия контейнера с подарком
+
+//Бонус
+BonusContainerContinue.onclick = function () { //при закрытии Бонуса
+  BonusContainer.style = 'display: none;';
+  containerGrayBackground.style = 'display: none;';
 }
 //Ежедневки
 everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
