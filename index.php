@@ -14,6 +14,7 @@
             let levelValue = Number('<?= $levelValue ?>');
             let memoneyValue = Number('<?= $memoneyValue ?>');
             let hintsValue = Number('<?= $hintsValue ?>');
+            let receiveGiftValue = Number('<?= $receiveGiftValue ?>');
       <?php else: ?>
             let expValue = 0;
             let nextLvlExpValue = Number(100);

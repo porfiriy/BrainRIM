@@ -226,6 +226,10 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
+
+if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
+  //сюда код на открытие контейнера с подарком
+}
 //Бонус
 //BonusContainer.style = 'display: flex;';
 //containerGrayBackground.style = 'display: flex;'; для открытия контейнера с подарком

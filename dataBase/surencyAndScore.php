@@ -52,6 +52,7 @@ $level = selectOne('usersLvl', ['user_id' => $_SESSION['id']]);
 $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
+$userInfo = select('users', ['id' => $_SESSION['id']]);
 
 $hintsValue = $EyeScore['sum_eye_hint'];
 $memoneyValue = $memany['sum_memany'];
@@ -59,6 +60,7 @@ $eyeValue = $EyeScore['sum_eye_hint'];
 $levelValue = $level['Level'];
 $expValue = $level['experience'];
 $nextLvlExpValue = $level['nextLvlExp'];
+$receiveGiftValue = $userInfo['recevedGift'];
 
 // if($expValue == 100){
 //    $LvlValue = ['Level' => $level['Level']+1];

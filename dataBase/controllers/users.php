@@ -3,7 +3,6 @@
    include $_SERVER['DOCUMENT_ROOT']."/dataBase/db.php";
 
    $errorMsg = '';
-  
 
    function userAuth ($array) {
       $_SESSION['id'] = $array['id'];
