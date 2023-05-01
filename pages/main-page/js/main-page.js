@@ -381,7 +381,7 @@ itemGamesNavigation.onclick = function () { //при нажатии на кно�
   //audioNavigClick.play();
 }
 
-//Достижения
+//Развитие
 itemImproveNavigation.onclick = function () { //при нажатии на кнопку Improve
   containerImprovePage.style = 'display: block;';
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
@@ -392,10 +392,10 @@ itemImproveNavigation.onclick = function () { //при нажатии на кн�
 
 //Скролл у ачивок
 ImproveScrollButton.onclick = function scrollToDown() {
-  document.getElementById('Improve-container').scrollTo(9999, 9999);
+  document.getElementById('improve-container').scrollTo(9999, 9999);
 }
 ImproveScrollButton.onclick = function scrollToTop() {
-  document.getElementById('Improve-container').scrollTo(0, 0);
+  document.getElementById('improve-container').scrollTo(0, 0);
 };
 //Уровни
 AllLevelsButton.onclick = function () { // Открыть уровни
