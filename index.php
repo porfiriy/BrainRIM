@@ -116,6 +116,16 @@
                <div class="everyday-tasks-button"><ion-icon name="receipt-outline"></ion-icon>
             </div>
          </div>
+
+<div class="bonus_container">
+	<p class="welcome-bonus-text">Добро пожаловать !</p>
+	<p class="bonus-text-second">Подарок</p>
+	<div class="bonus-rewards">+10 <span class="iq-name">IQ</span>
+	<br>+20 <img class="currency-icons" src="/img/Menu/Hints.svg" alt="hints">
+	<br>+30 <img class="currency-memoney-icon" src="/img/Menu/Memoney.svg" alt="memoney"></div>
+	<div class="bonus_container_continue">Принять</div>
+</div>
+
       </main>
       <footer class="footer">
          <div class="navigation">

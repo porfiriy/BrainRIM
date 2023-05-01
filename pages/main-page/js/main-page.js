@@ -69,7 +69,8 @@ const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
 const buttonLevelUp = document.querySelector('.level-up');
 const playerLvlCounterBody = document.querySelector('.playerLvlCounterBody');
-
+const BonusContainer = document.querySelector('.bonus-container');
+const BonusContainerContinue = document.querySelector('.bonus-container-continue');
 
 
 const deg = 6;
@@ -213,6 +214,16 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
 }
+//Бонус
+ *.onclick = function () { //при нажатии на кнопку Бонус
+	BonusContainer.style = 'display: flex;';
+	containerGrayBackground.style = 'display: flex;';
+  }
+//Бонус
+BonusContainerContinue.onclick = function () { //при закрытии Бонуса
+	BonusContainer.style = 'display: none;';
+	containerGrayBackground.style = 'display: none;';
+  }
 //Ежедневки
 everydayTasksButton.onclick = function () { //при нажатии на кнопку ежедневных заданий
   containerEverydayTasks.style = 'display: block;';
