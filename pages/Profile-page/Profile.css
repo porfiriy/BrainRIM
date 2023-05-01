@@ -202,15 +202,7 @@ color: #ffffff;
 width: 80%;
 margin: 0% auto;
 }
-.wtf{
-	display: block;
-	border: 2px solid #05EFD4;  
-	border-radius: 10px;
-	margin: 10%;
-	padding: 10px;
-	transition: 0.4s;
-}
-.rank{
+.button-achievments,.rank{
 	display: block;
 	border: 2px solid #05EFD4;  
 	border-radius: 10px;
@@ -236,6 +228,7 @@ margin: 0% auto;
 	border: 2px solid #05EFD4;
 	border-radius: 20px;
 	padding: 8px;
+	transition: 1.4s;
 }
 .close-rank{
 	margin: 10px;
@@ -263,6 +256,10 @@ box-shadow: 0px -1px 20px 0px rgb(0 211 255), 0px 2px 4px 1px rgb(0 255 26 / 70%
 background-color: #05EFD4;
 color: #000000;
 }
+.rank-info:hover {
+	background: #05EFD4;
+	color: #000000;
+}
 .leave{
 	text-decoration: none;
     color: red;
@@ -274,3 +271,26 @@ color: #000000;
     transition: 0.4s;
 	font-size: 19px;
 }
+/* pop-up */
+.pop-up-alert-container{
+	display: none;
+	justify-content: center;
+	align-items: center;
+	margin: 40px 0 0 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	top: 30px;
+	background-color: rgb(6, 6, 6);
+	width: 80%;
+	height: 50px;
+	border-radius: 20px;
+	z-index: 5;
+}
+.alert-text{
+	color: #6313c6;
+	font-weight: 900;
+	font-size: 17px;
+}
+/* pop-up */
