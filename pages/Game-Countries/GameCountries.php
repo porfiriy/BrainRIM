@@ -1,3 +1,6 @@
+<?php
+   include ( $_SERVER['DOCUMENT_ROOT'] . "/dataBase/surencyAndScore.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +12,9 @@
 	<link rel="stylesheet" href="/pages/Game-Countries/GameCountries.css">
 	<title>game-countries</title>
 </head>
-
+	<script>
+            let eyeValue = '<?= $eyeValue ?>';
+   </script>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <body>
 	<div class="victory-loose-screen-container">
@@ -106,7 +111,7 @@
 			<div class="deadLineWrapper">
 				<div id="deadeLine"></div>
 			</div>
-				<div class="hints-container"><img src="/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div>22</div></div>
+				<div class="hints-container"><img src="/img/Menu/Hints.svg" alt="Подсказки" class="hints"><div class="hint-counter"><?php if(isset($_SESSION['id'])): ?> <?php echo $EyeScore['sum_eye_hint']; ?> <?php else: ?>0<?php endif;?></div></div>
 
 			</div>
 			<div class="flags-container">

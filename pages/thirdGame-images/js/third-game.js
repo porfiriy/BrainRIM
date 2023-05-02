@@ -280,7 +280,8 @@ victoryLooseScreenResultsButton.onclick = function () {
    resultsMenuContainer.style = 'display:block;';
    audioComplete.play();
 }
-hintButton.onclick = function () {
+
+hintButton.onclick = function () {//при нажатии на подсказку
    if (eyeValue > 0) {
       eyeValueForJS -= 1;
       hintCounter.innerHTML = eyeValueForJS;
@@ -292,7 +293,6 @@ hintButton.onclick = function () {
       else {
          cards.forEach(card => card.classList.add('flip'));
          if (cards.forEach(card => card.classList.contains('alredy-flip'))) {
-            console.log('aza');
          } else {
             setTimeout(() => {
                cards.forEach(card => card.classList.remove('flip'));

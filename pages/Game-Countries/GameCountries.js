@@ -346,7 +346,10 @@ const resultsMenuWinLooseIcon = document.querySelector('.items-container__win-lo
 const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
-
+const hintsButton = document.querySelector('.hints');
+let hintCounter = document.querySelector('.hint-counter');
+let eyeValueForJS = 0;
+eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы 
@@ -370,6 +373,23 @@ function doAjaxExperience() {
       },
       success: function (data) {
          console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+function doAjaxMinusHints() {//минусует подсказки
+
+
+   $.ajax({
+      url: '/dataBase/controllers/antiBonusSystem/minusEyeHints.php',
+      type: 'POST',
+      data: {
+      },
+      success: function (data) {
+         console.log(data);
       },
       error: function () {
          console.log('ERROR');
@@ -470,37 +490,41 @@ function doAjaxResults() {
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
    settings.style = 'visibility:hidden;';
-
 };
 //при нажатии на иконку настроек
 document.querySelector('.linkToTheSettings').onclick = function () {
-
    settings.style = 'visibility:visible;';
-
 };
 
 //при нажатии на отмену вспл окна назад
 document.querySelector('.pop-up__cancel2').onclick = function () {
    comeback.style = 'visibility:hidden;';
-
 };
 //при нажатии на иконку назад
 document.querySelector('.comeback-button').onclick = function () {
-
    comeback.style = 'visibility:visible;';
-
 };
 
 //при нажатии на отмену вспл окна рестарт
 document.querySelector('.pop-up__cancel3').onclick = function () {
    restart.style = 'visibility:hidden;';
-
 };
 //при нажатии на иконку рестарт
 document.querySelector('.linkToTheRestart').onclick = function () {
-
    restart.style = 'visibility:visible;';
-
+};
+//при нажатии на иконку подсказок
+hintsButton.onclick = function () {
+   if (eyeValue > 0) {
+      eyeValueForJS -= 1;
+      hintCounter.innerHTML = eyeValueForJS;
+      audioComplete.play();
+      doAjaxMinusHints();
+      arrButtons[randomNumberBtn].style = 'background:green;';
+      setTimeout(() => {
+         arrButtons[randomNumberBtn].style = 'background:#213242;';
+      }, 1000);
+   }
 };
 
 easyModeButton.onclick = function () {//при нажатии на изи кнопку сложности
@@ -510,7 +534,7 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    gameMode.innerHTML = 'Легко';
    gameMode.classList.add('game-mode-style-easy');
    ModeTimeAnim = '60';
-   startButtonContainer.style = 'display: block;'
+   startButtonContainer.style = 'display: block;';
    startButtonGameMode.innerHTML = 'Легко';
    startButtonGameMode.classList.add('start-menu__easy-game-mode');
    victoryLooseScreenGameMode.classList.add('victory-loose-screen__easy-mode');
@@ -688,7 +712,6 @@ button6.onclick = function () {
 }
 
 function ChoiseGameModeArray() {
-
    if (chosenGameMode == 'easy') {
       arrGameMode = arrCounrysImgEasy;
       arrTextGameMode = arrCounrysTextEasy;
@@ -702,13 +725,11 @@ function ChoiseGameModeArray() {
       arrGameMode = arrCounrysImgcrazy;
       arrTextGameMode = arrCounrysTextcrazy;
    }
-
 }
-function randomLoopForArr() {
 
+function randomLoopForArr() {
    const count = 15;  // кол-во требуемых чисел
    let m = {};
-
    for (let i = 0; i < count; ++i) {
       let r = Math.floor(Math.random() * (rangeForMode - i));
       arrayRandomNumbers.push(((r in m) ? m[r] : r) + 1);
@@ -716,11 +737,9 @@ function randomLoopForArr() {
       m[r] = (l in m) ? m[l] : l;
    }
    //console.log(arrayRandomNumbers);
-
 }
 
 function showFlags() {
-
    if (conditionPress == true) {
       arrayRandomNumbers = [];
       randomLoopForArr();
@@ -733,7 +752,6 @@ function showFlags() {
       }
       conditionPress = false;
    }
-
    flagsBody.innerHTML = `<img class="img-country" src="${arrGameMode[arrayRandomNumbers[0]]}">`;//добавляет флаг в html
    arrAlredyExistNumbrs.push(arrayRandomNumbers[0]);
    randomNumberBtn = Math.floor(Math.random() * numbrButtnsForMode);//рандомная кнопка с правильным ответом
@@ -744,7 +762,6 @@ function showFlags() {
       iterCount++;
    }
    arrButtons[randomNumberBtn].innerHTML = arrTextGameMode[arrayRandomNumbers[0]];//вставляет правильный ответ текст в кнопку
-
 }
 
 
