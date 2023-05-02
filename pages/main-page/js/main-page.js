@@ -181,6 +181,8 @@ document.querySelector(".convert-button").onclick = function () {//конвер�
       console.log('ERROR');
     }
   })
+  ConvertCurrencyBody.style = 'display: none;'; //Закрывает конвертер в конце
+  containerGrayBackground.style = 'display: none;';
 }
 
 
