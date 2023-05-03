@@ -838,7 +838,7 @@ font-size: 18px;
 	position: absolute;
 	height: calc(100% + var(--borderWidth) * 2);
 	width: calc(100% + var(--borderWidth) * 0);
-	background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+	background: linear-gradient(60deg, #09e7f7, #1b99b9, #ffffff, #05EFD4, #5073b8, #1098ad, #07b39b, #05EFD4);
 	border-radius: 14px;
 	z-index: -1;
 	animation: animatedgradient 5s ease alternate infinite;

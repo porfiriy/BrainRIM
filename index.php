@@ -15,10 +15,13 @@
             let memoneyValue = Number('<?= $memoneyValue ?>');
             let hintsValue = Number('<?= $hintsValue ?>');
             let receiveGiftValue = Number('<?= $receiveGiftValue ?>');
-      <?php else: ?>
+      <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
             let expValue = 0;
             let nextLvlExpValue = Number(100);
             let levelValue = Number(1);
+            let memoneyValue =1;
+            let hintsValue = 1;
+            let receiveGiftValue = 1;
       <?php endif;?>
    </script>
    <meta charset="UTF-8">
@@ -237,8 +240,8 @@
 <div class="games-title">Внимательность</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="attention-games-body">
-<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
-<ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
+<a class="game-item memory-game" href="/pages/thirdGame-images/game-images.php"><ion-icon name="image-outline"></ion-icon></a>
+<a class="game-item reaction-game" href="/pages/fourthGame-colors/game-colors.php"><ion-icon name="color-palette-outline"></ion-icon></a>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="attention-game game-in-dev" name="code-slash"></ion-icon>

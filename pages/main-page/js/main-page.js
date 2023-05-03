@@ -136,6 +136,7 @@ buttonLevelUp.onclick = function () {
   buttonLevelUp.style = 'display:none;';
   playerLvlCounterBody.innerHTML = levelValue += 1;
   bodyForNextExpValue.innerHTML = nextLvlExpValue += 50;
+  audioClick.play();
 }
 bodyForExpValue.innerHTML = expValue;//добавляют динамич знач на экран из базы данных
 bodyForNextExpValue.innerHTML = nextLvlExpValue;
@@ -252,8 +253,8 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
 
 //Бонус при регистрации
 if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
-  BonusContainer.style = 'display: flex;'
-  containerGrayBackground.style = 'display: flex;'
+  BonusContainer.style = 'display: flex;';
+  containerGrayBackground.style = 'display: flex;';
 }
 BonusContainerContinue.onclick = function () { //при закрытии Бонуса
   shopMemoneyValueBody.innerHTML = `10`;
@@ -264,6 +265,7 @@ BonusContainerContinue.onclick = function () { //при закрытии Бон�
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
   doAjaxGift();
+  audioClick.play();
 }
 
 //Ежедневки
