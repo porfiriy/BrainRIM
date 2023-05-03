@@ -129,10 +129,10 @@ z-index: 1;
  }
  @-webkit-keyframes glow {
 	from {
-	  text-shadow: 0 0 3px #fff, 0 0 1px #2218b1, 0 0 3px #2218b1, 0 0 5px #2218b1, 0 0 7px #2218b1, 0 0 9px #2218b1, 0 0 11px #2218b1;
+	  text-shadow: 0 0 3px #000000, 0 0 1px #2218b14e, 0 0 3px #2218b17a, 0 0 5px #2218b155, 0 0 7px #2218b168, 0 0 9px #2218b165, 0 0 11px #1871b17e;
 	}
 	to {
-	  text-shadow: 0 0 15px #fff, 0 0 10px #6e1dc5, 0 0 15px #6e1dc5, 0 0 20px #6e1dc5, 0 0 25px #6e1dc5, 0 0 30px #6e1dc5, 0 0 35px #6e1dc5;
+	  text-shadow: 0 0 15px #14aec9, 0 0 10px #14aec9, 0 0 15px #14aec9, 0 0 20px #14aec9, 0 0 25px #14aec9, 0 0 30px #14aec9, 0 0 35px #14aec9;
 	}
   }
 	
@@ -530,8 +530,8 @@ font-size: 18px;
   }
    
   @keyframes everyday-glowing {
-	from { background-color: #ffffff00; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
-	to { background-color: #00ffc6; box-shadow: 0 0 20px #05a3a8; color: #000000; }
+	from { background-color: #1429b600; box-shadow: 0 0 0px #2ba80500; color: #ffffff;}
+	to { background-color: #00ffc6; box-shadow: 0 0 20px #00f7ff; color: #000000; }
   }
    
   @-webkit-keyframes everyday-glowing {
