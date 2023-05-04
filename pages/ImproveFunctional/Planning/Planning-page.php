@@ -7,6 +7,7 @@
    <meta name="viewport" content="width=device-width">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/Planning-page.css">
+	<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
    <title>Planning-page</title>
 </head>
 
@@ -22,7 +23,7 @@
 	    </div>
 		<div class="date-body">
 				<div class="today-text">Сегодня</div>
-				<div class="today-date">XX.XX.XXXX</div>
+				<div class="today-date"></div>
 		</div>
 		<div class="add-plan-body">
 			<div class="add-plan">+ Добавить план</div>
@@ -35,19 +36,19 @@
 		    <div class="comeback-button back"><ion-icon name="chevron-back-outline"></ion-icon></div>
 		    <div class="new-plan-title">Новый план</div>
 		<div class="new-plan-date-body">
-		    <div class="new-plan-date">XX.XX.XXXX</div>
-		    <div class="date-icon"><ion-icon class="page-title-icon md hydrated" name="calendar-outline" role="img" aria-label="calendar outline"></ion-icon></div>
+	<input type="text" class="new-plan-date" placeholder="Выберите дату">
+		    <div class="date-icon" ></div>
 		</div>
 		<div class="plan-text-body">
 		  <textarea name="target" id="target" cols="30" rows="10"></textarea>
 		  <div class="symbols-count">X/X</div>
 		  </div>
-		  <div class="create-plan">Создать план</div>
+		  <div class="create-plan" >Создать план</div>
 		</div>
 	</main>
 </body>
-
-    <script src="/pages/ImproveFunctional/Planning/Planning-page.js"></script>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+   <script src="/pages/ImproveFunctional/Planning/Planning-page.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>

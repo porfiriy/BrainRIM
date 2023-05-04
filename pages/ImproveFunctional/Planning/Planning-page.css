@@ -243,7 +243,9 @@ font-size: 18px;
     justify-content: center;
     align-items: center;
     height: 34px;
+    background-color: #213242;
 	font-weight: 600;
+    color: white;
 }
 #target{
 	display: flex;
