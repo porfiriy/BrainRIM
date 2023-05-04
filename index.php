@@ -157,8 +157,8 @@
                   </a>
                </li>
                <li class="list list-improve">
-                  <a href="#improve">
-                     <span class=" icon"><ion-icon name="ribbon-outline"></ion-icon></span>
+			   <a href="#improve">
+                     <span class="icon"><ion-icon name="trending-up-outline"></ion-icon></span>
                      <span class="text">Развитие</span>
                   </a>
                </li>
@@ -189,7 +189,7 @@
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="chill-games-body">
 <ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon>
-<ion-icon class="chill-game hz-game" name="american-football"></ion-icon>
+<a href="/pages/ImproveFunctional/Planning/Planning-page.php"><ion-icon class="chill-game hz-game" name="american-football"></ion-icon></a>
 <ion-icon class="chill-game hz-game" name="basketball"></ion-icon>
 <a href="/pages/Game-REAPEAT/gameREPEAT.php" class="chill-game tzfe-game">2048</a>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
@@ -265,7 +265,6 @@
       <div class="page-improve-container">
          <div class="wrapper-improve">
             <span class="improve-title">Улучшай себя !</span>
-			<span class="improve-description">Полезные советы</span>
             <main class="main-improve">
                <div id="improve-container">
                   <div class="container-improve">

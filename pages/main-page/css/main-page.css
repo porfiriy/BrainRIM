@@ -1091,11 +1091,6 @@ font-size: 18px;
     color: #ffffff;
     gap: 10px;
   }
-  .improve-description{
-	margin: 30px auto 20px auto;
-	font-size: 24px;
-	color: #00ff00;
-  }
   .main-improve{
 	 margin: -200px 0 0 0;
 	 display: flex;
@@ -1141,6 +1136,7 @@ font-size: 18px;
     text-shadow: 1px 0 1px #000, 0 1px 1px #000, -1px 0 1px #000, 0 -1px 1px #000;
     display: flex;
     align-items: center;
+	justify-content: center;
     border: 2px solid #05EFD4;
     border-radius: 20px;
     width: 270px;
