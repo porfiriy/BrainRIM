@@ -189,7 +189,7 @@
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="chill-games-body">
 <ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon>
-<a href="/pages/ImproveFunctional/Planning/Planning-page.php"><ion-icon class="chill-game hz-game" name="american-football"></ion-icon></a>
+<ion-icon class="chill-game hz-game" name="american-football"></ion-icon>
 <ion-icon class="chill-game hz-game" name="basketball"></ion-icon>
 <a href="/pages/Game-REAPEAT/gameREPEAT.php" class="chill-game tzfe-game">2048</a>
 <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
@@ -269,7 +269,7 @@
                <div id="improve-container">
                   <div class="container-improve">
                      <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
-                     <div class="forimprove">Ставь цели, достигай их!</div>
+                     <a href="/pages/ImproveFunctional/Planning/Planning-page.php"><div class="forimprove">Ставь цели, достигай их!</div></a>
                   </div>
                   <div class="container-improve">
                      <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>

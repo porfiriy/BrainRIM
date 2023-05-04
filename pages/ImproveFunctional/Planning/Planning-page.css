@@ -28,7 +28,7 @@
  html,
  body {
 	font-family: 'Balsamiq Sans', cursive;
-	 background: #213242;
+	background: #213242;
 	height: 100%;
 	width: 100%;
 	font-size: 100%;
@@ -121,4 +121,154 @@
 .page-title-icon{
 	color: #05EFD4;
 	font-size: 28px;
+}
+.info-body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	color: white;
+	gap: 15px;
+	margin: 40px 0 30px 0;
+}
+.info-button{
+    font-size: 36px;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    width: 50px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+	color: #05EFD4;
+}
+.info-text{
+    font-size: 16px;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    width: 230px;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+.date-body{
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+	gap: 8px;
+	margin: 0 0 40px 0;
+}
+.today-text{
+font-size: 18px;
+}
+.today-date{
+    font-size: 20px;
+    border: 2px solid #05EFD4;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+	font-weight: 600;
+}
+.add-plan-body{
+    display: flex;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+	color: white;
+	width: 340px;
+	height: 400px;
+	margin: 0 auto;
+	gap: 20px;
+}
+.add-plan{
+	font-size: 22px;
+	width: 280px;
+    border: 2px solid #05EFD4;
+	border-radius: 8px;
+	padding: 15px;
+    text-align: center;
+	font-weight: 600;
+	transition: 0.1s;
+}
+.add-plan:active{
+	transform: scale(0.95);
+    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
+    color: #213242;
+    background-color: #05EFD4;
+}
+
+.new-plan-body{
+    position: absolute;
+    display: none;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background: #213242;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+ .new-plan-title {
+	font-size: 26px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    align-items: center;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.new-plan-date-body{
+	display: flex;
+	gap: 10px;
+	margin: 40px;
+}
+.new-plan-date{
+	font-size: 20px;
+    border: 2px solid #05EFD4;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+	font-weight: 600;
+}
+#target{
+	display: flex;
+	background: #213242;
+	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+	border-radius: 20px;
+	width: 300px;
+	height: 360px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+}
+.symbols-count{
+    margin: -35px 0px 0px 255px;
+    font-size: 20px;
+}
+.create-plan{
+	display: flex;
+    margin: 100px 0 0 0;
+    box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    font-size: 23px;
+    width: 250px;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+	color: #05EFD4;
 }
