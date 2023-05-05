@@ -1123,6 +1123,10 @@ font-size: 18px;
     height: 180px;
     width: 300px;
     box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+	transition: 0.1s;
+  }
+  .container-improve:active{
+transform: scale(0.95);
   }
   .improve{
 	 font-size: 24px;
@@ -1130,6 +1134,7 @@ font-size: 18px;
 	 align-items: center;
 	 justify-content: center;
 	 gap: 10px;
+	 color: white;
   }
   .forimprove{
     color: #ffffff;

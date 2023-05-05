@@ -39,11 +39,17 @@
 	<input type="text" class="new-plan-date" placeholder="Выберите дату">
 		    <div class="date-icon" ></div>
 		</div>
-		<div class="plan-text-body">
-		  <textarea name="target" id="target" cols="30" rows="10"></textarea>
-		  <div class="symbols-count">X/X</div>
+
+<div class="container plan-text-body">
+    <textarea placeholder="Напишите цель/заметку здесь..." id="target" autocomplete="on" maxlength="200"></textarea>
+	<div class="symbols-count">
+    <span class="count" id="current">0 </span>
+    <span id="maximum">/ 200</span>
+  </div>
+</div>
+
 		  </div>
-		  <div class="create-plan" >Создать план</div>
+		  <div class="create-plan">Создать план</div>
 		</div>
 	</main>
 </body>
@@ -52,3 +58,7 @@
    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
+
+
+
+
