@@ -297,7 +297,7 @@
                   </div>
                </div>
                <div class="DownButton">
-                  <div class="scroll"><ion-icon class="Up-button" name="chevron-down-outline"></ion-icon></div>
+                  <div class="scroll"><ion-icon class="Up-button" name="chevron-up-outline"></ion-icon></div>
                </div>
             </main>
          </div>

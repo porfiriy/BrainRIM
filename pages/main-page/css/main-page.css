@@ -1163,8 +1163,26 @@ transform: scale(0.95);
 	 position: absolute;
 	 display: flex;
 	 margin: 20px;
-	 bottom: 13%
+	 bottom: 13%;
+	 -webkit-animation: UpButton ease-in-out infinite alternate;
+	 -moz-animation: UpButton ease-in-out infinite alternate;
+	 animation: UpButton ease-in-out infinite alternate;
+	 animation-duration: 1.2s;
+	 animation-iteration-count: infinite;
  }
+
+ .DownButton:active{
+	transform: scale(0.5);
+   transition: 50ms;
+ }
+
+ @keyframes UpButton {
+   50% {bottom: 13%;}
+   100% {bottom: 15%;}
+}
+
+
+
   .Up-button{
 	 font-size: 45px;
 	 color: #05EFD4;
