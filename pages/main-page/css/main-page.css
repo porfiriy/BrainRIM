@@ -1029,7 +1029,6 @@ font-size: 18px;
  .random-game-button-in-dev{
 	width: 85%;
 	height: 60px;
-    background: linear-gradient(225deg, rgba(169, 0, 228, 0.74) 0%, rgba(0, 23, 225, 0.74) 100%);
     box-shadow: inset 2px 3px 3px rgb(255 255 255 / 25%);
 	border-radius: 10px;
 	font-family: 'Balsamiq Sans';
@@ -1047,13 +1046,30 @@ font-size: 18px;
 	border: 3px solid black;
 	border: 2px solid #05EFD4;
 	transition: 0.4s;
+	animation: random-game-button 10s linear infinite ;
+	--bg-size: 400%; 	  /*Меняет скорость*/
+	--color-one: #a900e4;
+	--color-two: #0017e1;
+	background: linear-gradient(
+		100deg,
+		var(--color-one),
+		var(--color-two),
+		var(--color-one)
+	  )
+	  0 0 / var(--bg-size) 100%;
  }
- .random-game-button-in-dev:hover{
+ @media (prefers-reduced-motion: no-preference) {
+	@keyframes random-game-button {
+	  to {
+		background-position: var(--bg-size) 0;
+	  }
+	}
+  }
+  .random-game-button-in-dev:hover{
     box-shadow: inset 2px 3px 3px rgb(255 255 255 / 31%), 0px 0px 20px 0px #72727294;
     color: #05EFD4;
     background: #323232;
  }
- 
  
  .page-improve-container{
 	position: absolute;
