@@ -47,8 +47,6 @@
     <span id="maximum">/ 200</span>
   </div>
 </div>
-
-		  </div>
 		  <div class="create-plan">Создать план</div>
 		</div>
 	</main>

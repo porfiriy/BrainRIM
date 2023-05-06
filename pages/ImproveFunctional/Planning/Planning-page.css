@@ -276,7 +276,11 @@ font-size: 18px;
     align-items: center;
     justify-content: center;
 	color: #05EFD4;
+	transition: 0.2s;
 }
-
-
-
+.create-plan:active{
+	transform: scale(0.95);
+    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
+    color: #213242;
+    background-color: #05EFD4;
+}
