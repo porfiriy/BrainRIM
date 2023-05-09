@@ -1,6 +1,6 @@
 //звук 
 let audioClick = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
-let audioNavigClick = new Audio('/sound/680126__strangehorizon__g_neck_pop.wav');
+let audioNavigClick = new Audio('/sound/ClickMenu.mp3');
 
 
 const list = document.querySelectorAll('.list');
