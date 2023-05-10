@@ -348,8 +348,7 @@ const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 const hintsButton = document.querySelector('.hints');
 let hintCounter = document.querySelector('.hint-counter');
-let eyeValueForJS = 0;
-eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
+let eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы 
@@ -515,15 +514,16 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 };
 //при нажатии на иконку подсказок
 hintsButton.onclick = function () {
-   if (eyeValue > 0) {
+   if (eyeValue > 0 && eyeValueForJS > 0) {
       eyeValueForJS -= 1;
       hintCounter.innerHTML = eyeValueForJS;
       audioComplete.play();
       doAjaxMinusHints();
-      arrButtons[randomNumberBtn].style = 'background:green;';
+      let copyRandNumber = randomNumberBtn;//сделано в связи с багом покраски в зелйный кнопки
+      arrButtons[copyRandNumber].style = 'background:green;';
       setTimeout(() => {
-         arrButtons[randomNumberBtn].style = 'background:#213242;';
-      }, 1000);
+         arrButtons[copyRandNumber].style = 'background:#213242;';
+      }, 500);
    }
 };
 
@@ -689,21 +689,25 @@ button2.onclick = function () {
    conditionPress = true;
    checkPressButton(button2);
    audioCardDone.play();
+
 }
 button3.onclick = function () {
    conditionPress = true;
    checkPressButton(button3);
    audioCardDone.play();
+
 }
 button4.onclick = function () {
    conditionPress = true;
    checkPressButton(button4);
    audioCardDone.play();
+
 }
 button5.onclick = function () {
    conditionPress = true;
    checkPressButton(button5);
    audioCardDone.play();
+
 }
 button6.onclick = function () {
    conditionPress = true;

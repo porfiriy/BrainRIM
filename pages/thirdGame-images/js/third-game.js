@@ -24,8 +24,7 @@ let minutes = 0;
 let winForResults = 0;
 let looseForResults = 0;
 let statusLoosOrWin;
-let eyeValueForJS = 0;
-eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
+let eyeValueForJS = eyeValue;//записываю из переменной с инфой из базы данных в обычн js переменную для динамич. показа на экране
 const cards = document.querySelectorAll('.memory-card');
 let deadeLine = document.getElementById("deadeLine");
 let easyModeButton = document.querySelector('.easy-mode-button');
