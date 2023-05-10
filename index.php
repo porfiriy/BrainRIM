@@ -267,10 +267,10 @@
             <span class="improve-title">Улучшай себя !</span>
             <main class="main-improve">
                <div id="improve-container">
-                  <div class="container-improve">
+			   <a href="/pages/ImproveFunctional/Planning/Planning-page.php"><div class="container-improve">
                      <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
-                     <a href="/pages/ImproveFunctional/Planning/Planning-page.php"><div class="forimprove">Ставь цели, достигай их!</div></a>
-                  </div>
+                     <div class="forimprove">Ставь цели, достигай их!</div>
+                  </div></a>
                   <div class="container-improve">
                      <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>
                      <div class="forimprove">Планируй расходы и узнавай стратегии!</div>
@@ -297,7 +297,7 @@
                   </div>
                </div>
                <div class="DownButton">
-                  <div class="scroll"><ion-icon class="Up-button" name="chevron-down-outline"></ion-icon></div>
+                  <div class="scroll"><ion-icon class="Up-button" name="chevron-up-outline"></ion-icon></div>
                </div>
             </main>
          </div>

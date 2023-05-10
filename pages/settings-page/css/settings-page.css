@@ -40,6 +40,7 @@
  button,
  textarea {
 	font-family: 'Balsamiq Sans', cursive;
+	resize: none;
  }
  input::-ms-clear {
 	display: none;

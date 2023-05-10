@@ -52,6 +52,7 @@
  button,
  textarea {
 	font-family: 'Balsamiq Sans', cursive;
+	resize: none;
  }
  input::-ms-clear {
 	display: none;
@@ -246,6 +247,7 @@ font-size: 18px;
     background-color: #213242;
 	font-weight: 600;
     color: white;
+	text-align: center;
 }
 #target{
 	display: flex;
@@ -257,14 +259,16 @@ font-size: 18px;
 	color: white;
 	padding: 20px;
 	font-size: 20px;
+	margin: 0 auto
 }
 .symbols-count{
-    margin: -35px 0px 0px 255px;
+    margin: -35px 0px 0px 200px;
     font-size: 20px;
+    position: absolute;
 }
 .create-plan{
 	display: flex;
-    margin: 100px 0 0 0;
+    margin: 50px auto;
     box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
     border-radius: 20px;
     font-size: 23px;
@@ -273,4 +277,11 @@ font-size: 18px;
     align-items: center;
     justify-content: center;
 	color: #05EFD4;
+	transition: 0.2s;
+}
+.create-plan:active{
+	transform: scale(0.95);
+    box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
+    color: #213242;
+    background-color: #05EFD4;
 }

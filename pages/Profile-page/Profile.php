@@ -70,7 +70,10 @@
 				</div>
 			</div>
 			<div class="statistics">
-				<span class="button rank">Новичок</span>
+				<div class="container">
+					<span class="button rank">Новичок</span>
+					<div class="icon"><ion-icon name="happy-outline"></ion-icon></div>
+				</div>
 				<div class="rank-body">
 					<span class="rank-info rank-newbie">Новичок</span>
 					<span class="rank-info rank-midle">Знаток</span>
@@ -79,9 +82,18 @@
 					<span class="rank-info rank-god">Мегаразум</span>
 					<div class="close-rank"><ion-icon name="close-outline"></ion-icon></div>
 				</div>
-				<a href="/pages/Achievements-Page/Achievements.php" class="button button-achievments">Достижения<ion-icon name="ribbon-outline"></ion-icon></a>
-				<a href="#" class="button statistic-page">Статистика<ion-icon name="stats-chart"></ion-icon></a>
-				<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти из аккаунта</a>
+				<div class="container">
+				<a href="/pages/Achievements-Page/Achievements.php" class="button button-achievments">Достижения</a>
+					<div class="icon"><ion-icon name="ribbon-outline"></ion-icon></div>
+				</div>
+					<div class="container">
+					<a href="#" class="button statistic-page">Статистика</a>
+					<div class="icon"><ion-icon name="stats-chart"></ion-icon></div>
+					</div>
+					<div class="container">
+					<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти</a>
+					<div class="icon"><ion-icon name="log-out-outline"></ion-icon></div>
+					</div>
 			</div>
 		</div>
 	</main>
