@@ -282,7 +282,7 @@ victoryLooseScreenResultsButton.onclick = function () {
 }
 
 hintButton.onclick = function () {//при нажатии на подсказку
-   if (eyeValue > 0) {
+   if (eyeValue > 0 && eyeValueForJS > 0) {
       eyeValueForJS -= 1;
       hintCounter.innerHTML = eyeValueForJS;
       doAjaxMinusHints();
