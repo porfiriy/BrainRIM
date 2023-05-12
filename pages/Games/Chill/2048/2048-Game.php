@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>2048</title>
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/pages/Game-REAPEAT/css/gameREPEAT.css">    
+	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css">    
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
@@ -48,7 +48,7 @@
 			</div>
 		</div>
 	</div>
-    <script src="/pages/Game-REAPEAT/js/gameREPEAT.js"></script>  
+    <script src="/pages/Games/Chill/2048/js/2048-Game.js"></script>  
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>

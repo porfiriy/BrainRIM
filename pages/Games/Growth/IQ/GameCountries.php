@@ -9,7 +9,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="/pages/Game-Countries/GameCountries.css">
+	<link rel="stylesheet" href="/pages/Games/Growth/IQ/GameCountries.css">
 	<title>game-countries</title>
 </head>
 	<script>
@@ -134,7 +134,7 @@
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-	<script src="/pages/Game-Countries/GameCountries.js"></script>
+	<script src="/pages/Games/Growth/IQ/GameCountries.js"></script>
 </body>
 
 </html>
