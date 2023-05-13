@@ -85,6 +85,17 @@ const mn = document.querySelector('#mn');
 const sc = document.querySelector('#sc');
 
 
+//pop-up alert
+const GamesInDev = document.querySelectorAll('.game-in-dev');
+const alertContainer = document.querySelector('.pop-up-alert-container');
+
+GamesInDev.onclick = function () {
+	alertContainer.style = 'display: flex;';
+	setTimeout(() => {
+		alertContainer.style = 'display: none;';
+	}, 2000);
+}
+//pop-up alert
 
 
 //AJAX запрос обнуление опыта

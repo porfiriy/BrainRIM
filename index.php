@@ -33,6 +33,9 @@
 </head>
 
 <body>
+	<!-- alert -->
+	<div class="pop-up-alert-container"><div class="alert-text">Функция в разработке!</div></div></div>
+	<!-- alert -->
    <div class="wrapper">
       <div class="gray-background-container"></div>
       <header class="header">
@@ -254,7 +257,7 @@
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="iq-games-body">
 <a class="game-item iq-game" href="/pages/Games/Growth/IQ/GameCountries.php"><ion-icon name="flag-outline"></ion-icon></a>
-<ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
+<a href="/pages/Games/Chill/2048/2048-Game.php" class="chill-game tzfe-game">2048</a>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
