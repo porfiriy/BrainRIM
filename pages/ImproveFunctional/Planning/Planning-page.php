@@ -1,7 +1,19 @@
+<?php
+	include($_SERVER['DOCUMENT_ROOT']."/pages/ImproveFunctional/Planning/php/LogicToPlan.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
+<script>
+//записывает в переменные данные из базы
+      <?php if(isset($_SESSION['id'])): ?>
+            let planDateValue = Number('<?= $planDateFromDB ?>');
+				let planNumberValue = Number('<?= $planNumberFromDB ?>');
+      <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
+            let planDateValue = 00.00.0000;
+      <?php endif;?>
+   </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width">
@@ -26,29 +38,31 @@
 				<div class="today-date"></div>
 		</div>
 		<div class="add-plan-body">
-			<div class="add-plan">+ Добавить план</div>
-			<div class="add-plan">+ Добавить план</div>
-			<div class="add-plan">+ Добавить план</div>
-			<div class="add-plan">+ Добавить план</div>
+			<div class="add-plan first-plan">+ Добавить план</div>
+			<div class="add-plan second-plan">+ Добавить план</div>
+			<div class="add-plan third-plan">+ Добавить план</div>
+			<div class="add-plan fourth-plan">+ Добавить план</div>
 		</div>
-
+		<form action="Planning-page.php" method="post">
 		<div class="new-plan-body">
-		    <div class="comeback-button back"><ion-icon name="chevron-back-outline"></ion-icon></div>
-		    <div class="new-plan-title">Новый план</div>
-		<div class="new-plan-date-body">
-	<input type="text" class="new-plan-date" placeholder="Выберите дату">
-		    <div class="date-icon" ></div>
-		</div>
+		    	<div class="comeback-button back"><ion-icon name="chevron-back-outline"></ion-icon></div>
+		    	<div class="new-plan-title">Новый план</div>
+			<div class="new-plan-date-body">
+				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">
+		   	<div class="date-icon" ></div>
+				<input type="number" name="planNumber" class="planNumber" value="">
+			</div>
 
-<div class="container plan-text-body">
-    <textarea placeholder="Напишите цель/заметку здесь..." id="target" autocomplete="on" maxlength="200"></textarea>
-	<div class="symbols-count">
-    <span class="count" id="current">0 </span>
-    <span id="maximum">/ 200</span>
-  </div>
-</div>
-		  <div class="create-plan">Создать план</div>
+			<div class="container plan-text-body">
+    			<textarea name="planTextArea" placeholder="Напишите цель/заметку здесь..." id="target" autocomplete="on" maxlength="200"></textarea>
+				<div class="symbols-count">
+    			<span class="count" id="current">0 </span>
+    			<span id="maximum">/ 200</span>
+  				</div>
+			</div>
+		  <button type="submit" name="button-new-plan" class="create-plan">Создать план</button>
 		</div>
+		</form>
 	</main>
 </body>
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

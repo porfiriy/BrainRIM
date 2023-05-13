@@ -1,15 +1,31 @@
-const AddPlan = document.querySelector('.add-plan');
+const Add1Plan = document.querySelector('.first-plan');
+const Add2Plan = document.querySelector('.second-plan');
+const Add3Plan = document.querySelector('.third-plan');
+const Add4Plan = document.querySelector('.fourth-plan');
 const NewPlanBody = document.querySelector('.new-plan-body');
+const planNumberInputBody = document.querySelector('.planNumber');
 const Back = document.querySelector('.back');
 const todayDateValue = document.querySelector('.today-date');
-const UserChooseDateValue = document.querySelector('.new-plan-date');
 //const ta = document.querySelector('#target'); // textarea
 const textarea = document.querySelector("#target");
 const count = document.querySelector(".count");
 const MaximumCount = document.querySelector("#maximum");
 
-AddPlan.onclick = function () {//при нажатии открывается новый план
+Add1Plan.onclick = function () {//при нажатии открывается новый план
 	NewPlanBody.style = 'display: flex;';
+	planNumberInputBody.value = 1;
+}
+Add2Plan.onclick = function () {//при нажатии открывается новый план
+	NewPlanBody.style = 'display: flex;';
+	planNumberInputBody.value = 2;
+}
+Add3Plan.onclick = function () {//при нажатии открывается новый план
+	NewPlanBody.style = 'display: flex;';
+	planNumberInputBody.value = 3;
+}
+Add4Plan.onclick = function () {//при нажатии открывается новый план
+	NewPlanBody.style = 'display: flex;';
+	planNumberInputBody.value = 4;
 }
 
 Back.onclick = function () {//при нажатии назад на новом плане
@@ -17,21 +33,20 @@ Back.onclick = function () {//при нажатии назад на новом �
 }
 
 flatpickr(".new-plan-date", {
-	dateFormat: "d.m.Y",
-	locale: "en"
+	dateFormat: "Y/m/d"
 });
 
-var currentDate = new Date();
-var day = currentDate.getDate();
-var month = currentDate.toLocaleString('default', { month: 'long' });
-var year = currentDate.getFullYear();
-
+let currentDate = new Date();
+let day = currentDate.getDate();
+let month = currentDate.toLocaleString('default', { month: 'long' });
+let year = currentDate.getFullYear();
 // Форматируем дату в нужный формат (дд-мм-гггг)
-var formattedDate = day + '-' + month + '-' + year;
+let formattedDate = year + ' - ' + month + ' - ' + day;
 todayDateValue.innerHTML = formattedDate;
 
 
- // Кол-во символов в текстарее и смена цвета при низких значениях
+
+// Кол-во символов в текстарее и смена цвета при низких значениях
 const MaxCount = 200;
 
 textarea.addEventListener('input', () => {
