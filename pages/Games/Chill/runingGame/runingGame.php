@@ -10,10 +10,8 @@
   <body>
     <div class="game-container">
         <div id="player"></div>
-      <div id="score">Time: <span id="timer">0</span>s <span id="score-num"> 0</span></div>
+      <div id="score">Time: <span id="timer">0</span>s <div class="score-enemy-passed">Врагов пройдено:<span id="score-num">0</span></div></div>
     </div>
-      
-   
     <script src="/pages/Games/Chill/runingGame/js/runingGame.js"></script>
   </body>
 </html>

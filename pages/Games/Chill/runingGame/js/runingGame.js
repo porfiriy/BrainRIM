@@ -2,14 +2,14 @@ const gameContainer = document.querySelector(".game-container");
 const player = document.querySelector("#player");
 const timer = document.querySelector("#timer");
 const score = document.querySelector("#score-num");
-let scoreCount = 0;
 let timerCount = 0;
 let enemiesPassedCount = 0;
 let isGameOver = false;
 let enemySpeed = 3; // Скорость падения врагов
-let enemyInterval = 2000; // Интервал появления врагов
+let enemyInterval = 1500; // Интервал появления врагов
 let maxEnemies = 16; // Максимальное количество врагов на экране
 let currentEnemies = 0; // Текущее количество врагов на экране
+let enemyIntervalId = null;
 
 function movePlayer(event) {
    const x = event.touches[0].clientX;
@@ -57,14 +57,16 @@ function moveEnemy(enemy) {
 }
 
 function updateScore() {
-   score.innerHTML = `Time: ${timerCount}s | Enemies Passed: ${enemiesPassedCount}`;
+   score.innerHTML = `${enemiesPassedCount}`;
 }
 
 function increaseDifficulty() {
    if (timerCount > 0 && timerCount % 10 === 0) {
-      enemySpeed += 1;
-      if (enemyInterval > 500) {
-         enemyInterval -= 200;
+      enemySpeed += 1.5;
+      if (enemyInterval > 400) {
+         enemyInterval -= 400;
+         clearInterval(enemyIntervalId); // Останавливаем текущий интервал
+         enemyIntervalId = setInterval(createEnemy, enemyInterval); // Создаем новый интервал с обновленным значением
       }
       if (maxEnemies < 16) {
          maxEnemies += 2;
@@ -74,7 +76,6 @@ function increaseDifficulty() {
 
 function startGame() {
    isGameOver = false;
-   scoreCount = 0;
    timerCount = 0;
    enemiesPassedCount = 0;
    updateScore();
@@ -92,12 +93,13 @@ function startGame() {
    }, 1000);
 
    createEnemy();
-   setInterval(createEnemy, enemyInterval);
+   console.log(enemyInterval)
+   enemyIntervalId = setInterval(createEnemy, enemyInterval); // Сохраняем идентификатор интервала
 }
 
 function gameOver() {
    isGameOver = true;
-   alert("Game Over! Enemies Passed: " + enemiesPassedCount);
+   console.log("Game Over! Enemies Passed: " + enemiesPassedCount);
 }
 
 gameContainer.addEventListener("touchmove", movePlayer);
