@@ -89,11 +89,15 @@ const sc = document.querySelector('#sc');
 const GamesInDev = document.querySelectorAll('.game-in-dev');
 const alertContainer = document.querySelector('.pop-up-alert-container');
 
-GamesInDev.onclick = function () {
-	alertContainer.style = 'display: flex;';
-	setTimeout(() => {
-		alertContainer.style = 'display: none;';
-	}, 2000);
+GamesInDev.forEach(element => {
+  element.addEventListener('click', popUpAlert);
+});
+
+function popUpAlert() {
+  alertContainer.style = 'display: flex;';
+  setTimeout(() => {
+    alertContainer.style = 'display: none;';
+  }, 2000);
 }
 //pop-up alert
 
