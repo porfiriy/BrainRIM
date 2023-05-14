@@ -8,8 +8,10 @@
 <script>
 //записывает в переменные данные из базы
       <?php if(isset($_SESSION['id'])): ?>
-            let planDateValue = Number('<?= $planDateFromDB ?>');
-				let planNumberValue = Number('<?= $planNumberFromDB ?>');
+            let planDateValue1 = '<?= $planData1 ?>';
+				let planDateValue2 = '<?= $planData2 ?>';
+				let planDateValue3 = '<?= $planData3 ?>';
+				let planDateValue4 = '<?= $planData4 ?>';
       <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
             let planDateValue = 00.00.0000;
       <?php endif;?>

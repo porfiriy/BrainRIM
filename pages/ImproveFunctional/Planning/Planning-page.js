@@ -11,22 +11,10 @@ const textarea = document.querySelector("#target");
 const count = document.querySelector(".count");
 const MaximumCount = document.querySelector("#maximum");
 
-Add1Plan.onclick = function () {//при нажатии открывается новый план
-	NewPlanBody.style = 'display: flex;';
-	planNumberInputBody.value = 1;
-}
-Add2Plan.onclick = function () {//при нажатии открывается новый план
-	NewPlanBody.style = 'display: flex;';
-	planNumberInputBody.value = 2;
-}
-Add3Plan.onclick = function () {//при нажатии открывается новый план
-	NewPlanBody.style = 'display: flex;';
-	planNumberInputBody.value = 3;
-}
-Add4Plan.onclick = function () {//при нажатии открывается новый план
-	NewPlanBody.style = 'display: flex;';
-	planNumberInputBody.value = 4;
-}
+
+
+
+
 
 Back.onclick = function () {//при нажатии назад на новом плане
 	NewPlanBody.style = 'display: none;';
@@ -56,3 +44,42 @@ textarea.addEventListener('input', () => {
 	count.textContent = `${remaining}`;
 	count.style.color = color;
 });
+
+//проверяем если в базе есть план на ячейке то вешаем на ячейку ссылку на это задание
+if (planDateValue1 !== "") {
+	Add1Plan.innerHTML = planDateValue1;
+	Add1Plan.onclick = function () {//при нажатии открывается план
+		var url = "/pages/ImproveFunctional/Planning/plansPages/firstUserPlanBody.php"; // ссылка на план
+		window.location.href = url;
+	}
+} else {
+	Add1Plan.onclick = function () {//при нажатии открывается новый план только когда в базе на эту ячейку ничего нет
+		NewPlanBody.style = 'display: flex;';
+		planNumberInputBody.value = 1;
+	}
+}
+if (planDateValue2 !== "") {
+	Add2Plan.innerHTML = planDateValue2;
+} else {
+	Add2Plan.onclick = function () {//при нажатии открывается новый план
+		NewPlanBody.style = 'display: flex;';
+		planNumberInputBody.value = 2;
+	}
+}
+if (planDateValue3 !== "") {
+	Add3Plan.innerHTML = planDateValue3;
+} else {
+	Add3Plan.onclick = function () {//при нажатии открывается новый план
+		NewPlanBody.style = 'display: flex;';
+		planNumberInputBody.value = 3;
+	}
+}
+if (planDateValue4 !== "") {
+	Add4Plan.innerHTML = planDateValue4;
+} else {
+	Add4Plan.onclick = function () {//при нажатии открывается новый план
+		NewPlanBody.style = 'display: flex;';
+		planNumberInputBody.value = 4;
+	}
+}
+

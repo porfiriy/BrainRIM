@@ -191,7 +191,7 @@
 <div class="page-title">Отдых</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="chill-games-body">
-<ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon>
+<a href="/pages/Games/Chill/math3/math3.php"><ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon></a>
 <ion-icon class="chill-game hz-game" name="american-football"></ion-icon>
 <a href="/pages/Games/Chill/runingGame/runingGame.php"><ion-icon class="chill-game hz-game" name="basketball"></ion-icon></a>
 <a href="/pages/Games/Chill/2048/2048-Game.php" class="chill-game tzfe-game">2048</a>

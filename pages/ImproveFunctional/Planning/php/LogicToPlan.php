@@ -7,20 +7,45 @@
       $planNumber = htmlspecialchars($_POST['planNumber']);
       $planText = htmlspecialchars($_POST['planTextArea']);
       $planDate = htmlspecialchars($_POST['planDateValue']);
-      $submitData = [
+      $submitData = [//отправляем эти данные в базу 
          'planNumber' => $planNumber,
          'user_id' => $_SESSION['id'],
          'planText' => $planText,
          'planDate' => $planDate
       ];
-      insert('userListPlans',$submitData);
+         insert('userListPlans',$submitData);
    }
       
-   $userPlanFromDB = selectAll('userListPlans', ['user_id' => $_SESSION['id']]);
-   $planDateFromDB = $userPlanFromDB['planDate'];
+   //$userPlanFromDB = selectAll('userListPlans', ['user_id' => $_SESSION['id']]);
+   //tt($userPlanFromDB);
+
+   $planNumbers = selectAll('userListPlans', ['user_id' => $_SESSION['id']]); // Замените 'your_table_name' на имя вашей таблицы
+
+   $planNumber1 = null;//в эти переменные записываю массивы по номеру плана
+   $planNumber2 = null;
+   $planNumber3 = null;
+   $planNumber4 = null;
+
    
-   $planNumberFromDB = $userPlanFromDB['planNumber'];
+   
+   foreach ($planNumbers as $row) {
+      if ($row['planNumber'] == 1) {
+         $planNumber1 = $row;
+         
+       }
+       if ($row['planNumber'] == 2) {
+         $planNumber2 = $row;
+       }
+       if ($row['planNumber'] == 3) {
+         $planNumber3 = $row;
+       }
+       if ($row['planNumber'] == 4) {
+         $planNumber4 = $row; 
+       }
+   }
 
-
-
+   $planData1 = $planNumber1['planDate'];
+   $planData2 = $planNumber2['planDate'];
+   $planData3 = $planNumber3['planDate'];
+   $planData4 = $planNumber4['planDate'];
 ?>

@@ -143,6 +143,7 @@ console.log(nextLvlExpValue);
 if (expValue >= nextLvlExpValue && expValue !== 0) {//если лвл достиг нужн знач.
   buttonLevelUp.style = 'display:flex;';
 }
+// нажатие на кнопку улучшить
 buttonLevelUp.onclick = function () {
   ShowFireworks();
   doAjaxExperienceDowngradeAndLevelUp();
@@ -204,42 +205,38 @@ document.querySelector(".convert-button").onclick = function () {//конвер�
 
 
 function ShowFireworks() {
-  if (expValue >= nextLvlExpValue) { //условие вызывает фейерверк при новом левеле
 
+  const duration = 5 * 1000,
+    animationEnd = Date.now() + duration,
+    defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
 
-    const duration = 5 * 1000,
-      animationEnd = Date.now() + duration,
-      defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+  function randomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+  }
 
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
+  const interval = setInterval(function () {
+    const timeLeft = animationEnd - Date.now();
+
+    if (timeLeft <= 0) {
+      return clearInterval(interval);
     }
 
-    const interval = setInterval(function () {
-      const timeLeft = animationEnd - Date.now();
+    const particleCount = 50 * (timeLeft / duration);
 
-      if (timeLeft <= 0) {
-        return clearInterval(interval);
-      }
-
-      const particleCount = 50 * (timeLeft / duration);
-
-      // since particles fall down, start a bit higher than random
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
-        })
-      );
-      confetti(
-        Object.assign({}, defaults, {
-          particleCount,
-          origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
-        })
-      );
-    }, 250);
-
-  }
+    // since particles fall down, start a bit higher than random
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+      })
+    );
+    confetti(
+      Object.assign({}, defaults, {
+        particleCount,
+        origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+      })
+    );
+  }, 250);
 }
 
 function activeLink() {
@@ -280,6 +277,7 @@ BonusContainerContinue.onclick = function () { //при закрытии Бон�
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
   doAjaxGift();
+  ShowFireworks();
   audioClick.play();
 }
 
@@ -496,76 +494,3 @@ Profile.onclick = function () {
 
 }
 
-
-
-
-
-
-
-// //Платёжка Google
-// function onGooglePayLoaded() {
-// 	const googlePayClient =
-// 	new google.payments.api.PaymentsClient({
-// 	  environment:'TEST'
-// 	});
-// }
-
-// const clientConfiguration = {
-// 	apiVersion: 2,
-// 	apiVersionMinor: 0,
-// 	allowedPaymentMethods: [cardPaymentMethod]
-// };
-
-// googlePayClient.isReadyToPay(clientConfiguration)
-//  .then(function(response) {
-//   if(response.result) {
-// //Добавляет гугл пэй кнопку
-//   }
-// }).catch(function(err) {
-//  //Ошибка в консоль разрабов
-// });
-
-// googlePayClient.createButton({
-// 	// defaults to black if default or omitted
-// 	buttonColor:'default',
-// 	// defaults to long if omitted
-// 	buttonType:'long',
-// 	onClick: onGooglePaymentsButtonClicked
-// });
-
-// const paymentDataRequest = Object.assign({},
-// 	clientConfiguration);
-
-// 	paymentDataRequest.transactionInfo = {
-// 		totalPriceStatus:'FINAL',
-// 		totalPrice:'123.45',
-// 		currencyCode:'USD',
-// 	};
-// 	paymentDataRequest.merchantInfo = {
-// 		merchantId:'BCR2DN4T7LDKXGJW',
-// 		merchantName:'SFH Company'
-// 	};
-
-// 	//Информация при оплате
-// 	const cardPaymentMethod = {
-// 		type: 'CARD',
-// 		tokenizationSpecification: tokenizationSpec,
-// 		parameters: {
-// 			allowedCardNetworks: ['VISA','AMEX'],
-// 			allowedAuthMethods: ['PAN_ONLY','CRYPTOGRAM_3DS'],
-// 			billingAddressRequired: true,
-// 			billingAddressParameters: {
-// 				format: 'FULL',
-// 				phoneNumberRequired: true
-// 			}
-// 		}
-// 	};
-
-
-// googlePayClient
-// .loadPaymentData(paymentDataRequest)
-// .then(function(paymentData) {
-// 	processPayment(paymentData);
-// }).catch(function(err) {
-// 	//Ошибка в консоль разрабов
-//    });
