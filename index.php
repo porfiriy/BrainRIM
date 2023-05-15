@@ -460,9 +460,7 @@
          <div class="everyday-title">Слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
-               <span class="yellow-word">Прокрастинация</span> - склонность к постоянному
-               откладыванию даже важных и срочных дел,
-               приводящая к жизненным проблемам и болезненным психологическим эффектам.
+            <?php echo $insertRusWord; ?>
             </div>
          </div>
       </div>

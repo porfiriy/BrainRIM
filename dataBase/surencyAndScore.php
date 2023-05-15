@@ -53,6 +53,8 @@ $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 $userInfo = select('users', ['id' => $_SESSION['id']]);
+$dateForComparison = select('dateForComparison', ['user_id' => $_SESSION['id']]);
+$rusDayWord = selectAll('rusWords');
 
 $hintsValue = $EyeScore['sum_eye_hint'];
 $memoneyValue = $memany['sum_memany'];
@@ -61,14 +63,51 @@ $levelValue = $level['Level'];
 $expValue = $level['experience'];
 $nextLvlExpValue = $level['nextLvlExp'];
 $receiveGiftValue = $userInfo['recevedGift'];
-
-// if($expValue == 100){
-//    $LvlValue = ['Level' => $level['Level']+1];
-//    updateTo('usersLvl',$_SESSION['id'],$LvlValue);
-// }
-//код на логику добавления денег
-//$sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
+$insertRusWord ;
 
 
+//ежедневное изменение слов дня и т.д
+// Получаем текущую дату и время
+$currentDateTime = date('Y-m-d H:i:s');
 
+// Получаем последнюю сохраненную дату и время (из базы данных или файла)
+$lastDateTime = $dateForComparison['lastSaveDate']; // Пример последней сохраненной даты
+// Преобразуем даты в объекты DateTime для сравнения
+$current = new DateTime($currentDateTime);
+$last = new DateTime($lastDateTime);
+
+// Вычисляем разницу во времени между текущей и последней датами
+$interval = $current->diff($last);
+
+// Проверяем, прошло ли 24 часа с момента последней сохраненной даты
+if ($interval->h >= 24 || $interval->d >= 1) {
+    //  условие выполняется, прошло более 24 часов
+    $lastDateTime = $current->format('Y-m-d');// Сохраняем текущую дату и время для будущего сравнения
+    $dateParams = [
+      'lastSaveDate' => $lastDateTime,
+    ];
+    update('dateForComparison', $_SESSION['id'],$dateParams);
+
+    $rusWordsCount = 1;
+    $historyFactsCount = 2;
+    $engWordsCount = 3;
+    if($rusWordsCount < $historyFactsCount && $historyFactsCount < $engWordsCount){//выполняю код один за другим
+      foreach ($rusDayWord as $row) {//выбираю из массива конкретное новое слово
+         if ($row['id'] == $rusWordsCount) {
+            $arrayInsertRusWord = $row;
+          }
+      }
+      $rusWordsCount ++;
+    }else if($historyFactsCount = $rusWordsCount && $historyFactsCount < $engWordsCount) {
+      //мой код
+      $historyFactsCount ++;
+    }else {
+      //мой код
+      $engWordsCount ++;
+    }
+    $insertRusWord = $arrayInsertRusWord['word'];//записываю новое слово из бд
+
+}else{
+
+}
 ?>

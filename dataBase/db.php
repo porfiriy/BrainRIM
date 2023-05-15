@@ -128,7 +128,7 @@ function update($table, $id ,$params){
       $i++;
    }
 
-   $sql = "UPDATE $table SET $str WHERE id = $id;";
+   $sql = "UPDATE $table SET $str WHERE user_id = $id;";
    $query = $pdo->prepare($sql);
    $query->execute($params);
    dbCheckError($query);
