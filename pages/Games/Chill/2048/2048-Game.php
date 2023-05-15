@@ -16,6 +16,9 @@
       </div>
 	  
 	  <div class="wrapper">
+	  <div class="time_container">
+		<p>Время: <span id="time01"> 0</span></p>
+	</div>  
 	<div class="score_container">
 		<p>Счёт: <span id="score01"> 0</span></p>
 	</div>  
