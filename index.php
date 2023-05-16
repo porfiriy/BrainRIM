@@ -274,27 +274,27 @@
                      <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
                      <div class="forimprove">Ставь цели, достигай их!</div>
                   </div></a>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>
                      <div class="forimprove">Планируй расходы и узнавай стратегии!</div>
                   </div>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">Медитация<ion-icon class="improve-icon" name="pulse-outline"></ion-icon></div>
                      <div class="forimprove">Расслабляйся , настраивайся на рабочий лад , отдыхай!</div>
                   </div>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">Упражнения<ion-icon class="improve-icon" name="bicycle-outline"></ion-icon></div>
                      <div class="forimprove">Построй свой план тренировок, разминок!</div>
                   </div>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">Развитие<ion-icon class="improve-icon" name="rocket-outline"></ion-icon></div>
                      <div class="forimprove"> Уверенность, самодисциплина, общительность и др.</div>
                   </div>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">Продуктивность<ion-icon class="improve-icon" name="time-outline"></ion-icon></div>
                      <div class="forimprove">Управление временем, планирования задач, список дел, напоминания!</div>
                   </div>
-                  <div class="container-improve">
+                  <div class="container-improve improve-in-dev">
                      <div class="improve">?</div>
                      <div class="forimprove">???</div>
                   </div>

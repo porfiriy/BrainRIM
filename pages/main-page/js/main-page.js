@@ -99,6 +99,12 @@ function popUpAlert() {
     alertContainer.style = 'display: none;';
   }, 2000);
 }
+
+const ImproveDev = document.querySelectorAll('.improve-in-dev');
+
+ImproveDev.forEach(element => {
+	element.addEventListener('click', popUpAlert);
+  });
 //pop-up alert
 
 
