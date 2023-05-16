@@ -55,6 +55,8 @@ $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 $userInfo = select('users', ['id' => $_SESSION['id']]);
 $dateForComparison = select('dateForComparison', ['user_id' => $_SESSION['id']]);
 $rusDayWord = selectAll('rusWords');
+$historyFacts = selectAll('historyFacts');
+$engDayWord = selectAll('engWords');
 
 $hintsValue = $EyeScore['sum_eye_hint'];
 $memoneyValue = $memany['sum_memany'];
@@ -63,8 +65,29 @@ $levelValue = $level['Level'];
 $expValue = $level['experience'];
 $nextLvlExpValue = $level['nextLvlExp'];
 $receiveGiftValue = $userInfo['recevedGift'];
-$insertRusWord ;
+$insertRusWord;
+$rusWordsCount = $dateForComparison['rusWordsCount'];
+$historyFactsCount = $dateForComparison['historyFactsCount'];
+$engWordsCount = $dateForComparison['engWordsCount'];
 
+foreach ($rusDayWord as $row) {//выбираю из массива конкретное новое слово по числу в переменной из бд которая постоянно увеличиваеться
+   if ($row['id'] == $rusWordsCount) {
+      $arrayInsertRusWord = $row;
+    }
+}
+foreach ($historyFacts as $row) {//выбираю из массива конкретное новое слово по числу в переменной из бд которая постоянно увеличиваеться
+   if ($row['id'] == $historyFactsCount) {
+      $arrayInsertHistoryFact = $row;
+    }
+}
+foreach ($engDayWord as $row) {//выбираю из массива конкретное новое слово по числу в переменной из бд которая постоянно увеличиваеться
+   if ($row['id'] == $engWordsCount) {
+      $arrayInsertEngWord = $row;
+    }
+}
+$insertRusWord = $arrayInsertRusWord['word'];//записываю новое слово из бд
+$insertHistoryFact = $arrayInsertHistoryFact['fact'];
+$insertEngWord = $arrayInsertEngWord['word'];
 
 //ежедневное изменение слов дня и т.д
 // Получаем текущую дату и время
@@ -88,24 +111,23 @@ if ($interval->h >= 24 || $interval->d >= 1) {
     ];
     update('dateForComparison', $_SESSION['id'],$dateParams);
 
-    $rusWordsCount = 1;
-    $historyFactsCount = 2;
-    $engWordsCount = 3;
     if($rusWordsCount < $historyFactsCount && $historyFactsCount < $engWordsCount){//выполняю код один за другим
-      foreach ($rusDayWord as $row) {//выбираю из массива конкретное новое слово
-         if ($row['id'] == $rusWordsCount) {
-            $arrayInsertRusWord = $row;
-          }
-      }
-      $rusWordsCount ++;
-    }else if($historyFactsCount = $rusWordsCount && $historyFactsCount < $engWordsCount) {
-      //мой код
-      $historyFactsCount ++;
+      $dateVarRusWordsCountUpdate = [
+         'rusWordsCount' => $rusWordsCount+1,
+       ];
+       update('dateForComparison', $_SESSION['id'],$dateVarRusWordsCountUpdate);//увеличиваем переменную в бд
+    }else if($historyFactsCount == $rusWordsCount && $historyFactsCount < $engWordsCount) {
+      $dateVarHistoryFactsCountUpdate = [
+         'historyFactsCount' => $historyFactsCount + 1,
+       ];
+       update('dateForComparison', $_SESSION['id'],$dateVarHistoryFactsCountUpdate);//увеличиваем переменную в бд
     }else {
-      //мой код
-      $engWordsCount ++;
+      $dateVarEngWordsCountUpdate = [
+         'engWordsCount' => $engWordsCount+1,
+       ];
+       update('dateForComparison', $_SESSION['id'],$dateVarEngWordsCountUpdate);//увеличиваем переменную в бд
     }
-    $insertRusWord = $arrayInsertRusWord['word'];//записываю новое слово из бд
+    
 
 }else{
 
