@@ -327,111 +327,211 @@ html,body{
 	transform: scale(0.7);
  }
 
-.time_container{
-	font-family: 'Balsamiq Sans', cursive;
-	font-size: 40px;
-	font-weight: bold;
-	margin:50px auto;
-}
- /* Устанавливаем стиль самого дальнего большого окна */
-.score_container{   
-	font-family: 'Balsamiq Sans', cursive;
-	font-size: 40px;
-	font-weight: bold;
-	margin:50px auto;
-}
-p{
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
-    color: #FFF;
-    display: flex;
-    justify-content: center;
-	gap: 20px;
-}
-.time_container>p span{
-	color: #05EFD4;
-}
-.score_container>p span{
-	color: #05EFD4;
-}
-
- /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
-.main{
-	width: 400px;
-	height: 400px;
-	background-color: #bbada0;
-	border-radius: 15px;
-	font-size: 40px;
-}
-
- /* Устанавливаем все мелкие стили сетки */
-.cell{
-	width: 80px;
-	height: 80px;
-	margin:16px 0px 0px 16px;
-	border-radius: 5px;
-	background-color: #ccc0b3;
-	float: left;
-	text-align: center;
-	line-height: 80px;
-}
-
- /* Устанавливаем стиль маскирующего слоя */
-.gameover{
+ body {
+	background-color: #fff;
+	overflow: hidden;
+	paddin: 0;
+	margin: 0;
+ }
+ 
+ 
+ /* head */
+ .head {
+	height: 120px;
+	width: 510px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+ }
+ 
+ div.game {
+	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+ }
+ 
+ div.description {
+	height: 250px;
+	width: 300px;
+	top: 1000px;
+	color: #333;
+	font-family: nunito;
+	transform: translate(-50%, -50%) scale(0);
 	position: absolute;
-	top: 0;
+	left: 50%;
+	top: 425px;
+	background: #fff;
+	padding: 50px;
+	border-radius: 0px;
+	z-index: 1000;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+	text-align: center;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 15px;
+	transition: 0.3s all;
+ }
+ 
+ .description.show {
+	visibility: visible;
+	opacity: 1;
+	font-size: 15px;
+	transform: translate(-50%, -50%) scale(1);
+	transition: 0.3s all;
+ }
+ 
+ .info {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	font-weight: 100;
+	cursor: pointer;
+	border: 0px;
+	border-color: #aaa;
+	background-color: #88b1ef;
+	color: #fff;
+	font-size: 20px;
+	top: 50px;
+	transform: translate(-50%, -50%);
+	margin-left: 25px;
+	transition: 0.1s background-color;
+ }
+ 
+ .info:hover {
+	background-color: #6593d8;
+ }
+ 
+ 
+ .repeat {
+	margin: 0px !important;
+ }
+ 
+ .a {
+	font-family: Nunito;
+	font-size: 100px;
+	font-weight: 200;
+	margin-right: 15px
+	
+ }
+ 
+ .score {
+	position: relative;
+	width: 100px;
+	height: 100px;
+	top: 10px;
+	font-family: nunito;
+	font-weight: 400;
+	font-size: 30px;
+	color: grey;
+	text-align: center;
+ }
+ 
+ 
+ 
+ /* field */
+ .field, .grid {
+	position: absolute;
+	width: 510px;
+	height: 510px;
+	background-color: #888;
+	top: 150px;
+	border-radius: 0px;
+	border:5px solid #888;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
 	left: 0;
 	right: 0;
-	bottom: 0;
-	background-color: rgba(55,55,55,0.3);
-	display: none;	
-}
-.over{
-	width: 300px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	border: 1px solid black;
-	border-radius: 5px;
-	background-color: #fff;
+ }
+ 
+ .field {
+	z-index: 50;
+ }
+ 
+ .grid {
+	z-index: 100;
+ }
+ 
+ .row, .grid_row {
+	width: 510px;
+	height: 135px;
+	position: relative;
+	display: table-row;
+ }
+ 
+ .cell, .grid_cell {
+	background-color: white;
+	width: 125px;
+	height: 125px;
+	position: relative;
+	display: table-cell;
+	border-radius: 0px;
+	border: 5px solid #888;
 	text-align: center;
-	font-size: 30px;
-	margin-left: -150px;
-	margin-top: -120px; 
+	vertical-align: middle;
+	font-family: nunito;
+	font-size: 50px;
+ }
+ 
+ .grid_cell {
+	background-color: #aaa;
+	color: white;
 	
-}
-.over a{
-	display: inline-block;
-	text-decoration:none;
-	width: 150px;
-	height: 50px;
-	line-height: 50px;
-	font-size: 30px;
-	font-weight: bold;
-	color: #fff;
-	outline: none;
-	border: none;
-	border-radius: 4px;
-	background-color: #9F8D77;
-	margin-bottom: 5px;
-	cursor: pointer;
-}
-
- /* Устанавливаем в игре, при изменении данных в сетке соответствующий стиль */
-.n2{background-color:#eee3da;transition: 0.3s;}
-.n4{background-color:#ede0c8;transition: 0.3s;}
-.n8{background-color:#f2b179;transition: 0.3s;}
-.n16{background-color:#f59563;transition: 0.3s;}
-.n32{background-color:#f67c5f;transition: 0.3s;}
-.n64{background-color:#f65e3b;transition: 0.3s;}
-.n128{background-color:#edcf72;transition: 0.3s;}
-.n256{background-color:#edcc61;transition: 0.3s;}
-.n512{background-color:#9c0;transition: 0.3s;}
-.n1024{background-color:#33b5e5;font-size:30px;color:#FFF;transition: 0.3s;}
-.n2048{background-color:#09c;font-size:30px;color:#FFF;transition: 0.3s;;}
-.n4096{background-color:#a6c;font-size:30px;color:#FFF;transition: 0.3s;}
-.n8192{background-color:#93c;font-size:30px;color:#FFF;transition: 0.3s;}
+ }
+ 
+ div > div > div > div {
+	opacity: 0;
+	position: absolute;
+ }
+ 
+ .tile {
+	opacity: 1;
+	width: 118px;
+	height: 126px;
+	background-color: white;
+	z-index: 150;
+	border-radius: 0px;
+	font-weight: 200;
+	top: 0;
+	left: -1px;
+	color: black;
+	transition: 0.3s all;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -moz-box;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+ 
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	-moz-justify-content: center;
+	justify-content: center;
+ 
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	-moz-align-items: center;
+	align-items: center;
+ }
+ 
+ #status {
+	width: 100%;
+	height: 100vh;
+ }
+ 
+ .won {
+	background-color: #337538;
+	transition: 0.3s all;
+	
+ }
+ 
+ .lose {
+	background-color: #7D3C34;
+ }
 
 .results-container{
 	position: absolute;

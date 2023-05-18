@@ -15,42 +15,50 @@
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
 	  
-	  <div class="wrapper">
-	  <div class="time_container">
-		<p>Время: <span id="time01"> 0</span></p>
-	</div>  
-	<div class="score_container">
-		<p>Счёт: <span id="score01"> 0</span></p>
-	</div>  
-		<div class="main">                                              
-			<div class="cell" id="c00"></div>
-			<div class="cell" id="c01"></div>
-			<div class="cell" id="c02"></div>
-			<div class="cell" id="c03"></div>
-
-			<div class="cell" id="c10"></div>
-			<div class="cell" id="c11"></div>
-			<div class="cell" id="c12"></div>
-			<div class="cell" id="c13"></div>
-			
-			<div class="cell" id="c20"></div>
-			<div class="cell" id="c21"></div>
-			<div class="cell" id="c22"></div>
-			<div class="cell" id="c23"></div>
-
-			<div class="cell" id="c30"></div>
-			<div class="cell" id="c31"></div>
-			<div class="cell" id="c32"></div>
-			<div class="cell" id="c33"></div>
-			</div>
-		<div class="gameover" id="gameover">                
-			<div class="over">
-				<p>GAME OVER!!!</p>
-				<p>SCORE:<span id="score02"></span></p>
-				<a href="javascript:game.start()">try again!</a>
-			</div>
-		</div>
-	</div>
+		<div class="game">
+    <div class="head">
+      <div class="a">2048 <button class="info" onClick='info()'>i</button> <button id="repeat" class="info repeat" onClick='reset()'>↻</button></div>
+      <div class="score">Score<br/><span id="value"></span></div>
+    </div>
+    <div class="description" id="description">
+    How to play:<br/><br/>
+    Use your arrow-keys to slide the tiles. <br/>
+    Two tiles with the same value in line can be merged. The goal is to merge the tiles and get the 2048 tile.<br/><br/>
+    The score is a sum of the merged tiles.<br><br/>
+    <span>_______________________________</span><br/><br/>
+    Made by Fabian Richter 01/2017
+  </div>
+    <div class="field">
+      
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div class="row">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+    </div>
+    
+  </div>
+  <div class='' id='status'>
+  </div>
 
 		<div class="results-container">
 			<h1 class="results-head-text">Результаты</h1>
