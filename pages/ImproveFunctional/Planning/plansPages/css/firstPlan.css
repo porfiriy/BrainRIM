@@ -88,6 +88,23 @@
  }
 
 
+
+
+ .change-plan-body{
+    position: absolute;
+    display: flex;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background: #213242;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
  .comeback-button {
     font-size: 44px;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -100,6 +117,35 @@
  .comeback-button:active{
 	 transform: scale(0.5);
   }
+  .new-plan-title {
+	font-size: 26px;
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    align-items: center;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.new-plan-date-body{
+	display: flex;
+	gap: 10px;
+	margin: 40px;
+}
+.new-plan-date{
+	font-size: 20px;
+    border: 2px solid #05EFD4;
+    border-radius: 8px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 34px;
+    background-color: #213242;
+	font-weight: 600;
+    color: white;
+	text-align: center;
+}
 .page-title{
 	color: white;
 	font-size: 26px;
@@ -153,28 +199,16 @@
 font-size: 18px;
 }
 
-
-
-
 .planNumber{
    display: none;
 }
 
-.change-plan-body{
-    position: absolute;
-    display: none;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-	background: #213242;
-    flex-direction: column;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-}
+
+
+
+
+
+
 .change-plan{
     position: absolute;
     display: flex;
@@ -191,6 +225,18 @@ font-size: 18px;
     background-color: #213242;
     z-index: 2;
 }
+#target{
+	display: flex;
+	background: #213242;
+	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
+	border-radius: 20px;
+	width: 300px;
+	height: 360px;
+	color: white;
+	padding: 20px;
+	font-size: 20px;
+	margin: 0 auto
+}
 .save-plan{
 	display: flex;
     margin: 40px auto 20px auto;
@@ -205,7 +251,7 @@ font-size: 18px;
 	transition: 0.2s;
     background-color: #213242;
 }
-.delelte-plan{
+.delete-plan{
 	display: flex;
     margin: 0 auto;
     box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);

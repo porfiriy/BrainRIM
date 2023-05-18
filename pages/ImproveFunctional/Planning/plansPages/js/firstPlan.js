@@ -9,3 +9,14 @@ BackToPlanning.onclick = function () {//при нажатии назад на н
 InfoButton.onclick = function () {//при нажатии на инфо
    ChangePlanBody.style = 'display: flex;';
 }
+
+// Кол-во символов в текстарее и смена цвета при низких значениях
+const MaxCount = 200;
+
+textarea.addEventListener('input', () => {
+	const remaining = MaxCount - textarea.value.length;
+	const color = remaining < MaxCount * 0.1 ? 'red' : null;
+
+	count.textContent = `${remaining}`;
+	count.style.color = color;
+});

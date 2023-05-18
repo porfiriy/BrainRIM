@@ -9,11 +9,11 @@
 </head>
 <body>
 <div class="change-plan-body">
-		    	<div class="comeback-button back-to-planning"><ion-icon name="chevron-back-outline"></ion-icon></div>
-		    	<div class="new-plan-title">Изменить план</div>
+            <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><ion-icon name="chevron-back-outline"></ion-icon></a>
+		    	<div class="new-plan-title">План</div>
 			<div class="new-plan-date-body">
 				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">
-		   	<div class="date-icon" ></div>
+		   	<div class="date-icon"></div>
 			</div>
 			<div class="container plan-text-body">
 			<button type="submit" name="button-change" class="change-plan">Изменить</button>
@@ -24,7 +24,10 @@
   				</div>
 			</div>
 		  <button type="submit" name="button-save-plan" class="save-plan">Готово</button>
-		  <button type="submit" name="button-delelte-plan" class="delelte-plan">Удалить</button>
+		  <button type="submit" name="button-delelte-plan" class="delete-plan">Удалить</button>
 		</div>
 </body>
+<script src="/pages/ImproveFunctional/Planning/plansPages/js/firstPlan.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </html>
