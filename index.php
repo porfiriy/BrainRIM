@@ -126,6 +126,55 @@
             </div>
          </div>
 
+
+		 <div class="about-us-container">
+			<div class="about-us-header">
+		 <ion-icon class="close-about-us" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+			<h1 class="about-app-text">О приложении</h1>
+			</div>
+			<div class="about-us-first about-us-body">
+			<div class="about-us-title">Здравствуй, друг!</div>
+			<div class="about-us-welcome-text">Наш проект предназначен для людей которые, как и мы, стремиться к самосовершенствованию, развитию, и успеху в жизни! Приложение выступит в роли вашего помощника-ассистента.</div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-title">Функционал</div>
+			<div class="about-us-warning-info">(Некоторые функции в стадии разработки)</div>
+			<div class="about-us-text">1. Система уровней и бонусов</div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Funct.png" alt="hints"></div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-text">2. Игры для развития и отдыха</div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\2048.png" alt="hints"></div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-text">3. Раздел "Развитие"</div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Growth.png" alt="hints"></div>
+			<div class="about-us-Description">Финансы, планирование, спорт, медитация, питание. Эти и другие функции мы поможем внедрить в вашу жизнь.</div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-text">4. Раздел "Аналитика"</div>
+			<div class="about-us-picture"><img class="about-us-png" src="#" alt="hints"></div>
+			<div class="about-us-Description">Отслеживание вашего прогресса на пути самосовершенствования.</div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-text">5. Раздел "Слово дня"</div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Everyday word.png" alt="hints"></div>
+			<div class="about-us-Description">Пополняйте свой лексикон сложными словами и узнавайте новые исторические даты.</div>
+			</div>
+
+			<div class="about-us-first about-us-body">
+			<div class="about-us-text">6. Раздел "Еженедельные задания"</div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Everyday quests.png" alt="hints"></div>
+			<div class="about-us-Description">Выполняй задания и получай бонусы и награды</div>
+			</div>
+		 </div>
+
+
 <div class="bonus_container">
 	<p class="welcome-bonus-text">Добро пожаловать !</p>
 	<p class="bonus-text-second">Подарок</p>

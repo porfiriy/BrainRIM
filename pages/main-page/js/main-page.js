@@ -76,6 +76,8 @@ const homeMemoneyValueBody = document.querySelector('.home-memony-body');
 const homeHintsValueBody = document.querySelector('.home-hints-body');
 const homeIqValueBody = document.querySelector('.home-iq-body');
 const shopHintsValueBody = document.querySelector('.count-hints');
+const AboutUsContainer = document.querySelector('.about-us-container');
+const Main = document.querySelector('.main');
 
 let memoneyRealtime = memoneyValue;
 let eyeHintsRealtime = hintsValue;
@@ -267,6 +269,12 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
   audioNavigClick.play();
+}
+
+//О приложении
+const CloseAboutUs = document.querySelector('.close-about-us');
+CloseAboutUs.onclick = function () {
+	AboutUsContainer.style = 'display: none;';
 }
 
 //Бонус при регистрации
