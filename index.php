@@ -535,8 +535,9 @@
       </div>
       <div class="analytic-container">
 		<div class="games-title">Аналитика</div>
-		<div class="container-list-games">
-		<!--<a href="/page-for-memory/pages/Statistics-page/0All-statistics/All-stats.html" class="random-game-button">Общая
+		<div class="analytics-in-development">"Мы ведём активную разработку над разделом <div class="neoncolor">"АНАЛИТИКА"</div> и в ближайшее время порадуем вас обновлением!"</div>
+		<!--<div class="container-list-games">
+		<a href="/page-for-memory/pages/Statistics-page/0All-statistics/All-stats.html" class="random-game-button">Общая
 		</a>
 		   <a href="/page-for-memory/pages/Statistics-page/1Number-statistics/Numbers-stats.html">
 			  <div class="item-games yellow-item">
@@ -561,7 +562,7 @@
 		   <a href="/page-for-memory/pages/Statistics-page/6Countries-statistics/Rhytms-stats.html">
 			  <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/CountriesImg.svg" alt="">
 			  </div>
-		   </a>-->
+		   </a>
 		   <a href="#" class="random-game-button-in-dev">В разработке
 		   </a>
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
@@ -584,7 +585,7 @@
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
 		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-         </div>
+         </div>-->
       </div>
 
       
