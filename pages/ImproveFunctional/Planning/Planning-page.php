@@ -13,7 +13,7 @@
 				let planDateValue3 = '<?= $planData3 ?>';
 				let planDateValue4 = '<?= $planData4 ?>';
       <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
-            let planDateValue = 00.00.0000;
+           
       <?php endif;?>
    </script>
    <meta charset="UTF-8">
@@ -63,28 +63,11 @@
   				</div>
 			</div>
 		  <button type="submit" name="button-new-plan" class="create-plan">Создать план</button>
+		  </form>
 		</div>
 
-		<div class="change-plan-body">
-		    	<div class="comeback-button back-to-planning"><ion-icon name="chevron-back-outline"></ion-icon></div>
-		    	<div class="new-plan-title">Изменить план</div>
-			<div class="new-plan-date-body">
-				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">
-		   	<div class="date-icon" ></div>
-				<input type="number" name="planNumber" class="planNumber" value="">
-			</div>
-			<div class="container plan-text-body">
-			<button type="submit" name="button-change" class="change-plan">Изменить</button>
-    			<textarea name="planTextArea" placeholder="Напишите цель/заметку здесь..." id="target" autocomplete="on" maxlength="200"></textarea>
-				<div class="symbols-count">
-    			<span class="count" id="current">0 </span>
-    			<span id="maximum">/ 200</span>
-  				</div>
-			</div>
-		  <button type="submit" name="button-save-plan" class="save-plan">Готово</button>
-		  <button type="submit" name="button-delelte-plan" class="delelte-plan">Удалить</button>
-		</div>
-		</form>
+		
+		
 	</main>
 </body>
 	<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

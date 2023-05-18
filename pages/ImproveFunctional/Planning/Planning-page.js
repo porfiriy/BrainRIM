@@ -10,14 +10,9 @@ const todayDateValue = document.querySelector('.today-date');
 const textarea = document.querySelector("#target");
 const count = document.querySelector(".count");
 const MaximumCount = document.querySelector("#maximum");
-const BackToPlanning = document.querySelector(".back-to-planning");
 
-const InfoButton = document.querySelector('.info-button');
-const ChangePlanBody = document.querySelector('.change-plan-body');
 
-InfoButton.onclick = function () {//при нажатии на инфо
-	ChangePlanBody.style = 'display: flex;';
-}
+
 
 
 
@@ -26,9 +21,7 @@ Back.onclick = function () {//при нажатии назад на новом �
 	NewPlanBody.style = 'display: none;';
 }
 
-BackToPlanning.onclick = function () {//при нажатии назад на новом плане
-	ChangePlanBody.style = 'display: none;';
-}
+
 
 flatpickr(".new-plan-date", {
 	dateFormat: "Y/m/d"
