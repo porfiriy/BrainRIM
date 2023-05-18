@@ -77,7 +77,6 @@ const homeHintsValueBody = document.querySelector('.home-hints-body');
 const homeIqValueBody = document.querySelector('.home-iq-body');
 const shopHintsValueBody = document.querySelector('.count-hints');
 const AboutUsContainer = document.querySelector('.about-us-container');
-const Main = document.querySelector('.main');
 
 let memoneyRealtime = memoneyValue;
 let eyeHintsRealtime = hintsValue;
