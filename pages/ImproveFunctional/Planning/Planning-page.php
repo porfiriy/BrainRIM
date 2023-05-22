@@ -31,10 +31,13 @@
 			<div class="page-title">Планирование<ion-icon class="page-title-icon" name="calendar-outline"></ion-icon></div>
 	</header>
 	<main>
-	    <div class="info-body">
+	   <div class="info-body">
 	        <div class="info-button"><ion-icon name="information-outline" role="img" class="md hydrated" aria-label="information outline"></ion-icon></div>
 	        <div class="info-text">Выбирай дату и записывай задачу</div>
-	    </div>
+	   </div>
+		<div class="alerts-container err">
+			<p><?=$errorMsg?></p>
+		</div>
 		<div class="date-body">
 				<div class="today-text">Сегодня</div>
 				<div class="today-date"></div>

@@ -145,10 +145,10 @@ function update($table, $id ,$params){
 
 
 //Удаление данных в таблице
-function delete($table, $id ){
+function delete($table, $planNum ){
    global $pdo;
    
-   $sql = "DELETE FROM $table WHERE id = $id;";
+   $sql = "DELETE FROM $table WHERE planNumber = $planNum;";
    $query = $pdo->prepare($sql);
    $query->execute($params);
    dbCheckError($query);

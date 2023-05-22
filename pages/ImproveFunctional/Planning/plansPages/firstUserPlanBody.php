@@ -1,3 +1,6 @@
+<?php
+	include($_SERVER['DOCUMENT_ROOT']."/pages/ImproveFunctional/Planning/php/LogicToPlan.php"); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +15,22 @@
             <a href="/pages/ImproveFunctional/Planning/Planning-page.php" class="comeback-button back-to-planning"><ion-icon name="chevron-back-outline"></ion-icon></a>
 		    	<div class="new-plan-title">План</div>
 			<div class="new-plan-date-body">
-				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">
+				<div class="plan-date"><?php echo $valueFromDBPlan1['planDate'];?></div>
 		   	<div class="date-icon"></div>
 			</div>
+			<form action="firstUserPlanBody.php" method="post">
+			<input type="number" name="planNumber" class="planNumber" value="1">
 			<div class="container plan-text-body">
 			<button type="submit" name="button-change" class="change-plan">Изменить</button>
-    			<textarea name="planTextArea" placeholder="Напишите цель/заметку здесь..." id="target" autocomplete="on" maxlength="200"></textarea>
+    			<textarea readonly name="planTextArea" placeholder="" id="target" autocomplete="on" maxlength="200" ><?php echo $valueFromDBPlan1['planText'];?></textarea>
 				<div class="symbols-count">
     			<span class="count" id="current">0 </span>
     			<span id="maximum">/ 200</span>
   				</div>
 			</div>
-		  <button type="submit" name="button-save-plan" class="save-plan">Готово</button>
-		  <button type="submit" name="button-delelte-plan" class="delete-plan">Удалить</button>
+		  <button type="submit" name="button-save-plan" class="save-plan">Выполнено</button>
+		  <button type="submit" name="button-save-plan" class="delete-plan">Удалить</button>
+			</form>
 		</div>
 </body>
 <script src="/pages/ImproveFunctional/Planning/plansPages/js/firstPlan.js"></script>

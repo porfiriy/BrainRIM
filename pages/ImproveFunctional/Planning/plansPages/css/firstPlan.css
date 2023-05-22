@@ -132,7 +132,7 @@
 	gap: 10px;
 	margin: 40px;
 }
-.new-plan-date{
+.plan-date{
 	font-size: 20px;
     border: 2px solid #05EFD4;
     border-radius: 8px;
@@ -146,6 +146,9 @@
     color: white;
 	text-align: center;
 }
+.planNumber{
+    display: none;
+ }
 .page-title{
 	color: white;
 	font-size: 26px;
@@ -198,17 +201,6 @@
 .today-text{
 font-size: 18px;
 }
-
-.planNumber{
-   display: none;
-}
-
-
-
-
-
-
-
 .change-plan{
     position: absolute;
     display: flex;
