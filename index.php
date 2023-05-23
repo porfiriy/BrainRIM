@@ -509,7 +509,7 @@
          <div class="everyday-title">Слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
-            <?php echo $insertRusWord; ?>
+            <?php echo $insertRusWord;?>
             </div>
          </div>
       </div>
@@ -519,7 +519,7 @@
          <div class="everyday-title">Историческая дата</div>
          <div class="day-word__body">
             <div class="day-date">
-            <?php echo $insertHistoryFact; ?>
+            <?php echo $insertHistoryFact;?>
             </div>
          </div>
       </div>
@@ -529,7 +529,7 @@
          <div class="everyday-title">Англ. слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
-            <?php echo $insertEngWord; ?>
+            <?php echo $insertEngWord;?>
             </div>
          </div>
       </div>

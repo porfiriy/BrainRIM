@@ -60,6 +60,14 @@
                   'user_id' => $id
                ];
                insert('usersLvl',$userLvlValue);
+               $dataForComparison = [
+                  'user_id' => $id,
+                  'lastSaveDate' => '2022-02-24',
+                  'rusWordsCount' => 1,
+                  'historyFactsCount' => 2,
+                  'engWordsCount' => 3
+               ];
+               insert('dateForComparison',$dataForComparison);
                userAuth($user);
                
                header('location: /index.php');

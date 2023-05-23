@@ -53,7 +53,7 @@ $memany = select('Memany', ['user_id' => $_SESSION['id']]);
 $IQscore = select('IQscore', ['user_id' => $_SESSION['id']]);
 $EyeScore = select('hintEye', ['user_id' => $_SESSION['id']]);
 $userInfo = select('users', ['id' => $_SESSION['id']]);
-$dateForComparison = select('dateForComparison', ['user_id' => $_SESSION['id']]);
+$dateForComparison = select('dateForComparison',['user_id' => $_SESSION['id']]);
 $rusDayWord = selectAll('rusWords');
 $historyFacts = selectAll('historyFacts');
 $engDayWord = selectAll('engWords');
@@ -67,6 +67,7 @@ $nextLvlExpValue = $level['nextLvlExp'];
 $receiveGiftValue = $userInfo['recevedGift'];
 $insertRusWord;
 $rusWordsCount = $dateForComparison['rusWordsCount'];
+
 $historyFactsCount = $dateForComparison['historyFactsCount'];
 $engWordsCount = $dateForComparison['engWordsCount'];
 
@@ -86,6 +87,7 @@ foreach ($engDayWord as $row) {//выбираю из массива конкре
     }
 }
 $insertRusWord = $arrayInsertRusWord['word'];//записываю новое слово из бд
+
 $insertHistoryFact = $arrayInsertHistoryFact['fact'];
 $insertEngWord = $arrayInsertEngWord['word'];
 
