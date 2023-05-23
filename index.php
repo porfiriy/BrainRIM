@@ -485,7 +485,7 @@
          <div class="everyday_body">
             <div class="everyday_word">
                <div class="everyday_icon_body everyday-glowing"><ion-icon name="book-outline"></ion-icon></div>
-               <div class="everyday_text_body everyday-glowing">Слово дня</div>
+               <div class="everyday_text_body everyday-glowing">Слово дня<div class="red-update dot"></div></div>
             </div>
             <div class="day_history">
                <div class="everyday_icon_body"><ion-icon name="library-outline"></ion-icon></div>
