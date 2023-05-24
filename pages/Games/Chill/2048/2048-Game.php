@@ -55,9 +55,10 @@
 			<div class="results">
 				<div class="time">Время: <div class="time-count">0</div></div>
 				<div class="moves">Действий:<div class="moves-count">0</div></div>
-				<div class="best-results">Ваш лучший результат</div>
+				<div class="best-results">Ваш лучший результат:</div>
 				<div class="time">Время: <div class="best-time-count">0</div></div>
 				<div class="moves">Действий:<div class="best-moves-count">0</div></div>
+				<div class="congrats">Вы - молодец!</div>
 			</div>
 			<div class="results-menu__buttons-container">
 			<div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>

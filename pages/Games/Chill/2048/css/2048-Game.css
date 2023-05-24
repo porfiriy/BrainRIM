@@ -523,6 +523,11 @@ html,body{
 .best-moves-count{
 	color: rgb(0, 255, 0);
 }
+.congrats{
+    color: #05EFD4;
+    font-size: 28px;
+    margin: 20px 0;
+}
 .results-menu__buttons-container {
     display: flex;
     justify-content: space-around;
