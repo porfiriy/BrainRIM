@@ -1,12 +1,13 @@
 let settings = document.querySelector(".pop-up__container");
 let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
+let resultsContainer = document.querySelector(".results-container");
 
 
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
-	settings.style = 'visibility:hidden;';
+   settings.style = 'visibility:hidden;';
 };
 //при нажатии на иконку настроек
 document.querySelector('.linkToTheSettings').onclick = function () {
@@ -14,15 +15,15 @@ document.querySelector('.linkToTheSettings').onclick = function () {
 };
 //при нажатии на отмену вспл окна назад
 document.querySelector('.pop-up__cancel2').onclick = function () {
-	comeback.style = 'visibility:hidden;';
- };
- //при нажатии на иконку назад
- document.querySelector('.comeback-button').onclick = function () {
-	comeback.style = 'visibility:visible;';
- };
+   comeback.style = 'visibility:hidden;';
+};
+//при нажатии на иконку назад
+document.querySelector('.comeback-button').onclick = function () {
+   comeback.style = 'visibility:visible;';
+};
 //при нажатии на отмену вспл окна рестарт
 document.querySelector('.pop-up__cancel3').onclick = function () {
-	restart.style = 'visibility:hidden;';
+   restart.style = 'visibility:hidden;';
 };
 //при нажатии на иконку рестарт
 document.querySelector('.linkToTheRestart').onclick = function () {
@@ -30,10 +31,20 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 };
 
 
+//считает время с начала игры
+let seconds = 0;
+let minutes = 0;
+function timerGame() {
+   let timerID = setInterval(function () {
+
+      seconds += 1;
+   }, 1000)
+}
+
 window.onload = function () {
+   timerGame();
    buildGridOverlay();                      //Generates grid-overlay
    cellCreator(2, 0);
-   directions();
    score(0);
 };
 
@@ -294,6 +305,7 @@ function cellReset() {
 
    if (count == 16) {
       document.getElementById('status').className = 'lose';
+      resultsContainer.style = 'display:block;';
    } else if (document.getElementsByClassName('grid').id == 'moved') {
       cellCreator(1, 1);
    }
@@ -309,7 +321,7 @@ function score() {
 /* ----- STYLE ----- */
 function colorSet(value, tile) {
    switch (value) {
-      case 2: tile.style.color = 'black'; tile.style =  'background-color: #eee3da; border-radius: 20px'; break;
+      case 2: tile.style.color = 'black'; tile.style = 'background-color: #eee3da; border-radius: 20px'; break;
       case 4: tile.style.color = 'black'; tile.style = 'background-color: #ede0c8; border-radius: 20px'; break;
       case 8: tile.style.color = 'black'; tile.style = 'background-color: #f2b179; border-radius: 20px'; break;
       case 16: tile.style.color = 'black'; tile.style = 'background-color: #f59563; border-radius: 20px'; break;
@@ -321,16 +333,9 @@ function colorSet(value, tile) {
       case 1024: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #33b5e5; border-radius: 20px'; break;
       case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #09c; border-radius: 20px'; break;
       case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #a6c; border-radius: 20px'; break;
-	  case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #93c; border-radius: 20px'; break;
-      default: tile.style.color = 'white';tile.style.fontSize = '40px'; tile.style = 'background-color: #000; border-radius: 20px'; break;
+      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #93c; border-radius: 20px'; break;
+      default: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #000; border-radius: 20px'; break;
    }
 }
 
-function directions() {
-   var directions = document.getElementById('directions');
-   directions.addEventListener('click', function () {
-      var overlay = document.getElementById('overlay');
-      overlay.style.display = 'block';
-   })
-}
 

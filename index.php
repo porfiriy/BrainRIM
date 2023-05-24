@@ -430,7 +430,7 @@
             </div>
             <div class="special-offers">Специальные предложения</div>
 			<!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
-			<div class="special-offers-body">В данный момент специальных предложений нету.</div>
+			<div class="special-offers-body">В данный момент специальных предложений нет.</div>
          </div>
       </div>
 

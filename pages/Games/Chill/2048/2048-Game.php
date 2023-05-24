@@ -53,11 +53,11 @@
 		<div class="results-container">
 			<h1 class="results-head-text">Результаты</h1>
 			<div class="results">
-				<div class="time">Время: <div class="time-count">0</div></div>
-				<div class="moves">Действий:<div class="moves-count">0</div></div>
+				<div class="time">Время: <div class="time-count">2</div></div>
+				<div class="moves">Счёт:<div class="moves-count">0</div></div>
 				<div class="best-results">Ваш лучший результат:</div>
 				<div class="time">Время: <div class="best-time-count">0</div></div>
-				<div class="moves">Действий:<div class="best-moves-count">0</div></div>
+				<div class="moves">Счёт:<div class="best-moves-count">0</div></div>
 				<div class="congrats">Вы - молодец!</div>
 			</div>
 			<div class="results-menu__buttons-container">

@@ -458,21 +458,9 @@ html,body{
 	-moz-align-items: center;
 	align-items: center;
  }
-
- 
- .won {
-	background-color: #337538;
-	transition: 0.3s all;
-	
- }
- 
- .lose {
-	background-color: #7D3C34;
- }
-
 .results-container{
 	position: absolute;
-    display: none;
+    display: block;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
