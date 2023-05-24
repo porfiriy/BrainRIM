@@ -1,3 +1,35 @@
+let settings = document.querySelector(".pop-up__container");
+let comeback = document.querySelector(".pop-up__container2");
+let restart = document.querySelector(".pop-up__container3");
+
+
+
+//при нажатии на отмену вспл окна настройки 
+document.querySelector('.pop-up__cancel').onclick = function () {
+	settings.style = 'visibility:hidden;';
+};
+//при нажатии на иконку настроек
+document.querySelector('.linkToTheSettings').onclick = function () {
+   settings.style = 'visibility:visible;';
+};
+//при нажатии на отмену вспл окна назад
+document.querySelector('.pop-up__cancel2').onclick = function () {
+	comeback.style = 'visibility:hidden;';
+ };
+ //при нажатии на иконку назад
+ document.querySelector('.comeback-button').onclick = function () {
+	comeback.style = 'visibility:visible;';
+ };
+//при нажатии на отмену вспл окна рестарт
+document.querySelector('.pop-up__cancel3').onclick = function () {
+	restart.style = 'visibility:hidden;';
+};
+//при нажатии на иконку рестарт
+document.querySelector('.linkToTheRestart').onclick = function () {
+   restart.style = 'visibility:visible;';
+};
+
+
 window.onload = function () {
    buildGridOverlay();                      //Generates grid-overlay
    cellCreator(2, 0);
@@ -277,24 +309,20 @@ function score() {
 /* ----- STYLE ----- */
 function colorSet(value, tile) {
    switch (value) {
-      case 2: tile.style.background = '#fbfced'; tile.style.color = 'black'; break;
-      case 4: tile.style.background = '#ecefc6'; tile.style.color = 'black'; break;
-      case 8: tile.style.background = '#ffb296'; tile.style.color = 'black'; break;
-      case 16: tile.style.background = '#ff7373'; tile.style.color = 'black'; break;
-      case 32: tile.style.background = '#f6546a'; tile.style.color = 'white'; break;
-      case 64: tile.style.background = '#8b0000'; tile.style.color = 'white'; break;
-      case 128: tile.style.background = '#794044'; tile.style.color = 'white';
-         tile.style.fontSize = '50px'; break;
-      case 256: tile.style.background = '#31698a'; tile.style.color = 'white';
-         tile.style.fontSize = '50px'; break;
-      case 512: tile.style.background = '#566573'; tile.style.color = 'white';
-         tile.style.fontSize = '50px'; break;
-      case 1024: tile.style.background = '#708090'; tile.style.color = 'white';
-         tile.style.fontSize = '40px'; break;
-      case 2048: tile.style.background = '#2c3e50'; tile.style.color = 'white';
-         tile.style.fontSize = '40px'; break;
-      default: tile.style.background = 'black'; tile.style.color = 'white';
-         tile.style.fontSize = '40px'; break;
+      case 2: tile.style.color = 'black'; tile.style =  'background-color: #eee3da; border-radius: 20px'; break;
+      case 4: tile.style.color = 'black'; tile.style = 'background-color: #ede0c8; border-radius: 20px'; break;
+      case 8: tile.style.color = 'black'; tile.style = 'background-color: #f2b179; border-radius: 20px'; break;
+      case 16: tile.style.color = 'black'; tile.style = 'background-color: #f59563; border-radius: 20px'; break;
+      case 32: tile.style.color = 'white'; tile.style = 'background-color: #f67c5f; border-radius: 20px'; break;
+      case 64: tile.style.color = 'white'; tile.style = 'background-color: #f65e3b; border-radius: 20px'; break;
+      case 128: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #edcf72; border-radius: 20px'; break;
+      case 256: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #edcc61; border-radius: 20px'; break;
+      case 512: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #9c0; border-radius: 20px'; break;
+      case 1024: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #33b5e5; border-radius: 20px'; break;
+      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #09c; border-radius: 20px'; break;
+      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #a6c; border-radius: 20px'; break;
+	  case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #93c; border-radius: 20px'; break;
+      default: tile.style.color = 'white';tile.style.fontSize = '40px'; tile.style = 'background-color: #000; border-radius: 20px'; break;
    }
 }
 

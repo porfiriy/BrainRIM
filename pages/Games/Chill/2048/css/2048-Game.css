@@ -32,7 +32,7 @@ html,body{
 	height: 40px;
 	font-size: 44px;
 	color: #05EFD4;
-	z-index: 2;
+	z-index: 20;
 	transition: 0.1s;
  }
  .comeback-button-body:active{
@@ -326,13 +326,6 @@ html,body{
  .pop-up__cancel3:active{
 	transform: scale(0.7);
  }
-
- body {
-	background-color: #fff;
-	overflow: hidden;
-	paddin: 0;
-	margin: 0;
- }
  
  
  /* head */
@@ -348,84 +341,31 @@ html,body{
 	justify-content: center;
  }
  
- div.game {
-	box-shadow: 0px 0px 3px rgba(0,0,0,0.5);
- }
- 
- div.description {
-	height: 250px;
-	width: 300px;
-	top: 1000px;
-	color: #333;
-	font-family: nunito;
-	transform: translate(-50%, -50%) scale(0);
+ .best-score{
 	position: absolute;
-	left: 50%;
-	top: 425px;
-	background: #fff;
-	padding: 50px;
-	border-radius: 0px;
-	z-index: 1000;
-	box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
-	text-align: center;
-	visibility: hidden;
-	opacity: 0;
-	font-size: 15px;
-	transition: 0.3s all;
- }
- 
- .description.show {
-	visibility: visible;
-	opacity: 1;
-	font-size: 15px;
-	transform: translate(-50%, -50%) scale(1);
-	transition: 0.3s all;
- }
- 
- .info {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	font-weight: 100;
-	cursor: pointer;
-	border: 0px;
-	border-color: #aaa;
-	background-color: #88b1ef;
-	color: #fff;
-	font-size: 20px;
-	top: 50px;
-	transform: translate(-50%, -50%);
-	margin-left: 25px;
-	transition: 0.1s background-color;
- }
- 
- .info:hover {
-	background-color: #6593d8;
- }
- 
- 
- .repeat {
-	margin: 0px !important;
- }
- 
- .a {
-	font-family: Nunito;
-	font-size: 100px;
-	font-weight: 200;
-	margin-right: 15px
-	
- }
- 
- .score {
-	position: relative;
-	width: 100px;
-	height: 100px;
-	top: 10px;
-	font-family: nunito;
-	font-weight: 400;
+	width: 350px;
 	font-size: 30px;
-	color: grey;
+	color: rgb(255, 255, 255);
 	text-align: center;
+	top: 20%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ .score {
+	position: absolute;
+	width: 150px;
+	font-size: 30px;
+	color: rgb(255, 255, 255);
+	text-align: center;
+	top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+ }
+ #value-best{
+	color: #05EFD4;
+ }
+ #value{
+	color: #05EFD4;
  }
  
  
@@ -435,23 +375,24 @@ html,body{
 	position: absolute;
 	width: 510px;
 	height: 510px;
-	background-color: #888;
-	top: 150px;
-	border-radius: 0px;
-	border:5px solid #888;
+	background-color: #bbada0;
+	border-radius: 20px;
+    border: 10px solid #bbada0;
 	display: table;
 	margin-left: auto;
 	margin-right: auto;
-	left: 0;
 	right: 0;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
  }
  
  .field {
-	z-index: 50;
+	z-index: 10;
  }
  
  .grid {
-	z-index: 100;
+	z-index: 11;
  }
  
  .row, .grid_row {
@@ -468,17 +409,16 @@ html,body{
 	position: relative;
 	display: table-cell;
 	border-radius: 0px;
-	border: 5px solid #888;
+    border: 7px solid #bbada0;
 	text-align: center;
 	vertical-align: middle;
-	font-family: nunito;
+	font-family: 'Balsamiq Sans', cursive;
 	font-size: 50px;
  }
  
  .grid_cell {
-	background-color: #aaa;
+	background-color: #CCC0B3;
 	color: white;
-	
  }
  
  div > div > div > div {
@@ -487,11 +427,12 @@ html,body{
  }
  
  .tile {
+	font-family: 'Balsamiq Sans', cursive;
 	opacity: 1;
 	width: 118px;
 	height: 126px;
 	background-color: white;
-	z-index: 150;
+	z-index: 12;
 	border-radius: 0px;
 	font-weight: 200;
 	top: 0;
@@ -517,11 +458,7 @@ html,body{
 	-moz-align-items: center;
 	align-items: center;
  }
- 
- #status {
-	width: 100%;
-	height: 100vh;
- }
+
  
  .won {
 	background-color: #337538;
@@ -535,14 +472,14 @@ html,body{
 
 .results-container{
 	position: absolute;
-    display: block;
+    display: none;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     height: 100%;
     width: 100%;
     background-color: #213242;
-    z-index: 2;
+    z-index: 99;
 	font-size: 24px;
 	color: white;
 
@@ -603,3 +540,4 @@ html,body{
     background: #213242;
     box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
 }
+ 

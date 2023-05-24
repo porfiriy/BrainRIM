@@ -21,12 +21,8 @@
 			<form action="firstUserPlanBody.php" method="post">
 			<input type="number" name="planNumber" class="planNumber" value="1">
 			<div class="container plan-text-body">
-			<button type="submit" name="button-change" class="change-plan">Изменить</button>
+			<!--<button type="submit" name="button-change" class="change-plan">Изменить</button>-->
     			<textarea readonly name="planTextArea" placeholder="" id="target" autocomplete="on" maxlength="200" ><?php echo $valueFromDBPlan1['planText'];?></textarea>
-				<div class="symbols-count">
-    			<span class="count" id="current">0 </span>
-    			<span id="maximum">/ 200</span>
-  				</div>
 			</div>
 		  <button type="submit" name="button-save-plan" class="save-plan">Выполнено</button>
 		  <button type="submit" name="button-save-plan" class="delete-plan">Удалить</button>

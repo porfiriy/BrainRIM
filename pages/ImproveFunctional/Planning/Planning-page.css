@@ -261,11 +261,6 @@ header {
     font-size: 20px;
     margin: 0 auto;
 }
-.symbols-count {
-    margin: -35px 0px 0px 200px;
-    font-size: 20px;
-    position: absolute;
-}
 .create-plan {
     display: flex;
     margin: 50px auto;
@@ -312,6 +307,7 @@ header {
     height: 100%;
     width: 100%;
 }
+/*
 .change-plan {
     position: absolute;
     display: flex;
@@ -328,6 +324,7 @@ header {
     background-color: #213242;
     z-index: 2;
 }
+*/
 .save-plan {
     display: flex;
     margin: 40px auto 20px auto;
