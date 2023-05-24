@@ -767,7 +767,6 @@
  border-radius: 20px;
  background-color: #110707;
  animation: rectangle 2s;
- border: 3px solid #000000;
  box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }
  
@@ -808,10 +807,9 @@
 	border-radius: 20px;
 	background-color: #c8000A;
 	display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-	border: 2px solid #05EFD4;
+   align-items: center;
+   justify-content: center;
+   color: white;
 	transition: 0.2s;
 	box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }
@@ -832,7 +830,6 @@
     align-items: center;
     justify-content: center;
     color: white;
-	border: 2px solid #05EFD4;
 	transition: 0.2s;
 	box-shadow: 0px 5px 6px 2px rgba(0, 0, 0, 0.25);
  }

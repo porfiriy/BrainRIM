@@ -107,7 +107,7 @@ $interval = $current->diff($last);
 // Проверяем, прошло ли 24 часа с момента последней сохраненной даты
 if ($interval->h >= 24 || $interval->d >= 1) {
     //  условие выполняется, прошло более 24 часов
-    $lastDateTime = $current->format('Y-m-d');// Сохраняем текущую дату и время для будущего сравнения
+    $lastDateTime = $current->format('Y-m-d H:i:s');// Сохраняем текущую дату и время для будущего сравнения
     $dateParams = [
       'lastSaveDate' => $lastDateTime,
     ];

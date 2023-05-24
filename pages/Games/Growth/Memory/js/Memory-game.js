@@ -83,7 +83,7 @@ function doAjaxExperience() {
 }
 
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-function doAjaxWin() {
+function doAjaxWinBonuse() {
    let IqUpForModeAjax = `${iqUpForMode}`;
 
 
@@ -122,7 +122,7 @@ function doAjaxMinusHints() {
 }
 
 
-function doAjaxLoose() {
+function doAjaxLooseBonuse() {
    let IqUpForModeAjax = `2`;
 
    $.ajax({
@@ -331,7 +331,7 @@ function game() {
       resultsMenuExpItem.innerHTML = `+2`;
       statusLoosOrWin = "loose";
       looseForResults = 1;
-      doAjaxLoose();
+      doAjaxLooseBonuse();
       doAjaxExperience();
       doAjaxResults();
    }
@@ -408,7 +408,7 @@ function game() {
             resultsMenuExpItem.innerHTML = `+${expUpForMode}`;
             statusLoosOrWin = "win";
             winForResults = 1;
-            doAjaxWin();
+            doAjaxWinBonuse();
             doAjaxExperience();
             doAjaxResults();
             audioVictory.play();

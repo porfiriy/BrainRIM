@@ -1,11 +1,9 @@
 "use strict"
 
 //звук
-let audioComplete = new Audio('/page-for-memory/sound/successfull2.mp3');
-let audioVictory = new Audio('/page-for-memory/sound/successfull.mp3');
-let audioStart = new Audio('/page-for-memory/sound/start-game.mp3');
-let audioFaile = new Audio('/page-for-memory/sound/faile.mp3');
-let audioClick = new Audio('/page-for-memory/sound/fastSoftClick.mp3');
+let audioStart = new Audio('/sound/start-game.mp3');
+let audioClickLoud = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
+let audioClick = new Audio('/sound/ClickMenu.mp3');
 
 
 let settings = document.querySelector(".pop-up__container");
@@ -24,9 +22,13 @@ let arrayColorsText = ["Фиолетовый", "Зелёный", "Синий", "
 //создаёт рандомное число для цвета фигуры
 let randomNumRectangle = Math.floor(Math.random() * 4);
 let randomNumText = Math.floor(Math.random() * 4);
-//таймер
-let timerBoxMinutes = document.querySelector(".container-timer__box-minutes");
-let timerBoxSeconds = document.querySelector(".container-timer__box-seconds");
+
+let winForResults = 0;
+let looseForResults = 0;
+let statusLoosOrWin;
+let expUpForMode;
+let iqUpForMode;
+let gameModeId;
 //счётчик пройденных фигур(по нажатию на кнопки)
 let varCounterClickButtons = 0;
 let counterChangeSymbol = document.querySelector(".counter-complited__number");
@@ -68,64 +70,145 @@ const resultsMenuTime = document.querySelector('.results-menu__time');
 const resultsMenuIqItem = document.querySelector('.items-container__iq-item');
 const resultsMenuExpItem = document.querySelector('.items-container__exp-item');
 
+//считает время с начала игры
+let seconds = 0;
+let minutes = 0;
+function timerGame() {
+   let timerID = setInterval(function () {
+
+      seconds += 1;
+   }, 1000)
+}
+
 //z
 //AJAX запрос на сервер для добавления в базу данных инфы
-async function doAjaxLoose() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForLoose.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
-   }
+function doAjaxLooseBonuse() {
+   let IqUpForModeAjax = `2`;
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
 }
 
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
-async function doAjaxWin() {
-   try {
-      const url = await fetch('/dataBase/controllers/bonusSystem/bonusForWin.php');
-      const data = await url.text();
-      console.log(data);
-   } catch (error) {
-      console.log('Error:' + error);
+function doAjaxWinBonuse() {
+   let IqUpForModeAjax = `${iqUpForMode}`;
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+function doAjaxExperience() {
+
+   let expUpForModeAjax;
+
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = `${expUpForMode}`;
+   } else {
+      expUpForModeAjax = 2;
    }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let modeID = `${gameModeId}`;
+   let win = `${winForResults}`;
+   let loose = `${looseForResults}`;
+   let time_sec = `${seconds}`;
+   let rightAnswerValue = `${rightAnswer}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsColorsGame.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         modeID: modeID,
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         rightAnswerValue: rightAnswerValue,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
+      }
+   })
 }
 //z
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
    settings.style = 'visibility:hidden;';
-
+   audioClickLoud.play();
 };
 //при нажатии на иконку настроек
 document.querySelector('.linkToTheSettings').onclick = function () {
-
+   audioClickLoud.play();
    settings.style = 'visibility:visible;';
-
 };
 
 //при нажатии на отмену вспл окна назад
 document.querySelector('.pop-up__cancel2').onclick = function () {
    comeback.style = 'visibility:hidden;';
-
+   audioClickLoud.play();
 };
 //при нажатии на иконку назад
 document.querySelector('.comeback-button').onclick = function () {
-
    comeback.style = 'visibility:visible;';
-
+   audioClickLoud.play();
 };
 
 //при нажатии на отмену вспл окна рестарт
 document.querySelector('.pop-up__cancel3').onclick = function () {
    restart.style = 'visibility:hidden;';
-
+   audioClickLoud.play();
 };
 //при нажатии на иконку рестарт
 document.querySelector('.linkToTheRestart').onclick = function () {
-
    restart.style = 'visibility:visible;';
-
+   audioClickLoud.play();
 };
 easyModeButton.onclick = function () {//при нажатии на изи кнопку сложности
    modeOptionsContainer.style = 'display: none;';
@@ -139,6 +222,10 @@ easyModeButton.onclick = function () {//при нажатии на изи кно
    victoryLooseScreenGameMode.innerHTML = 'Легко';
    resultsMenuMode.classList.add('results-menu__easy-mode');
    resultsMenuMode.innerHTML = 'Легко';
+   expUpForMode = 5;
+   iqUpForMode = 10;
+   gameModeId = 1;
+   audioClickLoud.play();
 }
 normalModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -152,6 +239,10 @@ normalModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Нормально';
    resultsMenuMode.classList.add('results-menu__normal-mode');
    resultsMenuMode.innerHTML = 'Нормально';
+   expUpForMode = 6;
+   iqUpForMode = 12;
+   gameModeId = 2;
+   audioClickLoud.play();
 }
 hardModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -165,6 +256,10 @@ hardModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Сложно';
    resultsMenuMode.classList.add('results-menu__hard-mode');
    resultsMenuMode.innerHTML = 'Сложно';
+   expUpForMode = 8;
+   iqUpForMode = 15;
+   gameModeId = 3;
+   audioClickLoud.play();
 }
 crazyModeButton.onclick = function () {
    modeOptionsContainer.style = 'display: none;';
@@ -178,9 +273,14 @@ crazyModeButton.onclick = function () {
    victoryLooseScreenGameMode.innerHTML = 'Безумно';
    resultsMenuMode.classList.add('results-menu__crazy-mode');
    resultsMenuMode.innerHTML = 'Безумно';
+   expUpForMode = 10;
+   iqUpForMode = 20;
+   gameModeId = 4;
+   audioClickLoud.play();
 }
 victoryLooseScreenResultsButton.onclick = function () {
-   resultsMenuContainer.style = 'display:block;'
+   resultsMenuContainer.style = 'display:block;';
+   audioClickLoud.play();
 }
 
 // //считает время с начала игры
@@ -209,16 +309,6 @@ function randomColorRectangle() {
 
 
 function game() {
-
-   //считает время с начала игры
-   let seconds = 0;
-   let minutes = 0;
-   function timerGame() {
-      let timerID = setInterval(function () {
-
-         seconds += 1;
-      }, 1000)
-   }
    if (varCounterClickButtons !== 20) {
       timerGame();
    }
@@ -233,12 +323,17 @@ function game() {
       victoryLooseScreenWinLooseText.classList.add('loose-text-red');
       resultsMenuWinLooseItem.innerHTML = 'Поражение!';
       resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-red');
-      resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-down-outline"></ion-icon>';
       resultsMenuOpenedCardsItem.innerHTML = `${rightAnswer}`;
       resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-red');
       resultsMenuTimeItem.classList.add('items-container__time-item-red');
       resultsMenuTime.innerHTML = `${seconds}`;
-      doAjaxLoose();//z //вызов запроса в БД
+      resultsMenuIqItem.innerHTML = '+2';
+      resultsMenuExpItem.innerHTML = `+2`;
+      statusLoosOrWin = "loose";
+      looseForResults = 1;
+      doAjaxLooseBonuse(); //вызов запроса в БД
+      doAjaxExperience();
+      doAjaxResults();
    }
    deadeLine.addEventListener("animationend", showMessage);
 
@@ -251,14 +346,17 @@ function game() {
          victoryLooseScreenWinLooseText.classList.add('victory-text-green');
          resultsMenuWinLooseItem.innerHTML = 'Победа!'
          resultsMenuWinLooseItem.classList.add('items-container__win-loose-item-green');
-         resultsMenuWinLooseIcon.innerHTML = '<ion-icon name="thumbs-up-outline"></ion-icon>';
          resultsMenuOpenedCardsItem.innerHTML = '20';
          resultsMenuDoneCardsItem.classList.add('items-container__done-cards-item-green');
          resultsMenuTimeItem.classList.add('items-container__time-item-green');
          resultsMenuTime.innerHTML = `${seconds}`;
-         resultsMenuIqItem.innerHTML = '+50';
-         resultsMenuExpItem.innerHTML = '+20';
-         doAjaxWin();
+         resultsMenuIqItem.innerHTML = `+${iqUpForMode}`;
+         resultsMenuExpItem.innerHTML = `+${expUpForMode}`;
+         statusLoosOrWin = "win";
+         winForResults = 1;
+         doAjaxWinBonuse();
+         doAjaxExperience();
+         doAjaxResults();
       }
       else if (varCounterClickButtons == 20 && wrongAnswer > 0) {
          showMessage();

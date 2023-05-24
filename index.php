@@ -485,15 +485,27 @@
          <div class="everyday_body">
             <div class="everyday_word">
                <div class="everyday_icon_body everyday-glowing"><ion-icon name="book-outline"></ion-icon></div>
-               <div class="everyday_text_body everyday-glowing">Слово дня<div class="red-update dot"></div></div>
+               <div class="everyday_text_body everyday-glowing">Слово дня
+                <?php if($rusWordsCount == $historyFactsCount && $historyFactsCount < $engWordsCount): ?> <!--добавляю точку к каждому обновлённому элементу-->
+                  <?php echo '<div class="red-update dot"></div>'; ?>
+                  <?php endif;?>   
+               </div>
             </div>
             <div class="day_history">
                <div class="everyday_icon_body"><ion-icon name="library-outline"></ion-icon></div>
-               <div class="everyday_text_body">Историческая дата</div>
+               <div class="everyday_text_body">Историч. дата
+               <?php if($historyFactsCount > $rusWordsCount && $historyFactsCount == $engWordsCount): ?>
+                  <?php echo '<div class="red-update dot"></div>'; ?>
+                  <?php endif;?> 
+               </div>
             </div>
             <div class="new_word">
                <div class="everyday_icon_body"><ion-icon name="language-outline"></ion-icon></div>
-               <div class="everyday_text_body">Англ. слово дня</div>
+               <div class="everyday_text_body">Англ. слово дня
+               <?php if($rusWordsCount < $historyFactsCount && $historyFactsCount < $engWordsCount && $rusWordsCount !== 1): ?>
+                  <?php echo '<div class="red-update dot"></div>'; ?>
+                  <?php endif;?> 
+               </div>
             </div>
          </div>
          <div class="everyday-info-button-body">
