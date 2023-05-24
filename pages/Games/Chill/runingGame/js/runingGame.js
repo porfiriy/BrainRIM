@@ -1,3 +1,35 @@
+let settings = document.querySelector(".pop-up__container");
+let comeback = document.querySelector(".pop-up__container2");
+let restart = document.querySelector(".pop-up__container3");
+
+let ResultsGameOver = document.querySelector(".results-gameover");
+
+//при нажатии на отмену вспл окна настройки 
+document.querySelector('.pop-up__cancel').onclick = function () {
+	settings.style = 'visibility:hidden;';
+};
+//при нажатии на иконку настроек
+document.querySelector('.linkToTheSettings').onclick = function () {
+   settings.style = 'visibility:visible;';
+};
+//при нажатии на отмену вспл окна назад
+document.querySelector('.pop-up__cancel2').onclick = function () {
+	comeback.style = 'visibility:hidden;';
+ };
+ //при нажатии на иконку назад
+ document.querySelector('.comeback-button').onclick = function () {
+	comeback.style = 'visibility:visible;';
+ };
+//при нажатии на отмену вспл окна рестарт
+document.querySelector('.pop-up__cancel3').onclick = function () {
+	restart.style = 'visibility:hidden;';
+};
+//при нажатии на иконку рестарт
+document.querySelector('.linkToTheRestart').onclick = function () {
+   restart.style = 'visibility:visible;';
+};
+
+
 const gameContainer = document.querySelector(".game-container");
 const player = document.querySelector("#player");
 const timer = document.querySelector("#timer");
@@ -100,6 +132,7 @@ function startGame() {
 function gameOver() {
    isGameOver = true;
    console.log("Game Over! Enemies Passed: " + enemiesPassedCount);
+   ResultsGameOver.style = 'display:block;';
 }
 
 gameContainer.addEventListener("touchmove", movePlayer);
