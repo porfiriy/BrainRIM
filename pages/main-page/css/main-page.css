@@ -1896,6 +1896,10 @@ font-size: 22px;
    color: #213242;
    background-color: #05EFD4;
  }
+.run-icon{
+	width: 90px;
+    height: 90px;
+ }
  .tzfe-game {
 	font-size: 30px;
     display: flex;
