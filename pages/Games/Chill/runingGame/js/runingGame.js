@@ -33,6 +33,8 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 const gameContainer = document.querySelector(".game-container");
 const player = document.querySelector("#player");
 const timer = document.querySelector("#timer");
+const timerCountResultsValue = document.querySelector(".time-count");
+const enemyCountResultsValue = document.querySelector(".moves-count");
 const score = document.querySelector("#score-num");
 let timerCount = 0;
 let enemiesPassedCount = 0;
@@ -42,6 +44,109 @@ let enemyInterval = 1500; // Интервал появления врагов
 let maxEnemies = 16; // Максимальное количество врагов на экране
 let currentEnemies = 0; // Текущее количество врагов на экране
 let enemyIntervalId = null;
+
+
+//z
+let winForResults = 0;
+let looseForResults = 0;
+let statusLoosOrWin;
+
+//AJAX запрос на сервер для добавления в базу данных инфы 
+function doAjaxExperience() {
+
+   let expUpForModeAjax;
+
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = 15;
+   } else {
+      expUpForModeAjax = 2;
+   }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxWinBonuse() {
+   let IqUpForModeAjax = 15;
+
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+function doAjaxLooseBonuse() {
+   let IqUpForModeAjax = 2;
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let win = `${winForResults}`;
+   let loose = `${looseForResults}`;
+   let time_sec = `${timerCount}`;
+   let enemiesPassed = `${enemiesPassedCount}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsRuningGame.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         enemiesPassed: enemiesPassed,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
+      }
+   })
+}
+//z
 
 function movePlayer(event) {
    const x = event.touches[0].clientX;
@@ -76,6 +181,8 @@ function moveEnemy(enemy) {
          playerPosition.right >= enemyPosition.left &&
          playerPosition.left <= enemyPosition.right
       ) {
+         enemyMoveInterval = 0;
+         gameContainer.removeChild(enemy);
          gameOver();
       } else if (enemyPosition.top >= gameContainer.clientHeight) {
          gameContainer.removeChild(enemy);
@@ -133,7 +240,27 @@ function gameOver() {
    isGameOver = true;
    enemySpeed = 0;
    console.log("Game Over! Enemies Passed: " + enemiesPassedCount);
+   showMessageLoose();
+}
+//анимация проигриша 
+function showMessageLoose() {
    ResultsGameOver.style = 'display:block;';
+   timerCountResultsValue.innerHTML = timerCount;
+   enemyCountResultsValue.innerHTML = enemiesPassedCount;
+   statusLoosOrWin = "loose";
+   looseForResults = 1;
+   doAjaxLooseBonuse();
+   doAjaxExperience();
+   doAjaxResults();
+}
+//анимация победы 
+if (false) {
+   statusLoosOrWin = "win";
+   winForResults = 1;
+   doAjaxWinBonuse();
+   doAjaxExperience();
+   doAjaxResults();
+   audioVictory.play();
 }
 
 gameContainer.addEventListener("touchmove", movePlayer);

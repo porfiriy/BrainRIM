@@ -210,7 +210,7 @@
             <img src="/pages/Games/Growth/Memory/img/0.jpg" alt="memory card" class="back-face">
             <img class="brain-logo" src="/pages/Games/Growth/Memory/img/brain-logo.svg" alt="logo">
          </div>
-      </section>
+      </section> 
 
    </div>
    
