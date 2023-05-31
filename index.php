@@ -15,6 +15,7 @@
             let memoneyValue = Number('<?= $memoneyValue ?>');
             let hintsValue = Number('<?= $hintsValue ?>');
             let receiveGiftValue = Number('<?= $receiveGiftValue ?>');
+            let viewedPopUpValue = Number('<?= $viewedPopUpValue ?>');
       <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
             let expValue = 0;
             let nextLvlExpValue = Number(100);
@@ -22,6 +23,7 @@
             let memoneyValue =1;
             let hintsValue = 1;
             let receiveGiftValue = 1;
+            let viewedPopUpValue = 1;
       <?php endif;?>
    </script>
    <meta charset="UTF-8">

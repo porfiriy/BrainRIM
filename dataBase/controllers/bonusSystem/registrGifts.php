@@ -3,7 +3,8 @@ include $_SERVER['DOCUMENT_ROOT']."/dataBase/surencyAndScore.php";
 
 header('Content-Type: text/plain');
 
-$ajaxValue['justPlug'] = $_POST['justPlug'];
+$ajaxValue['receiveGift'] = $_POST['receiveGift'];
+$ajaxValue['viewedPopUp'] = $_POST['viewedPopUp'];
 
 echo json_encode($ajaxValue);
 
@@ -26,8 +27,9 @@ function updateUserTable($table, $id ,$params){
    $query->execute($params);
    dbCheckError($query);
 }
-
-$sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
+//проверка что именно нажал юзер 
+if($ajaxValue['receiveGift'] == true){
+   $sumIQ = ['sum_iq' => $IQscore['sum_iq']+10];
 updateTo('IQscore',$_SESSION['id'],$sumIQ);
 
 $sumEye = ['sum_eye_hint' => $IQscore['sum_eye_hint']+20];
@@ -38,5 +40,13 @@ updateTo('Memany',$_SESSION['id'],$sumMemoney);
 
 $markRecevedGift = ['recevedGift' => 1];
 updateUserTable('users',$_SESSION['id'],$markRecevedGift);
+}
+
+if($ajaxValue['viewedPopUp'] == true){
+   $markViwedPopUp = ['lookedIntro' => 1];
+   updateUserTable('users',$_SESSION['id'],$markViwedPopUp);
+}
+
+
 ?>
 

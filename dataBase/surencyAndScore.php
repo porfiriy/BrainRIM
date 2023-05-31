@@ -65,6 +65,7 @@ $levelValue = $level['Level'];
 $expValue = $level['experience'];
 $nextLvlExpValue = $level['nextLvlExp'];
 $receiveGiftValue = $userInfo['recevedGift'];
+$viewedPopUpValue = $userInfo['lookedIntro'];
 $insertRusWord;
 $rusWordsCount = $dateForComparison['rusWordsCount'];
 
