@@ -15,57 +15,39 @@
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>
 	  
-		<div class="game">
-		<div class="best-score">Лучший результат: <span id="value-best">00</span></div>
-      <div class="score">Счёт: <span id="value"></span></div>
-    <div class="field">
-      
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-      <div class="row">
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-        <div class="cell"></div>
-      </div>
-    </div>
-    
-  </div>
-  <div class='' id='status'>
-  </div>
+	  <div class="wrapper">
+	<div class="score_container">
+		<p>Счёт: <span id="score01"> 0</span></p>
+	</div>  
+		<div class="main">                                              
+			<div class="cell" id="c00"></div>
+			<div class="cell" id="c01"></div>
+			<div class="cell" id="c02"></div>
+			<div class="cell" id="c03"></div>
 
-		<div class="results-container">
-			<h1 class="results-head-text">Результаты</h1>
-			<div class="results">
-				<div class="time">Время: <div class="time-count">2</div></div>
-				<div class="moves">Счёт:<div class="moves-count">0</div></div>
-				<div class="best-results">Ваш лучший результат:</div>
-				<div class="time">Время: <div class="best-time-count">0</div></div>
-				<div class="moves">Счёт:<div class="best-moves-count">0</div></div>
-				<div class="congrats">Вы - молодец!</div>
+			<div class="cell" id="c10"></div>
+			<div class="cell" id="c11"></div>
+			<div class="cell" id="c12"></div>
+			<div class="cell" id="c13"></div>
+			
+			<div class="cell" id="c20"></div>
+			<div class="cell" id="c21"></div>
+			<div class="cell" id="c22"></div>
+			<div class="cell" id="c23"></div>
+
+			<div class="cell" id="c30"></div>
+			<div class="cell" id="c31"></div>
+			<div class="cell" id="c32"></div>
+			<div class="cell" id="c33"></div>
 			</div>
-			<div class="results-menu__buttons-container">
-			<div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>
+		<div class="gameover" id="gameover">                
+			<div class="over">
+				<p>GAME OVER!!!</p>
+				<p>SCORE:<span id="score02"></span></p>
+				<a href="javascript:game.start()">try again!</a>
 			</div>
-			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon></a>
 		</div>
-		</div>
+	</div>
 
   <script src="/pages/Games/Chill/2048/js/2048-Game.js"></script>  
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

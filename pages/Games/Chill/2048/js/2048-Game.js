@@ -1,18 +1,18 @@
 let settings = document.querySelector(".pop-up__container");
 let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
-let resultsContainer = document.querySelector(".results-container");
-
 
 
 //при нажатии на отмену вспл окна настройки 
 document.querySelector('.pop-up__cancel').onclick = function () {
    settings.style = 'visibility:hidden;';
+
 };
 //при нажатии на иконку настроек
 document.querySelector('.linkToTheSettings').onclick = function () {
    settings.style = 'visibility:visible;';
 };
+
 //при нажатии на отмену вспл окна назад
 document.querySelector('.pop-up__cancel2').onclick = function () {
    comeback.style = 'visibility:hidden;';
@@ -21,9 +21,11 @@ document.querySelector('.pop-up__cancel2').onclick = function () {
 document.querySelector('.comeback-button').onclick = function () {
    comeback.style = 'visibility:visible;';
 };
+
 //при нажатии на отмену вспл окна рестарт
 document.querySelector('.pop-up__cancel3').onclick = function () {
    restart.style = 'visibility:hidden;';
+
 };
 //при нажатии на иконку рестарт
 document.querySelector('.linkToTheRestart').onclick = function () {
@@ -31,311 +33,325 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 };
 
 
-//считает время с начала игры
-let seconds = 0;
-let minutes = 0;
-function timerGame() {
-   let timerID = setInterval(function () {
 
-      seconds += 1;
-   }, 1000)
-}
 
-window.onload = function () {
-   timerGame();
-   buildGridOverlay();                      //Generates grid-overlay
-   cellCreator(2, 0);
-   score(0);
-};
 
-/* GENERATE GRID */
-function buildGridOverlay() {
-   var game = document.getElementsByClassName('game');
-   var grid = document.getElementsByClassName('grid');
-   var size = 4;
-   var table = document.createElement('DIV');
 
-   table.className += 'grid';
-   table.id = ' ';
-   table.dataset.value = 0;
-
-   for (var i = 0; i < size; i++) {
-      var tr = document.createElement('DIV');
-      table.appendChild(tr);
-      tr.id = 'row_' + (i + 1);
-      tr.className += 'grid_row';
-
-      for (var j = 0; j < size; j++) {
-         var td = document.createElement('DIV');
-         td.id = '' + (i + 1) + (j + 1);                            //ID with x y
-         td.className += 'grid_cell';
-         tr.appendChild(td);
-      }
-      document.body.appendChild(table);
-   }
-
-   table.addEventListener('touchstart', handleTouchStart, false);
-   table.addEventListener('touchmove', handleTouchMove, false);
-   table.addEventListener('touchend', handleTouchEnd, false);
-
-   return table;
-}
-
-/* RANDOM TILE CREATOR */
-function cellCreator(c, timeOut) {
-   /* do 2 times for 2 new tiles */
-   for (var i = 0; i < c; i++) {
-
-      var count = 0;
-      /* search for an empty cell to create a tile */
-
-      for (var value = 1; value < 2; value++) {
-         var randomX = Math.floor((Math.random() * 4) + 1);
-         var randomY = Math.floor((Math.random() * 4) + 1);
-         var checker = document.getElementById('' + randomX + randomY);
-         if (checker.innerHTML != '') {
-            value = 0;
+var game = {
+   mydata: [],     // Добавляем атрибут mydata для хранения игровых данных
+   score: 0,	  	   // Добавляем атрибут оценки
+   gameover: 0,	    // Добавляем состояние в конце игры 
+   gamerrunning: 1,	     // Добавляем состояние, когда игра запущена
+   status: 1,		      // Добавляем состояние игры
+   start: function () {      // Устанавливаем метод при запуске игры
+      this.status = this.gamerrunning;
+      this.score = 0;
+      this.mydata = [];
+      for (var r = 0; r < 4; r++) {  // Добавьте число 0 к переменной цикла массива mydata, чтобы сделать его двумерным массивом
+         this.mydata[r] = [];
+         for (var c = 0; c < 4; c++) {
+            this.mydata[r][c] = 0;
          }
       }
+      this.randomNum();    // Число 2/4 генерируется случайным образом в начале игры
+      this.randomNum();
+      this.dataView();     // Выполняем функцию dataView, когда игра начинает передавать обновление данных на страницу, обновляем данные на странице
+      // console.log(this.mydata);
+   },
 
-      var randomValue = Math.floor((Math.random() * 4) + 1); //create value 1, 2, 3 or 4
-      if (randomValue == 3) { randomValue = 4 };              //3 --> 4
-      if (randomValue == 1) { randomValue = 2 };              //1 --> 2
-      var position = document.getElementById('' + randomX + randomY);
-      var tile = document.createElement('DIV');           //create div at x, y
-      position.appendChild(tile);                         //tile becomes child of grid cell
-      tile.innerHTML = '' + randomValue;                    //tile gets value 2 or 4
-
-      colorSet(randomValue, tile);
-      tile.data = '' + randomValue;
-      tile.id = 'tile_' + randomX + randomY;
-      position.className += ' active';
-      var tileValue = tile.dataset.value;
-      tile.dataset.value = '' + randomValue;
-
-      console.info('' + timeOut);
-      if (timeOut == 0) {
-         tile.className = 'tile ' + randomValue;
-      } else {
-         setTimeout(function () {
-            tile.className = 'tile ' + randomValue;
-         }, 10);
-      }
-
-   }
-}
-
-/* MOVE TILES */
-var touchStartX = 0;
-var touchStartY = 0;
-var touchEndX = 0;
-var touchEndY = 0;
-
-function handleTouchStart(event) {
-   var touch = event.touches[0];
-   touchStartX = touch.clientX;
-   touchStartY = touch.clientY;
-}
-
-function handleTouchMove(event) {
-   event.preventDefault();
-}
-
-function handleTouchEnd(event) {
-   var touch = event.changedTouches[0];
-   touchEndX = touch.clientX;
-   touchEndY = touch.clientY;
-   handleSwipe();
-}
-
-function handleSwipe() {
-   var deltaX = touchEndX - touchStartX;
-   var deltaY = touchEndY - touchStartY;
-
-   if (Math.abs(deltaX) > Math.abs(deltaY)) {
-      if (deltaX > 0) {
-         // Swipe right
-         moveTilesRight();
-      } else {
-         // Swipe left
-         moveTilesLeft();
-      }
-   } else {
-      if (deltaY > 0) {
-         // Swipe down
-         moveTilesDown();
-      } else {
-         // Swipe up
-         moveTilesUp();
-      }
-   }
-}
-
-function moveTilesUp() {
-   var count = 2;
-   for (var x = 2; x > 1; x--) {
-      for (var y = 1; y < 5; y++) {
-         moveTilesMain(x, y, -1, 0, 1, 0);
-         console.info('' + x + y);
-      }
-      if (x == 2) {
-         x += count;
-         count++;
-      }
-      if (count > 4) { break; }
-   }
-   cellReset();
-}
-
-function moveTilesDown() {
-   var count = -2;
-   var test = 1;
-   for (var x = 3; x < 4; x++) {
-      for (var y = 1; y < 5; y++) {
-         moveTilesMain(x, y, 1, 0, 4, 0);
-      }
-      if (x == 3) {
-         x += count;
-         count--;
-      }
-      if (count < -4) { break; }
-   }
-   cellReset();
-}
-
-function moveTilesLeft() {
-   var count = 2;
-   var test = 1;
-   for (var x = 2; x > 1; x--) {
-      for (var y = 1; y < 5; y++) {
-         moveTilesMain(y, x, 0, -1, 0, 1);
-      }
-      if (x == 2) {
-         x += count;
-         count++;
-      }
-      if (count > 4) { break; }
-   }
-   cellReset();
-}
-
-function moveTilesRight() {
-   var count = -2;
-   var noCell = 0;
-   var c = 1;
-   var d = 0;
-
-   for (var x = 3; x < 4; x++) {
-      for (var y = 1; y < 5; y++) {
-         moveTilesMain(y, x, 0, 1, 0, 4, c, d);
-      }
-      if (x == 3) {
-         x += count;
-         count--;
-      }
-      if (count < -4) { break; }
-   }
-   cellReset();
-}
-
-//--------------------------------------------------------
-
-function moveTilesMain(x, y, X, Y, xBorder, yBorder, c, d) {
-   var tile = document.getElementById('tile_' + x + y);
-   var checker = document.getElementById('' + x + y);
-   var xAround = x + X;
-   var yAround = y + Y;
-
-   if (xAround > 0 && xAround < 5 && yAround > 0 && yAround < 5 && checker.className == 'grid_cell active') {
-      var around = document.getElementById('' + xAround + yAround);
-
-      if (around.className == 'grid_cell active') {
-         var aroundTile = document.getElementById('tile_' + xAround + yAround);
-         if (aroundTile.innerHTML == tile.innerHTML) {
-            var value = tile.dataset.value * 2;
-            aroundTile.dataset.value = '' + value;
-            aroundTile.className = 'tile ' + value;
-            aroundTile.innerHTML = '' + value;
-            colorSet(value, aroundTile);
-            checker.removeChild(tile);
-            checker.className = 'grid_cell';
-            around.className = 'grid_cell active merged';
-            document.getElementsByClassName('grid').id = 'moved';
-            var grid = document.getElementById(' ');
-            var scoreValue = parseInt(grid.dataset.value);
-            var newScore = value + scoreValue;
-
-            grid.dataset.value = newScore;
-            var score = document.getElementById('value');
-
-            score.innerHTML = '' + newScore;
-         }
-      } else if (around.className == 'grid_cell') {
-         around.appendChild(tile);
-         around.className = 'grid_cell active';
-         tile.id = 'tile_' + xAround + yAround;
-         checker.className = 'grid_cell';
-         document.getElementsByClassName('grid').id = 'moved';
-      }
-   }
-}
-
-//-------------------------------------------------------
-
-function cellReset() {
-   var count = 0;
-
-   for (var x = 1; x < 5; x++) {
-      for (var y = 1; y < 5; y++) {
-
-         var resetter = document.getElementById('' + x + y);
-         if (resetter.innerHTML != '') {
-            count++;
-         }
-
-         if (resetter.innerHTML == '') {
-            resetter.className = 'grid_cell';
-         }
-
-         if (resetter.className == 'grid_cell active merged') {
-            resetter.className = 'grid_cell active'
+   randomNum: function () {       // Метод генерации случайных чисел и присвоения начального случайного числа mydata
+      for (; ;) {                     // Циклу for здесь нельзя задать фиксированное условие, потому что конечное условие не может быть известно, когда игра запущена, и он может работать только последовательно
+         var r = Math.floor(Math.random() * 4);      // Задаем случайную величину и пусть это будет координата, в которой число появляется случайным образом
+         var c = Math.floor(Math.random() * 4);
+         if (this.mydata[r][c] == 0) {               // Если значение в текущей координате в данных равно 0 или пусто, вставляем случайное число 2 или 4
+            var num = Math.random() > 0.5 ? 2 : 4;     // Установленное случайное число 2 или 4 имеет одинаковый шанс выпадения, наполовину открыто
+            this.mydata[r][c] = num;
+            break;
          }
       }
-   }
+   },
 
-   if (count == 16) {
-      document.getElementById('status').className = 'lose';
-      resultsContainer.style = 'display:block;';
-   } else if (document.getElementsByClassName('grid').id == 'moved') {
-      cellCreator(1, 1);
+
+   dataView: function () {      // Метод передачи данных на страницу и контроль смены стиля
+      for (var r = 0; r < 4; r++) {
+         for (var c = 0; c < 4; c++) {
+            var div = document.getElementById("c" + r + c);
+            if (this.mydata[r][c] == 0) {
+               div.innerHTML = "";
+               div.className = "cell";
+            }
+            else {
+               div.innerHTML = this.mydata[r][c];
+               div.className = 'cell n' + this.mydata[r][c];
+            }
+         }
+      }
+      document.getElementById('score01').innerHTML = this.score;
+      if (this.status == this.gameover) {
+         document.getElementById('score02').innerHTML = this.score;
+         document.getElementById('gameover').style.display = 'block';
+      }
+      else {
+         document.getElementById('gameover').style.display = 'none';
+      }
+   },
+
+   isgameover: function () {
+      for (var r = 0; r < 4; r++) {
+         for (var c = 0; c < 4; c++) {
+            if (this.mydata[r][c] == 0) {
+               return false;
+            }
+            if (c < 3) {
+               if (this.mydata[r][c] == this.mydata[r][c + 1]) {
+                  return false;
+               }
+            }
+            if (r < 3) {
+               if (this.mydata[r][c] == this.mydata[r + 1][c]) {
+                  return false;
+               }
+            }
+         }
+      }
+      return true;
+   },
+
+   //Движение влево
+   moveLeft: function () {
+      var before = String(this.mydata);
+      for (var r = 0; r < 4; r++) {
+         this.moveLeftInRow(r);
+      }
+      var after = String(this.mydata);
+      if (before != after) {
+         this.randomNum();
+         if (this.isgameover()) {
+            this.status = this.gameover;
+         }
+         this.dataView();
+      }
+   },
+
+   moveLeftInRow: function (r) {
+      for (var c = 0; c < 3; c++) {
+         var nextc = this.getNEXTinRow(r, c);
+         if (nextc != -1) {
+            if (this.mydata[r][c] == 0) {
+               this.mydata[r][c] = this.mydata[r][nextc];
+               this.mydata[r][nextc] = 0;
+               c--;
+            }
+            else if (this.mydata[r][c] == this.mydata[r][nextc]) {
+               this.mydata[r][c] *= 2;
+               this.mydata[r][nextc] = 0;
+               this.score += this.mydata[r][c];
+            }
+         }
+         else {
+            break;
+         }
+      }
+   },
+
+   getNEXTinRow: function (r, c) {
+      for (var i = c + 1; i < 4; i++) {
+         if (this.mydata[r][i] != 0) {
+            return i;
+         }
+      }
+      return -1;
+   },
+
+
+   //Переместить вправо
+   moveRight: function () {
+      var before = String(this.mydata);
+      for (var r = 0; r < 4; r++) {
+         this.moveRightInRow(r);
+      }
+      var after = String(this.mydata);
+      if (before != after) {
+         this.randomNum();
+         if (this.isgameover()) {
+            this.status = this.gameover;
+         }
+         this.dataView();
+      }
+   },
+
+   moveRightInRow: function (r) {
+      for (var c = 3; c > 0; c--) {
+         var nextc = this.RightgetNEXTinRow(r, c);
+         if (nextc != -1) {
+            if (this.mydata[r][c] == 0) {
+               this.mydata[r][c] = this.mydata[r][nextc];
+               this.mydata[r][nextc] = 0;
+               c++;
+            }
+            else if (this.mydata[r][c] == this.mydata[r][nextc]) {
+               this.mydata[r][c] *= 2;
+               this.mydata[r][nextc] = 0;
+               this.score += this.mydata[r][c];
+            }
+         }
+         else {
+            break;
+         }
+      }
+   },
+
+   RightgetNEXTinRow: function (r, c) {
+      for (var i = c - 1; i >= 0; i--) {
+         if (this.mydata[r][i] != 0) {
+            return i;
+         }
+      }
+      return -1;
+   },
+
+
+   // Двигаться вверх
+   moveTop: function () {
+      var before = String(this.mydata);
+      for (var r = 0; r < 4; r++) {
+         this.moveTopInRow(r);
+      }
+      var after = String(this.mydata);
+      if (before != after) {
+         this.randomNum();
+         if (this.isgameover()) {
+            this.status = this.gameover;
+         }
+         this.dataView();
+      }
+   },
+
+   moveTopInRow: function (r) {
+      for (var c = 0; c < 3; c++) {
+         var nextc = this.TopgetNEXTinRow(r, c);
+         if (nextc != -1) {
+            if (this.mydata[c][r] == 0) {
+               this.mydata[c][r] = this.mydata[nextc][r];
+               this.mydata[nextc][r] = 0;
+               c++;
+            }
+            else if (this.mydata[c][r] == this.mydata[nextc][r]) {
+               this.mydata[c][r] *= 2;
+               this.mydata[nextc][r] = 0;
+               this.score += this.mydata[c][r];
+            }
+         }
+         else {
+            break;
+         }
+      }
+   },
+
+   TopgetNEXTinRow: function (r, c) {
+      for (var i = c + 1; i < 4; i++) {
+         if (this.mydata[i][r] != 0) {
+            return i;
+         }
+      }
+      return -1;
+   },
+
+
+   // двигаться вниз
+   moveBottom: function () {
+      var before = String(this.mydata);
+      for (var r = 0; r < 4; r++) {
+         this.moveBottomInRow(r);
+      }
+      var after = String(this.mydata);
+      if (before != after) {
+         this.randomNum();
+         if (this.isgameover()) {
+            this.status = this.gameover;
+         }
+         this.dataView();
+      }
+   },
+
+   moveBottomInRow: function (r) {
+      for (var c = 3; c > 0; c--) {
+         var nextc = this.BottomgetNEXTinRow(r, c);
+         if (nextc != -1) {
+            if (this.mydata[c][r] == 0) {
+               this.mydata[c][r] = this.mydata[nextc][r];
+               this.mydata[nextc][r] = 0;
+               c++;
+            }
+            else if (this.mydata[c][r] == this.mydata[nextc][r]) {
+               this.mydata[c][r] *= 2;
+               this.mydata[nextc][r] = 0;
+               this.score += this.mydata[c][r];
+            }
+         }
+         else {
+            break;
+         }
+      }
+   },
+
+   BottomgetNEXTinRow: function (r, c) {
+      for (var i = c - 1; i >= 0; i--) {
+         if (this.mydata[i][r] != 0) {
+            return i;
+         }
+      }
+      return -1;
+   },
+
+}
+game.start();
+document.onkeydown = function (event) {
+   var event = event || e || arguments[0];
+   if (event.keyCode == 37) {
+      game.moveLeft();
    }
-   document.getElementsByClassName('grid').id = ' ';
+   else if (event.keyCode == 38) {
+      game.moveTop();
+   }
+   else if (event.keyCode == 39) {
+      game.moveRight();
+   }
+   else if (event.keyCode == 40) {
+      game.moveBottom();
+   }
 }
 
-function score() {
-   var grid = document.getElementById(' ');
-   var value = grid.dataset.value;
-   document.getElementById('value').innerHTML = '' + value;
-}
 
-/* ----- STYLE ----- */
-function colorSet(value, tile) {
-   switch (value) {
-      case 2: tile.style.color = 'black'; tile.style = 'background-color: #eee3da; border-radius: 20px'; break;
-      case 4: tile.style.color = 'black'; tile.style = 'background-color: #ede0c8; border-radius: 20px'; break;
-      case 8: tile.style.color = 'black'; tile.style = 'background-color: #f2b179; border-radius: 20px'; break;
-      case 16: tile.style.color = 'black'; tile.style = 'background-color: #f59563; border-radius: 20px'; break;
-      case 32: tile.style.color = 'white'; tile.style = 'background-color: #f67c5f; border-radius: 20px'; break;
-      case 64: tile.style.color = 'white'; tile.style = 'background-color: #f65e3b; border-radius: 20px'; break;
-      case 128: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #edcf72; border-radius: 20px'; break;
-      case 256: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #edcc61; border-radius: 20px'; break;
-      case 512: tile.style.color = 'white'; tile.style.fontSize = '50px'; tile.style = 'background-color: #9c0; border-radius: 20px'; break;
-      case 1024: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #33b5e5; border-radius: 20px'; break;
-      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #09c; border-radius: 20px'; break;
-      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #a6c; border-radius: 20px'; break;
-      case 2048: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #93c; border-radius: 20px'; break;
-      default: tile.style.color = 'white'; tile.style.fontSize = '40px'; tile.style = 'background-color: #000; border-radius: 20px'; break;
+// Следующий код предназначен для обработки совместимости этой игры путем ее упаковки в режим приложения,
+var startX, startY, endX, endY;    // Определение четырех переменных для хранения значений по оси X и оси Y при касании и при выходе из касания
+document.addEventListener("touchstart", function (event) {  // Связывание события слушателя при начале касания пальцем
+   var event = event || e || arguments[0];
+   startX = event.touches[0].pageX;
+   startY = event.touches[0].pageY;
+})
+
+document.addEventListener("touchend", function (event) {    // Привязка события прослушивания, когда палец касается и уходит
+   var event = event || e || arguments[0];
+   endX = event.changedTouches[0].pageX;
+   endY = event.changedTouches[0].pageY;
+
+   var x = endX - startX;
+   var y = endY - startY;
+
+   var absX = Math.abs(x) > Math.abs(y);
+   var absY = Math.abs(y) > Math.abs(x);
+   if (x > 0 && absX) {
+      game.moveRight();
    }
-}
+   else if (x < 0 && absX) {
+      game.moveLeft();
+   }
+   else if (y > 0 && absY) {
+      game.moveBottom();
+   }
+   else if (y < 0 && absY) {
+      game.moveTop();
+   }
 
-
+})

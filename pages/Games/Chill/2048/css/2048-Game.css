@@ -1,5 +1,5 @@
  /* Удаляем стиль браузера по умолчанию */
-*{  
+ *{  
 	margin: 0;
 	padding: 0;
 	box-sizing:border-box;	
@@ -32,7 +32,7 @@ html,body{
 	height: 40px;
 	font-size: 44px;
 	color: #05EFD4;
-	z-index: 20;
+	z-index: 2;
 	transition: 0.1s;
  }
  .comeback-button-body:active{
@@ -326,211 +326,100 @@ html,body{
  .pop-up__cancel3:active{
 	transform: scale(0.7);
  }
- 
- 
- /* head */
- .head {
-	height: 120px;
-	width: 510px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
-	float: center;
-	display: flex;
-	align-items: center;
-	justify-content: center;
- }
- 
- .best-score{
-	position: absolute;
-	width: 350px;
-	font-size: 30px;
-	color: rgb(255, 255, 255);
-	text-align: center;
-	top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
- }
- .score {
-	position: absolute;
-	width: 150px;
-	font-size: 30px;
-	color: rgb(255, 255, 255);
-	text-align: center;
-	top: 30%;
-    left: 50%;
-    transform: translate(-50%, -50%);
- }
- #value-best{
-	color: #05EFD4;
- }
- #value{
-	color: #05EFD4;
- }
- 
- 
- 
- /* field */
- .field, .grid {
-	position: absolute;
-	width: 510px;
-	height: 510px;
-	background-color: #bbada0;
-	border-radius: 20px;
-    border: 10px solid #bbada0;
-	display: table;
-	margin-left: auto;
-	margin-right: auto;
-	right: 0;
-	top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
- }
- 
- .field {
-	z-index: 10;
- }
- 
- .grid {
-	z-index: 11;
- }
- 
- .row, .grid_row {
-	width: 510px;
-	height: 135px;
-	position: relative;
-	display: table-row;
- }
- 
- .cell, .grid_cell {
-	background-color: white;
-	width: 125px;
-	height: 125px;
-	position: relative;
-	display: table-cell;
-	border-radius: 0px;
-    border: 7px solid #bbada0;
-	text-align: center;
-	vertical-align: middle;
-	font-family: 'Balsamiq Sans', cursive;
-	font-size: 50px;
- }
- 
- .grid_cell {
-	background-color: #CCC0B3;
-	color: white;
- }
- 
- div > div > div > div {
-	opacity: 0;
-	position: absolute;
- }
- 
- .tile {
-	font-family: 'Balsamiq Sans', cursive;
-	opacity: 1;
-	width: 118px;
-	height: 126px;
-	background-color: white;
-	z-index: 12;
-	border-radius: 0px;
-	font-weight: 200;
-	top: 0;
-	left: -1px;
-	color: black;
-	transition: 0.3s all;
-	display: -webkit-box;
-	display: -webkit-flex;
-	display: -moz-box;
-	display: -moz-flex;
-	display: -ms-flexbox;
-	display: flex;
- 
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	-webkit-justify-content: center;
-	-moz-justify-content: center;
-	justify-content: center;
- 
-	-webkit-box-align: center;
-	-ms-flex-align: center;
-	-webkit-align-items: center;
-	-moz-align-items: center;
-	align-items: center;
- }
-.results-container{
-	position: absolute;
-    display: block;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    background-color: #213242;
-    z-index: 99;
-	font-size: 24px;
-	color: white;
 
+
+ /* Устанавливаем стиль самого дальнего большого окна */
+.score_container{   
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 40px;
+	font-weight: bold;
+	margin:50px auto;
 }
-.results-head-text{
-    margin: 10% 0 0 0;
-    text-align: center;
-    font-size: 38px;
-}
-.results{
-	margin: 15% auto;
-	display: flex;
-	align-items: center;
+p{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    color: #FFF;
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
-    border-radius: 26px;
-    width: 350px;
-	height: 450px;
+	gap: 20px;
 }
-.time{
-	display: flex;
-	margin: 10px auto;
-}
-.moves{
-	display: flex;
-	margin: 10px auto;
-}
-.best-results{
-	margin: 20px auto;
-}
-.time-count{
+.score_container>p span{
 	color: #05EFD4;
 }
-.moves-count{
-	color: #05EFD4;
+
+ /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
+.main{
+	width: 400px;
+	height: 400px;
+	background-color: #bbada0;
+	border-radius: 15px;
+	font-size: 40px;
 }
-.best-time-count{
-	color: rgb(0, 255, 0);
+
+ /* Устанавливаем все мелкие стили сетки */
+.cell{
+	width: 80px;
+	height: 80px;
+	margin:16px 0px 0px 16px;
+	border-radius: 5px;
+	background-color: #ccc0b3;
+	float: left;
+	text-align: center;
+	line-height: 80px;
 }
-.best-moves-count{
-	color: rgb(0, 255, 0);
+
+ /* Устанавливаем стиль маскирующего слоя */
+.gameover{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(55,55,55,0.3);
+	display: none;	
 }
-.congrats{
-    color: #05EFD4;
-    font-size: 28px;
-    margin: 20px 0;
+.over{
+	width: 300px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #fff;
+	text-align: center;
+	font-size: 30px;
+	margin-left: -150px;
+	margin-top: -120px; 
 }
-.results-menu__buttons-container {
-    display: flex;
-    justify-content: space-around;
+.over a{
+	display: inline-block;
+	text-decoration:none;
+	width: 150px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+	color: #fff;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	background-color: #9F8D77;
+	margin-bottom: 5px;
+	cursor: pointer;
 }
-.results-menu__button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 18px;
-    font-size: 42px;
-    width: 140px;
-    height: 60px;
-    color: #05EFD4;
-    transition: 0.2s;
-    background: #213242;
-    box-shadow: -1px -2px 5px rgba(255, 255, 255, 0.25), 0px 2px 4px 1px rgba(0, 0, 0, 0.45);
-}
- 
+
+ /* Устанавливаем в игре, при изменении данных в сетке соответствующий стиль */
+.n2{background-color:#eee3da}
+.n4{background-color:#ede0c8}
+.n8{background-color:#f2b179}
+.n16{background-color:#f59563}
+.n32{background-color:#f67c5f}
+.n64{background-color:#f65e3b}
+.n128{background-color:#edcf72}
+.n256{background-color:#edcc61}
+.n512{background-color:#9c0}
+.n1024{background-color:#33b5e5;font-size:30px;color:#FFF;}
+.n2048{background-color:#09c;font-size:30px;color:#FFF;}
+.n4096{background-color:#a6c;font-size:30px;color:#FFF;}
+.n8192{background-color:#93c;font-size:30px;color:#FFF;}
