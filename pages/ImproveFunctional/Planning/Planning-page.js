@@ -63,6 +63,10 @@ if (planDateValue1 !== "") {
 }
 if (planDateValue2 !== "") {
 	Add2Plan.innerHTML = planDateValue2;
+	Add2Plan.onclick = function () {//при нажатии открывается план
+		var url = "/pages/ImproveFunctional/Planning/plansPages/secondUserPlanBody.php"; // ссылка на план
+		window.location.href = url;
+	}
 } else {
 	Add2Plan.onclick = function () {//при нажатии открывается новый план
 		NewPlanBody.style = 'display: flex;';
@@ -71,6 +75,10 @@ if (planDateValue2 !== "") {
 }
 if (planDateValue3 !== "") {
 	Add3Plan.innerHTML = planDateValue3;
+	Add3Plan.onclick = function () {//при нажатии открывается план
+		var url = "/pages/ImproveFunctional/Planning/plansPages/thirdUserPlanBody.php"; // ссылка на план
+		window.location.href = url;
+	}
 } else {
 	Add3Plan.onclick = function () {//при нажатии открывается новый план
 		NewPlanBody.style = 'display: flex;';
@@ -79,6 +87,10 @@ if (planDateValue3 !== "") {
 }
 if (planDateValue4 !== "") {
 	Add4Plan.innerHTML = planDateValue4;
+	Add4Plan.onclick = function () {//при нажатии открывается план
+		var url = "/pages/ImproveFunctional/Planning/plansPages/fourthUserPlanBody.php"; // ссылка на план
+		window.location.href = url;
+	}
 } else {
 	Add4Plan.onclick = function () {//при нажатии открывается новый план
 		NewPlanBody.style = 'display: flex;';

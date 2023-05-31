@@ -1,6 +1,18 @@
+<?php 
+   include $_SERVER['DOCUMENT_ROOT']."/dataBase/games/logicRuningGame.php";
+   ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
+  <script>//записывает в переменные данные из базы
+      <?php if(isset($_SESSION['id'])): ?>
+            let bestTimeRes = Number('<?= $bestUserResultTime ?>');
+            let bestEnemiesPassedRes = Number('<?= $bestUserResultEnemiesPassed ?>');
+      <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
+        bestTimeRes = 0;
+        bestEnemiesPassedRes = 0;
+      <?php endif;?>
+   </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -21,12 +33,12 @@
 	  <div class="results-gameover results-container">
 	  <h1 class="results-head-text">Результаты</h1>
 			<div class="results">
-				<div class="time">Время: <div class="time-count"></div>c.</div>
-				<div class="moves">Врагов: <div class="moves-count"></div></div>
+				<div class="time">Время:<div class="time-count"></div>c.</div>
+				<div class="moves">Врагов:<div class="moves-count"></div></div>
 				<div class="best-results">Ваш лучший результат:</div>
-				<div class="time">Время: <div class="best-time-count">0</div></div>
+				<div class="time">Время: <div class="best-time-count">0</div>с.</div>
 				<div class="moves">Врагов: <div class="best-moves-count">0</div></div>
-				<div class="loose">Вы проиграли</div> 
+				<div class="loose-win-value">Вы проиграли</div> 
 			</div>
 			<div class="results-menu__buttons-container">
 			<div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>

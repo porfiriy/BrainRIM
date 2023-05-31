@@ -79,10 +79,12 @@ margin: 0 auto;
 .time{
 	display: flex;
 	margin: 10px auto;
+	gap:  10px;
 }
 .moves{
 	display: flex;
 	margin: 10px auto;
+	gap:  10px;
 }
 .best-results{
 	margin: 20px auto;
@@ -101,12 +103,12 @@ margin: 0 auto;
 }
 .congrats{
     color: rgb(0, 255, 0);
-    font-size: 28px;
-    margin: 20px 0;
 }
 .loose{
 	color: #ff0000;
-    font-size: 28px;
+}
+.loose-win-value{
+	font-size: 28px;
     margin: 20px 0;
 }
 .results-menu__buttons-container {

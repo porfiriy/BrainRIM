@@ -35,6 +35,9 @@ const player = document.querySelector("#player");
 const timer = document.querySelector("#timer");
 const timerCountResultsValue = document.querySelector(".time-count");
 const enemyCountResultsValue = document.querySelector(".moves-count");
+const bestTimerCountResultsValue = document.querySelector(".best-time-count");
+const bestEnemyCountResultsValue = document.querySelector(".best-moves-count");
+const winOrLooseResultsValue = document.querySelector(".loose-win-value");
 const score = document.querySelector("#score-num");
 let timerCount = 0;
 let enemiesPassedCount = 0;
@@ -239,19 +242,34 @@ function startGame() {
 function gameOver() {
    isGameOver = true;
    enemySpeed = 0;
-   console.log("Game Over! Enemies Passed: " + enemiesPassedCount);
    showMessageLoose();
-}
-//анимация проигриша 
-function showMessageLoose() {
-   ResultsGameOver.style = 'display:block;';
-   timerCountResultsValue.innerHTML = timerCount;
-   enemyCountResultsValue.innerHTML = enemiesPassedCount;
    statusLoosOrWin = "loose";
    looseForResults = 1;
    doAjaxLooseBonuse();
    doAjaxExperience();
    doAjaxResults();
+}
+//показывает результаты
+function showMessageLoose() {
+   ResultsGameOver.style = 'display:block;';
+   timerCountResultsValue.innerHTML = timerCount;
+   enemyCountResultsValue.innerHTML = enemiesPassedCount;
+   bestTimerCountResultsValue.innerHTML = bestTimeRes;//из базы данных
+   bestEnemyCountResultsValue.innerHTML = bestEnemiesPassedRes;
+   if (comparisonResBetterOrNot() == true) {//если результат лучше
+      winOrLooseResultsValue.classList.add('congrats');
+      winOrLooseResultsValue.innerHTML = 'вы победили';
+   } else {
+      winOrLooseResultsValue.classList.add('loose');
+      winOrLooseResultsValue.innerHTML = 'вы проиграли';
+   }
+}
+function comparisonResBetterOrNot() {//возвращает правду или ложь
+   if (enemiesPassedCount > bestEnemiesPassedRes) {
+      return true;
+   } else {
+      return false;
+   }
 }
 //анимация победы 
 if (false) {
