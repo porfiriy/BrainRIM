@@ -668,13 +668,16 @@ justify-content: space-around;
 text-align: center;
  }
  .country-button{
-font-size: 18px;
-min-width: 40%;
-border: 2px solid #05EFD4;
-border-radius: 10px;
-margin: 20px auto;
-padding: 10px;
-transition: 0.2s;
+    font-size: 20px;
+    min-width: 40%;
+    border: 2px solid #05EFD4;
+    border-radius: 10px;
+    margin: 20px auto;
+    padding: 10px;
+    transition: 0.2s;
+    max-width: 150px;
+    max-height: 40px;
+    overflow: scroll;
  }
  .country-button:active{
     transform: scale(0.8);
