@@ -275,6 +275,11 @@ const CloseAboutUs = document.querySelector('.close-about-us');
 CloseAboutUs.onclick = function () {
 	AboutUsContainer.style = 'display: none;';
 }
+const CloseAboutUsBtn = document.querySelector('.about-us-confirm_button');
+	CloseAboutUsBtn.onclick = setTimeout(CloseAboutUsBody, 8000); //Сделать закрытие "О приложении" с таймером на кнопку 'confirm_button'
+	function CloseAboutUsBody () {
+		AboutUsContainer.style = 'display: none;';
+}
 
 //Бонус при регистрации
 if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком

@@ -157,7 +157,7 @@
 
 			<div class="about-us-first about-us-body">
 			<div class="about-us-text">4. Раздел "Аналитика"</div>
-			<div class="about-us-picture"><img class="about-us-png" src="#" alt="hints"></div>
+			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\analitycs.png" alt="hints"></div>
 			<div class="about-us-Description">Отслеживание вашего прогресса на пути самосовершенствования.</div>
 			</div>
 
@@ -172,6 +172,7 @@
 			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Everyday quests.png" alt="hints"></div>
 			<div class="about-us-Description">Выполняй задания и получай бонусы и награды</div>
 			</div>
+			<div class="about-us-confirm_button">Погнали!</div>
 		 </div>
 
 
