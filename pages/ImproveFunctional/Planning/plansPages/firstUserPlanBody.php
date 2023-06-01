@@ -8,7 +8,7 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/plansPages/css/firstPlan.css">
-   <title>Document</title>
+   <title>Change-Plan</title>
 </head>
 <body>
 <div class="change-plan-body">

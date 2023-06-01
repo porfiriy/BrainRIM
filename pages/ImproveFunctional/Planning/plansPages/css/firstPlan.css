@@ -118,6 +118,7 @@
 	 transform: scale(0.5);
   }
   .new-plan-title {
+	font-family: 'Balsamiq Sans', cursive;
 	font-size: 26px;
     display: flex;
     justify-content: space-evenly;
@@ -145,6 +146,7 @@
 	font-weight: 600;
     color: white;
 	text-align: center;
+	font-family: 'Balsamiq Sans', cursive;
 }
 .planNumber{
     display: none;
@@ -218,6 +220,7 @@ font-size: 18px;
     z-index: 2;
 }
 #target{
+	font-family: 'Balsamiq Sans', cursive;
 	display: flex;
 	background: #213242;
 	box-shadow: 0px 4px 12px 6px rgba(0, 0, 0, 0.25), -1px -3px 4px rgba(255, 255, 255, 0.25);
@@ -227,7 +230,7 @@ font-size: 18px;
 	color: white;
 	padding: 20px;
 	font-size: 20px;
-	margin: 0 auto
+	margin: 0 auto;
 }
 .save-plan{
 	display: flex;
@@ -242,6 +245,7 @@ font-size: 18px;
 	color: #05EFD4;
 	transition: 0.2s;
     background-color: #213242;
+	font-family: 'Balsamiq Sans', cursive;
 }
 .delete-plan{
 	display: flex;
@@ -256,4 +260,5 @@ font-size: 18px;
 	color: #ff0000;
 	transition: 0.2s;
     background-color: #213242;
+	font-family: 'Balsamiq Sans', cursive;
 }

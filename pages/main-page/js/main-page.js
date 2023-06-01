@@ -104,8 +104,8 @@ function popUpAlert() {
 const ImproveDev = document.querySelectorAll('.improve-in-dev');
 
 ImproveDev.forEach(element => {
-  element.addEventListener('click', popUpAlert);
-});
+	element.addEventListener('click', popUpAlert);
+  });
 //pop-up alert
 
 
@@ -126,17 +126,15 @@ function doAjaxExperienceDowngradeAndLevelUp() {
     }
   })
 }
-//AJAX запрос на добавления подарка или просмотр вводного поп ап
-let receiveGift = false;
-let viewedPopUp = false;
-function doAjaxGiftAndViwed() {
+//AJAX запрос на добавления подарка
+function doAjaxGift() {
+  let justPlug = true;
   $.ajax({
     url: '/dataBase/controllers/bonusSystem/registrGifts.php',
     type: 'POST',
     dataType: "json",
     data: {
-      receiveGift: receiveGift,
-      viewedPopUp: viewedPopUp,
+      justPlug: justPlug,
     },
     success: function (data) {
       console.log(data);
@@ -275,21 +273,16 @@ itemHomeNavigation.onclick = function () {//при нажатии на элем 
 //О приложении
 const CloseAboutUs = document.querySelector('.close-about-us');
 CloseAboutUs.onclick = function () {
-  AboutUsContainer.style = 'display: none;';
+	AboutUsContainer.style = 'display: none;';
 }
 const CloseAboutUsBtn = document.querySelector('.about-us-confirm_button');
-CloseAboutUsBtn.onclick = function () {
-  viewedPopUp = true;
-  AboutUsContainer.style = 'display: none;';
-  doAjaxGiftAndViwed();
+	CloseAboutUsBtn.onclick = setTimeout(CloseAboutUsBody, 8000); //Сделать закрытие "О приложении" с таймером на кнопку 'confirm_button'
+	function CloseAboutUsBody () {
+		AboutUsContainer.style = 'display: none;';
 }
 
 //Бонус при регистрации
 if (receiveGiftValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
-  AboutUsContainer.style = 'display: flex;';
-}
-//pop-up about us
-if (viewedPopUpValue == 0) {//проверка на получение подарка и вывод на экран окна с подарком
   BonusContainer.style = 'display: flex;';
   containerGrayBackground.style = 'display: flex;';
 }
@@ -301,8 +294,7 @@ BonusContainerContinue.onclick = function () { //при закрытии Бон�
   homeHintsValueBody.innerHTML = `20`;
   BonusContainer.style = 'display: none;';
   containerGrayBackground.style = 'display: none;';
-  receiveGift = true;
-  doAjaxGiftAndViwed();
+  doAjaxGift();
   ShowFireworks();
   audioClick.play();
 }
