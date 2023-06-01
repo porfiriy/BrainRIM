@@ -17,6 +17,7 @@
 	  
 	  <div class="wrapper">
 	<div class="score_container">
+	<div class="best-score">Лучший результат: <span id="value-best">00</span></div>
 		<p>Счёт: <span id="score01"> 0</span></p>
 	</div>  
 		<div class="main">                                              
@@ -40,12 +41,31 @@
 			<div class="cell" id="c32"></div>
 			<div class="cell" id="c33"></div>
 			</div>
-		<div class="gameover" id="gameover">                
+
+<!--
+    		<div class="gameover" id="gameover">                
 			<div class="over">
 				<p>GAME OVER!!!</p>
 				<p>SCORE:<span id="score02"></span></p>
 				<a href="javascript:game.start()">try again!</a>
 			</div>
+!-->
+
+			<div class="results-gameover results-container">
+	  <h1 class="results-head-text">Результаты</h1>
+			<div class="results">
+				<div class="time">Время:<div class="time-count"></div>c.</div>
+				<div class="moves">Действий:<div class="moves-count"></div></div>
+				<div class="best-results">Ваш лучший результат:</div>
+				<div class="time">Время: <div class="best-time-count">0</div>с.</div>
+				<div class="moves">Действий: <div class="best-moves-count">0</div></div>
+				<div class="loose-win-value">Вы проиграли</div> 
+			</div>
+			<div class="results-menu__buttons-container">
+			<div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>
+			</div>
+			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon></a>
+		</div>
 		</div>
 	</div>
 
