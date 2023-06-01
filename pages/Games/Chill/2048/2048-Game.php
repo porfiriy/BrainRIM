@@ -51,7 +51,9 @@
 			</div>
 !-->
 
-			<div class="results-gameover results-container">
+
+		</div>
+		<div id class="results-gameover results-container">
 	  <h1 class="results-head-text">Результаты</h1>
 			<div class="results">
 				<div class="time">Время:<div class="time-count"></div>c.</div>
@@ -65,7 +67,6 @@
 			<div onclick="window.location.reload();" class=" results-menu__button results-menu__button-restart"><ion-icon name="refresh-outline" role="img" class="md hydrated" aria-label="refresh outline"></ion-icon>
 			</div>
 			<a href="/index.php" class=" results-menu__button result-menu__button-home"><ion-icon name="home-outline" role="img" class="md hydrated" aria-label="home outline"></ion-icon></a>
-		</div>
 		</div>
 	</div>
 

@@ -89,10 +89,10 @@ var game = {
       document.getElementById('score01').innerHTML = this.score;
       if (this.status == this.gameover) {
          document.getElementById('score02').innerHTML = this.score;
-         document.getElementById('gameover').style.display = 'block';
+         document.querySelector('.results-container').style.display = 'block';
       }
       else {
-         document.getElementById('gameover').style.display = 'none';
+         document.querySelector('.results-container').style.display = 'none';
       }
    },
 

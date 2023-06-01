@@ -261,6 +261,12 @@ header {
     font-size: 20px;
     margin: 0 auto;
 }
+.symbols-count {
+    margin: -35px 0px 0px 200px;
+    font-size: 20px;
+    position: absolute;
+}
+
 .create-plan {
     display: flex;
     margin: 50px auto;

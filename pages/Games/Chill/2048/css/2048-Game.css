@@ -409,16 +409,13 @@ p{
 	cursor: pointer;
 }
 .best-score{
-	position: absolute;
-	width: 350px;
-	font-size: 30px;
-	color: rgb(255, 255, 255);
-	text-align: center;
-	top: 20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: 350px;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+	margin: 40px auto;
  }
- 
+
 
 .results-gameover{
 	display: none;
