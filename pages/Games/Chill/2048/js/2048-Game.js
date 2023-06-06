@@ -1,6 +1,113 @@
 let settings = document.querySelector(".pop-up__container");
 let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
+const resultContainer = document.querySelector('.results-container');
+const timerCountResultsValue = document.querySelector(".time-count");
+const scoreResultsValue = document.querySelector(".moves-count");
+const bestTimerCountResultsValue = document.querySelector(".best-time-count");
+const bestScoreCountResultsValue = document.querySelector(".best-moves-count");
+const winOrLooseResultsValue = document.querySelector(".loose-win-value");
+const bestResultGameContainerValue = document.querySelector(".value-best");
+let timerCount = 0;
+
+//AJAX запрос на сервер для добавления в базу данных инфы 
+let winForResults = 0;
+let looseForResults = 0;
+let statusLoosOrWin;
+
+function doAjaxExperience() {
+   let expUpForModeAjax;
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = 15;
+   } else {
+      expUpForModeAjax = 2;
+   }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxWinBonuse() {
+   let IqUpForModeAjax = 15;
+
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+function doAjaxLooseBonuse() {
+   let IqUpForModeAjax = 2;
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let win = `${winForResults}`;
+   let loose = `${looseForResults}`;
+   let time_sec = `${timerCount}`;
+   let score = `${game.score}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/results2048Game.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         score: score,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
+      }
+   })
+}
+//z
 
 
 //при нажатии на отмену вспл окна настройки 
@@ -35,7 +142,13 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 
 
 
-
+function comparisonResBetterOrNot() {//возвращает правду или ложь
+   if (game.score > bestScoreRes) {
+      return true;
+   } else {
+      return false;
+   }
+}
 
 var game = {
    mydata: [],     // Добавляем атрибут mydata для хранения игровых данных
@@ -57,6 +170,10 @@ var game = {
       this.randomNum();
       this.dataView();     // Выполняем функцию dataView, когда игра начинает передавать обновление данных на страницу, обновляем данные на странице
       // console.log(this.mydata);
+      //timer
+      const gameTimer = setInterval(() => {
+         timerCount++;
+      }, 1000);
    },
 
    randomNum: function () {       // Метод генерации случайных чисел и присвоения начального случайного числа mydata
@@ -87,12 +204,27 @@ var game = {
          }
       }
       document.getElementById('score01').innerHTML = this.score;
+      bestResultGameContainerValue.innerHTML = bestScoreRes;
+      //при проигрыше
       if (this.status == this.gameover) {
-         document.getElementById('score02').innerHTML = this.score;
-         document.querySelector('.results-container').style.display = 'block';
-      }
-      else {
-         document.querySelector('.results-container').style.display = 'none';
+         timerCountResultsValue.innerHTML = timerCount;
+         scoreResultsValue.innerHTML = this.score;
+         bestTimerCountResultsValue.innerHTML = bestTimeRes;//из базы данных
+         bestScoreCountResultsValue.innerHTML = bestScoreRes;
+         if (comparisonResBetterOrNot() == true) {//если результат лучше
+            winOrLooseResultsValue.classList.add('congrats');
+            winOrLooseResultsValue.innerHTML = 'вы победили';
+         }
+         else {
+            winOrLooseResultsValue.classList.add('loose');
+            winOrLooseResultsValue.innerHTML = 'вы проиграли';
+         }
+         resultContainer.style = "display: block;";
+         statusLoosOrWin = "loose";
+         looseForResults = 1;
+         doAjaxLooseBonuse();
+         doAjaxExperience();
+         doAjaxResults();
       }
    },
 

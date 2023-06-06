@@ -14,7 +14,9 @@ html,body{
    background-color: #213242;
    font-family: 'Balsamiq Sans', cursive;
 }
-
+.value-best{
+	color: rgb(0, 255, 0);
+}
 .topButton-gameWords {
 	position: absolute;
 	top: 5px;
