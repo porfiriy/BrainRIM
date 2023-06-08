@@ -259,6 +259,7 @@ function showMessageLoose() {
    if (comparisonResBetterOrNot() == true) {//если результат лучше
       winOrLooseResultsValue.classList.add('congrats');
       winOrLooseResultsValue.innerHTML = 'вы победили';
+      doAjaxWinBonuse();
    } else {
       winOrLooseResultsValue.classList.add('loose');
       winOrLooseResultsValue.innerHTML = 'вы проиграли';

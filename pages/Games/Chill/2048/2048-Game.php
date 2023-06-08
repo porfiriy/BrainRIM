@@ -10,7 +10,7 @@
             let bestScoreRes = Number('<?= $bestUserScore ?>');
       <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
         bestTimeRes = 0;
-        bestEnemiesPassedRes = 0;
+        bestScoreRes = 0;
       <?php endif;?>
    </script>
 	<meta charset="UTF-8">
@@ -54,15 +54,6 @@
 			<div class="cell" id="c33"></div>
 			</div>
 
-<!--
-    		<div class="gameover" id="gameover">                
-			<div class="over">
-				<p>GAME OVER!!!</p>
-				<p>SCORE:<span id="score02"></span></p>
-				<a href="javascript:game.start()">try again!</a>
-			</div>
-!-->
-
 
 		</div>
 		<div id class="results-gameover results-container">
@@ -82,8 +73,8 @@
 		</div>
 	</div>
 	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  	<script src="/pages/Games/Chill/2048/js/2048-Game.js"></script>  
-	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  	<script src="/pages/Games/Chill/2048/js/2048-Game.js"></script> 
 </body>
 </html>

@@ -551,61 +551,10 @@
       <div class="analytic-container">
 		<div class="games-title">Аналитика</div>
 		<div class="analytics-in-development">"Мы ведём активную разработку над разделом <div class="neoncolor">"АНАЛИТИКА"</div> и в ближайшее время порадуем вас обновлением!"</div>
-		<!--<div class="container-list-games">
-		<a href="/page-for-memory/pages/Statistics-page/0All-statistics/All-stats.html" class="random-game-button">Общая
-		</a>
-		   <a href="/page-for-memory/pages/Statistics-page/1Number-statistics/Numbers-stats.html">
-			  <div class="item-games yellow-item">
-				 <img src="/page-for-memory/pages/main-page/img/games-page/numbersImg.svg" alt="">
-			  </div>
-		   </a>
-		   <a href="/page-for-memory/pages/Statistics-page/2Words-statistics/Words-stats.html">
-		   <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/wordsImg.svg" alt="">
-		   </div>
-		   <a href="/page-for-memory/pages/Statistics-page/3Images-statistics/Images-stats.html">
-			   <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/ImageIcon.svg" alt="">
-			  </div>
-		   </a>
-		   <a href="/page-for-memory/pages/Statistics-page/4Figures-statistics/Figures-stats.html">
-			  <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/shapesImg.svg" alt="">
-			  </div>
-		   </a>
-		   <a href="/page-for-memory/pages/Statistics-page/5Colors-statistics/Colors-stats.html">
-				 <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/colorsImg.svg" alt="">
-			  </div>
-		   </a>
-		   <a href="/page-for-memory/pages/Statistics-page/6Countries-statistics/Rhytms-stats.html">
-			  <div class="item-games"><img src="/page-for-memory/pages/main-page/img/games-page/CountriesImg.svg" alt="">
-			  </div>
-		   </a>
-		   <a href="#" class="random-game-button-in-dev">В разработке
-		   </a>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-		   <div class="item-games-in-dev in-dev_text">В разработке</div>
-         </div>-->
       </div>
 
       
       <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-      <!-- <script async src="https://pay.google.com/gp/p/js/pay.js" onload="onGooglePayLoaded()"></script> -->
       <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
       <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
       <script src="/pages/main-page/js/main-page.js"></script>

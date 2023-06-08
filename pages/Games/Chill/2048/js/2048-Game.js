@@ -43,8 +43,6 @@ function doAjaxExperience() {
 //AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
 function doAjaxWinBonuse() {
    let IqUpForModeAjax = 15;
-
-
    $.ajax({
       url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
       type: 'POST',
@@ -214,6 +212,7 @@ var game = {
          if (comparisonResBetterOrNot() == true) {//если результат лучше
             winOrLooseResultsValue.classList.add('congrats');
             winOrLooseResultsValue.innerHTML = 'вы победили';
+            doAjaxWinBonuse();
          }
          else {
             winOrLooseResultsValue.classList.add('loose');
