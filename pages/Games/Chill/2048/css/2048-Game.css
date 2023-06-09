@@ -13,6 +13,7 @@ html,body{
    overflow: hidden;
    background-color: #213242;
    font-family: 'Balsamiq Sans', cursive;
+   user-select: none;
 }
 .value-best{
 	color: rgb(0, 255, 0);
@@ -333,7 +334,7 @@ html,body{
  /* Устанавливаем стиль самого дальнего большого окна */
 .score_container{   
 	font-family: 'Balsamiq Sans', cursive;
-	font-size: 40px;
+	font-size: 24px;
 	font-weight: bold;
 	margin:50px auto;
 }
@@ -352,11 +353,13 @@ p{
 
  /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
 .main{
+	max-width: 80%;
+	max-height: 80%;
 	width: 400px;
 	height: 400px;
 	background-color: #bbada0;
 	border-radius: 15px;
-	font-size: 40px;
+	font-size: 30px;
 }
 
  /* Устанавливаем все мелкие стили сетки */
@@ -412,7 +415,7 @@ p{
 }
 .best-score{
     width: 350px;
-    font-size: 30px;
+    font-size: 22px;
     color: rgb(255, 255, 255);
     text-align: center;
 	margin: 40px auto;

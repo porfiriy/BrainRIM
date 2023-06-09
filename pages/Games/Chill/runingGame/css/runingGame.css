@@ -5,6 +5,7 @@ body {
   overflow: hidden;
   background-color: #213242;
   font-family: 'Balsamiq Sans', cursive;
+  user-select: none;
 }
 
 .game-container {
@@ -25,13 +26,14 @@ margin: 0 auto;
 }
 
 #player {
-  width: 50px;
-  height: 50px;
- background: url(/img/Menu/ubp8p8dz1h3451.png);
-  position: absolute;
-  bottom: 10px;
-  left: calc(50% - 25px);
-  border-radius: 5px;
+	width: 50px;
+	height: 50px;
+	background: hwb(210 0% 0%);
+	position: absolute;
+	bottom: 10px;
+	left: calc(50% - 25px);
+	border-radius: 5px;
+	border: 1px double #0400ff;
 }
 
 .enemy {
