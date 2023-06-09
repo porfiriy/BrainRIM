@@ -353,8 +353,6 @@ p{
 
  /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
 .main{
-	max-width: 80%;
-	max-height: 80%;
 	width: 400px;
 	height: 400px;
 	background-color: #bbada0;
