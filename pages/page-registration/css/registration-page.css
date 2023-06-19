@@ -118,6 +118,9 @@
  }
  .alerts-container{
 	height: 20px;
+	color: rgba(255,255,255,0.5);
+    font-size: 0.95em;
+    font-weight: 300;
 }
  .container .form.signin,
  .container.signinForm .form.signup{
@@ -221,7 +224,7 @@
     color: rgba(255,255,255,0.5);
     font-size: 0.95em;
     font-weight: 300;
-    margin: 10px;
+    margin: 30px;
  }
  .container .form p a{
 	 font-weight: 500;
