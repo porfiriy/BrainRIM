@@ -31,8 +31,8 @@
             <form action="registration-page.php" method="post">
 					<h2>Регистрация</h2>
 					<div class="alerts-container err">
-						<p><?=$errorMsg?></p>
-					</div>
+                            <p><?=$errorMsg?></p>
+               </div>
 					<div class="inputBox">
 									<input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login" >
 						<i class="fa-regular fa-user"></i>

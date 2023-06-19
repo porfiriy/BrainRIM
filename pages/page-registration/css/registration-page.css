@@ -117,7 +117,7 @@
 	gap: 40px;
  }
  .alerts-container{
-	position: absolute;
+	height: 20px;
 }
  .container .form.signin,
  .container.signinForm .form.signup{
@@ -221,7 +221,7 @@
     color: rgba(255,255,255,0.5);
     font-size: 0.95em;
     font-weight: 300;
-    margin: 30px;
+    margin: 10px;
  }
  .container .form p a{
 	 font-weight: 500;
