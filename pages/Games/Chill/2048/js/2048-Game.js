@@ -1,3 +1,8 @@
+//звук 
+let audioClick = new Audio('/pages/main-page/sounds/mixkit-modern-click-box-check-1120.wav');
+let audioSwapeLeftRight = new Audio('/sound/korotkiy-moschnyiy-zamah.mp3');
+let audioSwapeTopBottom = new Audio('/sound/zvuk-kogda-razrubili-vozduh.mp3');
+
 let settings = document.querySelector(".pop-up__container");
 let comeback = document.querySelector(".pop-up__container2");
 let restart = document.querySelector(".pop-up__container3");
@@ -250,6 +255,7 @@ var game = {
 
    //Движение влево
    moveLeft: function () {
+      audioSwapeLeftRight.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveLeftInRow(r);
@@ -297,6 +303,7 @@ var game = {
 
    //Переместить вправо
    moveRight: function () {
+      audioSwapeLeftRight.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveRightInRow(r);
@@ -344,6 +351,7 @@ var game = {
 
    // Двигаться вверх
    moveTop: function () {
+      audioSwapeTopBottom.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveTopInRow(r);
@@ -391,6 +399,7 @@ var game = {
 
    // двигаться вниз
    moveBottom: function () {
+      audioSwapeTopBottom.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveBottomInRow(r);
