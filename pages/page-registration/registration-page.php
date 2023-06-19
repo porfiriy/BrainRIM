@@ -18,6 +18,9 @@
 </head>
 
 <body>
+	<!-- alert -->
+	<div class="pop-up-alert-container"><div class="alert-text">Функция в разработке!</div></div></div>
+	<!-- alert -->
 	<header>
 	<a class="skip-button" href="/index.php">Пропустить</a>
 	</header>
