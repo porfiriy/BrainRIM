@@ -26,7 +26,7 @@
 			<span class="page-name">Профиль</span>
 			<div class="change-name"><ion-icon name="pencil-outline"></ion-icon></div>
 		</div>
-		<ion-icon name="mail-outline"></ion-icon>
+		<ion-icon name="mail-outline" class="mail"></ion-icon>
 	</header>
 	<main>
 		
@@ -40,7 +40,7 @@
 						Логин
 						<?php endif;?>
 					</span>
-					<ion-icon name="link-outline"></ion-icon>
+					<ion-icon name="link-outline" class="link"></ion-icon>
 				</div>	
 			</div>
 				<div class="rank-container">
@@ -55,7 +55,7 @@
 					<div class="icon"><ion-icon name="stats-chart"></ion-icon></div>
 					</div>
 					<div class="container">
-					<a href="#" class="button statistic-page">Добавить друга</a>
+					<a href="#" class="button add-friend">Добавить друга</a>
 					<div class="icon"><ion-icon name="person-add-outline"></ion-icon></div>
 					</div>
 					<div class="leave-btn">
