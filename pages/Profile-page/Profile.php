@@ -22,65 +22,29 @@
 	<header>
 		<a class="comeback-button" href="/index.php">
 			<ion-icon name="chevron-back-outline"></ion-icon></a>
-		<span class="page-name">Профиль</span>
-		<ion-icon class="settings" name="ellipsis-vertical-outline"></ion-icon>
+		<div class="profile-title-container">
+			<span class="page-name">Профиль</span>
+			<div class="change-name"><ion-icon name="pencil-outline"></ion-icon></div>
+		</div>
+		<ion-icon name="mail-outline"></ion-icon>
 	</header>
 	<main>
-		<div class="profile-container">
-			<div class="profile_first">
-				<div class="profile-picture"><img class="Profilesvg" src="/img/Menu/brain.svg" alt=""></div>
-				<div class="profile">
-					<div class="change-name"><ion-icon name="pencil-outline"></ion-icon></div>
-				<span class="profile-name">
-					<?php if(isset($_SESSION['id'])): ?>
-					<?php echo $_SESSION['login'];?>
-					<?php else: ?>
-					Логин
-					<?php endif;?>
-				</span>
-				</div>
+		
+			<div class="profile_first"> 
+				<div class="profile-picture"><img class="Profilesvg" src="/img/Menu/brain.svg" alt=""></div>	
+				<div class="name-container">
+					<span class="profile-name">
+						<?php if(isset($_SESSION['id'])): ?>
+						<?php echo $_SESSION['login'];?>
+						<?php else: ?>
+						Логин
+						<?php endif;?>
+					</span>
+					<ion-icon name="link-outline"></ion-icon>
+				</div>	
 			</div>
-			<div class="currency">
-				<div class="currencies memoney"><img class="money-pct" src="/img/Menu/Memoney.svg" alt="">
-					<div class="count">
-					<?php if(isset($_SESSION['id'])): ?>
-                  <?php echo $memany['sum_memany']; ?>
-                  <?php else: ?>
-                  0
-                  <?php endif;?>
-					</div>
-				</div>
-				<div class="currencies hints"><img class="hints-pct" src="/img/Menu/Hints.svg" alt="">
-					<div class="count">
-					<?php if(isset($_SESSION['id'])): ?>
-                  <?php echo $EyeScore['sum_eye_hint']; ?>
-                  <?php else: ?>
-                  0
-                  <?php endif;?>
-					</div>
-				</div>
-				<div class="currencies iq"><span class="iq-txt">IQ</span>
-					<div class="count">
-					<?php if(isset($_SESSION['id'])): ?>
-                  <?php echo $IQscore['sum_iq']; ?>
-                  <?php else: ?>
-                  0
-                  <?php endif;?>
-					</div>
-				</div>
-			</div>
-			<div class="statistics">
-				<div class="container">
-					<span class="button rank">Новичок</span>
-					<div class="icon"><ion-icon name="happy-outline"></ion-icon></div>
-				</div>
-				<div class="rank-body">
-					<span class="rank-info rank-newbie">Новичок</span>
-					<span class="rank-info rank-midle">Знаток</span>
-					<span class="rank-info rank-good">Молодец</span>
-					<span class="rank-info rank-pro">Профессионал</span>
-					<span class="rank-info rank-god">Мегаразум</span>
-					<div class="close-rank"><ion-icon name="close-outline"></ion-icon></div>
+				<div class="rank-container">
+					<span class="rank">Новичок</span>
 				</div>
 				<div class="container">
 				<a href="/pages/Achievements-Page/Achievements.php" class="button button-achievments">Достижения</a>
@@ -91,11 +55,13 @@
 					<div class="icon"><ion-icon name="stats-chart"></ion-icon></div>
 					</div>
 					<div class="container">
-					<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти</a>
-					<div class="icon"><ion-icon name="log-out-outline"></ion-icon></div>
+					<a href="#" class="button statistic-page">Добавить друга</a>
+					<div class="icon"><ion-icon name="person-add-outline"></ion-icon></div>
 					</div>
-			</div>
-		</div>
+					<div class="leave-btn">
+					<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти з аккаунта</a>
+					</div>
+			
 	</main>
 
 	<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

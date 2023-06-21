@@ -6,6 +6,10 @@ body {
   background-color: #213242;
   font-family: 'Balsamiq Sans', cursive;
   user-select: none;
+  -webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	outline: none;
 }
 
 .game-container {
