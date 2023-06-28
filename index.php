@@ -374,8 +374,8 @@
 		 </div>
 	</div>
 
-         <div class="time">Обновление через</div>
-         <div class="time">23:59</div>
+        <!--<div class="time">Обновление через</div>
+         <div class="time">23:59</div>-->
          <div class="currency">
             <div class="currency-memoney">
                <img class="memoneyicon" src="/img/Menu/Memoney.svg" alt="">
@@ -417,7 +417,8 @@
 				<button type="submit" name="convert-button" class="convert-button">Обменять</button>
 		    </div>
          <div class="buy-currency">
-            <div class="buy-memoney">
+			<span class="donate-dev">В разработке...</span>
+<!--            <div class="buy-memoney">
                <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 0.86$</div>
                <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
@@ -430,7 +431,7 @@
                      alt="">= 13.62$</div>
                <div id="buy" class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 25.22$</div>
-            </div>
+            </div>-->
             <div class="special-offers">Специальные предложения</div>
 			<!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
 			<div class="special-offers-body">В данный момент специальных предложений нет.</div>
