@@ -216,8 +216,11 @@ var game = {
          bestScoreCountResultsValue.innerHTML = bestScoreRes;
          if (comparisonResBetterOrNot() == true) {//если результат лучше
             winOrLooseResultsValue.classList.add('congrats');
-            winOrLooseResultsValue.innerHTML = 'вы победили';
+            winOrLooseResultsValue.innerHTML = 'Лучший результат!';
+            statusLoosOrWin = "win";
             doAjaxWinBonuse();
+            doAjaxExperience();
+            doAjaxResults();
          }
          else {
             winOrLooseResultsValue.classList.add('loose');
@@ -495,3 +498,14 @@ document.addEventListener("touchend", function (event) {    // Привязка 
    }
 
 })
+
+//активация кнопки старт при нажатии
+const BUTTON_START = document.querySelector('.button-start');
+BUTTON_START.onclick = function () {
+   document.querySelector('.start-menu').classList.add('activated');
+   BUTTON_START.classList.add('activated');
+   if (BUTTON_START.classList.contains('activated')) {
+
+
+   }
+}

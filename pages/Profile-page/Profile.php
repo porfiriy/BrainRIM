@@ -59,7 +59,7 @@
 					<div class="icon"><ion-icon name="person-add-outline"></ion-icon></div>
 					</div>
 					<div class="leave-btn">
-					<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти з аккаунта</a>
+					<a href="<?php echo "/dataBase/logOut.php";?>" class="button leave">Выйти из аккаунта</a>
 					</div>
 			
 	</main>

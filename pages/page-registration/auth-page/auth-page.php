@@ -25,11 +25,11 @@
 	<div class="main">
         <div class="container">
             <div class="form signin">
-                    <div class="alerts-container err">
-                            <p><?=$errorMsg?></p>
-                        </div>
                         <form action="auth-page.php" method="post">
 						<h2>Авторизация</h2>
+                        <div class="alerts-container err">
+                            <span><?=$errorMsg?></span>
+                        </div>
                         <div class="inputBox">
                             <input type="email" value="<?=$email?>" required="required" class="form-control" name="email" id="emailLog">
                             <i class="fa-regular fa-user"></i>

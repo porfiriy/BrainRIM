@@ -31,6 +31,7 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 
 
 const gameContainer = document.querySelector(".game-container");
+const bestResBody = document.querySelector(".best-res__value");
 const player = document.querySelector("#player");
 const timer = document.querySelector("#timer");
 const timerCountResultsValue = document.querySelector(".time-count");
@@ -260,6 +261,11 @@ function showMessageLoose() {
       winOrLooseResultsValue.classList.add('congrats');
       winOrLooseResultsValue.innerHTML = 'вы победили';
       doAjaxWinBonuse();
+      statusLoosOrWin = "win";
+      winForResults = 1;
+      doAjaxWinBonuse();
+      doAjaxExperience();
+      doAjaxResults();
    } else {
       winOrLooseResultsValue.classList.add('loose');
       winOrLooseResultsValue.innerHTML = 'вы проиграли';
@@ -272,15 +278,17 @@ function comparisonResBetterOrNot() {//возвращает правду или 
       return false;
    }
 }
-//анимация победы 
-if (false) {
-   statusLoosOrWin = "win";
-   winForResults = 1;
-   doAjaxWinBonuse();
-   doAjaxExperience();
-   doAjaxResults();
-   audioVictory.play();
-}
 
 gameContainer.addEventListener("touchmove", movePlayer);
-startGame();
+
+//активация кнопки старт при нажатии
+const BUTTON_START = document.querySelector('.button-start');
+BUTTON_START.onclick = function () {
+   document.querySelector('.start-menu').classList.add('activated');
+   BUTTON_START.classList.add('activated');
+   if (BUTTON_START.classList.contains('activated')) {
+      startGame();
+
+   }
+}
+bestResBody.innerHTML = bestEnemiesPassedRes;

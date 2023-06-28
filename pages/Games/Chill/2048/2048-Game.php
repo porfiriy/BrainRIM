@@ -20,7 +20,16 @@
 </head>
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
-
+<div class="button-start-container">
+      <div class="start-menu">
+         <a href="#" class="button-start">START</a>
+		 <div class="game-info-title">
+		<span class="game-info-name">2048</span>
+		<span class="game-info">В этой игре вам надо дойти до кубика с числом "2048"</span>
+	  </div>
+      </div>
+   </div>
+   </div>
 <div class="topButton-gameWords">
          <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>

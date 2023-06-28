@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <script>//записывает в переменные данные из базы
+    <script>//записывает в переменные данные из базы
       <?php if(isset($_SESSION['id'])): ?>
             let bestTimeRes = Number('<?= $bestUserResultTime ?>');
             let bestEnemiesPassedRes = Number('<?= $bestUserResultEnemiesPassed ?>');
@@ -12,16 +12,27 @@
         bestTimeRes = 0;
         bestEnemiesPassedRes = 0;
       <?php endif;?>
-   </script>
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Game</title>
-	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+	  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/pages/Games/Chill/runingGame/css/runingGame.css" />
   </head>
   <body>
-  <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
+    <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
+   <div class="button-start-container">
+      <div class="start-menu">
+        <div class="start-menu__best-res-title">Лучший результат:<div class="best-res__value"></div> кубиков</div>
+         <a href="#" class="button-start">START</a>
+		 <div class="game-info-title">
+		<span class="game-info-name">Кубики</span>
+		<span class="game-info">В этой игре вам надо уворачиваться от падающих кубиков и продержаться как можно дольше</span>
+	  </div>
+      </div>
+   </div>
+   </div>
   <div class="topButton-gameWords">
          <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
