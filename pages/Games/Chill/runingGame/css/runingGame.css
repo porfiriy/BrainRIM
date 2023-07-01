@@ -165,10 +165,15 @@ body {
     justify-content: center;
     position: absolute;
 	 top: 130px;
+	 flex-wrap: wrap;
+	 width: 80%;
 	 font-size: 23px;
     text-align: center;
     gap: 15px;
-	 color: chartreuse;
+	 color: white;
+}
+.best-res__value{
+	color: chartreuse;
 }
 .game-container {
   position: relative;
@@ -344,7 +349,7 @@ margin: 0 auto;
  .linkToTheRestart:hover{
 	transform: rotate(540deg);
  }
- .pop-up__container {
+  .pop-up__container {
 	visibility: hidden;
 	position: absolute;
 	background-color: #02000099;
@@ -403,7 +408,7 @@ margin: 0 auto;
 	font-weight: 600;
 	text-align: center;
 	padding: 10px 0;
-	height: 20px;
+	height:40px;
 	width: 100px;
 	font-family: 'Balsamiq Sans', cursive;
 	border-radius: 10px;
@@ -423,7 +428,7 @@ margin: 0 auto;
 	padding: 10px 0;
 	font-weight: 600;
 	text-align: center;
-	height: 20px;
+	height:40px;
 	border-radius: 10px;
 	width: 100px;
 	background-color: rgb(194, 45, 45);
@@ -490,7 +495,7 @@ margin: 0 auto;
 	font-weight: 600;
 	text-align: center;
 	padding: 10px 0;
-	height: 20px;
+	height:40px;
 	width: 100px;
 	background-color: rgb(17, 190, 75);
 	font-family: 'Balsamiq Sans', cursive;
@@ -508,7 +513,7 @@ margin: 0 auto;
 	padding: 10px 0;
 	font-weight: 600;
 	text-align: center;
-	height: 20px;
+	height:40px;
 	width: 100px;
 	background-color: rgb(194, 45, 45);
 	font-family: 'Balsamiq Sans', cursive;
@@ -577,7 +582,7 @@ margin: 0 auto;
 	font-weight: 600;
 	text-align: center;
 	padding: 10px 0;
-	height: 20px;
+	height:40px;
 	width: 100px;
 	background-color: rgb(17, 190, 75);
 	font-family: 'Balsamiq Sans', cursive;
@@ -595,7 +600,7 @@ margin: 0 auto;
 	padding: 10px 0;
 	font-weight: 600;
 	text-align: center;
-	height: 20px;
+	height:40px;
 	width: 100px;
 	background-color: rgb(194, 45, 45);
 	font-family: 'Balsamiq Sans', cursive;

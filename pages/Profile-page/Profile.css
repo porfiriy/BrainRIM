@@ -110,6 +110,7 @@ transition: 0.1s;
 transform: scale(0.80);
 }
 .page-name{
+	font-size: 32px;
 transition: 0.4s;
 }
 .page-name:hover{

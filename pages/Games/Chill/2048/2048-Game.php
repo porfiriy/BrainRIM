@@ -22,7 +22,7 @@
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <div class="button-start-container">
       <div class="start-menu">
-         <a href="#" class="button-start">START</a>
+         <div class="button-start">START</div>
 		 <div class="game-info-title">
 		<span class="game-info-name">2048</span>
 		<span class="game-info">В этой игре вам надо дойти до кубика с числом "2048"</span>

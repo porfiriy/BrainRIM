@@ -25,7 +25,7 @@
    <div class="button-start-container">
       <div class="start-menu">
         <div class="start-menu__best-res-title">Лучший результат:<div class="best-res__value"></div> кубиков</div>
-         <a href="#" class="button-start">START</a>
+         <div class="button-start">START</div>
 		 <div class="game-info-title">
 		<span class="game-info-name">Кубики</span>
 		<span class="game-info">В этой игре вам надо уворачиваться от падающих кубиков и продержаться как можно дольше</span>
