@@ -183,13 +183,13 @@ body {
 }
 
 #score {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  font-size: 18px;
-  color: #05efd4;
-  z-index: 1;
-margin: 0 auto;
+	position: fixed;
+	bottom: 20px;
+	left: 20px;
+	font-size: 18px;
+	color: #05efd4;
+	z-index: 1;
+	margin: 0 auto;
 }
 
 #player {

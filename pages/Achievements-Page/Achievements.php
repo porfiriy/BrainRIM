@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Achievements-Page/Achievements.css">
-	<title>Achievments-page</title>
+	<title>Достижения</title>
 </head>
 <header>
 <a class="comeback-button" href="/pages/Profile-page/Profile.php"><ion-icon name="chevron-back-outline"></ion-icon></a>

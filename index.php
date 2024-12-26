@@ -31,7 +31,22 @@
    <meta name="viewport" content="width=device-width">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/main-page/css/main-page.css">
-   <title>main-page</title>
+   <title>Главная страница</title>
+   <link rel="icon" href="https://brainrim.site/img/app_icon_with_larger_area_1024x1024.png" type="image/png">
+
+   <!-- Заголовок -->
+   <meta property="og:title" content="BrainRim">
+   <!-- Описание -->
+   <meta property="og:description" content="Приложение развивающее интелект, смекалку и эрудицию. Тут вы найдёте как развивающие игры, так и игры для отдыха">
+   <!-- URL -->
+   <meta property="og:url" content="https://brainrim.site">
+   <!-- Тип -->
+   <meta property="og:type" content="website">
+   <!-- Изображение -->
+   <meta property="og:image" content="https://brainrim.site/img/app_icon_with_larger_area_1024x1024.png">
+   
+   
+   <meta charset="UTF-8">
 </head>
 
 <body>
@@ -83,7 +98,7 @@
       </header>
       <main class="main">
 		         <div class="lvl-container">
-            <div class="player-level">Lvl 
+            <div class="player-level">Уровень 
                   <?php if(isset($_SESSION['id'])): ?>
                      <span class="playerLvlCounterBody"></span>
                   <?php else: ?>
@@ -97,16 +112,16 @@
             </div>
 
             <div class="all-lvls-container">
-               <div class="level level-one">Lvl 1</div>
-               <div class="level level-two">Lvl 2</div>
-               <div class="level level-three">Lvl 3</div>
-               <div class="level level-four">Lvl 4</div>
-               <div class="level level-five">Lvl 5</div>
-               <div class="level level-six">Lvl 6</div>
-               <div class="level level-seven">Lvl 7</div>
-               <div class="level level-eight">Lvl 8</div>
-               <div class="level level-nine">Lvl 9</div>
-               <div class="level level-ten">Lvl 10</div>
+               <div class="level level-one">Уровень 1</div>
+               <div class="level level-two">Уровень 2</div>
+               <div class="level level-three">Уровень 3</div>
+               <div class="level level-four">Уровень 4</div>
+               <div class="level level-five">Уровень 5</div>
+               <div class="level level-six">Уровень 6</div>
+               <div class="level level-seven">Уровень 7</div>
+               <div class="level level-eight">Уровень 8</div>
+               <div class="level level-nine">Уровень 9</div>
+               <div class="level level-ten">Уровень 10</div>
                <div class="close-levels-container"><ion-icon name="close-outline"></ion-icon></div>
             </div>
 
@@ -118,7 +133,7 @@
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
 			   <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
-			   <span class="reg-hint-text">Войдите, чтобы сохранить прогресс.<br> Подарок при первой регистрации!</span>
+			   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при первой регистрации!</span>
 			   </a>
  
                   <?php endif;?>
@@ -270,8 +285,8 @@
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="memory-games-body">
 <a class="game-item memory-game" href="/pages/Games/Growth/Memory/Memory-game.php"><ion-icon name="image-outline"></ion-icon></a>
-<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
-<ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
+<a class="game-item memory-game" href="/pages/Games/Chill/math3/math3.php"><img src="/img/icons8-память-64.png" alt="Память"></ion-icon></a>
+<a class="game-item memory-game" href="/pages/Games/Chill/TilesLabirint/tilesMaze.php"><img src="/img/maze.png" alt="Память"></ion-icon></a>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
@@ -345,10 +360,6 @@
                   <div class="container-improve improve-in-dev">
                      <div class="improve">Продуктивность<ion-icon class="improve-icon" name="time-outline"></ion-icon></div>
                      <div class="forimprove">Управление временем, планирования задач, список дел, напоминания!</div>
-                  </div>
-                  <div class="container-improve improve-in-dev">
-                     <div class="improve">?</div>
-                     <div class="forimprove">???</div>
                   </div>
                </div>
                <div class="DownButton">
@@ -462,16 +473,6 @@
                <div class="tasks-body__mark-done"></div>
                <div class="tasks-body__task-text">Открыть 4 правильных карты подряд</div>
                <div class="tasks-body__task-reward">25 IQ</div>
-            </div>
-            <div class="task-body">
-               <div class="tasks-body__mark-done"></div>
-               <div class="tasks-body__task-text">???</div>
-               <div class="tasks-body__task-reward">255 IQ</div>
-            </div>
-            <div class="task-body">
-               <div class="tasks-body__mark-done"></div>
-               <div class="tasks-body__task-text">???</div>
-               <div class="tasks-body__task-reward">255 IQ</div>
             </div>
          </div>
       </div>

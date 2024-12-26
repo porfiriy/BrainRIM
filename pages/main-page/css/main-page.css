@@ -1,3 +1,4 @@
+
 * {
 	padding: 0;
 	margin: 0;
@@ -146,29 +147,36 @@ z-index: 1;
 	gap: 40px;
 	font-size: 18px;
 	color: #FFFFFF;
-	-webkit-animation: glow 2s ease-in-out infinite alternate;
-	-moz-animation: glow 2s ease-in-out infinite alternate;
-	animation: glow 2s ease-in-out infinite alternate;
- }
- @-webkit-keyframes glow {
-	from {
-	  text-shadow: 0 0 3px #000000, 0 0 1px #2218b14e, 0 0 3px #2218b17a, 0 0 5px #2218b155, 0 0 7px #2218b168, 0 0 9px #2218b165, 0 0 11px #1871b17e;
-	}
-	to {
-	  text-shadow: 0 0 15px #14aec9, 0 0 10px #14aec9, 0 0 15px #14aec9, 0 0 20px #14aec9, 0 0 25px #14aec9, 0 0 30px #14aec9, 0 0 35px #14aec9;
-	}
-  }
 	
+ }	
  
  .header__top-button-title{
 	font-size: 34px;
 	font-weight: 800;
 	transition: 1s;
+	position: relative;
+  overflow: hidden;
  }
- .header__top-button-title:hover{
-text-shadow: 0px 0px 20px #05EFD4;
-color: #05EFD4;
+ .header__top-button-title::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: -100%;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(90deg, #21324200 0%, #213242d3 50%, #21324200 100%);
+	animation: glow-move 2s infinite;
  }
+ 
+ @keyframes glow-move {
+	0% {
+	  left: -100%;
+	}
+	100% {
+	  left: 100%;
+	}
+ }
+ 
  .header-score-container{
 	margin: 20px 0 ;
 	display: flex;
@@ -211,24 +219,25 @@ color: #05EFD4;
 }
  
 .player-level {
-    display: flex;
-    align-items: center;
-    margin: 20px auto 0 auto;
-    justify-content: center;
-    width: 90px;
-    height: 30px;
-    background: #000000;
-    border-radius: 10px;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 24px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.225em;
-    color: #05EFD4;
-    gap: 5px;
+	display: flex;
+	align-items: center;
+	margin: 20px auto 0 auto;
+	justify-content: center;
+	width: fit-content;
+	padding: 10px 20px;
+	height: 30px;
+	background: #00000061;
+	border-radius: 10px;
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+	text-align: center;
+	letter-spacing: 0.225em;
+	color: #ffffff;
+	gap: 5px;
 }
  #loading-bar{
 	 box-sizing: border-box;
@@ -258,13 +267,16 @@ color: #05EFD4;
 	color: #05efd4;
 }
 
-
+.reg-hint-text span {
+	color: #05EFD4;
+}
 
  .all-lvls-container{
 	display: none;
 	flex-direction: column;
 	position: absolute;
 	text-align: center;
+	gap: 5px;
     top: 35%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -1144,19 +1156,20 @@ flex-direction: column;
 	 height: 100%;
 	 flex: 1 1 auto;
   }
-  #improve-container{
-	 font-family: 'Balsamiq Sans', cursive;
-	 font-size: 20px;
-	 color: #ffffff;
-	 overflow: scroll;
-	 height: 500px;
-	 width: 330px;
-  }
+  #improve-container {
+	font-family: 'Balsamiq Sans', cursive;
+	font-size: 20px;
+	color: #ffffff;
+	overflow: scroll;
+	height: 60vh;
+	margin: 60px 0 0 0;
+	width: 330px;
+}
   .scroll{
 	rotate: 180deg;
   }
   .container-improve{
-    margin: 50px auto;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1774,7 +1787,7 @@ font-size: 22px;
    color: #00ff08;
  }
  .games-choice{
-   margin: 250px auto;
+   margin: 30vh auto;
    gap: 20px;
    display: flex;
    flex-direction: column;
@@ -1863,7 +1876,7 @@ font-size: 22px;
  }
  .chill-games-body{
    display: flex;
-   margin: 90px auto 0 auto;
+	margin: 0px auto 0 auto;
    align-items: center;
    justify-content: center;
    flex-wrap: wrap;
@@ -1937,7 +1950,7 @@ font-size: 22px;
 }
 .memory-games-body{
 	display: flex;
-	margin: 100px auto 0 auto;
+	margin: 0px auto 0 auto;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -1972,7 +1985,7 @@ font-size: 22px;
 }
 .reaction-games-body{
 	display: flex;
-	margin: 90px auto 0 auto;
+	margin: 0px auto 0 auto;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -2007,7 +2020,7 @@ font-size: 22px;
 }
 .attention-games-body{
 	display: flex;
-	margin: 90px auto 0 auto;
+	margin: 0px auto 0 auto;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -2042,7 +2055,7 @@ font-size: 22px;
 }
 .iq-games-body{
 	display: flex;
-	margin: 90px auto 0 auto;
+	margin: 0px auto 0 auto;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;

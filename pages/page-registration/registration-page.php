@@ -11,10 +11,9 @@
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/pages/page-registration/css/registration-page.css">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
-	<title>registration-page</title>
+	<title>Регистрация</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
-		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-		crossorigin="anonymous" referrerpolicy="no-referrer" />
+		integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
@@ -34,17 +33,17 @@
                             <div><?=$errorMsg?></div>
                </div>
 					<div class="inputBox">
-									<input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login" >
+									<input type="text" required="required" value="<?=$login?>" class="form-control" name="login" id="login">
 						<i class="fa-regular fa-user"></i>
 						<span>Логин</span>
 					</div>
 					<div class="inputBox">
-									<input type="email" required="required" value="<?=$email?>"  class="form-control" name="email" id="email" >
+									<input type="email" required="required" value="<?=$email?>"  class="form-control" name="email" id="email">
 						<i class="fa-regular fa-envelope"></i>
 						<span>Почта</span>
 					</div>
 					<div class="inputBox">
-									<input type="password" required="required" class="form-control" id="pass" name="pass" >
+									<input type="password" required="required" class="form-control" id="pass" name="pass">
 						<i class="fa-sharp fa-solid fa-lock"></i>
 						<span>Пароль</span>
 					</div>

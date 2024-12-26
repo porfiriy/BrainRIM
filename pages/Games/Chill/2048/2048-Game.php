@@ -14,6 +14,7 @@
       <?php endif;?>
    </script>
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
 	<title>2048</title>
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Games/Chill/2048/css/2048-Game.css">    

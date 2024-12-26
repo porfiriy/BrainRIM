@@ -11,7 +11,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css">
-   <title>settings-page</title>
+   <title>Настройки</title>
 </head>
 
 <body>
@@ -21,9 +21,9 @@
          <a class="comeback-button" href="/index.php">
             <ion-icon name="chevron-back-outline"></ion-icon></a>
          <div class="social-list">
-            <a class="tik-tok settings-top-icon" href="https://www.tiktok.com/@brainrim_app"><ion-icon name="logo-tiktok"></ion-icon></a>
-            <a href="https://vk.com/club217095388" class="linkiVK settings-top-icon"><ion-icon
-                  name="logo-vk"></ion-icon></a>
+            <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><ion-icon name="logo-tiktok"></ion-icon></a>
+            <a href="https://vk.com/brainrim" target="_blank" class="settings-top-icon"><img src="/img/free-icon-vk-3670055.png" alt=""></a>
+            <a href="https://t.me/brainrim" target="_blank" class="settings-top-icon"><img src="/img/telegram.png" alt=""></a>
          </div>
       </header>
       <main class="main">
@@ -107,7 +107,7 @@
        
       </main>
       <footer class="footer">
-         <span class="version">| Beta version 1.1</span>
+         <span class="version">| Beta version 1.3</span>
 		 <a href="/Privacy-Policy.php" class="privacy"><ion-icon name="shield-outline"></ion-icon></a>
 
       </footer>

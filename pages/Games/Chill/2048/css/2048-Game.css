@@ -443,19 +443,23 @@ p{
 }
 
  /* Устанавливаем стиль большой коробки, обернутой Jiugongge */
-.main{
-	width: 400px;
-	height: 400px;
+ .main {
+	width: 330px;
+	height: 330px;
 	background-color: #bbada0;
 	border-radius: 15px;
 	font-size: 30px;
+	margin: 0 auto;
 }
 
  /* Устанавливаем все мелкие стили сетки */
-.cell{
-	width: 80px;
-	height: 80px;
-	margin:16px 0px 0px 16px;
+ .cell {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 60px;
+	height: 60px;
+	margin: 17px 0px 0px 17px;
 	border-radius: 5px;
 	background-color: #ccc0b3;
 	float: left;
@@ -515,22 +519,19 @@ p{
 	display: none;
 }
 
-.results-container{
+.results-container {
 	position: absolute;
-    display: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 100%;
-    width: 100%;
-    background-color: #213242;
-    z-index: 99;
+	display: none;
+	height: 100%;
+	width: 100%;
+	background-color: #213242;
+	z-index: 99;
 	font-size: 24px;
 	color: white;
-
+	overflow: auto;
+	padding: 40px 0;
 }
 .results-head-text{
-    margin: 10% 0 0 0;
     text-align: center;
     font-size: 38px;
 }

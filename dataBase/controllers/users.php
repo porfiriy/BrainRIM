@@ -38,6 +38,8 @@
                ];
                $id = insert('users',$post);
                $user =selectOne('users', ['id' => $id]);
+
+
                //должно создавать новую строку со счётом memany с id пользователя
                $currencyMemany = [
                   'user_id' => $id,
@@ -83,7 +85,6 @@
    if($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['button-log'])){
       $email = trim($_POST['email']);
       $pass = trim($_POST['pass']);
-
       if($email === '' || $pass === ''){
          $errorMsg = "Не все поля заполнены";
       }else{

@@ -11,7 +11,7 @@
 	<meta name="viewport" content="width=device-width">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Profile-page/Profile.css">
-	<title>Profile-page</title>
+	<title>Профиль</title>
 </head>
 
 <body>

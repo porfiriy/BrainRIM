@@ -6,8 +6,8 @@
   <head>
     <script>//записывает в переменные данные из базы
       <?php if(isset($_SESSION['id'])): ?>
-            let bestTimeRes = Number('<?= $bestUserResultTime ?>');
-            let bestEnemiesPassedRes = Number('<?= $bestUserResultEnemiesPassed ?>');
+        let bestTimeRes = Number('<?= $bestUserResultTime ?>');
+        let bestEnemiesPassedRes = Number('<?= $bestUserResultEnemiesPassed ?>');
       <?php else: ?>//что бы не было ошибки когда не авторизован пользователь
         bestTimeRes = 0;
         bestEnemiesPassedRes = 0;
@@ -16,7 +16,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Game</title>
+    <title>Игра - бега</title>
 	  <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/pages/Games/Chill/runingGame/css/runingGame.css" />
   </head>

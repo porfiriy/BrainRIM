@@ -229,15 +229,13 @@
 	 font-weight: 500;
 	 color: #fff;
  }
- footer{
-	 display: flex;
-	 position: absolute;
-	 left: 0;
-	 bottom: 0;
-	 width: 100%;
-	 -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-	 -webkit-tap-highlight-color: transparent;
- }
+ footer {
+	display: flex;
+	margin: 40px 0 0 0;
+	width: 100%;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	-webkit-tap-highlight-color: transparent;
+}
  .Support{
 	 color: #00dfc4;
 	 font-size: 20px;

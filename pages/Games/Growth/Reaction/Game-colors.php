@@ -7,7 +7,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/Games/Growth/Reaction/css/Game-colors.css">
-   <title>Game-Colors</title>
+   <title>Игра - цвета</title>
 </head>
 
 <?php 

@@ -157,14 +157,18 @@ color: #05EFD4;
   .scroll{
 	rotate: 180deg;
   }
-  .container-achieve{
-	 margin: 50px auto;
-	 background: rgb(0,121,255);
-	 background: linear-gradient(270deg, rgb(0 73 155) 0%, rgb(0 249 229 / 70%) 130%);
-	 border-radius: 10px;
-	 height: 70px;
-	 width: 90%;
-  }
+  .container-achieve {
+	display: flex;
+	flex-direction: column;
+	margin: 50px auto;
+	gap: 10px;
+	padding: 10px;
+	border-radius: 10px;
+	height: auto;
+	width: 90%;
+	background: #213242;
+	box-shadow: 3px 0px 7px 5px rgba(0, 0, 0, 0.25), -1px -2px 0px rgba(255, 255, 255, 0.25);
+}
   .achieve{
 	 font-size: 24px;
 	 height: 30px;

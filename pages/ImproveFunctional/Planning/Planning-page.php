@@ -1,9 +1,8 @@
 <?php
-	include($_SERVER['DOCUMENT_ROOT']."/pages/ImproveFunctional/Planning/php/LogicToPlan.php"); 
+	include($_SERVER['DOCUMENT_ROOT']."/pages/ImproveFunctional/Planning/php/LogicToPlan.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <script>
 //записывает в переменные данные из базы
@@ -22,12 +21,12 @@
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/Planning-page.css">
 	<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
-   <title>Planning-page</title>
+   <title>Планирование</title>
 </head>
 
 <body>
     <header>
-            <a class="comeback-button" href="/index.php"><ion-icon name="chevron-back-outline"></ion-icon></a>
+         <a class="comeback-button" href="/index.php"><ion-icon name="chevron-back-outline"></ion-icon></a>
 			<div class="page-title">Планирование<ion-icon class="page-title-icon" name="calendar-outline"></ion-icon></div>
 	</header>
 	<main>

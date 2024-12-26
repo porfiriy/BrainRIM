@@ -203,7 +203,7 @@
 	text-align: center;
 	width: 250px;
     height: 250px;
-	background-color:#0c4e74;
+	background-color:#213242;
 	z-index: 3;
 	border: 4px solid #05EFD4;
 	border-radius: 15px;
@@ -214,7 +214,7 @@
  .input-trouble{
 	height: 200px;
     overflow: scroll;
-    background-color: #0c4e74;
+    background-color: #213242;
     padding: 12px;
     color: #ffffff;
     transition: 1s;
@@ -226,7 +226,7 @@
 	border: 2px solid #05EFD4;
 	width: 180px; height: 35px; 
 	font-size: 20px; 
-	background-color: #0c4e74; 
+	background-color: #213242; 
 	color: #05EFD4; 
 	transition: 0.8s; 
 	margin: 22px auto; 
@@ -237,22 +237,22 @@
 	color: #000;
 	background-color: #05EFD4;
 }
- .close-support{
+.close-support {
 	position: absolute;
-    border: 2px solid #05EFD4;
-    border-radius: 10px;
-    transition: 0.1s;
-    color: red;
-    right: -15px;
-    top: -15px;
-    background: #11215a;
-    font-size: 26px;
-    width: 34px;
-    height: 34px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
- }
+	border: 2px solid #05EFD4;
+	border-radius: 10px;
+	transition: 0.1s;
+	color: red;
+	right: -15px;
+	top: -15px;
+	background: #213242;
+	font-size: 26px;
+	width: 34px;
+	height: 34px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
  .close-support:active{
 	transform: scale(0.95);
     box-shadow: 0px 0px 20px 2px rgb(10 242 255 / 25%);
@@ -267,7 +267,7 @@
 	 position: absolute;
 	 text-align: center;
 	 width: 190px;
-	 background-color:#0c4e74;
+	 background-color:#213242;
 	 z-index: 3;
 	 border: 4px solid #05EFD4;
 	 border-radius: 15px;
@@ -326,7 +326,7 @@
 	position: absolute;
 	text-align: center;
 	width: 280px;
-	background-color:#0c4e74;
+	background-color:#213242;
 	z-index: 3;
 	border: 4px solid #05EFD4;
 	border-radius: 15px;
@@ -382,13 +382,13 @@
 	 font-size: 16px;
 	 font-family: 'Balsamiq Sans', cursive;
 	 position: absolute;
-	 background-color:#0c4e74;
+	 background-color:#213242;
 	 z-index: 3;
 	 border: 4px solid #05EFD4;
 	 border-radius: 15px;
 	 width: 300px;
 	 height: 320px;
-	 color: #05EFD4;
+	 color: #fff;
 	 top:50%;
 	 left:50%;
 	 transform:translate(-50%, -50%);
@@ -430,12 +430,12 @@
 	 flex-direction: column;
 	 font-size: 16px;
 	 position: absolute;
-	 background-color:#0c4e74;
+	 background-color:#213242;
 	 z-index: 3;
 	 border: 4px solid #05EFD4;
 	 border-radius: 15px;
 	 width: 200px;
-	 color: #05EFD4;
+	 color: #fff;
 	 top:50%;
 	 left:50%;
 	 transform:translate(-50%, -50%);
@@ -476,3 +476,8 @@
 	 background-color: #000000;
 	 opacity: 0.2;
    }
+
+
+	.settings-top-icon img {
+		width: 40px;
+	}

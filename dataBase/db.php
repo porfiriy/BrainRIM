@@ -1,7 +1,5 @@
 <?php 
 
-ini_set('session.gc_maxlifetime',604800);//увеличив время сессии
-ini_set('session.cookie_lifetime',604800);
 
 
 session_start();
@@ -84,7 +82,7 @@ function insert($table,$params){
    $coll ='';
    $mask = '';
    foreach($params as $key => $value){
-      if($i === 0){
+      if($i === 0){ 
          $coll = $coll."$key";
          $mask = $mask."'"."$value"."'";
       }else{
