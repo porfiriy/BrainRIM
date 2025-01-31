@@ -6,10 +6,14 @@ const pgRegistrContainer = document.querySelector('.pg-registr-container');
 const pgAuthorisContainer = document.querySelector('.pg-authoris-container');
 
 //pop-up alert
-const googleButton = document.querySelectorAll('.another-variants');
+const facebookButton = document.querySelectorAll('.facebook');
+const twitterButton = document.querySelectorAll('.twitter');
 const alertContainer = document.querySelector('.pop-up-alert-container');
 
-googleButton.forEach(element => {
+facebookButton.forEach(element => {
+   element.addEventListener('click', popUpAlert);
+});
+twitterButton.forEach(element => {
    element.addEventListener('click', popUpAlert);
 });
 

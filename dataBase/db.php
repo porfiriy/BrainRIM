@@ -1,14 +1,77 @@
 <?php 
 
-
-
-session_start();
+// Подключаемся к базе данных (важно сделать это до регистрации обработчиков сессий)
 require('connect.php');
 
+// Настройка времени жизни сессии (30 дней)
+session_set_cookie_params([
+    'lifetime' => 2592000, // 30 дней в секундах
+    'path' => '/',
+    'domain' => $_SERVER['HTTP_HOST'],
+    'secure' => isset($_SERVER['HTTPS']), // Включить только для HTTPS
+    'httponly' => true,
+    'samesite' => 'Lax'
+]);
+
+// Обработчики сессий
+function openSession($savePath, $sessionName) {
+    return true;
+}
+
+function closeSession() {
+    return true;
+}
+
+function readSession($id) {
+    global $pdo;
+    $stmt = $pdo->prepare("SELECT data FROM sessions WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+    $result = $stmt->fetchColumn();
+    return $result ?: '';
+}
+
+function writeSession($id, $data) {
+    global $pdo;
+    $stmt = $pdo->prepare(
+        "REPLACE INTO sessions (id, data, last_access) VALUES (:id, :data, NOW())"
+    );
+    $stmt->execute(['id' => $id, 'data' => $data]);
+    return true;
+}
+
+function destroySession($id) {
+    global $pdo;
+    $stmt = $pdo->prepare("DELETE FROM sessions WHERE id = :id");
+    $stmt->execute(['id' => $id]);
+    return true;
+}
+
+function gcSession($maxLifetime) {
+    global $pdo;
+    $stmt = $pdo->prepare(
+        "DELETE FROM sessions WHERE last_access < NOW() - INTERVAL :maxLifetime SECOND"
+    );
+    $stmt->execute(['maxLifetime' => $maxLifetime]);
+    return true;
+}
+
+// Регистрируем функции для обработки сессий
+session_set_save_handler(
+    "openSession",
+    "closeSession",
+    "readSession",
+    "writeSession",
+    "destroySession",
+    "gcSession"
+);
+
+session_start();
+
+// Остальной код вашего файла db.php
 function tt($value){
-   echo '<pre>';
-   print_r($value);
-   echo '</pre>';
+    echo '<pre>';
+    print_r($value);
+    echo '</pre>';
 }
 
 //Проверка выполнения запроса к БД

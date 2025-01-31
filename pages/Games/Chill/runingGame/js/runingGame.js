@@ -32,8 +32,6 @@ document.querySelector('.linkToTheRestart').onclick = function () {
 
 const gameContainer = document.querySelector(".game-container");
 const bestResBody = document.querySelector(".best-res__value");
-const player = document.querySelector("#player");
-const timer = document.querySelector("#timer");
 const timerCountResultsValue = document.querySelector(".time-count");
 const enemyCountResultsValue = document.querySelector(".moves-count");
 const bestTimerCountResultsValue = document.querySelector(".best-time-count");

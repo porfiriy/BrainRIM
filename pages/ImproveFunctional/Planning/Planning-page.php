@@ -17,16 +17,18 @@
    </script>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/ImproveFunctional/Planning/Planning-page.css">
 	<link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+	<link rel="canonical" href="https://brainrim.site">
+    <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
    <title>Планирование</title>
 </head>
 
 <body>
     <header>
-         <a class="comeback-button" href="/index.php"><ion-icon name="chevron-back-outline"></ion-icon></a>
+         <a class="comeback-button" href="/index.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
 			<div class="page-title">Планирование<ion-icon class="page-title-icon" name="calendar-outline"></ion-icon></div>
 	</header>
 	<main>
@@ -50,7 +52,7 @@
 		<form action="Planning-page.php" method="post">
 
 		<div class="new-plan-body">
-		    	<div class="comeback-button back"><ion-icon name="chevron-back-outline"></ion-icon></div>
+		    	<div class="comeback-button back"><ion-icon name="arrow-back-outline"></ion-icon></div>
 		    	<div class="new-plan-title">Новый план</div>
 			<div class="new-plan-date-body">
 				<input type="date" name="planDateValue" class="new-plan-date" placeholder="Выберите дату">

@@ -172,9 +172,12 @@ min-width: 300px;
 }
 .name-container{
 	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 15px;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 100px;
+    width: 40%;
+    overflow: auto;
 }
 .profile-name {
 	position: relative; 

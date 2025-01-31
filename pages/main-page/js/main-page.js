@@ -46,6 +46,8 @@ const ConvertCurrencyButton = document.querySelector('.convert-currency-button')
 const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
 const CloseConvertCurrency = document.querySelector('.close-currency-body');
 const Offers = document.querySelector('.special-offers');
+
+//раздел с играми
 const Growth = document.querySelector('.growth-body');
 const Chill = document.querySelector('.chill-body');
 const GrowthButton = document.querySelector('.growth-up');
@@ -64,6 +66,15 @@ const BackFromMemory = document.querySelector('.back-from-memory');
 const BackFromReaction = document.querySelector('.back-from-reaction');
 const BackFromAttention = document.querySelector('.back-from-attention');
 const BackFromIQ = document.querySelector('.back-from-iq');
+
+
+//new
+const chillButton = document.querySelector('.switch-btn__chill');
+const growthButton = document.querySelector('.switch-btn__growth');
+const gamesChillContainer = document.querySelector('.games-chill-container');
+const gamesGrowthContainer = document.querySelector('.games-growth-container');
+// конец раздела с играми
+
 const nextLvlValueContainer = document.querySelector('.nextLvl-value');
 const bodyForExpValue = document.querySelector('.expValueFromDB');
 const bodyForNextExpValue = document.querySelector('.nextLvl-value');
@@ -84,6 +95,19 @@ const deg = 6;
 const hr = document.querySelector('#hr');
 const mn = document.querySelector('#mn');
 const sc = document.querySelector('#sc');
+
+
+
+// подключение serwice worker нужен для PWA
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+    .then(registration => {
+      console.log('Service Worker зарегистрирован:', registration);
+    })
+    .catch(error => {
+      console.error('Ошибка регистрации Service Worker:', error);
+    });
+}
 
 
 //pop-up alert
@@ -260,12 +284,12 @@ list.forEach((item) =>
 //Дом
 itemHomeNavigation.onclick = function () {//при нажатии на элем home в меню навигац
   containerGamesPage.style = 'display: none;'; //убирает страницу игр
-  Growth.style = 'display: none;';
-  Chill.style = 'display: none;';
-  MemoryContainer.style = 'display: none;';
-  ReactionContainer.style = 'display: none;';
-  AttentionContainer.style = 'display: none;';
-  IQContainer.style = 'display: none;';
+  //Growth.style = 'display: none;';
+  //Chill.style = 'display: none;';
+  //MemoryContainer.style = 'display: none;';
+  //ReactionContainer.style = 'display: none;';
+  //AttentionContainer.style = 'display: none;';
+  //IQContainer.style = 'display: none;';
   containerImprovePage.style = 'display: none;';
   containerStorePage.style = 'display: none;';
   containerAnalyticPage.style = 'display:none;';
@@ -380,7 +404,77 @@ everydayNewWordCloseButton.onclick = function () { //при закрытии н�
   audioClick.play();
 }
 
+//код для свайпов по играм
+document.addEventListener('DOMContentLoaded', function () {
+  const swipeArea = document.querySelector('.page-games-container');
+  let startX, startY;
+  const threshold = 50; // Минимальное расстояние для определения свайпа
+
+  swipeArea.addEventListener('touchstart', function (e) {
+    const touch = e.touches[0];
+    startX = touch.clientX;
+    startY = touch.clientY;
+  });
+
+  swipeArea.addEventListener('touchend', function (e) {
+    const touch = e.changedTouches[0];
+    const endX = touch.clientX;
+    const endY = touch.clientY;
+
+    const deltaX = endX - startX;
+    const deltaY = endY - startY;
+
+    // Проверяем, является ли движение больше по горизонтали
+    if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > threshold) {
+      if (deltaX > 0) {
+        chillButton.classList.add('active');
+        growthButton.classList.remove('active');
+        gamesChillContainer.classList.remove('hidden');
+        gamesGrowthContainer.classList.add('hidden');
+      } else {
+        gamesChillContainer.classList.add('hidden');
+        growthButton.classList.add('active');
+        chillButton.classList.remove('active');
+        gamesGrowthContainer.classList.remove('hidden');
+      }
+    }
+  });
+});
+
+
 //Игры
+chillButton.onclick = function () {
+  chillButton.classList.add('active');
+  growthButton.classList.remove('active');
+  gamesChillContainer.classList.remove('hidden');
+  gamesGrowthContainer.classList.add('hidden');
+}
+growthButton.onclick = function () {
+  gamesChillContainer.classList.add('hidden');
+  growthButton.classList.add('active');
+  chillButton.classList.remove('active');
+  gamesGrowthContainer.classList.remove('hidden');
+}
+
+//разворачивание элементов при нажатии
+document.addEventListener("DOMContentLoaded", function () {
+  const gameBlocks = document.querySelectorAll(".game-item-block");
+
+  gameBlocks.forEach((block) => {
+    block.addEventListener("click", function () {
+      // Найдем следующий соседний элемент с классом game-item-block__content
+      const content = this.nextElementSibling;
+
+      // Если следующий элемент существует и является нужным блоком контента
+      if (content && content.classList.contains("game-item-block__content")) {
+        content.classList.toggle("active");
+      }
+    });
+  });
+});
+
+
+/*
 GrowthButton.onclick = function () { //при нажатии на кнопку развития
   Growth.style = 'display: block;';
   audioClick.play();
@@ -432,6 +526,7 @@ BackFromIQ.onclick = function () { //Кнопка назад в играх Ин�
   IQContainer.style = 'display:none;';
   audioClick.play();
 }
+*/
 
 //ИГРЫ
 itemGamesNavigation.onclick = function () { //при нажатии на кнопку Games

@@ -10,6 +10,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="/pages/Games/Growth/IQ/GameCountries.css">
+	<link rel="canonical" href="https://brainrim.site">
+   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
 	<title>Игра - страны</title>
 </head>
 	<script>
@@ -74,7 +76,7 @@
 			</div>
 			<a href="#" class="button-start">START</a>
 			<div class="game-info-title">
-			<span class="game-info-name">Игра стран</span>
+			<span class="game-info-name">Угадай страну</span>
 			<span class="game-info">В этой игре вам надо будет выбрать правильное название страны, изображённой на картинке </span>
 	   </div>
 	</div>
@@ -102,7 +104,7 @@
 			</div>
 		</div>
 		<div class="topButton-gameWords">
-         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="chevron-back-outline"></ion-icon></div></a>
+         <a class="comeback-button" href="#"><div class="comeback-button-body"><ion-icon name="arrow-back-outline"></ion-icon></div></a>
          <a href="#" class="linkToTheSettings"><ion-icon class="imgSettings" name="settings-outline"></ion-icon></a>
          <div class="linkToTheRestart"><ion-icon name="refresh-outline"></ion-icon></div>
       </div>

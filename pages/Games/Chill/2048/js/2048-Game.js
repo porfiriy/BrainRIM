@@ -15,6 +15,10 @@ const winOrLooseResultsValue = document.querySelector(".loose-win-value");
 const bestResultGameContainerValue = document.querySelector(".value-best");
 let timerCount = 0;
 
+let leaderboardButton = document.querySelector(".leaderboard-button");
+let leaderboarBackdButton = document.querySelector(".leaderboard__back-button");
+let leaderboardContainer = document.querySelector(".leaderboard-container");
+
 //AJAX запрос на сервер для добавления в базу данных инфы 
 let winForResults = 0;
 let looseForResults = 0;
@@ -258,7 +262,7 @@ var game = {
 
    //Движение влево
    moveLeft: function () {
-      audioSwapeLeftRight.play();
+      //audioSwapeLeftRight.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveLeftInRow(r);
@@ -306,7 +310,7 @@ var game = {
 
    //Переместить вправо
    moveRight: function () {
-      audioSwapeLeftRight.play();
+      //audioSwapeLeftRight.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveRightInRow(r);
@@ -354,7 +358,7 @@ var game = {
 
    // Двигаться вверх
    moveTop: function () {
-      audioSwapeTopBottom.play();
+      //audioSwapeTopBottom.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveTopInRow(r);
@@ -402,7 +406,7 @@ var game = {
 
    // двигаться вниз
    moveBottom: function () {
-      audioSwapeTopBottom.play();
+      //audioSwapeTopBottom.play();
       var before = String(this.mydata);
       for (var r = 0; r < 4; r++) {
          this.moveBottomInRow(r);
@@ -448,7 +452,7 @@ var game = {
    },
 
 }
-game.start();
+
 document.onkeydown = function (event) {
    var event = event || e || arguments[0];
    if (event.keyCode == 37) {
@@ -499,13 +503,21 @@ document.addEventListener("touchend", function (event) {    // Привязка 
 
 })
 
+
+leaderboardButton.onclick = function () {
+   leaderboardContainer.style = "display: block;"
+}
+leaderboarBackdButton.onclick = function () {
+   leaderboardContainer.style = "display: none;"
+}
+
 //активация кнопки старт при нажатии
 const BUTTON_START = document.querySelector('.button-start');
 BUTTON_START.onclick = function () {
    document.querySelector('.start-menu').classList.add('activated');
    BUTTON_START.classList.add('activated');
    if (BUTTON_START.classList.contains('activated')) {
-
+      game.start();
 
    }
 }

@@ -8,7 +8,7 @@
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/settings-page/css/settings-page.css">
    <title>Настройки</title>
@@ -19,7 +19,7 @@
       <div class="gray-background-container"></div>
       <header class="header">
          <a class="comeback-button" href="/index.php">
-            <ion-icon name="chevron-back-outline"></ion-icon></a>
+         <ion-icon name="arrow-back-outline"></ion-icon></a>
          <div class="social-list">
             <a class="settings-top-icon" target="_blank" href="https://www.tiktok.com/@brainrim_app"><ion-icon name="logo-tiktok"></ion-icon></a>
             <a href="https://vk.com/brainrim" target="_blank" class="settings-top-icon"><img src="/img/free-icon-vk-3670055.png" alt=""></a>

@@ -8,13 +8,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
+   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.png" type="image/png">
 	<link rel="stylesheet" href="/pages/Achievements-Page/Achievements.css">
 	<title>Достижения</title>
+   <link rel="canonical" href="https://brainrim.site">
 </head>
 <header>
-<a class="comeback-button" href="/pages/Profile-page/Profile.php"><ion-icon name="chevron-back-outline"></ion-icon></a>
+<a class="comeback-button" href="/pages/Profile-page/Profile.php"><ion-icon name="arrow-back-outline"></ion-icon></a>
 </header>
 <body>
 <div class="page-achievments-container">
@@ -33,22 +35,6 @@
                   <div class="container-achieve">
                      <div class="achieve">Молоток</div>
                      <div class="forachieve">Выполнить все ежедневные задания</div>
-                  </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
-                  </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
-                  </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
-                  </div>
-                  <div class="container-achieve">
-                     <div class="achieve">?</div>
-                     <div class="forachieve">???</div>
                   </div>
                </div>
                <div class="DownButton">

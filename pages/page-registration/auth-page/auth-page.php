@@ -47,7 +47,7 @@
                         <p>Не зарегистрированы? <a href="/pages/page-registration/registration-page.php" class="create">Создать аккаунт</a></p>
 						<Span class="another-variants-text">Быстрый вход</Span>
 				<div class="another-variants">
-				<a class="google" href="#">
+				<a class="google" href="/pages/page-registration/google-login.php">
 					<svg class="google-img" xmlns="https://www.w3.org/2000/svg" viewBox="0 0 48 48">
 					<path fill="#4285F4" d="M45.12 24.5c0-1.56-.14-3.06-.4-4.5H24v8.51h11.84c-.51 2.75-2.06 5.08-4.39 6.64v5.52h7.11c4.16-3.83 6.56-9.47 6.56-16.17z"></path>
 					<path fill="#34A853" d="M24 46c5.94 0 10.92-1.97 14.56-5.33l-7.11-5.52c-1.97 1.32-4.49 2.1-7.45 2.1-5.73 0-10.58-3.87-12.31-9.07H4.34v5.7C7.96 41.07 15.4 46 24 46z"></path>

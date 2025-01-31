@@ -8,7 +8,7 @@
          </div>
          <div class="wrap__button">
             <form class="pop-up__form" action="#">
-               <a href=" /pages/settings-page/settings-page.html" class="pop-up__ok">Ok</a>
+               <a href=" /pages/settings-page/settings-page.php" class="pop-up__ok">Ok</a>
                <a class="pop-up__cancel">Отмена</a>
             </form>
          </div>
@@ -24,8 +24,8 @@
          </div>
          <div class="wrap__button2">
             <form class="pop-up__form2" action="#">
-               <a href=" /index.php" class="pop-up__ok2">Ok</a>
-               <a class="pop-up__cancel2">Отмена</a>
+               <a href=" /index.php" class="pop-up__ok pop-up__ok2">Ok</a>
+               <a class="pop-up__cancel pop-up__cancel2">Отмена</a>
             </form>
          </div>
       </div>
@@ -42,8 +42,8 @@
 
          <div class="wrap__button3">
             <form class="pop-up__form3" action="#">
-               <a onClick="window.location.reload();" class="pop-up__ok3">Ok</a>
-               <a class="pop-up__cancel3">Отмена</a>
+               <a onClick="window.location.reload();" class="pop-up__ok pop-up__ok3">Ok</a>
+               <a class="pop-up__cancel pop-up__cancel3">Отмена</a>
             </form>
          </div>
       </div>

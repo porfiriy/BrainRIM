@@ -1,16 +1,164 @@
+// логика для всплывающих окон
+let settings = document.querySelector(".pop-up__container");
+let comeback = document.querySelector(".pop-up__container2");
+let restart = document.querySelector(".pop-up__container3");
+
+// результаты 
+let ResultsGameOver = document.querySelector(".results-gameover");
+const gameContainer = document.querySelector(".game-container");
+const bestResBody = document.querySelector(".best-res__value");
+const timerCountResultsValue = document.querySelector(".time-count");
+const levelCountResultsValue = document.querySelector(".level-count");
+const bestTimerCountResultsValue = document.querySelector(".best-time-count");
+const bestlevelCountResultsValue = document.querySelector(".best-level-count");
+const winOrLooseResultsValue = document.querySelector(".loose-win-value");
+
+
+
+//AJAX запрос на сервер для добавления в базу данных инфы 
+let winForResults = 0;
+let looseForResults = 0;
+let statusLoosOrWin;
+
+function doAjaxExperience() {
+   let expUpForModeAjax;
+   if (statusLoosOrWin == "win") {//проверка на победу или луз
+      expUpForModeAjax = 15;
+   } else {
+      expUpForModeAjax = 2;
+   }
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/experience.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         expUpForModeAjax: expUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.expUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxWinBonuse() {
+   let IqUpForModeAjax = 15;
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForWin copy.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+function doAjaxLooseBonuse() {
+   let IqUpForModeAjax = 2;
+
+   $.ajax({
+      url: '/dataBase/controllers/bonusSystem/bonusForLoose.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         IqUpForModeAjax: IqUpForModeAjax,
+
+      },
+      success: function (data) {
+         console.log(data.IqUpForModeAjax);
+      },
+      error: function () {
+         console.log('ERROR');
+      }
+   })
+}
+
+//AJAX запрос на сервер для добавления в базу данных инфы при выйгрыше
+function doAjaxResults() {
+   let win = `0`;
+   let loose = `1`;
+   let time_sec = `${totalTime}`;
+   let level = `${currentLevel}`;
+
+   $.ajax({
+      url: '/dataBase/resultsGames/resultsMazeGame.php',
+      type: 'POST',
+      dataType: "json",
+      data: {
+         win: win,
+         loose: loose,
+         time_sec: time_sec,
+         level: level,
+      },
+      success: function (data) {
+         console.log(data);
+      },
+      error: function () {
+         console.log('ERRORчик');
+      }
+   })
+}
+//z
+
+function comparisonResBetterOrNot() {//возвращает правду или ложь
+   if (game.score > bestScoreRes) {
+      return true;
+   } else {
+      return false;
+   }
+}
+
+
+//при нажатии на отмену вспл окна настройки 
+document.querySelector('.pop-up__cancel').onclick = function () {
+   settings.style = 'visibility:hidden;';
+};
+//при нажатии на иконку настроек
+document.querySelector('.linkToTheSettings').onclick = function () {
+   settings.style = 'visibility:visible;';
+};
+//при нажатии на отмену вспл окна назад
+document.querySelector('.pop-up__cancel2').onclick = function () {
+   comeback.style = 'visibility:hidden;';
+};
+//при нажатии на иконку назад
+document.querySelector('.comeback-button').onclick = function () {
+   comeback.style = 'visibility:visible;';
+};
+//при нажатии на отмену вспл окна рестарт
+document.querySelector('.pop-up__cancel3').onclick = function () {
+   restart.style = 'visibility:hidden;';
+};
+//при нажатии на иконку рестарт
+document.querySelector('.linkToTheRestart').onclick = function () {
+   restart.style = 'visibility:visible;';
+};
+
+
+
 const board = document.getElementById('game-board');
 const levelTimerElement = document.getElementById('level-timer');
 const totalTimerElement = document.getElementById('total-timer');
 const levelElement = document.getElementById('level');
 const messageElement = document.getElementById('message');
-const resultScreen = document.getElementById('result-screen');
-const resultText = document.getElementById('result-text');
 
 let gridSize = 2; // Starting grid size
 let path = [];
 let selectedTiles = new Set();
-let levelTime = 40; // Time per level
-let totalTime = 0; // Total time spent in the game
+let levelTime = 40; // время на один уровень
+let totalTime = 0; // общее время для всей игры
 let currentLevel = 1; // Current level number
 let levelTimer;
 let totalTimer;
@@ -100,7 +248,7 @@ function nextLevel() {
 function startLevelTimer() {
    levelTimer = setInterval(() => {
       levelTime--;
-      levelTimerElement.textContent = `Level Time: ${levelTime}`;
+      levelTimerElement.textContent = `Осталось: ${levelTime} сек.`;
       if (levelTime <= 0) {
          endGame();
       }
@@ -110,7 +258,6 @@ function startLevelTimer() {
 function startTotalTimer() {
    totalTimer = setInterval(() => {
       totalTime++;
-      totalTimerElement.textContent = `Total Time: ${totalTime}`;
    }, 1000);
 }
 
@@ -119,8 +266,7 @@ function endGame() {
       clearInterval(levelTimer);
       clearInterval(totalTimer);
       gameOver = true;
-      resultText.innerHTML = `Game Over!<br>You reached Level ${currentLevel} in ${totalTime} seconds.`;
-      resultScreen.style.display = 'flex';
+      showMessageLoose();
    }
 }
 
@@ -133,4 +279,45 @@ function startGame() {
    startTotalTimer(); // Start total timer at the beginning of the game
 }
 
-startGame();
+
+//показывает результаты
+function showMessageLoose() {
+   ResultsGameOver.style = 'display:block;';
+   timerCountResultsValue.innerHTML = totalTime;
+   levelCountResultsValue.innerHTML = currentLevel;
+   //bestTimerCountResultsValue.innerHTML = bestTimeRes;//из базы данных
+   //bestlevelCountResultsValue.innerHTML = bestEnemiesPassedRes;
+   doAjaxResults();
+   if (comparisonResBetterOrNot() == true) {//если результат лучше
+      winOrLooseResultsValue.classList.add('congrats');
+      winOrLooseResultsValue.innerHTML = 'вы победили';
+      doAjaxWinBonuse();
+      statusLoosOrWin = "win";
+      winForResults = 1;
+      doAjaxWinBonuse();
+      doAjaxExperience();
+
+   } else {
+      winOrLooseResultsValue.classList.add('loose');
+      winOrLooseResultsValue.innerHTML = 'вы проиграли';
+   }
+}
+function comparisonResBetterOrNot() {//возвращает правду или ложь
+   //if (enemiesPassedCount > bestEnemiesPassedRes) {
+   //   return true;
+   //} else {
+   //   return false;
+   //}
+}
+
+
+//активация кнопки старт при нажатии
+const BUTTON_START = document.querySelector('.button-start');
+BUTTON_START.onclick = function () {
+   document.querySelector('.start-menu').classList.add('activated');
+   BUTTON_START.classList.add('activated');
+   if (BUTTON_START.classList.contains('activated')) {
+      startGame();
+
+   }
+}

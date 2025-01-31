@@ -26,27 +26,65 @@
             let viewedPopUpValue = 1;
       <?php endif;?>
    </script>
+      <!-- Основные метатеги -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width">
+   <meta name="viewport" content="width=device-width initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+   <meta name="description" content="BrainRim — приложение для самосовершенствования и развития! Ежедневные интересные слова, исторические даты, английский словарный запас. Мини-игры на логику, память и отдых. Система баллов и наград для мотивации!">
+   <meta name="keywords" content="самосовершенствование, развитие, мини-игры, логика, память, внимание, английский язык, интересные слова, исторические даты, 2048, баллы, награды, мотивация">
+   <meta name="author" content="BrainRim Team">
+   <meta name="robots" content="index, follow">
+   <meta name="theme-color" content="#213242">
+
+   <!-- Open Graph (для соцсетей) -->
+   <meta property="og:title" content="BrainRim — развивайся каждый день!">
+   <meta property="og:description" content="Самосовершенствование, мини-игры, ежедневные интересные факты и много мотивации! Попробуй сегодня!">
+   <meta property="og:image" content="/img/app_icon_with_larger_area_1024x1024.png">
+   <meta property="og:url" content="https://brainrim.site">
+   <meta property="og:type" content="website">
+
+   <!-- Twitter Card -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta name="twitter:title" content="BrainRim — развивайся каждый день!">
+   <meta name="twitter:description" content="Ежедневные обновления: интересные слова, исторические даты, английский словарный запас, мини-игры для тренировки логики, памяти и отдыха!">
+   <meta name="twitter:image" content="/img/app_icon_with_larger_area_1024x1024.png">
+
+   <!-- Дополнительные метатеги -->
+   <link rel="icon" href="/img/app_icon_with_larger_area_1024x1024.ico" type="image/x-icon">
+   <link rel="manifest" href="/manifest.json">
+   <meta name="application-name" content="BrainRim">
+   <meta name="mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-capable" content="yes">
+   <meta name="apple-mobile-web-app-title" content="BrainRim">
+   <meta name="apple-mobile-web-app-status-bar-style" content="default">
+   <link rel="apple-touch-icon" href="/img/app_icon_with_larger_area_1024x1024.png">
+
    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="/pages/main-page/css/main-page.css">
-   <title>Главная страница</title>
-   <link rel="icon" href="https://brainrim.site/img/app_icon_with_larger_area_1024x1024.png" type="image/png">
+   <link rel="manifest" href="/manifest.json">
+   <title>Развитие и самосовершенствование - BrainRim</title>
+   <link rel="canonical" href="https://brainrim.site">
 
-   <!-- Заголовок -->
-   <meta property="og:title" content="BrainRim">
-   <!-- Описание -->
-   <meta property="og:description" content="Приложение развивающее интелект, смекалку и эрудицию. Тут вы найдёте как развивающие игры, так и игры для отдыха">
-   <!-- URL -->
-   <meta property="og:url" content="https://brainrim.site">
-   <!-- Тип -->
-   <meta property="og:type" content="website">
-   <!-- Изображение -->
-   <meta property="og:image" content="https://brainrim.site/img/app_icon_with_larger_area_1024x1024.png">
-   
-   
-   <meta charset="UTF-8">
+
+   <!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(99567764, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/99567764" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
 </head>
 
 <body>
@@ -133,7 +171,7 @@
                   <?php else: ?>
             <a class="reg-hint" href="/pages/page-registration/registration-page.php">
 			   <ion-icon class="reg-hint-icon" name="gift-outline"></ion-icon>
-			   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при первой регистрации!</span>
+			   <span class="reg-hint-text"><span>Войдите</span>, чтобы сохранить прогресс.<br> <span>Подарок</span> при регистрации!</span>
 			   </a>
  
                   <?php endif;?>
@@ -146,11 +184,11 @@
 
 		 <div class="about-us-container">
 			<div class="about-us-header">
-		 <ion-icon class="close-about-us" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+       <ion-icon class="close-about-us" name="arrow-back-outline"></ion-icon>
 			<h1 class="about-app-text">О приложении</h1>
 			</div>
 			<div class="about-us-first about-us-body">
-			<div class="about-us-title">Здравствуй, друг!</div>
+			<div class="about-us-title">Здравствуй!</div>
 			<div class="about-us-welcome-text">Наш проект предназначен для людей которые, как и мы, стремиться к самосовершенствованию, развитию, и успеху в жизни! Приложение выступит в роли вашего помощника-ассистента.</div>
 			</div>
 
@@ -187,7 +225,7 @@
 			<div class="about-us-first about-us-body">
 			<div class="about-us-text">6. Раздел "Еженедельные задания"</div>
 			<div class="about-us-picture"><img class="about-us-png" src="pages\main-page\img\Everyday quests.png" alt="hints"></div>
-			<div class="about-us-Description">Выполняй задания и получай бонусы и награды</div>
+			<div class="about-us-Description">Выполняй задания и получай бонусы и награды.</div>
 			</div>
 			<div class="about-us-confirm_button">Погнали!</div>
 		 </div>
@@ -244,32 +282,160 @@
 		 </footer>
 
 <div class="page-games-container">
-   <div class="games-title">Игры<ion-icon class="gamepad-title" name="game-controller"></ion-icon></div>
+   
+    <div class="games-container">
+      <div class="switch-btn-container">
+         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__chill active">Отдых🌿</div>
+         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__growth">Развитие🔥</div>
+      </div>
+      <div class="games-chill-container">
+         <a href = "/pages/Games/Chill/2048/2048-Game.php">
+            <div class="game-item">
+               <h2 class="title">2048</h2>
+               <p class="subtitle">Тренирует <span class = "backlight">логику</span>, <span class = "backlight">внимание</span> и <span class = "backlight">стратегическое</span> мышление. Объединяйте числа, чтобы достичь заветной плитки 2048! 🚀🧠</p>
+               <img src="/img/Games/2048gameImage.png" alt="2048 картинка">
+               <div class="game-item__category">мини-игра</div>
+            </div>
+         </a>
+         <a href = "/pages/Games/Chill/TilesLabirint/tilesMaze.php">
+            <div class="game-item">
+               <h2 class="title">Лабиринт</h2>
+               <p class="subtitle">Развивает <span class = "backlight">память</span> и <span class = "backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите путь из памяти! 🧩🧠</p>
+               <img src="/img/Games/mazeGameImage.png" alt="2048 картинка">
+               <div class="game-item__category">мини-игра</div>
+            </div>
+         </a>
+         <a href = "/pages/Games/Chill/runingGame/runingGame.php">
+            <div class="game-item">
+               <h2 class="title">Забег</h2>
+               <p class="subtitle">Проверяет <span class = "backlight">реакцию</span> и <span class = "backlight">скорость</span>. Уворачивайтесь от падающих кубиков, пока темп игры не станет по-настоящему безумным! ⚡🏃‍♂️</p>
+               <img src="/img/Games/runnerImg.png" alt="2048 картинка">
+               <div class="game-item__category">мини-игра</div>
+            </div>
+         </a>
+      </div>
+      <div class="games-growth-container hidden">
+         <div class="game-item-block">
+            <h2 class="title">Память</h2>
+            <h2 class="icon"><span>3</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
+         </div>
+         <div class="game-item-block__content">
+            <a href = "/pages/Games/Growth/Memory/Memory-game.php">
+               <div class="game-item">
+                  <h2 class="title">Зеркальная память</h2>
+                  <p class="subtitle">Тренирует <span class = "backlight">внимание</span> и <span class = "backlight">память</span>. Найдите пары перевернутых карт как можно быстрее! 🃏🔍</p>
+                  <img src="/img/Games/memoryGameImg.png" alt="память картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+            <a href = "/pages/Games/Chill/math3/math3.php">
+               <div class="game-item">
+                  <h2 class="title">Числовой штурм</h2>
+                  <p class="subtitle">Испытание для <span class = "backlight">памяти</span> и <span class = "backlight">концентрации</span>! Запомните числа за <span class = "backlight">20</span> секунд и восстановите их без ошибок! 🔢🧠⏳</p>
+                  <img src="/img/Games/gameNumbrsImage.png" alt="числа картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+            <a href = "/pages/Games/Chill/TilesLabirint/tilesMaze.php">
+               <div class="game-item">
+                  <h2 class="title">Лабиринт</h2>
+                  <p class="subtitle">Развивает <span class = "backlight">память</span> и <span class = "backlight">концентрацию</span>. Запомните расположение тайлов, а затем восстановите путь из памяти! 🧩🧠</p>
+                  <img src="/img/Games/mazeGameImage.png" alt="лабиринт картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+         </div>
+         
+         <div class="game-item-block">
+            <h2 class="title">Внимательность</h2>
+            <h2 class="icon"><span>2</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
+         </div>
+         <div class="game-item-block__content">
+            <a href = "/pages/Games/Growth/Reaction/Game-colors.php">
+               <div class="game-item">
+                  <h2 class="title">Верю - Не Верю</h2>
+                  <p class="subtitle">Проверка <span class = "backlight">внимательности</span> и <span class = "backlight">реакции</span>! Совпадают ли цвет и его название? Решайте мгновенно и нажимайте правильную кнопку! 🔴🟢⚡</p>
+                  <img src="/img/Games/colorGameImage.png" alt="верю - не верю картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+            <a href = "/pages/Games/Growth/Memory/Memory-game.php">
+               <div class="game-item">
+                  <h2 class="title">Зеркальная память</h2>
+                  <p class="subtitle">Тренирует <span class = "backlight">внимание</span> и <span class = "backlight">память</span>. Найдите пары перевернутых карт как можно быстрее! 🃏🔍</p>
+                  <img src="/img/Games/memoryGameImg.png" alt="память картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+         </div>
+
+         <div class="game-item-block">
+            <h2 class="title">Реакция</h2>
+            <h2 class="icon"><span>1</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
+         </div>
+         <div class="game-item-block__content">
+            <a href = "/pages/Games/Growth/Reaction/Game-colors.php">
+               <div class="game-item">
+                  <h2 class="title">Верю - Не Верю</h2>
+                  <p class="subtitle">Проверка <span class = "backlight">внимательности</span> и <span class = "backlight">реакции</span>! Совпадают ли цвет и его название? Решайте мгновенно и нажимайте правильную кнопку! 🔴🟢⚡</p>
+                  <img src="/img/Games/colorGameImage.png" alt="верю - не верю картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+         </div>
+         <div class="game-item-block">
+            <h2 class="title">Интеллект</h2>
+            <h2 class="icon"><span>2</span><img src="/img/Games/games_n2ykb0hqc3jy.svg" alt="иконка игр"></h2>
+         </div>
+         <div class="game-item-block__content">
+            <a href = "/pages/Games/Growth/IQ/GameCountries.php">
+               <div class="game-item">
+                  <h2 class="title">Угадай страну</h2>
+                  <p class="subtitle">Выбери свой режим! От <span class = "backlight_green">лёгкого</span> до <span class = "backlight_purple">безумного</span> – угадывай флаги и проверь свои знания и реакцию на всех уровнях! 🌍⚡</p>
+                  <img src="/img/Games/countriesGameImage.png" alt="верю - не верю картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+            <a href = "/pages/Games/Chill/2048/2048-Game.php">
+               <div class="game-item">
+                  <h2 class="title">2048</h2>
+                  <p class="subtitle">Тренирует <span class = "backlight">логику</span>, <span class = "backlight">внимание</span> и <span class = "backlight">стратегическое</span> мышление. Объединяйте числа, чтобы достичь заветной плитки 2048! 🚀🧠</p>
+                  <img src="/img/Games/2048gameImage.png" alt="2048 картинка">
+                  <div class="game-item__category">мини-игра</div>
+               </div>
+            </a>
+         </div>
+      </div>
+    </div>
+
+
+
+<!-- <div class="games-title">Игры<ion-icon class="gamepad-title" name="game-controller"></ion-icon></div>
    <div class="games-choice">
 	  <div class="growth-up choice-mode">Развиваться</div>
 	  <div class="or">Или</div>
 	  <div class="chillout choice-mode">Отдыхать</div>
-   </div>
+   </div> -->
   </div>
 
 
-<div class="chill-body">
-<ion-icon class="back-from-chill back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
-<div class="page-title">Отдых</div>
-<div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
-<div class="chill-games-body">
-<!--<a href="/pages/Games/Chill/math3/math3.php"><ion-icon class="chill-game hz-game" name="car-sport-sharp"></ion-icon></a>-->  <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
-<!--<a href="#"><ion-icon class="chill-game hz-game" name="american-football"></ion-icon>-->  <ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
-<a href="/pages/Games/Chill/runingGame/runingGame.php"><img class="chill-game run-icon hz-game" src="/img/Menu/Frame 16.png" alt="hints"></a>
-<a href="/pages/Games/Chill/2048/2048-Game.php" class="chill-game tzfe-game">2048</a>
-<ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
-<ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon>
-</div>
-</div>
+<!-- <div class="chill-body">
+   <ion-icon class="back-from-chill back-from-games" name="arrow-back-outline"></ion-icon>
+   <div class="page-title">Отдых</div>
+   <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
+   <div class="chill-games-body">
+      <div class="games-item"><a href="/pages/Games/Chill/runingGame/runingGame.php"><img class="chill-game run-icon hz-game" src="/img/Menu/Frame 16.png" alt="Кубики"></a></div>
+      <div class="games-item"><a href="/pages/Games/Chill/2048/2048-Game.php" class="chill-game tzfe-game">2048</a></div>
+      <div class="games-item"><a href="/pages/Games/Chill/TilesLabirint/tilesMaze.php"><ion-icon name="apps-outline"></ion-icon></a></div>
+      <div class="games-item"><ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon></a></div>
+      <div class="games-item"><ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon></div>
+      <div class="games-item"><ion-icon class="chill-game game-in-dev" name="code-slash"></ion-icon></div>
+   </div>
+</div> -->
 
 
-<div class="growth-body">
-<ion-icon class="back-from-growth back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<!-- <div class="growth-body">
+<ion-icon class="back-from-growth back-from-games" name="arrow-back-outline"></ion-icon>
 <div class="page-title">Развитие</div>
 <div class="growth-games-body">
 <div class="growth-game memory-button">Память</div>
@@ -280,20 +446,20 @@
 </div>
 
 <div class="memory-games-container">
-<ion-icon class="back-from-memory back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<ion-icon class="back-from-memory back-from-games" name="arrow-back-outline"></ion-icon>
 <div class="games-title">Память</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="memory-games-body">
 <a class="game-item memory-game" href="/pages/Games/Growth/Memory/Memory-game.php"><ion-icon name="image-outline"></ion-icon></a>
 <a class="game-item memory-game" href="/pages/Games/Chill/math3/math3.php"><img src="/img/icons8-память-64.png" alt="Память"></ion-icon></a>
-<a class="game-item memory-game" href="/pages/Games/Chill/TilesLabirint/tilesMaze.php"><img src="/img/maze.png" alt="Память"></ion-icon></a>
+<a class="game-item memory-game" href="/pages/Games/Chill/TilesLabirint/tilesMaze.php"><img src="/img/maze.png" alt="Лабиринт"></ion-icon></a>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="memory-game game-in-dev" name="code-slash"></ion-icon>
 </div>
 </div>
 <div class="reaction-games-container">
-<ion-icon class="back-from-reaction back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<ion-icon class="back-from-reaction back-from-games" name="arrow-back-outline"></ion-icon>
 <div class="games-title">Реакция</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="reaction-games-body">
@@ -306,7 +472,7 @@
 </div>
 </div>
 <div class="attention-games-container">
-<ion-icon class="back-from-attention back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<ion-icon class="back-from-attention back-from-games" name="arrow-back-outline"></ion-icon>
 <div class="games-title">Внимательность</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="attention-games-body">
@@ -319,7 +485,7 @@
 </div>
 </div>
 <div class="iq-games-container">
-<ion-icon class="back-from-iq back-from-games" name="chevron-back-outline" aria-label="chevron back outline"></ion-icon>
+<ion-icon class="back-from-iq back-from-games" name="arrow-back-outline"></ion-icon>
 <div class="games-title">Интеллект</div>
 <div class="in-dev-info"><ion-icon class="in-dev-info-icon" name="code-slash"></ion-icon>- в разработке</div>
 <div class="iq-games-body">
@@ -330,17 +496,25 @@
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 <ion-icon class="iq-game game-in-dev" name="code-slash"></ion-icon>
 </div>
-</div>
+</div> -->
 
       <div class="page-improve-container">
          <div class="wrapper-improve">
             <span class="improve-title">Улучшай себя !</span>
             <main class="main-improve">
                <div id="improve-container">
-			   <a href="/pages/ImproveFunctional/Planning/Planning-page.php"><div class="container-improve">
-                     <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
-                     <div class="forimprove">Ставь цели, достигай их!</div>
-                  </div></a>
+                  <a href="#">
+                     <div class="container-improve">
+                        <div class="improve">Полезное <ion-icon class="improve-icon" name="book-outline"></ion-icon></div>
+                        <div class="forimprove">Свежие идеи, ценные знания и мощные инсайты для тех, кто хочет большего! 🚀🔥</div>
+                     </div>
+                  </a>
+			         <a href="/pages/ImproveFunctional/Planning/Planning-page.php">
+                     <div class="container-improve">
+                        <div class="improve">Планирование<ion-icon class="improve-icon" name="calendar-outline"></ion-icon></div>
+                        <div class="forimprove">Ставь цели, достигай их!</div>
+                     </div>
+                  </a>
                   <div class="container-improve improve-in-dev">
                      <div class="improve">Финансы<ion-icon class="improve-icon" name="cash-outline"></ion-icon></div>
                      <div class="forimprove">Планируй расходы и узнавай стратегии!</div>
@@ -429,20 +603,20 @@
 		    </div>
          <div class="buy-currency">
 			<span class="donate-dev">В разработке...</span>
-<!--            <div class="buy-memoney">
+            <div class="buy-memoney">
                <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 0.86$</div>
+                     alt="">= 0.50$</div>
                <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 1.88$</div>
-               <div id="buy" class="buy third-offer">48<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 3.41$</div>
+                     alt="">= 0.99$</div>
+               <div id="buy" class="buy third-offer">50<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+                     alt="">= 2.99$</div>
                <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 6.99$</div>
+                     alt="">= 5.99$</div>
                <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 13.62$</div>
-               <div id="buy" class="buy six-offer">535<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 25.22$</div>
-            </div>-->
+               <div id="buy" class="buy six-offer">666<img class="memoneyicon" src="/img/Menu/Memoney.svg"
+                     alt="">= 22.22$</div>
+            </div>
             <div class="special-offers">Специальные предложения</div>
 			<!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
 			<div class="special-offers-body">В данный момент специальных предложений нет.</div>
@@ -516,13 +690,13 @@
          <div class="everyday-info-button-body">
             <span>Каждый день здесь будет появляться новая интересная и полезная информация.
                <br>Она будет расширять ваш кругозор.
-               <br>Не пропустите!.</span>
+               <br>Не пропустите!</span>
             <div class="close-everyday-info-button-body"><ion-icon name="close-outline"></ion-icon></div>
          </div>
       </div>
       <div class="everyday_day-word-container">
          <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_day-word-close-button"><ion-icon name="close-outline"></ion-icon></div>
+         <div class="close-window everyday_day-word-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
          <div class="everyday-title">Слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
@@ -532,7 +706,7 @@
       </div>
       <div class="everyday_date-container">
          <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_date-close-button"><ion-icon name="close-outline"></ion-icon></div>
+         <div class="close-window everyday_date-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
          <div class="everyday-title">Историческая дата</div>
          <div class="day-word__body">
             <div class="day-date">
@@ -542,7 +716,7 @@
       </div>
       <div class="everyday_new-word-container">
          <div class="info-button word-day-info-button"><ion-icon name="information-outline"></ion-icon></div>
-         <div class="close-window everyday_new-word-close-button"><ion-icon name="close-outline"></ion-icon></div>
+         <div class="close-window everyday_new-word-close-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
          <div class="everyday-title">Англ. слово дня</div>
          <div class="day-word__body">
             <div class="day-word">
