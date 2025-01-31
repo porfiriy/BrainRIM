@@ -1,0 +1,10 @@
+body {
+   margin: 0;
+   overflow: hidden;
+   background: #6d3838; /* Фон страницы */
+ }
+ 
+ #container {
+   width: 100vw;
+   height: 100vh;
+ }
