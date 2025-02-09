@@ -151,7 +151,7 @@ z-index: 1;
 	color: #FFFFFF;
 	
  }	
- 
+ /*
  .header__top-button-title{
 	font-size: 34px;
 	font-weight: 800;
@@ -178,7 +178,7 @@ z-index: 1;
 	  left: 100%;
 	}
  }
- 
+ */
  .header-score-container{
 	margin: 20px 0 ;
 	display: flex;
@@ -229,7 +229,7 @@ z-index: 1;
 	border-radius: 10px;
 	font-style: normal;
 	font-weight: 700;
-	font-size: 20px;
+	font-size: 16px;
 	line-height: 24px;
 	display: flex;
 	align-items: center;

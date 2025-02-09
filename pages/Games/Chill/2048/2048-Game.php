@@ -22,7 +22,7 @@ try {
 			r.user_id, u.login 
 		ORDER BY 
 			best_score DESC
-		LIMIT 20;
+		LIMIT 10;
 
     ";
 
@@ -57,11 +57,11 @@ try {
 <body>
 <?php include($_SERVER['DOCUMENT_ROOT']."/include/games-pop-up.php"); ?>
 <div class="leaderboard-container">
-	<div class="leaderboard__back-button"><img src="/img/left_arrow_b5hqu8dra3y4.svg" alt="кнопка назад" height = "30"></div>
+	<div class="leaderboard__back-button"><ion-icon name="arrow-back-outline"></ion-icon></div>
 	<h2>Лидеры</h2>
 	<div class="leaderboard-list-container">
 		<h3>2048</h3>
-		
+		<span>(Топ 10)</span>
 			<div class="leaderboard-items-container">
 				<?php foreach ($results as $index => $row): ?>
 						<div class="leaderboard-item">
