@@ -85,6 +85,38 @@ if (isset($_GET['code'])) {
 
         insert('dateForComparison', $dataForComparison);
 
+        //функция для оповещения о новой регистрации в канале ТГ
+        function sendTelegramMessage($chatId, $message, $token) {
+            $url = "https://api.telegram.org/bot{$token}/sendMessage";
+            $data = [
+                'chat_id' => $chatId,
+                'text' => $message,
+            ];
+            $options = [
+                'http' => [
+                    'header'  => "Content-type: application/x-www-form-urlencoded\r\n",
+                    'method'  => 'POST',
+                    'content' => http_build_query($data),
+                ],
+            ];
+            $context  = stream_context_create($options);
+            file_get_contents($url, false, $context);
+        }
+        
+        $token = '7768419147:AAFOkr_gRotalDyLrjQWkMuHfAJf3AXre24';
+        $chatId = '@NEWREGISTRATIONBRAINRIM';
+        $userData = [
+            'username' => $name,
+            'email' => $email,
+            'registration_date' => date('Y-m-d H:i:s'),
+        ];
+        $message = "Новый пользователь зарегистрирован:\n\n";
+        $message .= "Имя: " . $userData['username'] . "\n";
+        $message .= "Email: " . $userData['email'] . "\n";
+        $message .= "Дата регистрации: " . $userData['registration_date'];
+        
+        sendTelegramMessage($chatId, $message, $token);
+
         if (!$id) {
             die('Ошибка записи нового пользователя в базу данных');
         }

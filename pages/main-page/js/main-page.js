@@ -43,8 +43,8 @@ const AllLevelsButton = document.querySelector('.player-level');
 const AllLevels = document.querySelector('.all-lvls-container');
 const CloseAllLevels = document.querySelector('.close-levels-container');
 const ConvertCurrencyButton = document.querySelector('.convert-currency-button');
-const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
-const CloseConvertCurrency = document.querySelector('.close-currency-body');
+//const ConvertCurrencyBody = document.querySelector('.convert-currency-body');
+//const CloseConvertCurrency = document.querySelector('.close-currency-body');
 const Offers = document.querySelector('.special-offers');
 
 //раздел с играми
@@ -460,6 +460,7 @@ growthButton.onclick = function () {
 document.addEventListener("DOMContentLoaded", function () {
   const gameBlocks = document.querySelectorAll(".game-item-block");
 
+
   gameBlocks.forEach((block) => {
     block.addEventListener("click", function () {
       // Найдем следующий соседний элемент с классом game-item-block__content
@@ -468,6 +469,14 @@ document.addEventListener("DOMContentLoaded", function () {
       // Если следующий элемент существует и является нужным блоком контента
       if (content && content.classList.contains("game-item-block__content")) {
         content.classList.toggle("active");
+        block.classList.toggle("active");
+
+        if (content.style.height === '0px' || content.style.height === '') {
+          content.style.height = `${content.scrollHeight}px`; // Устанавливаем высоту равной содержимому
+        } else {
+          content.style.height = '0px';
+        }
+
       }
     });
   });
@@ -563,9 +572,7 @@ CloseAllLevels.onclick = function () { //Закрыть уровни
   audioClick.play();
 }
 
-ConvertCurrencyButton.onclick = function () { //Кнопка конверт валюты
-  audioClick.play();
-}
+
 
 //Магазин
 itemStoreNavigation.onclick = function () { //при нажатии на кнопку Store
@@ -585,6 +592,7 @@ setInterval(() => { //время
   sc.style.transform = `rotateZ(${ss}deg)`;
 })
 
+/*
 ConvertCurrencyButton.onclick = function () { //Конвертировать валюту - при нажатии на кнопку
   ConvertCurrencyBody.style = 'display: flex; z-index:4;';
   containerGrayBackground.style = 'display: block; z-index:3;';
@@ -595,6 +603,7 @@ CloseConvertCurrency.onclick = function () { //Конвертировать ва
   containerGrayBackground.style = 'display: none;';
   audioClick.play();
 }
+  */
 Offers.onclick = function scrollToDown() { //Скролл до спец предложений
   containerStorePage.scrollTo(9999, 9999);
 }

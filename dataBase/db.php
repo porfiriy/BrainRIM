@@ -67,7 +67,6 @@ session_set_save_handler(
 
 session_start();
 
-// Остальной код вашего файла db.php
 function tt($value){
     echo '<pre>';
     print_r($value);

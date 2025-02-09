@@ -47,6 +47,8 @@
  button,
  textarea {
 	font-family: 'Balsamiq Sans', cursive;
+	-webkit-appearance: none;
+    appearance: none;
  }
  input::-ms-clear {
 	display: none;

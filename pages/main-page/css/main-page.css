@@ -53,6 +53,8 @@
  button,
  textarea {
 	font-family: 'Balsamiq Sans', cursive;
+	-webkit-appearance: none;
+    appearance: none;
  }
  input::-ms-clear {
 	display: none;
@@ -1026,7 +1028,7 @@ font-size: 18px;
 	flex-direction: column;
 	align-items: center;
 	background-color: #213242;
-	width: 80%;
+	width: 75%;
 	box-shadow: 4px 4px 5px 3px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(255, 255, 255, 0.25);
 	border-radius: 10px;
 	padding: 30px 20px 20px 20px;
@@ -1038,6 +1040,7 @@ font-size: 18px;
 	background-color: #273644;
    transform: scale(0.95);
 }
+
 .game-item .title{
 	font-size: 26px;
 	width: 100%;
@@ -1083,10 +1086,16 @@ font-size: 18px;
    margin: 20px auto 0 auto;
 	gap: 20px;
 	transition: 0.1s linear;
+
 }
 .game-item-block:active{
 	background-color: #273644;
    transform: scale(0.95);
+}
+.game-item-block.active{
+	width: 85%;
+   border-radius: 10px 10px 2px 2px;
+   box-shadow: 1px 1px 0px 2px rgba(0, 0, 0, 0.25), -1px -1px 2px rgba(255, 255, 255, 0.25);
 }
 .game-item-block .title{
 	font-size: 22px;
@@ -1104,13 +1113,13 @@ font-size: 18px;
 	width: 22px;
 }
 .game-item-block__content {
-	margin: 20px 0 20px 0;
+	margin: 20px 0 20px 0; 
 	display: none;
+	 flex-direction: column; 
+	 gap: 20px; 
 }
 .game-item-block__content.active {
 	display: flex;
-	flex-direction: column;
-	gap: 20px;
 }
 .backlight{
 	color: #05EFD4;
@@ -1129,6 +1138,10 @@ font-size: 18px;
 @keyframes aniHidden {
 	0% {opacity: 1;}
 	100% {opacity: 0;display: none;}
+}
+@keyframes animShow {
+	0% {opacity: 0;}
+	100% {opacity: 1;display: flex;}
 }
 
 
@@ -1768,21 +1781,16 @@ background: #05EFD4;
 color: #000;
 text-decoration: none;
 }
-.convert-currency-body{
-	display: none;
-    flex-direction: column;
-    font-size: 20px;
-    position: absolute;
-    text-align: center;
-    width: 270px;
-    background-color: #213242;
-    border: 2px solid #05EFD4;
-    border-radius: 15px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-	gap: 20px;
+.convert-currency-body {
+	display: flex;
+	flex-direction: column;
+	font-size: 20px;
+	position: relative;
+	text-align: center;
+	background-color: #213242;
+	border-radius: 15px;
+	color: white;
+	margin: 0 auto;
 }
 .close-currency-body{
     position: absolute;
@@ -1809,9 +1817,9 @@ text-decoration: none;
 	transition: 0.4s;
 }
 .convert-currency-text{
-    margin: 70px auto auto auto;
-color: #ffffff;
-font-size: 22px;
+   margin: 30px auto auto auto;
+	color: #ffffff;
+	font-size: 22px;
 }
 .trade-price {
     display: flex;
@@ -1819,6 +1827,7 @@ font-size: 22px;
     align-items: center;
 	gap: 5px;
 	font-size: 24px;
+	margin: 50px 0 0 0;
 }
 .trade-currency {
     display: flex;
@@ -1826,37 +1835,36 @@ font-size: 22px;
     justify-content: center;
     align-items: center;
 	gap: 10px;
+	margin: 30px 0 0 0;
 }
 .input-trade{
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius: 15px;
+	border-radius: 10px;
 	width: 100px;
-	height: 30px;
-	background-color: #0c4e74;
+	height: 40px;
+	background-color: #213242;
 	padding: 10px;
 	color: #ffffff;
 	transition: 1s;
-	box-shadow: -5px -5px 15px rgba(255,255,255,0.1), 5px 5px 15px rgba(0,0,0,0.35);
-	border: 1px solid #00dfc4;
+	box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.1), 2px 3px 5px rgba(0, 0, 0, 0.35);
 }
 .input-trade:focus {
-    box-shadow: 0px 0px 15px 0px #0da5a5;
-    border-radius: 16px;
-    color: #000;
-    background-color: #05EFD4;
+	border-radius: 16px;
+	color: #05efd4;
+	background-color: #2f3b47;
 }
-.convert-button{
-	border-radius: 15px;
+.convert-button {
+	border-radius: 10px;
 	border: 2px solid #05EFD4;
-    width: 160px;
-	height: 35px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-	margin: 10px auto 70px auto;
+	width: 50%;
+	max-width: 300px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 50px auto 0px auto;
 	font-size: 20px;
 	background-color: #213242;
 	color: #ffffff;
@@ -1877,12 +1885,6 @@ font-size: 22px;
 .buy-currency{
 	margin: 50px auto;
 	max-width: 350px;
-}
-.donate-dev{
-	color: #05EFD4;
-	font-size: 22px;
-	display: block;
-	text-align: center;
 }
 .buy-memoney{
 	color: #000000;
