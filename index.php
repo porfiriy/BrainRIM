@@ -285,8 +285,8 @@
    
     <div class="games-container">
       <div class="switch-btn-container">
-         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__chill active">Отдых🌿</div>
-         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__growth">Развитие🔥</div>
+         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__chill active">Отдых✨</div>
+         <div onclick="toggleGameVisibility()" class="switch-btn switch-btn__growth">Развитие🌿</div>
       </div>
       <div class="games-chill-container">
          <a href = "/pages/Games/Chill/2048/2048-Game.php">
@@ -584,10 +584,10 @@
             </div>
          </div>
          <div class="convert-currency">
-            <button class="convert-currency-button">Конвертировать валюту</button>
+            <!--<button class="convert-currency-button">Конвертировать валюту</button>-->
 			</div>
 			<div class="convert-currency-body">
-			    <div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>
+			    <!--<div class="close-currency-body"><ion-icon name="close-outline"></ion-icon></div>-->
 				<div class="convert-currency-text">Конвертировать валюту</div>
 				<div class="trade-price">
 				<span>1</span><img class="memoneyicon" src="/img/Menu/Memoney.svg" alt=""> 
@@ -602,7 +602,6 @@
 				<button type="submit" name="convert-button" class="convert-button">Обменять</button>
 		    </div>
          <div class="buy-currency">
-			<span class="donate-dev">В разработке...</span>
             <div class="buy-memoney">
                <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
                      alt="">= 0.50$</div>
