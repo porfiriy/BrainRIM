@@ -97,7 +97,19 @@
          <div class="header__top-button-container">
             <a href="/pages/settings-page/settings-page.php" class="settings"><ion-icon class="icon-settings"
                   name="settings-outline"></ion-icon></a>
-            <span class="header__top-button-title">BrainRIM</span>
+            <!--<span class="header__top-button-title">BrainRIM</span>-->
+            <div class="card">
+               <div class="loader">
+                  <p>Улучши</p>
+                  <div class="words">
+                     <span class="word">память</span>
+                     <span class="word">внимательность</span>
+                     <span class="word">реакцию</span>
+                     <span class="word">интеллект</span>
+                     <span class="word">с BrainRIM</span>
+                  <span class="word">память</span></div>
+               </div>
+            </div>
 			<div class="Profile-anim"><a href="/pages/Profile-page/Profile.php" class="profile-page"><img src="/img/Menu/brain.svg" alt="#" class="profile"></a></div>
          </div>
          <div class="header-score-container">

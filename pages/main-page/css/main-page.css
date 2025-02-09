@@ -147,7 +147,6 @@ z-index: 1;
 	justify-content: space-around;
 	align-items: center;
 	margin: 15px 0 0 0;
-	gap: 40px;
 	font-size: 18px;
 	color: #FFFFFF;
 	
@@ -214,7 +213,7 @@ z-index: 1;
  .memany-count{
    display: flex;
    justify-content: center;
-   font-size: 20px;
+   font-size: 18px;
    font-weight: 900;
 }
  
@@ -1857,7 +1856,6 @@ text-decoration: none;
 }
 .convert-button {
 	border-radius: 10px;
-	border: 2px solid #05EFD4;
 	width: 50%;
 	max-width: 300px;
 	height: 50px;
@@ -1865,10 +1863,12 @@ text-decoration: none;
 	justify-content: center;
 	align-items: center;
 	margin: 50px auto 0px auto;
-	font-size: 20px;
+	font-size: 16px;
+	text-transform: uppercase;
 	background-color: #213242;
-	color: #ffffff;
+	color: #05EFD4;
 	transition: 0.8s;
+	box-shadow: -1px -1px 2px rgba(255, 255, 255, 0.1), 2px 3px 5px rgba(0, 0, 0, 0.35);
 }
 .convert-button:active{
 	transform: scale(0.95);
@@ -2673,3 +2673,101 @@ text-decoration: none;
 	border-radius: 20px;
 	border: 2px solid #05EFD4;
 }
+
+/*Анимация для текста в шапке НАЧАЛО*/
+.card {
+	--bg-color: #212121;
+	background-color: var(--bg-color);
+	border-radius: 1.25rem;
+ }
+ .loader {
+	color: rgb(124, 124, 124);
+	font-weight: 500;
+	font-size: 16px;
+	-webkit-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 25px;
+	padding: 10px 10px;
+	display: flex;
+	justify-content: center;
+	border-radius: 8px;
+ }
+ .loader p {
+	display:flex;
+	align-items:center;
+	justify-content: center;
+ }
+ .words {
+	overflow: hidden;
+	position: relative;
+ }
+ .words::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 20;
+ }
+ 
+ .word {
+	display: block;
+	height: 100%;
+	padding-left: 6px;
+	color: #956afa;
+	animation: spin_4991 6s infinite;
+ }
+ .words span {
+	display:flex;
+	align-items:center;
+ }
+ 
+ @keyframes spin_4991 {
+	10% {
+	  -webkit-transform: translateY(-103%);
+	  transform: translateY(-103%);
+	}
+ 
+	20% {
+	  -webkit-transform: translateY(-100%);
+	  transform: translateY(-100%);
+	}
+ 
+	30% {
+	  -webkit-transform: translateY(-203%);
+	  transform: translateY(-203%);
+	}
+ 
+	40% {
+	  -webkit-transform: translateY(-200%);
+	  transform: translateY(-200%);
+	}
+ 
+	50% {
+	  -webkit-transform: translateY(-303%);
+	  transform: translateY(-303%);
+	}
+ 
+	60% {
+	  -webkit-transform: translateY(-300%);
+	  transform: translateY(-300%);
+	}
+ 
+	70% {
+	  -webkit-transform: translateY(-403%);
+	  transform: translateY(-403%);
+	}
+ 
+	80% {
+	  -webkit-transform: translateY(-400%);
+	  transform: translateY(-400%);
+	}
+	90% {
+	  -webkit-transform: translateY(-503%);
+	  transform: translateY(-503%);
+	}
+ 
+	100% {
+	  -webkit-transform: translateY(-500%);
+	  transform: translateY(-500%);
+	}
+ }
+ /*Анимация для текста в шапке КОНЕЦ*/
