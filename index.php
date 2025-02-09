@@ -604,17 +604,83 @@
          <div class="buy-currency">
             <div class="buy-memoney">
                <div id="buy" class="buy first-offer">5<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 0.50$</div>
+                     alt="">= 0.50$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
                <div id="buy" class="buy second-offer">15<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 0.99$</div>
+                     alt="">= 0.99$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
                <div id="buy" class="buy third-offer">50<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 2.99$</div>
+                     alt="">= 2.99$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
                <div id="buy" class="buy four-offer">120<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 5.99$</div>
+                     alt="">= 5.99$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
                <div id="buy" class="buy five-offer">260<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 13.62$</div>
+                     alt="">= 13.62$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
                <div id="buy" class="buy six-offer">666<img class="memoneyicon" src="/img/Menu/Memoney.svg"
-                     alt="">= 22.22$</div>
+                     alt="">= 22.22$<div class="points_wrapper">
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+    <i class="point"></i>
+  </div></div>
             </div>
             <div class="special-offers">Специальные предложения</div>
 			<!--<div class="newbie-pack">200<img class="memoneyicon" src="/img/Menu/Memoney.svg"/></div>-->
