@@ -242,7 +242,7 @@ z-index: 1;
 	box-sizing: border-box;
 	width: 60%;
 	height: 25px;
-	background: #2e3031bf;
+	background-color: #212121;
 	border-radius: 7px;
 	text-align: center;
 	margin: 10px auto;
@@ -494,8 +494,8 @@ font-size: 18px;
 	position: absolute;
 	inset: 5px;
 	border-radius: 30px;
-	background-color: black;
-	border: 1px solid black;
+	background-color: #212121;
+   border: 1px solid #212121;
 }
 @keyframes rotate {
 	0% {
@@ -506,7 +506,7 @@ font-size: 18px;
 	}
 }
 .profile{
-	width: 90%;
+	width: 80%;
 }
  .main{
 	 flex: 1 1 auto;
