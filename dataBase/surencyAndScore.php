@@ -9,6 +9,7 @@ function select($table, $params = [])
 
    if (!empty($params)) {
       $i = 0;
+
       foreach ($params as $key => $value) {
          if (!is_numeric($value)) {
 
